@@ -1,0 +1,17 @@
+{
+  "name": "the-watcher",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "browser-sync start --watch --server src",
+    "dev": "npm run serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3"
+  },
+  "dependencies": {}
+}
