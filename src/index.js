@@ -1,8 +1,9 @@
-/**
- * Author: Michael Hadley, mikewesthad.com
- * Asset Credits:
- *  - Tuxemon, https://github.com/Tuxemon/Tuxemon
- */
+import Phaser from "phaser";
+import townPng from "./assets/town/tuxmon-sample-32px-extruded.png";
+import atlasPng from "./assets/atlas/atlas.png";
+
+const townJson = require('./assets/town/town.json');
+const atlasJson = require('./assets/atlas/atlas.json');
 
 const config = {
   type: Phaser.AUTO,
@@ -24,20 +25,22 @@ const config = {
 };
 
 const game = new Phaser.Game(config);
+
 let cursors;
 let player;
 let showDebug = false;
 
+
 function preload() {
-  this.load.image("tiles", "./assets/town/tuxmon-sample-32px-extruded.png");
-  this.load.tilemapTiledJSON("map", "./assets/town/town.json");
+  this.load.image("tiles", townPng);
+  this.load.tilemapTiledJSON("map", townJson);
 
   // An atlas is a way to pack multiple images together into one texture. I'm using it to load all
   // the player animations (walking left, walking right, etc.) in one image. For more info see:
   //  https://labs.phaser.io/view.html?src=src/animation/texture%20atlas%20animation.js
   // If you don't use an atlas, you can do the same thing with a spritesheet, see:
   //  https://labs.phaser.io/view.html?src=src/animation/single%20sprite%20sheet.js
-  this.load.atlas("atlas", "./assets/atlas/atlas.png", "./assets/atlas/atlas.json");
+  this.load.atlas("atlas", atlasPng, atlasJson);
 }
 
 function create() {
