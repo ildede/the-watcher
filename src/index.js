@@ -1,13 +1,13 @@
 import Phaser from "phaser";
-import townPng from "./assets/town/tuxmon-sample-32px-extruded.png";
+import townPng from "./assets/tileset/tileset.png";
 import atlasPng from "./assets/atlas/atlas.png";
 
-const townJson = require('./assets/town/town.json');
+const townJson = require('./assets/main-town/town.json');
 const atlasJson = require('./assets/atlas/atlas.json');
 
 const config = {
   type: Phaser.AUTO,
-  width: 800,
+  width: 900,
   height: 600,
   parent: "game-container",
   pixelArt: true,
@@ -48,14 +48,16 @@ function create() {
 
   // Parameters are the name you gave the tileset in Tiled and then the key of the tileset image in
   // Phaser's cache (i.e. the name you used in preload)
-  const tileset = map.addTilesetImage("tuxmon-sample-32px-extruded", "tiles");
+  const tileset = map.addTilesetImage("watcherbase", "tiles");
 
   // Parameters: layer name (or index) from Tiled, tileset, x, y
+
+  const bottom = map.createStaticLayer("Bottom", tileset, 0, 0);
   const belowLayer = map.createStaticLayer("Below Player", tileset, 0, 0);
   const worldLayer = map.createStaticLayer("World", tileset, 0, 0);
   const aboveLayer = map.createStaticLayer("Above Player", tileset, 0, 0);
 
-  worldLayer.setCollisionByProperty({ collides: true });
+  worldLayer.setCollisionByProperty({ collide: true });
 
   // By default, everything gets depth sorted on the screen in the order we created things. Here, we
   // want the "Above Player" layer to sit on top of the player, so we explicitly give it a depth.
@@ -131,15 +133,15 @@ function create() {
   cursors = this.input.keyboard.createCursorKeys();
 
   // Help text that has a "fixed" position on the screen
-  this.add
-    .text(16, 16, 'Arrow keys to move\nPress "D" to show hitboxes', {
-      font: "18px monospace",
-      fill: "#000000",
-      padding: { x: 20, y: 10 },
-      backgroundColor: "#ffffff"
-    })
-    .setScrollFactor(0)
-    .setDepth(30);
+  // this.add
+  //   .text(16, 16, 'Arrow keys to move\nPress "D" to show hitboxes', {
+  //     font: "18px monospace",
+  //     fill: "#000000",
+  //     padding: { x: 20, y: 10 },
+  //     backgroundColor: "#ffffff"
+  //   })
+  //   .setScrollFactor(0)
+  //   .setDepth(30);
 
   // Debug graphics
   this.input.keyboard.once("keydown_D", event => {
