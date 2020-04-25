@@ -16,7 +16,7 @@ export default class TransitionScene extends Phaser.Scene {
     this.add.text(100,340, 'Wait a moment...', {fontSize: '30px'})
 
     this.time.addEvent({
-      delay: 3500,
+      delay: 0,
       callback: () => {
         this.scene.start('WorldScene', this.levelConfig);
         this.scene.wake('UIScene')

@@ -2,6 +2,7 @@ import 'phaser'
 import townPng from "../assets/tileset/tileset.png";
 import atlasPng from "../assets/atlas/atlas.png";
 import Player from "../entity/Player";
+import Sign from "../entity/Sign";
 
 const townJson = require('../assets/main-town/town.json');
 const atlasJson = require('../assets/atlas/atlas.json');
@@ -45,6 +46,24 @@ export default class WorldScene extends Phaser.Scene {
         this.physics.world.bounds.height = map.heightInPixels
 
         this.physics.add.collider(this.player, worldLayer)
+
+        this.readableSigns = this.physics.add.group()
+
+        const objectLayer = map.getObjectLayer('Objects')
+        objectLayer.objects.forEach((object) => {
+            if (object.type === 'sign') {
+                this.readableSigns.add(new Sign(this, object))
+            }
+        })
+
+        this.physics.add.collider(
+            this.player,
+            this.readableSigns,
+            this.startDialogue,
+            null,
+            this
+        )
+
         this.player.setCollideWorldBounds(true)
 
         this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels)
@@ -73,13 +92,13 @@ export default class WorldScene extends Phaser.Scene {
 
         this.input.keyboard.once("keydown_S", event => {
             console.log('S')
-            this.cameras.main.fadeOut(500)
+            this.cameras.main.fadeOut(0)
             this.time.addEvent({
-                delay: 500,
+                delay: 0,
                 callback: () => {
                     this.events.off('update')
                     this.scene.sleep('UIScene')
-                    this.scene.start('TransitionScene', { x: this.player.x, y: this.player.y })
+                    this.scene.start('TransitionScene', { x: this.player.x, y: this.player.y, new: this.levelConfig.new })
                 }
             })
         });
@@ -100,6 +119,11 @@ export default class WorldScene extends Phaser.Scene {
             },
             this
         )
+
+        if (this.levelConfig.new) {
+            this.events.emit('newGame')
+            this.levelConfig.new = false
+        }
     }
 
     update(time, delta) {
@@ -152,5 +176,9 @@ export default class WorldScene extends Phaser.Scene {
             frameRate: 10,
             repeat: -1
         });
+    }
+
+    startDialogue(player, item) {
+        this.events.emit('signRead', item)
     }
 }
