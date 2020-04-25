@@ -1,5 +1,5 @@
 import 'phaser'
-import MainScene from "./scenes/MainScene";
+import BootScene from "./scenes/BootScene";
 import TitleScene from "./scenes/TitleScene";
 import WorldScene from "./scenes/WorldScene";
 import UIScene from "./scenes/UIScene";
@@ -9,7 +9,7 @@ class TheWatcher extends Phaser.Game {
     constructor(phaserConfig) {
         super(phaserConfig);
 
-        this.scene.add('MainScene', MainScene)
+        this.scene.add('BootScene', BootScene)
         this.scene.add('TitleScene', TitleScene)
         this.scene.add('WorldScene', WorldScene)
         this.scene.add('UIScene', UIScene)
