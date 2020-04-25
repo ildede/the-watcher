@@ -2,6 +2,8 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/29dd1062-d17e-45b3-a7d0-0d8ec6312a54/deploy-status)](https://app.netlify.com/sites/dazzling-lalande-df429a/deploys)
 An AdventureJam2020 game
 
+Play online: https://dazzling-lalande-df429a.netlify.app/
+
 ## Available Commands
 
 | Command | Description |
