@@ -3,7 +3,7 @@ import Character from "./Character";
 
 export default class Player extends Character {
     constructor(scene, x, y, spriteKey, frame) {
-        super(scene, x, y, spriteKey, frame)
+        super(scene, x, y, spriteKey, frame, false)
 
         this.speed = 175
     }
