@@ -1,11 +1,14 @@
 import 'phaser'
 import townPng from "../assets/tileset/tileset.png";
-import atlasPng from "../assets/characters/mario/mario.png";
+import marioPng from "../assets/characters/mario/mario.png";
+import gioiaPng from "../assets/characters/gioia/gioia.png";
 import Player from "../entity/Player";
 import Sign from "../entity/Sign";
+import Character from "../entity/Character";
 
 const townJson = require('../assets/main-town/town.json');
-const atlasJson = require('../assets/characters/mario/mario.json');
+const marioJson = require('../assets/characters/mario/mario.json');
+const gioiaJson = require('../assets/characters/gioia/gioia.json');
 
 export default class WorldScene extends Phaser.Scene {
     constructor() {
@@ -15,7 +18,8 @@ export default class WorldScene extends Phaser.Scene {
     preload() {
         this.load.image("tiles", townPng)
         this.load.tilemapTiledJSON("map", townJson)
-        this.load.atlas("atlas", atlasPng, atlasJson)
+        this.load.atlas("mario", marioPng, marioJson)
+        this.load.atlas("gioia", gioiaPng, gioiaJson)
     }
 
     create(data) {
@@ -34,7 +38,8 @@ export default class WorldScene extends Phaser.Scene {
             ? { x: this.levelConfig.x, y: this.levelConfig.y }
             : map.findObject("Objects", obj => obj.name === "Spawn Point")
 
-        this.player = new Player(this, spawnPoint.x, spawnPoint.y, "atlas", "front")
+        this.player = new Player(this, spawnPoint.x, spawnPoint.y, "mario", "front")
+        this.gioia = new Character(this, spawnPoint.x+90, spawnPoint.y-60, "gioia", "front")
 
         worldLayer.setCollisionByProperty({ collide: true })
 

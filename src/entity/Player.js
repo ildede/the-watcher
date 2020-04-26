@@ -1,19 +1,9 @@
 import 'phaser'
+import Character from "./Character";
 
-export default class Player extends Phaser.Physics.Arcade.Sprite {
+export default class Player extends Character {
     constructor(scene, x, y, spriteKey, frame) {
         super(scene, x, y, spriteKey, frame)
-
-        this.scene = scene
-        this.scene.add.existing(this)
-        this.scene.physics.world.enable(this)
-
-        this.spriteKey = spriteKey
-
-        this.setScale(1.6, 1.6)
-        this.setSize(14, 15)
-        this.setOffset(8, 17)
-        this.createAnimations()
 
         this.speed = 175
     }
@@ -47,13 +37,13 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
         // Update the animation last and give left/right animations precedence over up/down animations
         if (cursors.left.isDown) {
-            this.anims.play("left-walk", true);
+            this.left()
         } else if (cursors.right.isDown) {
-            this.anims.play("right-walk", true);
+            this.right()
         } else if (cursors.up.isDown) {
-            this.anims.play("back-walk", true);
+            this.up()
         } else if (cursors.down.isDown) {
-            this.anims.play("front-walk", true);
+            this.down()
         } else {
             this.anims.stop();
 
@@ -63,53 +53,5 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
             else if (prevVelocity.y < 0) this.setTexture(this.spriteKey, "back");
             else if (prevVelocity.y > 0) this.setTexture(this.spriteKey, "front");
         }
-    }
-
-    createAnimations() {
-        const anims = this.scene.anims;
-        anims.create({
-            key: "left-walk",
-            frames: anims.generateFrameNames(this.spriteKey, {
-                prefix: "left-walk.",
-                start: 0,
-                end: 3,
-                zeroPad: 3
-            }),
-            frameRate: 10,
-            repeat: -1
-        });
-        anims.create({
-            key: "right-walk",
-            frames: anims.generateFrameNames(this.spriteKey, {
-                prefix: "right-walk.",
-                start: 0,
-                end: 3,
-                zeroPad: 3
-            }),
-            frameRate: 10,
-            repeat: -1
-        });
-        anims.create({
-            key: "front-walk",
-            frames: anims.generateFrameNames(this.spriteKey, {
-                prefix: "front-walk.",
-                start: 0,
-                end: 3,
-                zeroPad: 3
-            }),
-            frameRate: 10,
-            repeat: -1
-        });
-        anims.create({
-            key: "back-walk",
-            frames: anims.generateFrameNames(this.spriteKey, {
-                prefix: "back-walk.",
-                start: 0,
-                end: 3,
-                zeroPad: 3
-            }),
-            frameRate: 10,
-            repeat: -1
-        });
     }
 }
