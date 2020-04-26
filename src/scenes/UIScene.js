@@ -24,18 +24,19 @@ export default class UIScene extends Phaser.Scene {
         this.load.json('itTranslation', itTranslation)
     }
 
-    create() {
+    create(data) {
         const currentGame = this.scene.get('WorldScene')
+        this.uiConfig = data
 
         i18next
             .init({
-                lng: 'en',
+                lng: data.language,
                 resources: {
                     en: {translation: this.cache.json.get('enTranslation')},
                     it: {translation: this.cache.json.get('itTranslation')}
                 }
             }).then(function (t) {
-                console.log('loc ok')
+                console.debug('i18next initialized')
             })
 
         const textBox = this.rexUI.add.textBox({

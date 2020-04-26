@@ -7,21 +7,25 @@ export default class TitleScene extends Phaser.Scene {
     }
 
     create() {
-        this.add.text(160, 100, 'THE WATCHER', { fontSize: '70px' })
+        this.add.text(140, 100, 'THE WATCHER', { fontSize: '70px' })
 
-        const text = this.add.text(235, 320, 'start game', { fontSize: '30px' })
-        text.setInteractive({ useHandCursor: true })
-        text.on('pointerdown', () => this.startWorldScene())
+        const en = this.add.text(225, 300, 'English (default)', { fontSize: '30px' })
+        const it = this.add.text(225, 340, 'Italiano', { fontSize: '30px' })
+        en.setInteractive({ useHandCursor: true })
+        it.setInteractive({ useHandCursor: true })
+        en.on('pointerdown', () => this.startWorldScene('en'))
+        it.on('pointerdown', () => this.startWorldScene('it'))
         this.input.keyboard.on('keydown-SPACE', () => this.startWorldScene())
     }
 
-    startWorldScene() {
+    startWorldScene(language) {
+        language = language || 'en'
         this.cameras.main.fadeOut(500)
         this.time.addEvent({
             delay: 500,
             callback: () => {
                 this.scene.start('WorldScene', { new: true })
-                this.scene.launch('UIScene')
+                this.scene.launch('UIScene', { language: language })
                 this.scene.bringToTop('UIScene')
             }
         })
