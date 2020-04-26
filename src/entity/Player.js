@@ -44,30 +44,30 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
         // Update the animation last and give left/right animations precedence over up/down animations
         if (cursors.left.isDown) {
-            this.anims.play("mario-left-walk", true);
+            this.anims.play("left-walk", true);
         } else if (cursors.right.isDown) {
-            this.anims.play("mario-right-walk", true);
+            this.anims.play("right-walk", true);
         } else if (cursors.up.isDown) {
-            this.anims.play("mario-back-walk", true);
+            this.anims.play("back-walk", true);
         } else if (cursors.down.isDown) {
-            this.anims.play("mario-front-walk", true);
+            this.anims.play("front-walk", true);
         } else {
             this.anims.stop();
 
             // If we were moving, pick and idle frame to use
-            if (prevVelocity.x < 0) this.setTexture("atlas", "mario-left");
-            else if (prevVelocity.x > 0) this.setTexture("atlas", "mario-right");
-            else if (prevVelocity.y < 0) this.setTexture("atlas", "mario-back");
-            else if (prevVelocity.y > 0) this.setTexture("atlas", "mario-front");
+            if (prevVelocity.x < 0) this.setTexture("atlas", "left");
+            else if (prevVelocity.x > 0) this.setTexture("atlas", "right");
+            else if (prevVelocity.y < 0) this.setTexture("atlas", "back");
+            else if (prevVelocity.y > 0) this.setTexture("atlas", "front");
         }
     }
 
     createAnimations() {
         const anims = this.scene.anims;
         anims.create({
-            key: "mario-left-walk",
+            key: "left-walk",
             frames: anims.generateFrameNames("atlas", {
-                prefix: "mario-left-walk.",
+                prefix: "left-walk.",
                 start: 0,
                 end: 3,
                 zeroPad: 3
@@ -76,9 +76,9 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
             repeat: -1
         });
         anims.create({
-            key: "mario-right-walk",
+            key: "right-walk",
             frames: anims.generateFrameNames("atlas", {
-                prefix: "mario-right-walk.",
+                prefix: "right-walk.",
                 start: 0,
                 end: 3,
                 zeroPad: 3
@@ -87,9 +87,9 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
             repeat: -1
         });
         anims.create({
-            key: "mario-front-walk",
+            key: "front-walk",
             frames: anims.generateFrameNames("atlas", {
-                prefix: "mario-front-walk.",
+                prefix: "front-walk.",
                 start: 0,
                 end: 3,
                 zeroPad: 3
@@ -98,9 +98,9 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
             repeat: -1
         });
         anims.create({
-            key: "mario-back-walk",
+            key: "back-walk",
             frames: anims.generateFrameNames("atlas", {
-                prefix: "mario-back-walk.",
+                prefix: "back-walk.",
                 start: 0,
                 end: 3,
                 zeroPad: 3
