@@ -1,8 +1,12 @@
 import 'phaser'
-import textBox from "../assets/UI/textbox.png";
 import nextPage from "../assets/UI/arrow-down-left.png";
+import i18next from 'i18next';
+
+const enTranslation = require('../locales/en/translation.json');
+const itTranslation = require('../locales/it/translation.json');
 
 export default class UIScene extends Phaser.Scene {
+
     constructor() {
         super('UIScene')
     }
@@ -14,12 +18,25 @@ export default class UIScene extends Phaser.Scene {
             sceneKey: 'rexUI'
         })
 
-        this.load.image('textBox', textBox)
         this.load.image('nextPage', nextPage)
+
+        this.load.json('enTranslation', enTranslation)
+        this.load.json('itTranslation', itTranslation)
     }
 
     create() {
         const currentGame = this.scene.get('WorldScene')
+
+        i18next
+            .init({
+                lng: 'en',
+                resources: {
+                    en: {translation: this.cache.json.get('enTranslation')},
+                    it: {translation: this.cache.json.get('itTranslation')}
+                }
+            }).then(function (t) {
+                console.log('loc ok')
+            })
 
         const textBox = this.rexUI.add.textBox({
             x: 30,
@@ -55,7 +72,7 @@ export default class UIScene extends Phaser.Scene {
         let mainCamera = this.cameras.main
 
         this.input.keyboard.on(
-            'keydown-' + 'ENTER',
+            'keydown-' + 'SPACE',
             function() {
                 const icon = textBox.getElement('action').setVisible(false)
                 textBox.resetChildVisibleState(icon)
@@ -71,14 +88,12 @@ export default class UIScene extends Phaser.Scene {
         )
 
         textBox.on('pageend', function() {
-                const icon = textBox.getElement('action').setVisible(true)
-                textBox.resetChildVisibleState(icon)
-            },
-            textBox
-        )
+            const icon = textBox.getElement('action').setVisible(true)
+            textBox.resetChildVisibleState(icon)
+        }, textBox)
 
         currentGame.events.on('newGame', function() {
-            textBox.setVisible(true).start(welcomeMessage(), 50)
+            textBox.setVisible(true).start(welcomeMessages(), 50)
         }, this)
 
         currentGame.events.on('signRead', function(sign) {
@@ -86,7 +101,7 @@ export default class UIScene extends Phaser.Scene {
         }, this)
 
         this.events.on('wake', () => {
-            // mainCamera.fadeIn(0)
+            mainCamera.fadeIn(500)
         })
     }
 }
@@ -120,7 +135,14 @@ const getBBcodeText = function(scene, wrapWidth, fixedWidth, fixedHeight) {
     })
 }
 
-const welcomeMessage = () => {
-    return `[u]text[/u] ut [b]perspiciatis[/b] omnis [stroke]iste[/stroke] natus [shadow]text[/shadow] sit [i]voluptatem[/i] accusantium [color=red]doloremque[/color] laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet.`
+const welcomeMessages = () => {
+    return [
+        i18next.t('System_001'),
+        i18next.t('System_002'),
+        i18next.t('System_003'),
+        i18next.t('System_004'),
+        i18next.t('System_005'),
+        i18next.t('System_006'),
+    ]
 }
 
