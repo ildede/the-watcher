@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.3.4" orientation="orthogonal" renderorder="right-down" width="105" height="107" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="5">
+<map version="1.2" tiledversion="1.3.4" orientation="orthogonal" renderorder="right-down" width="105" height="107" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="12">
  <editorsettings>
   <export target="." format="json"/>
  </editorsettings>
@@ -126451,13 +126451,36 @@
 </data>
  </layer>
  <objectgroup id="3" name="Objects">
-  <object id="1" name="Spawn Point" type="spawn" x="166.536" y="354.69">
+  <object id="1" name="Player" type="spawn" x="166.536" y="354.69">
    <point/>
   </object>
-  <object id="4" name="Message" type="sign" x="314" y="323" width="29" height="27">
+  <object id="4" name="Message" type="sign" x="314" y="320" width="28" height="28">
    <properties>
-    <property name="string_id" value="STOP"/>
+    <property name="stringId" value="sign_000"/>
    </properties>
+  </object>
+  <object id="11" name="Message" type="sign" x="320" y="1120" width="32" height="32">
+   <properties>
+    <property name="stringId" value="sign_001"/>
+   </properties>
+  </object>
+  <object id="5" name="orange" type="npc" x="420" y="310">
+   <point/>
+  </object>
+  <object id="6" name="white" type="npc" x="460" y="310">
+   <point/>
+  </object>
+  <object id="7" name="brown" type="npc" x="500" y="310">
+   <point/>
+  </object>
+  <object id="8" name="black" type="npc" x="540" y="310">
+   <point/>
+  </object>
+  <object id="9" name="gioia" type="npc" x="580" y="310">
+   <point/>
+  </object>
+  <object id="10" name="mario" type="npc" x="620" y="310">
+   <point/>
   </object>
  </objectgroup>
 </map>

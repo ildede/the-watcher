@@ -10,9 +10,10 @@ export default class Character extends Phaser.Physics.Arcade.Sprite {
 
         this.spriteKey = spriteKey
 
+        console.log(this)
         this.setScale(1.6, 1.6)
-        this.setSize(14, 15)
-        this.setOffset(8, 17)
+        // this.setSize(14, 15)
+        // this.setOffset(8, 17)
         this.createAnimations()
     }
 

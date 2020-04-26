@@ -56,7 +56,7 @@
         <key>jxrCompressionLevel</key>
         <uint>0</uint>
         <key>ditherType</key>
-        <enum type="SettingsBase::DitherType">NearestNeighbour</enum>
+        <enum type="SettingsBase::DitherType">PngQuantLow</enum>
         <key>backgroundColor</key>
         <uint>0</uint>
         <key>libGdx</key>
@@ -82,7 +82,7 @@
         <key>atfFormats</key>
         <string></string>
         <key>textureFormat</key>
-        <enum type="SettingsBase::TextureFormat">png</enum>
+        <enum type="SettingsBase::TextureFormat">png8</enum>
         <key>borderPadding</key>
         <uint>0</uint>
         <key>maxTextureSize</key>
@@ -142,7 +142,7 @@
         <key>outputFormat</key>
         <enum type="SettingsBase::OutputFormat">RGBA8888</enum>
         <key>alphaHandling</key>
-        <enum type="SettingsBase::AlphaHandling">ClearTransparentPixels</enum>
+        <enum type="SettingsBase::AlphaHandling">ReduceBorderArtifacts</enum>
         <key>contentProtection</key>
         <struct type="ContentProtection">
             <key>key</key>
@@ -151,7 +151,7 @@
         <key>autoAliasEnabled</key>
         <true/>
         <key>trimSpriteNames</key>
-        <false/>
+        <true/>
         <key>prependSmartFolderName</key>
         <false/>
         <key>autodetectAnimations</key>
@@ -169,7 +169,7 @@
             <key>trimMargin</key>
             <uint>1</uint>
             <key>trimMode</key>
-            <enum type="SpriteSettings::TrimMode">Trim</enum>
+            <enum type="SpriteSettings::TrimMode">Crop</enum>
             <key>tracerTolerance</key>
             <int>200</int>
             <key>heuristicMask</key>
@@ -181,22 +181,22 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">mario/mario-back-walk.000.png</key>
-            <key type="filename">mario/mario-back-walk.001.png</key>
-            <key type="filename">mario/mario-back-walk.002.png</key>
-            <key type="filename">mario/mario-back.png</key>
-            <key type="filename">mario/mario-front-walk.000.png</key>
-            <key type="filename">mario/mario-front-walk.001.png</key>
-            <key type="filename">mario/mario-front-walk.002.png</key>
-            <key type="filename">mario/mario-front.png</key>
-            <key type="filename">mario/mario-left-walk.000.png</key>
-            <key type="filename">mario/mario-left-walk.001.png</key>
-            <key type="filename">mario/mario-left-walk.002.png</key>
-            <key type="filename">mario/mario-left.png</key>
-            <key type="filename">mario/mario-right-walk.000.png</key>
-            <key type="filename">mario/mario-right-walk.001.png</key>
-            <key type="filename">mario/mario-right-walk.002.png</key>
-            <key type="filename">mario/mario-right-walk.png</key>
+            <key type="filename">mario/back-walk.000.png</key>
+            <key type="filename">mario/back-walk.001.png</key>
+            <key type="filename">mario/back-walk.002.png</key>
+            <key type="filename">mario/back.png</key>
+            <key type="filename">mario/front-walk.000.png</key>
+            <key type="filename">mario/front-walk.001.png</key>
+            <key type="filename">mario/front-walk.002.png</key>
+            <key type="filename">mario/front.png</key>
+            <key type="filename">mario/left-walk.000.png</key>
+            <key type="filename">mario/left-walk.001.png</key>
+            <key type="filename">mario/left-walk.002.png</key>
+            <key type="filename">mario/left.png</key>
+            <key type="filename">mario/right-walk.000.png</key>
+            <key type="filename">mario/right-walk.001.png</key>
+            <key type="filename">mario/right-walk.002.png</key>
+            <key type="filename">mario/right.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>

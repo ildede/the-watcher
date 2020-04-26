@@ -3,6 +3,9 @@ import townPng from "../assets/tileset/tileset.png";
 import marioPng from "../assets/characters/mario/mario.png";
 import gioiaPng from "../assets/characters/gioia/gioia.png";
 import blackPng from "../assets/characters/cats/black.png";
+import orangePng from "../assets/characters/cats/orange.png";
+import whitePng from "../assets/characters/cats/white.png";
+import brownPng from "../assets/characters/cats/brown.png";
 import Player from "../entity/Player";
 import Sign from "../entity/Sign";
 import Character from "../entity/Character";
@@ -11,6 +14,9 @@ const townJson = require('../assets/main-town/town.json');
 const marioJson = require('../assets/characters/mario/mario.json');
 const gioiaJson = require('../assets/characters/gioia/gioia.json');
 const blackJson = require('../assets/characters/cats/black.json');
+const orangeJson = require('../assets/characters/cats/orange.json');
+const whiteJson = require('../assets/characters/cats/white.json');
+const brownJson = require('../assets/characters/cats/brown.json');
 
 export default class WorldScene extends Phaser.Scene {
     constructor() {
@@ -23,6 +29,9 @@ export default class WorldScene extends Phaser.Scene {
         this.load.atlas("mario", marioPng, marioJson)
         this.load.atlas("gioia", gioiaPng, gioiaJson)
         this.load.atlas("black", blackPng, blackJson)
+        this.load.atlas("orange", orangePng, orangeJson)
+        this.load.atlas("white", whitePng, whiteJson)
+        this.load.atlas("brown", brownPng, brownJson)
     }
 
     create(data) {
@@ -36,18 +45,27 @@ export default class WorldScene extends Phaser.Scene {
         const belowLayer = map.createStaticLayer("Below Player", tileset, 0, 0)
         const worldLayer = map.createStaticLayer("World", tileset, 0, 0)
         const aboveLayer = map.createStaticLayer("Above Player", tileset, 0, 0)
+        const objectLayer = map.getObjectLayer('Objects')
+
+        this.readableSigns = this.physics.add.group()
+        this.npc = this.physics.add.staticGroup()
+        objectLayer.objects.forEach((object) => {
+            if (object.type === 'sign') {
+                this.readableSigns.add(new Sign(this, object))
+            }
+            if (object.type === 'npc') {
+                this.npc.add(new Character(this, object.x, object.y, object.name, "front", true))
+            }
+            if (object.type === 'spawn') {
+                const spawnPoint = this.levelConfig.x && this.levelConfig.y
+                    ? { x: this.levelConfig.x, y: this.levelConfig.y }
+                    : { x: object.x, y: object.y }
+                this.player = new Player(this, spawnPoint.x, spawnPoint.y, "mario", "front")
+            }
+        })
+
         aboveLayer.setDepth(10)
 
-        const spawnPoint = this.levelConfig.x && this.levelConfig.y
-            ? { x: this.levelConfig.x, y: this.levelConfig.y }
-            : map.findObject("Objects", obj => obj.name === "Spawn Point")
-
-        this.player = new Player(this, spawnPoint.x, spawnPoint.y, "mario", "front")
-
-        this.npc = this.physics.add.staticGroup([
-            new Character(this, spawnPoint.x+250, spawnPoint.y-60, "gioia", "front", true),
-            new Character(this, spawnPoint.x+200, spawnPoint.y-70, "black", "front", true)
-        ])
         this.physics.add.collider(this.player, [this.npc],
             (player, item) => {
                 if (!this.dialogOpen) {
@@ -64,14 +82,6 @@ export default class WorldScene extends Phaser.Scene {
         this.physics.world.bounds.height = map.heightInPixels
 
         this.physics.add.collider(this.player, worldLayer)
-
-        this.readableSigns = this.physics.add.group()
-        const objectLayer = map.getObjectLayer('Objects')
-        objectLayer.objects.forEach((object) => {
-            if (object.type === 'sign') {
-                this.readableSigns.add(new Sign(this, object))
-            }
-        })
 
         this.player.setCollideWorldBounds(true)
 
