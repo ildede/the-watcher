@@ -34,7 +34,7 @@ export default class WorldScene extends Phaser.Scene {
             ? { x: this.levelConfig.x, y: this.levelConfig.y }
             : map.findObject("Objects", obj => obj.name === "Spawn Point")
 
-        this.player = new Player(this, spawnPoint.x, spawnPoint.y, "atlas", "mario-front")
+        this.player = new Player(this, spawnPoint.x, spawnPoint.y, "atlas", "front")
 
         worldLayer.setCollisionByProperty({ collide: true })
 
