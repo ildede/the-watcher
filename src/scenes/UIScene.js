@@ -72,7 +72,7 @@ export default class UIScene extends Phaser.Scene {
         let mainCamera = this.cameras.main
 
         this.input.keyboard.on(
-            'keydown-' + 'SPACE',
+            'keydown-SPACE',
             function() {
                 const icon = textBox.getElement('action').setVisible(false)
                 textBox.resetChildVisibleState(icon)
