@@ -91,11 +91,9 @@ export default class WorldScene extends Phaser.Scene {
         });
 
         const uiScene = this.scene.get('UIScene')
-        uiScene.events.once(
-            'startTransition',
-            function() {
-                this.cameras.main.fadeOut(500)
-                this.time.addEvent({
+        uiScene.events.once('startTransition', () => {
+            this.cameras.main.fadeOut(500)
+            this.time.addEvent({
                     delay: 500,
                     callback: () => {
                         this.events.off('update')
@@ -103,9 +101,7 @@ export default class WorldScene extends Phaser.Scene {
                         this.scene.start('TransitionScene', { x: this.player.x, y: this.player.y, new: this.levelConfig.new })
                     }
                 })
-            },
-            this
-        )
+        }, this)
 
         if (this.levelConfig.new) {
             this.events.emit('newGame')
