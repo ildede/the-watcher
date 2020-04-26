@@ -19,7 +19,6 @@ export default class UIScene extends Phaser.Scene {
     }
 
     create() {
-        console.log('Create UIScene')
         const currentGame = this.scene.get('WorldScene')
 
         const textBox = this.rexUI.add.textBox({
@@ -87,7 +86,7 @@ export default class UIScene extends Phaser.Scene {
         }, this)
 
         this.events.on('wake', () => {
-            mainCamera.fadeIn(0)
+            // mainCamera.fadeIn(0)
         })
     }
 }

@@ -6,7 +6,6 @@ export default class BootScene extends Phaser.Scene {
     }
 
     create() {
-        console.log('Create BootScene')
         this.scene.start('TitleScene')
     }
 }

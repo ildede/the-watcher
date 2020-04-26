@@ -7,8 +7,6 @@ export default class TitleScene extends Phaser.Scene {
     }
 
     create() {
-        console.log('Create TitleScene')
-
         this.add.text(160, 100, 'THE WATCHER', { fontSize: '70px' })
 
         const text = this.add.text(235, 320, 'start game', { fontSize: '30px' })

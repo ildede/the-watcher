@@ -12,7 +12,6 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         this.setSize(14, 15)
         this.setOffset(8, 17)
         this.createAnimations()
-        console.log('player', this)
     }
 
     update(cursors) {

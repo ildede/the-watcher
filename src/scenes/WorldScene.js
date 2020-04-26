@@ -19,11 +19,7 @@ export default class WorldScene extends Phaser.Scene {
     }
 
     create(data) {
-        // console.log('Create WorldScene')
-        // console.log(data)
         this.levelConfig = data
-
-        this.cameras.main.fadeIn(500)
 
         const map = this.make.tilemap({ key: "map" })
         const tileset = map.addTilesetImage("watcherbase", "tiles")
@@ -72,6 +68,7 @@ export default class WorldScene extends Phaser.Scene {
 
         this.cursors = this.input.keyboard.createCursorKeys();
 
+        console.debug('D: Turn on physics debugging to show player\'s hitbox')
         this.input.keyboard.once("keydown_D", event => {
             // Turn on physics debugging to show player's hitbox
             this.physics.world.createDebugGraphic();
@@ -88,18 +85,9 @@ export default class WorldScene extends Phaser.Scene {
             });
         });
 
-
+        console.debug('S: Test startTransition event')
         this.input.keyboard.once("keydown_S", event => {
-            console.log('S')
-            this.cameras.main.fadeOut(0)
-            this.time.addEvent({
-                delay: 0,
-                callback: () => {
-                    this.events.off('update')
-                    this.scene.sleep('UIScene')
-                    this.scene.start('TransitionScene', { x: this.player.x, y: this.player.y, new: this.levelConfig.new })
-                }
-            })
+            uiScene.events.emit('startTransition')
         });
 
         const uiScene = this.scene.get('UIScene')
@@ -112,7 +100,7 @@ export default class WorldScene extends Phaser.Scene {
                     callback: () => {
                         this.events.off('update')
                         this.scene.sleep('UIScene')
-                        this.scene.start('TransitionScene')
+                        this.scene.start('TransitionScene', { x: this.player.x, y: this.player.y, new: this.levelConfig.new })
                     }
                 })
             },
