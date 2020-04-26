@@ -33,6 +33,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "i18next": "^19.4.3",
     "phaser": "^3.20.1",
     "phaser3-rex-plugins": "^1.1.13"
   }
