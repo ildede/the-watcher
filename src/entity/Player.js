@@ -14,7 +14,6 @@ export default class Player extends Character {
 
     updateMovement(cursors) {
         const prevVelocity = this.body.velocity.clone();
-
         // Stop any previous movement from the last frame
         this.body.setVelocity(0);
 
@@ -45,13 +44,23 @@ export default class Player extends Character {
         } else if (cursors.down.isDown) {
             this.down()
         } else {
-            this.anims.stop();
-
             // If we were moving, pick and idle frame to use
-            if (prevVelocity.x < 0) this.setTexture(this.spriteKey, "left");
-            else if (prevVelocity.x > 0) this.setTexture(this.spriteKey, "right");
-            else if (prevVelocity.y < 0) this.setTexture(this.spriteKey, "back");
-            else if (prevVelocity.y > 0) this.setTexture(this.spriteKey, "front");
+            this.stopAnimation(prevVelocity);
         }
     }
+
+    stopAnimation(prevVelocity) {
+        this.anims.stop();
+        if (prevVelocity.x < 0) this.setTexture(this.spriteKey, "left");
+        else if (prevVelocity.x > 0) this.setTexture(this.spriteKey, "right");
+        else if (prevVelocity.y < 0) this.setTexture(this.spriteKey, "back");
+        else if (prevVelocity.y > 0) this.setTexture(this.spriteKey, "front");
+    }
+
+    stop() {
+        const prevVelocity = this.body.velocity.clone();
+        this.body.setVelocity(0);
+        this.stopAnimation(prevVelocity)
+    }
+
 }

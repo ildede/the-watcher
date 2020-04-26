@@ -2,6 +2,7 @@ import 'phaser'
 import townPng from "../assets/tileset/tileset.png";
 import marioPng from "../assets/characters/mario/mario.png";
 import gioiaPng from "../assets/characters/gioia/gioia.png";
+import blackPng from "../assets/characters/cats/black.png";
 import Player from "../entity/Player";
 import Sign from "../entity/Sign";
 import Character from "../entity/Character";
@@ -9,6 +10,7 @@ import Character from "../entity/Character";
 const townJson = require('../assets/main-town/town.json');
 const marioJson = require('../assets/characters/mario/mario.json');
 const gioiaJson = require('../assets/characters/gioia/gioia.json');
+const blackJson = require('../assets/characters/cats/black.json');
 
 export default class WorldScene extends Phaser.Scene {
     constructor() {
@@ -20,10 +22,12 @@ export default class WorldScene extends Phaser.Scene {
         this.load.tilemapTiledJSON("map", townJson)
         this.load.atlas("mario", marioPng, marioJson)
         this.load.atlas("gioia", gioiaPng, gioiaJson)
+        this.load.atlas("black", blackPng, blackJson)
     }
 
     create(data) {
         this.levelConfig = data
+        this.dialogOpen = false
 
         const map = this.make.tilemap({ key: "map" })
         const tileset = map.addTilesetImage("watcherbase", "tiles")
@@ -39,7 +43,20 @@ export default class WorldScene extends Phaser.Scene {
             : map.findObject("Objects", obj => obj.name === "Spawn Point")
 
         this.player = new Player(this, spawnPoint.x, spawnPoint.y, "mario", "front")
-        this.gioia = new Character(this, spawnPoint.x+90, spawnPoint.y-60, "gioia", "front")
+
+        this.npc = this.physics.add.staticGroup([
+            new Character(this, spawnPoint.x+250, spawnPoint.y-60, "gioia", "front", true),
+            new Character(this, spawnPoint.x+200, spawnPoint.y-70, "black", "front", true)
+        ])
+        this.physics.add.collider(this.player, [this.npc],
+            (player, item) => {
+                if (!this.dialogOpen) {
+                    if (item.lastVisit === undefined || (item.lastVisit && (Date.now() - item.lastVisit) / 1000 > 15)) {
+                        item.lastVisit = Date.now()
+                        this.events.emit('talkTo', item)
+                    }
+                }
+            })
 
         worldLayer.setCollisionByProperty({ collide: true })
 
@@ -100,18 +117,12 @@ export default class WorldScene extends Phaser.Scene {
         }, this)
 
         this.events.on('dialogStart', () => {
-            this.cursors.up.enabled = false
-            this.cursors.down.enabled = false
-            this.cursors.right.enabled = false
-            this.cursors.left.enabled = false
+            this.dialogOpen = true
             this.input.keyboard.off('keydown_SPACE');
             this.input.keyboard.on('keydown_SPACE', this.continueDialog());
         })
         this.events.on('dialogEnd', () => {
-            this.cursors.up.enabled = true
-            this.cursors.down.enabled = true
-            this.cursors.right.enabled = true
-            this.cursors.left.enabled = true
+            this.dialogOpen = false
             this.input.keyboard.off('keydown_SPACE');
             this.input.keyboard.on('keydown_SPACE', this.playerAction());
         })
@@ -125,16 +136,17 @@ export default class WorldScene extends Phaser.Scene {
     }
 
     update(time, delta) {
-        this.player.update(this.cursors)
+        if (!this.dialogOpen) {
+            this.player.update(this.cursors)
+        } else {
+            this.player.stop();
+        }
     }
 
     continueDialog() { return () => this.events.emit('continueDialog') }
-    playerAction() { return () => this.physics.overlap(
-            this.player,
-            this.readableSigns,
-            (player, item) => this.events.emit('readSign', item),
-            null,
-            this)
-    }
+    playerAction() { return () => {
+        this.physics.overlap(this.player, this.readableSigns,
+            (player, item) => this.events.emit('readSign', item))
+    }}
 }
 
