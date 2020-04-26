@@ -78,19 +78,19 @@ export default class UIScene extends Phaser.Scene {
         }, textBox)
 
         currentGame.events.on('newGame', function() {
-            console.log('Event newGame received')
+            console.debug('Event newGame received')
             currentGame.events.emit('dialogStart')
             textBox.setVisible(true).start(welcomeMessages(), 50)
         }, this)
 
-        currentGame.events.on('signRead', function(sign) {
-            console.log('Event signRead received')
+        currentGame.events.on('readSign', function(sign) {
+            console.debug('Event readSign received')
             currentGame.events.emit('dialogStart')
             textBox.setVisible(true).start(sign.stringId(), 50)
         }, this)
 
         currentGame.events.on('continueDialog', function() {
-            console.log('Event continueDialog received')
+            console.debug('Event continueDialog received')
             const icon = textBox.getElement('action').setVisible(false)
             textBox.resetChildVisibleState(icon)
             if (this.isTyping) {

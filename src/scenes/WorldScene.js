@@ -127,7 +127,7 @@ export default class WorldScene extends Phaser.Scene {
     playerAction() { return () => this.physics.overlap(
             this.player,
             this.readableSigns,
-            (player, item) => this.events.emit('signRead', item),
+            (player, item) => this.events.emit('readSign', item),
             null,
             this)
     }
