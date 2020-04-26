@@ -8,6 +8,8 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         this.scene.add.existing(this)
         this.scene.physics.world.enable(this)
 
+        this.spriteKey = spriteKey
+
         this.setScale(1.6, 1.6)
         this.setSize(14, 15)
         this.setOffset(8, 17)
@@ -55,10 +57,10 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
             this.anims.stop();
 
             // If we were moving, pick and idle frame to use
-            if (prevVelocity.x < 0) this.setTexture("atlas", "left");
-            else if (prevVelocity.x > 0) this.setTexture("atlas", "right");
-            else if (prevVelocity.y < 0) this.setTexture("atlas", "back");
-            else if (prevVelocity.y > 0) this.setTexture("atlas", "front");
+            if (prevVelocity.x < 0) this.setTexture(this.spriteKey, "left");
+            else if (prevVelocity.x > 0) this.setTexture(this.spriteKey, "right");
+            else if (prevVelocity.y < 0) this.setTexture(this.spriteKey, "back");
+            else if (prevVelocity.y > 0) this.setTexture(this.spriteKey, "front");
         }
     }
 
@@ -66,7 +68,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         const anims = this.scene.anims;
         anims.create({
             key: "left-walk",
-            frames: anims.generateFrameNames("atlas", {
+            frames: anims.generateFrameNames(this.spriteKey, {
                 prefix: "left-walk.",
                 start: 0,
                 end: 3,
@@ -77,7 +79,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         });
         anims.create({
             key: "right-walk",
-            frames: anims.generateFrameNames("atlas", {
+            frames: anims.generateFrameNames(this.spriteKey, {
                 prefix: "right-walk.",
                 start: 0,
                 end: 3,
@@ -88,7 +90,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         });
         anims.create({
             key: "front-walk",
-            frames: anims.generateFrameNames("atlas", {
+            frames: anims.generateFrameNames(this.spriteKey, {
                 prefix: "front-walk.",
                 start: 0,
                 end: 3,
@@ -99,7 +101,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         });
         anims.create({
             key: "back-walk",
-            frames: anims.generateFrameNames("atlas", {
+            frames: anims.generateFrameNames(this.spriteKey, {
                 prefix: "back-walk.",
                 start: 0,
                 end: 3,
