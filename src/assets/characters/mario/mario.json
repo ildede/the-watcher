@@ -1,0 +1,140 @@
+{"frames": {
+
+"mario-back-walk.000":
+{
+	"frame": {"x":1,"y":1,"w":28,"h":32},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":0,"w":28,"h":32},
+	"sourceSize": {"w":32,"h":32}
+},
+"mario-back-walk.001":
+{
+	"frame": {"x":1,"y":35,"w":28,"h":32},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":0,"w":28,"h":32},
+	"sourceSize": {"w":32,"h":32}
+},
+"mario-back-walk.002":
+{
+	"frame": {"x":1,"y":69,"w":28,"h":32},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":0,"w":28,"h":32},
+	"sourceSize": {"w":32,"h":32}
+},
+"mario-back":
+{
+	"frame": {"x":1,"y":1,"w":28,"h":32},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":0,"w":28,"h":32},
+	"sourceSize": {"w":32,"h":32}
+},
+"mario-front-walk.000":
+{
+	"frame": {"x":31,"y":1,"w":28,"h":32},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":0,"w":28,"h":32},
+	"sourceSize": {"w":32,"h":32}
+},
+"mario-front-walk.001":
+{
+	"frame": {"x":31,"y":35,"w":28,"h":32},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":0,"w":28,"h":32},
+	"sourceSize": {"w":32,"h":32}
+},
+"mario-front-walk.002":
+{
+	"frame": {"x":31,"y":69,"w":28,"h":32},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":0,"w":28,"h":32},
+	"sourceSize": {"w":32,"h":32}
+},
+"mario-front":
+{
+	"frame": {"x":31,"y":1,"w":28,"h":32},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":0,"w":28,"h":32},
+	"sourceSize": {"w":32,"h":32}
+},
+"mario-left-walk.000":
+{
+	"frame": {"x":61,"y":1,"w":22,"h":32},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":0,"w":22,"h":32},
+	"sourceSize": {"w":32,"h":32}
+},
+"mario-left-walk.001":
+{
+	"frame": {"x":61,"y":35,"w":22,"h":32},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":0,"w":22,"h":32},
+	"sourceSize": {"w":32,"h":32}
+},
+"mario-left-walk.002":
+{
+	"frame": {"x":61,"y":69,"w":22,"h":32},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":0,"w":22,"h":32},
+	"sourceSize": {"w":32,"h":32}
+},
+"mario-left":
+{
+	"frame": {"x":61,"y":1,"w":22,"h":32},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":0,"w":22,"h":32},
+	"sourceSize": {"w":32,"h":32}
+},
+"mario-right-walk.000":
+{
+	"frame": {"x":85,"y":1,"w":22,"h":32},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":0,"w":22,"h":32},
+	"sourceSize": {"w":32,"h":32}
+},
+"mario-right-walk.001":
+{
+	"frame": {"x":85,"y":35,"w":22,"h":32},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":0,"w":22,"h":32},
+	"sourceSize": {"w":32,"h":32}
+},
+"mario-right-walk.002":
+{
+	"frame": {"x":85,"y":69,"w":22,"h":32},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":0,"w":22,"h":32},
+	"sourceSize": {"w":32,"h":32}
+},
+"mario-right":
+{
+	"frame": {"x":85,"y":1,"w":22,"h":32},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":0,"w":22,"h":32},
+	"sourceSize": {"w":32,"h":32}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "mario.png",
+	"format": "RGBA8888",
+	"size": {"w":108,"h":102},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:972379dded664a232c8324f285c6afea:b61e24a42c5a5cd96c8568a79f0eaaaa:049a1e10ddf44989e4af4e84fecd01e8$"
+}
+}

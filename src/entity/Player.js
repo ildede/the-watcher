@@ -8,8 +8,11 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         this.scene.add.existing(this)
         this.scene.physics.world.enable(this)
 
-        this.setSize(30, 28)
-        this.setOffset(0, 38)
+        this.setScale(1.6, 1.6)
+        this.setSize(14, 15)
+        this.setOffset(8, 17)
+        this.createAnimations()
+        console.log('player', this)
     }
 
     update(cursors) {
@@ -42,21 +45,69 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
         // Update the animation last and give left/right animations precedence over up/down animations
         if (cursors.left.isDown) {
-            this.anims.play("misa-left-walk", true);
+            this.anims.play("mario-left-walk", true);
         } else if (cursors.right.isDown) {
-            this.anims.play("misa-right-walk", true);
+            this.anims.play("mario-right-walk", true);
         } else if (cursors.up.isDown) {
-            this.anims.play("misa-back-walk", true);
+            this.anims.play("mario-back-walk", true);
         } else if (cursors.down.isDown) {
-            this.anims.play("misa-front-walk", true);
+            this.anims.play("mario-front-walk", true);
         } else {
             this.anims.stop();
 
             // If we were moving, pick and idle frame to use
-            if (prevVelocity.x < 0) this.setTexture("atlas", "misa-left");
-            else if (prevVelocity.x > 0) this.setTexture("atlas", "misa-right");
-            else if (prevVelocity.y < 0) this.setTexture("atlas", "misa-back");
-            else if (prevVelocity.y > 0) this.setTexture("atlas", "misa-front");
+            if (prevVelocity.x < 0) this.setTexture("atlas", "mario-left");
+            else if (prevVelocity.x > 0) this.setTexture("atlas", "mario-right");
+            else if (prevVelocity.y < 0) this.setTexture("atlas", "mario-back");
+            else if (prevVelocity.y > 0) this.setTexture("atlas", "mario-front");
         }
+    }
+
+    createAnimations() {
+        const anims = this.scene.anims;
+        anims.create({
+            key: "mario-left-walk",
+            frames: anims.generateFrameNames("atlas", {
+                prefix: "mario-left-walk.",
+                start: 0,
+                end: 3,
+                zeroPad: 3
+            }),
+            frameRate: 10,
+            repeat: -1
+        });
+        anims.create({
+            key: "mario-right-walk",
+            frames: anims.generateFrameNames("atlas", {
+                prefix: "mario-right-walk.",
+                start: 0,
+                end: 3,
+                zeroPad: 3
+            }),
+            frameRate: 10,
+            repeat: -1
+        });
+        anims.create({
+            key: "mario-front-walk",
+            frames: anims.generateFrameNames("atlas", {
+                prefix: "mario-front-walk.",
+                start: 0,
+                end: 3,
+                zeroPad: 3
+            }),
+            frameRate: 10,
+            repeat: -1
+        });
+        anims.create({
+            key: "mario-back-walk",
+            frames: anims.generateFrameNames("atlas", {
+                prefix: "mario-back-walk.",
+                start: 0,
+                end: 3,
+                zeroPad: 3
+            }),
+            frameRate: 10,
+            repeat: -1
+        });
     }
 }

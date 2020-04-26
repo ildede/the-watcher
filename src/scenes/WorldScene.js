@@ -1,11 +1,11 @@
 import 'phaser'
 import townPng from "../assets/tileset/tileset.png";
-import atlasPng from "../assets/atlas/atlas.png";
+import atlasPng from "../assets/characters/mario/mario.png";
 import Player from "../entity/Player";
 import Sign from "../entity/Sign";
 
 const townJson = require('../assets/main-town/town.json');
-const atlasJson = require('../assets/atlas/atlas.json');
+const atlasJson = require('../assets/characters/mario/mario.json');
 
 export default class WorldScene extends Phaser.Scene {
     constructor() {
@@ -19,8 +19,8 @@ export default class WorldScene extends Phaser.Scene {
     }
 
     create(data) {
-        console.log('Create WorldScene')
-        console.log(data)
+        // console.log('Create WorldScene')
+        // console.log(data)
         this.levelConfig = data
 
         this.cameras.main.fadeIn(500)
@@ -38,7 +38,7 @@ export default class WorldScene extends Phaser.Scene {
             ? { x: this.levelConfig.x, y: this.levelConfig.y }
             : map.findObject("Objects", obj => obj.name === "Spawn Point")
 
-        this.player = new Player(this, spawnPoint.x, spawnPoint.y, "atlas", "misa-front")
+        this.player = new Player(this, spawnPoint.x, spawnPoint.y, "atlas", "mario-front")
 
         worldLayer.setCollisionByProperty({ collide: true })
 
@@ -56,7 +56,7 @@ export default class WorldScene extends Phaser.Scene {
             }
         })
 
-        this.physics.add.collider(
+        this.physics.add.overlap(
             this.player,
             this.readableSigns,
             this.startDialogue,
@@ -68,10 +68,9 @@ export default class WorldScene extends Phaser.Scene {
 
         this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels)
         this.cameras.main.startFollow(this.player)
+        this.cameras.main.setZoom(1.3)
 
         this.cursors = this.input.keyboard.createCursorKeys();
-
-        this.createAnimations();
 
         this.input.keyboard.once("keydown_D", event => {
             // Turn on physics debugging to show player's hitbox
@@ -128,54 +127,6 @@ export default class WorldScene extends Phaser.Scene {
 
     update(time, delta) {
         this.player.update(this.cursors)
-    }
-
-    createAnimations() {
-        const anims = this.anims;
-        anims.create({
-            key: "misa-left-walk",
-            frames: anims.generateFrameNames("atlas", {
-                prefix: "misa-left-walk.",
-                start: 0,
-                end: 3,
-                zeroPad: 3
-            }),
-            frameRate: 10,
-            repeat: -1
-        });
-        anims.create({
-            key: "misa-right-walk",
-            frames: anims.generateFrameNames("atlas", {
-                prefix: "misa-right-walk.",
-                start: 0,
-                end: 3,
-                zeroPad: 3
-            }),
-            frameRate: 10,
-            repeat: -1
-        });
-        anims.create({
-            key: "misa-front-walk",
-            frames: anims.generateFrameNames("atlas", {
-                prefix: "misa-front-walk.",
-                start: 0,
-                end: 3,
-                zeroPad: 3
-            }),
-            frameRate: 10,
-            repeat: -1
-        });
-        anims.create({
-            key: "misa-back-walk",
-            frames: anims.generateFrameNames("atlas", {
-                prefix: "misa-back-walk.",
-                start: 0,
-                end: 3,
-                zeroPad: 3
-            }),
-            frameRate: 10,
-            repeat: -1
-        });
     }
 
     startDialogue(player, item) {
