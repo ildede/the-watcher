@@ -30,7 +30,7 @@ export default class UIScene extends Phaser.Scene {
 
         i18next
             .init({
-                lng: data.language,
+                lng: this.uiConfig.language,
                 resources: {
                     en: {translation: this.cache.json.get('enTranslation')},
                     it: {translation: this.cache.json.get('itTranslation')}
@@ -72,34 +72,36 @@ export default class UIScene extends Phaser.Scene {
 
         let mainCamera = this.cameras.main
 
-        this.input.keyboard.on(
-            'keydown-SPACE',
-            function() {
-                const icon = textBox.getElement('action').setVisible(false)
-                textBox.resetChildVisibleState(icon)
-                if (this.isTyping) {
-                    this.stop(true)
-                } else if (this.isLastPage) {
-                    textBox.setVisible(false)
-                } else {
-                    this.typeNextPage()
-                }
-            },
-            textBox
-        )
-
         textBox.on('pageend', function() {
             const icon = textBox.getElement('action').setVisible(true)
             textBox.resetChildVisibleState(icon)
         }, textBox)
 
         currentGame.events.on('newGame', function() {
+            console.log('Event newGame received')
+            currentGame.events.emit('dialogStart')
             textBox.setVisible(true).start(welcomeMessages(), 50)
         }, this)
 
         currentGame.events.on('signRead', function(sign) {
+            console.log('Event signRead received')
+            currentGame.events.emit('dialogStart')
             textBox.setVisible(true).start(sign.stringId(), 50)
         }, this)
+
+        currentGame.events.on('continueDialog', function() {
+            console.log('Event continueDialog received')
+            const icon = textBox.getElement('action').setVisible(false)
+            textBox.resetChildVisibleState(icon)
+            if (this.isTyping) {
+                this.stop(true)
+            } else if (this.isLastPage) {
+                textBox.setVisible(false)
+                currentGame.events.emit('dialogEnd')
+            } else {
+                this.typeNextPage()
+            }
+        }, textBox)
 
         this.events.on('wake', () => {
             mainCamera.fadeIn(500)

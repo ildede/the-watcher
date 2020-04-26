@@ -44,21 +44,12 @@ export default class WorldScene extends Phaser.Scene {
         this.physics.add.collider(this.player, worldLayer)
 
         this.readableSigns = this.physics.add.group()
-
         const objectLayer = map.getObjectLayer('Objects')
         objectLayer.objects.forEach((object) => {
             if (object.type === 'sign') {
                 this.readableSigns.add(new Sign(this, object))
             }
         })
-
-        this.physics.add.overlap(
-            this.player,
-            this.readableSigns,
-            this.startDialogue,
-            null,
-            this
-        )
 
         this.player.setCollideWorldBounds(true)
 
@@ -103,9 +94,28 @@ export default class WorldScene extends Phaser.Scene {
                 })
         }, this)
 
+        this.events.on('dialogStart', () => {
+            this.cursors.up.enabled = false
+            this.cursors.down.enabled = false
+            this.cursors.right.enabled = false
+            this.cursors.left.enabled = false
+            this.input.keyboard.off('keydown_SPACE');
+            this.input.keyboard.on('keydown_SPACE', this.continueDialog());
+        })
+        this.events.on('dialogEnd', () => {
+            this.cursors.up.enabled = true
+            this.cursors.down.enabled = true
+            this.cursors.right.enabled = true
+            this.cursors.left.enabled = true
+            this.input.keyboard.off('keydown_SPACE');
+            this.input.keyboard.on('keydown_SPACE', this.playerAction());
+        })
+
         if (this.levelConfig.new) {
             this.events.emit('newGame')
             this.levelConfig.new = false
+        } else {
+            this.input.keyboard.on('keydown_SPACE', this.playerAction());
         }
     }
 
@@ -113,7 +123,13 @@ export default class WorldScene extends Phaser.Scene {
         this.player.update(this.cursors)
     }
 
-    startDialogue(player, item) {
-        this.events.emit('signRead', item)
+    continueDialog() { return () => this.events.emit('continueDialog') }
+    playerAction() { return () => this.physics.overlap(
+            this.player,
+            this.readableSigns,
+            (player, item) => this.events.emit('signRead', item),
+            null,
+            this)
     }
 }
+
