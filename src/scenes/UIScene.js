@@ -89,6 +89,11 @@ export default class UIScene extends Phaser.Scene {
             textBox.setVisible(true).start(sign.stringId(), 50)
         }, this)
 
+        currentGame.events.on('talkTo', function(npc) {
+            currentGame.events.emit('dialogStart')
+            textBox.setVisible(true).start(`Stop touching me! (I'm ${npc.spriteKey})`, 50)
+        }, this)
+
         currentGame.events.on('continueDialog', function() {
             console.debug('Event continueDialog received')
             const icon = textBox.getElement('action').setVisible(false)
