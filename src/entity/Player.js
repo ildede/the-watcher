@@ -7,8 +7,8 @@ export default class Player extends Character {
 
         this.speed = 175
 
-        this.setSize(this.width, this.height/2)
-        this.setOffset(0, this.height/2)
+        this.setSize(this.width/2, this.height/2)
+        this.setOffset(this.width/4, this.height/2)
     }
 
     update(cursors) {
