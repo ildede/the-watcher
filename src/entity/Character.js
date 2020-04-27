@@ -10,11 +10,8 @@ export default class Character extends Phaser.Physics.Arcade.Sprite {
 
         this.spriteKey = spriteKey
 
-        console.log(this)
-        this.setScale(1.6, 1.6)
-        // this.setSize(14, 15)
-        // this.setOffset(8, 17)
         this.createAnimations()
+        this.down()
     }
 
     down() { this.anims.play(this.spriteKey+"front-walk", true) }
@@ -32,7 +29,7 @@ export default class Character extends Phaser.Physics.Arcade.Sprite {
                 end: 2,
                 zeroPad: 3
             }),
-            frameRate: 10,
+            frameRate: 7,
             repeat: -1
         });
         anims.create({
@@ -43,7 +40,7 @@ export default class Character extends Phaser.Physics.Arcade.Sprite {
                 end: 3,
                 zeroPad: 3
             }),
-            frameRate: 10,
+            frameRate: 7,
             repeat: -1
         });
         anims.create({
@@ -54,7 +51,7 @@ export default class Character extends Phaser.Physics.Arcade.Sprite {
                 end: 2,
                 zeroPad: 3
             }),
-            frameRate: 10,
+            frameRate: 7,
             repeat: -1
         });
         anims.create({
@@ -65,7 +62,7 @@ export default class Character extends Phaser.Physics.Arcade.Sprite {
                 end: 2,
                 zeroPad: 3
             }),
-            frameRate: 10,
+            frameRate: 7,
             repeat: -1
         });
     }

@@ -6,6 +6,9 @@ export default class Player extends Character {
         super(scene, x, y, spriteKey, frame, false)
 
         this.speed = 175
+
+        this.setSize(this.width, this.height/2)
+        this.setOffset(0, this.height/2)
     }
 
     update(cursors) {

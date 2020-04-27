@@ -1,22 +1,34 @@
 import 'phaser'
+import Player from "../entity/Player";
+import Sign from "../entity/Sign";
+import Character from "../entity/Character";
+
 import townPng from "../assets/tileset/tileset.png";
+const townJson = require('../assets/main-town/town.json');
+
 import marioPng from "../assets/characters/mario/mario.png";
 import gioiaPng from "../assets/characters/gioia/gioia.png";
 import blackPng from "../assets/characters/cats/black.png";
 import orangePng from "../assets/characters/cats/orange.png";
 import whitePng from "../assets/characters/cats/white.png";
 import brownPng from "../assets/characters/cats/brown.png";
-import Player from "../entity/Player";
-import Sign from "../entity/Sign";
-import Character from "../entity/Character";
+import amarantaPng from "../assets/characters/npcs/amaranta.png";
+import amilcarePng from "../assets/characters/npcs/amilcare.png";
+import carolinaPng from "../assets/characters/npcs/carolina.png";
+import debborahPng from "../assets/characters/npcs/debborah.png";
+import ezechielePng from "../assets/characters/npcs/ezechiele.png";
 
-const townJson = require('../assets/main-town/town.json');
 const marioJson = require('../assets/characters/mario/mario.json');
 const gioiaJson = require('../assets/characters/gioia/gioia.json');
 const blackJson = require('../assets/characters/cats/black.json');
 const orangeJson = require('../assets/characters/cats/orange.json');
 const whiteJson = require('../assets/characters/cats/white.json');
 const brownJson = require('../assets/characters/cats/brown.json');
+const amarantaJson = require('../assets/characters/npcs/amaranta.json');
+const amilcareJson = require('../assets/characters/npcs/amilcare.json');
+const carolinaJson = require('../assets/characters/npcs/carolina.json');
+const debborahJson = require('../assets/characters/npcs/debborah.json');
+const ezechieleJson = require('../assets/characters/npcs/ezechiele.json');
 
 export default class WorldScene extends Phaser.Scene {
     constructor() {
@@ -32,6 +44,11 @@ export default class WorldScene extends Phaser.Scene {
         this.load.atlas("orange", orangePng, orangeJson)
         this.load.atlas("white", whitePng, whiteJson)
         this.load.atlas("brown", brownPng, brownJson)
+        this.load.atlas("amaranta", amarantaPng, amarantaJson)
+        this.load.atlas("amilcare", amilcarePng, amilcareJson)
+        this.load.atlas("carolina", carolinaPng, carolinaJson)
+        this.load.atlas("debborah", debborahPng, debborahJson)
+        this.load.atlas("ezechiele", ezechielePng, ezechieleJson)
     }
 
     create(data) {
@@ -60,7 +77,7 @@ export default class WorldScene extends Phaser.Scene {
                 const spawnPoint = this.levelConfig.x && this.levelConfig.y
                     ? { x: this.levelConfig.x, y: this.levelConfig.y }
                     : { x: object.x, y: object.y }
-                this.player = new Player(this, spawnPoint.x, spawnPoint.y, "mario", "front")
+                this.player = new Player(this, spawnPoint.x, spawnPoint.y, "ezechiele", "front")
             }
         })
 

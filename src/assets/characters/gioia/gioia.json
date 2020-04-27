@@ -4,30 +4,30 @@
 			"image": "gioia.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 28,
-				"h": 408
+				"w": 444,
+				"h": 50
 			},
-			"scale": 1,
+			"scale": 1.5,
 			"frames": [
 				{
 					"filename": "back-walk.000",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 26,
-						"h": 32
+						"w": 38,
+						"h": 48
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 26,
-						"h": 32
+						"w": 38,
+						"h": 48
 					},
 					"frame": {
 						"x": 1,
 						"y": 1,
-						"w": 26,
-						"h": 32
+						"w": 38,
+						"h": 48
 					}
 				},
 				{
@@ -35,41 +35,20 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 26,
-						"h": 32
+						"w": 38,
+						"h": 48
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 26,
-						"h": 32
+						"w": 38,
+						"h": 48
 					},
 					"frame": {
 						"x": 1,
 						"y": 1,
-						"w": 26,
-						"h": 32
-					}
-				},
-				{
-					"filename": "back-walk.001",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 26,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 26,
-						"h": 32
-					},
-					"frame": {
-						"x": 1,
-						"y": 35,
-						"w": 26,
-						"h": 32
+						"w": 38,
+						"h": 48
 					}
 				},
 				{
@@ -77,20 +56,20 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 26,
-						"h": 32
+						"w": 38,
+						"h": 48
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 26,
-						"h": 32
+						"w": 38,
+						"h": 48
 					},
 					"frame": {
-						"x": 1,
-						"y": 69,
-						"w": 26,
-						"h": 32
+						"x": 41,
+						"y": 1,
+						"w": 38,
+						"h": 48
 					}
 				},
 				{
@@ -98,20 +77,20 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 26,
-						"h": 32
+						"w": 38,
+						"h": 48
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 26,
-						"h": 32
+						"w": 38,
+						"h": 48
 					},
 					"frame": {
-						"x": 1,
-						"y": 103,
-						"w": 26,
-						"h": 32
+						"x": 81,
+						"y": 1,
+						"w": 38,
+						"h": 48
 					}
 				},
 				{
@@ -119,41 +98,20 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 26,
-						"h": 32
+						"w": 38,
+						"h": 48
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 26,
-						"h": 32
+						"w": 38,
+						"h": 48
 					},
 					"frame": {
-						"x": 1,
-						"y": 103,
-						"w": 26,
-						"h": 32
-					}
-				},
-				{
-					"filename": "front-walk.001",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 26,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 26,
-						"h": 32
-					},
-					"frame": {
-						"x": 1,
-						"y": 137,
-						"w": 26,
-						"h": 32
+						"x": 81,
+						"y": 1,
+						"w": 38,
+						"h": 48
 					}
 				},
 				{
@@ -161,20 +119,20 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 26,
-						"h": 32
+						"w": 38,
+						"h": 48
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 26,
-						"h": 32
+						"w": 38,
+						"h": 48
 					},
 					"frame": {
-						"x": 1,
-						"y": 171,
-						"w": 26,
-						"h": 32
+						"x": 121,
+						"y": 1,
+						"w": 38,
+						"h": 48
 					}
 				},
 				{
@@ -182,20 +140,20 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 22,
-						"h": 32
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 22,
-						"h": 32
+						"w": 32,
+						"h": 48
 					},
 					"frame": {
-						"x": 1,
-						"y": 205,
-						"w": 22,
-						"h": 32
+						"x": 161,
+						"y": 1,
+						"w": 32,
+						"h": 48
 					}
 				},
 				{
@@ -203,41 +161,20 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 22,
-						"h": 32
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 22,
-						"h": 32
+						"w": 32,
+						"h": 48
 					},
 					"frame": {
-						"x": 1,
-						"y": 205,
-						"w": 22,
-						"h": 32
-					}
-				},
-				{
-					"filename": "left-walk.001",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 22,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 22,
-						"h": 32
-					},
-					"frame": {
-						"x": 1,
-						"y": 239,
-						"w": 22,
-						"h": 32
+						"x": 161,
+						"y": 1,
+						"w": 32,
+						"h": 48
 					}
 				},
 				{
@@ -245,20 +182,20 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 22,
-						"h": 32
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 22,
-						"h": 32
+						"w": 32,
+						"h": 48
 					},
 					"frame": {
-						"x": 1,
-						"y": 273,
-						"w": 22,
-						"h": 32
+						"x": 195,
+						"y": 1,
+						"w": 32,
+						"h": 48
 					}
 				},
 				{
@@ -266,20 +203,20 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 22,
-						"h": 32
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 22,
-						"h": 32
+						"w": 32,
+						"h": 48
 					},
 					"frame": {
-						"x": 1,
-						"y": 307,
-						"w": 22,
-						"h": 32
+						"x": 229,
+						"y": 1,
+						"w": 32,
+						"h": 48
 					}
 				},
 				{
@@ -287,41 +224,20 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 22,
-						"h": 32
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 22,
-						"h": 32
+						"w": 32,
+						"h": 48
 					},
 					"frame": {
-						"x": 1,
-						"y": 307,
-						"w": 22,
-						"h": 32
-					}
-				},
-				{
-					"filename": "right-walk.001",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 22,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 22,
-						"h": 32
-					},
-					"frame": {
-						"x": 1,
-						"y": 341,
-						"w": 22,
-						"h": 32
+						"x": 229,
+						"y": 1,
+						"w": 32,
+						"h": 48
 					}
 				},
 				{
@@ -329,20 +245,104 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 22,
-						"h": 32
+						"w": 32,
+						"h": 48
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 22,
-						"h": 32
+						"w": 32,
+						"h": 48
 					},
 					"frame": {
-						"x": 1,
-						"y": 375,
-						"w": 22,
-						"h": 32
+						"x": 263,
+						"y": 1,
+						"w": 32,
+						"h": 48
+					}
+				},
+				{
+					"filename": "back-walk.001",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 38,
+						"h": 47
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 38,
+						"h": 47
+					},
+					"frame": {
+						"x": 297,
+						"y": 1,
+						"w": 38,
+						"h": 47
+					}
+				},
+				{
+					"filename": "front-walk.001",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 38,
+						"h": 47
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 38,
+						"h": 47
+					},
+					"frame": {
+						"x": 337,
+						"y": 1,
+						"w": 38,
+						"h": 47
+					}
+				},
+				{
+					"filename": "left-walk.001",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 47
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 47
+					},
+					"frame": {
+						"x": 377,
+						"y": 1,
+						"w": 32,
+						"h": 47
+					}
+				},
+				{
+					"filename": "right-walk.001",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 47
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 47
+					},
+					"frame": {
+						"x": 411,
+						"y": 1,
+						"w": 32,
+						"h": 47
 					}
 				}
 			]
@@ -351,6 +351,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:2795898c1c0bd811c5419d2c2cabcc73:dd36d9f1cad1a278f58955856370ebd1:267e4852061ef6a3bb9b6df3f01ed59a$"
+		"smartupdate": "$TexturePacker:SmartUpdate:09ec70ac14dd7a0ef6159ca27f039125:dd36d9f1cad1a278f58955856370ebd1:267e4852061ef6a3bb9b6df3f01ed59a$"
 	}
 }
