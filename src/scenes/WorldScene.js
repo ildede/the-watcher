@@ -97,7 +97,7 @@ export default class WorldScene extends Phaser.Scene {
                 }
             })
 
-        this.physics.add.collider(this.player, [this.systemMessage],
+        this.physics.add.overlap(this.player, [this.systemMessage],
             (player, item) => {
                 if (!this.dialogOpen) {
                     if (item.lastVisit === undefined || (item.lastVisit && (Date.now() - item.lastVisit) / 1000 > 15)) {

@@ -77,6 +77,9 @@ export default class UIScene extends Phaser.Scene {
             if (item.stringId()) {
                 currentGame.events.emit('dialogStart')
                 textBox.setVisible(true).start(item.stringId().split(',').map(s => i18next.t(s)), 50)
+                if (item.showOnce()) {
+                    item.stringId = () => {}
+                }
             }
         }, this)
 
