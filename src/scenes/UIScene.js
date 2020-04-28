@@ -2,8 +2,7 @@ import 'phaser'
 import nextPage from "../assets/UI/arrow-down-left.png";
 import i18next from 'i18next';
 
-const enTranslation = require('../locales/en/translation.json');
-const itTranslation = require('../locales/it/translation.json');
+const theArrival = require('../locales/the_arrival.json');
 
 export default class UIScene extends Phaser.Scene {
 
@@ -20,8 +19,7 @@ export default class UIScene extends Phaser.Scene {
 
         this.load.image('nextPage', nextPage)
 
-        this.load.json('enTranslation', enTranslation)
-        this.load.json('itTranslation', itTranslation)
+        this.load.json('langResource', theArrival)
     }
 
     create(data) {
@@ -31,10 +29,7 @@ export default class UIScene extends Phaser.Scene {
         i18next
             .init({
                 lng: this.uiConfig.language,
-                resources: {
-                    en: {translation: this.cache.json.get('enTranslation')},
-                    it: {translation: this.cache.json.get('itTranslation')}
-                }
+                resources: this.cache.json.get('langResource')
             }).then(function (t) {
                 console.debug('i18next initialized')
             })
@@ -77,10 +72,10 @@ export default class UIScene extends Phaser.Scene {
             textBox.resetChildVisibleState(icon)
         }, textBox)
 
-        currentGame.events.on('newGame', function() {
-            console.debug('Event newGame received')
+        currentGame.events.on('systemMessage', function(message) {
+            console.debug('Event systemMessage received')
             currentGame.events.emit('dialogStart')
-            textBox.setVisible(true).start(welcomeMessages(), 50)
+            textBox.setVisible(true).start(i18next.t(message.stringId()), 50)
         }, this)
 
         currentGame.events.on('readSign', function(sign) {
@@ -90,6 +85,7 @@ export default class UIScene extends Phaser.Scene {
         }, this)
 
         currentGame.events.on('talkTo', function(npc) {
+            console.debug('Event talkTo received')
             currentGame.events.emit('dialogStart')
             textBox.setVisible(true).start(`Stop touching me! (I'm ${npc.spriteKey})`, 50)
         }, this)
@@ -142,15 +138,3 @@ const getBBcodeText = function(scene, wrapWidth, fixedWidth, fixedHeight) {
         }
     })
 }
-
-const welcomeMessages = () => {
-    return [
-        i18next.t('System_001'),
-        i18next.t('System_002'),
-        i18next.t('System_003'),
-        i18next.t('System_004'),
-        i18next.t('System_005'),
-        i18next.t('System_006'),
-    ]
-}
-

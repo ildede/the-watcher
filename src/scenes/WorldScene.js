@@ -65,10 +65,14 @@ export default class WorldScene extends Phaser.Scene {
         const objectLayer = map.getObjectLayer('Objects')
 
         this.readableSigns = this.physics.add.group()
+        this.systemMessage = this.physics.add.group()
         this.npc = this.physics.add.staticGroup()
         objectLayer.objects.forEach((object) => {
             if (object.type === 'sign') {
                 this.readableSigns.add(new Sign(this, object))
+            }
+            if (object.type === 'message') {
+                this.systemMessage.add(new Sign(this, object))
             }
             if (object.type === 'npc') {
                 this.npc.add(new Character(this, object.x, object.y, object.name, "front", true))
@@ -77,7 +81,7 @@ export default class WorldScene extends Phaser.Scene {
                 const spawnPoint = this.levelConfig.x && this.levelConfig.y
                     ? { x: this.levelConfig.x, y: this.levelConfig.y }
                     : { x: object.x, y: object.y }
-                this.player = new Player(this, spawnPoint.x, spawnPoint.y, "ezechiele", "front")
+                this.player = new Player(this, spawnPoint.x, spawnPoint.y, "amilcare", "front")
             }
         })
 
@@ -89,6 +93,16 @@ export default class WorldScene extends Phaser.Scene {
                     if (item.lastVisit === undefined || (item.lastVisit && (Date.now() - item.lastVisit) / 1000 > 15)) {
                         item.lastVisit = Date.now()
                         this.events.emit('talkTo', item)
+                    }
+                }
+            })
+
+        this.physics.add.collider(this.player, [this.systemMessage],
+            (player, item) => {
+                if (!this.dialogOpen) {
+                    if (item.lastVisit === undefined || (item.lastVisit && (Date.now() - item.lastVisit) / 1000 > 15)) {
+                        item.lastVisit = Date.now()
+                        this.events.emit('systemMessage', item)
                     }
                 }
             })
@@ -154,12 +168,7 @@ export default class WorldScene extends Phaser.Scene {
             this.input.keyboard.on('keydown_SPACE', this.playerAction());
         })
 
-        if (this.levelConfig.new) {
-            this.events.emit('newGame')
-            this.levelConfig.new = false
-        } else {
-            this.input.keyboard.on('keydown_SPACE', this.playerAction());
-        }
+        this.input.keyboard.on('keydown_SPACE', this.playerAction());
     }
 
     update(time, delta) {
