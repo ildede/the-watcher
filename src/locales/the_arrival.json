@@ -1,0 +1,48 @@
+{
+  "en": {
+    "translation": {
+      "System_001": "Welcome to Vereal Village! It is great to have you here!",
+      "System_002": "Take your time to explore the neighborhood, take a walk and enjoy the town!",
+      "System_003": "You might find some interesting activity and meet new people!",
+      "System_004": "Press arrow keys to walk.",
+      "System_005": "Press space bar to interact, read, talk.",
+      "System_006": "Enjoy!",
+      "Mario_001": "It doesn't look that bad here. Let's see what's around.",
+      "Town_hall_party": "Town Hall. \nDancing party, this Friday night at the Municipal Hall. \nEntry hours: 8:00PM - 11:00PM\nFree entrance",
+      "Mario_party": "Oh well. Not a fan of dancing, but at least it is a good occasion to meet someone. I'd better go get prepared and dress nicely.",
+      "Dog_pound_sign": "Dog shelter. Come meet your new best friend.",
+      "Mario_dog": "I always wanted a dog. But I don't think I can take such a responsibility on my own. Maybe one day I'll be able to share this joy with someone else.",
+      "Inn": "AvaBar\nGrog, Nuka Coke, Pißwater and much more!\nCome in, we're open!",
+      "Mario_Inn": "Seems cool. I should get here sometime. But I don't feel like drinking alone at the moment.",
+      "Park": "City park.\nOpening hours:\n9:00AM - 9:00PM",
+      "Mario_park": "What a lovely garden. I wish I had something similar at my place.",
+      "House_sign": "For sale",
+      "Mario_house": "Damn! This looks exactly like my dream home! I would give anything to live here!",
+      "Mario party_1": "I should go get prepared before it is too late...",
+      "Mario party_2": "Let's hope they have a bar. Sometimes chatting with the barman is the only way to survive a dancing night."
+    }
+  },
+  "it": {
+    "translation": {
+      "System_001": "Ti diamo il benvenuto a Borgo Reale! È un piacere averti qui!",
+      "System_002": "Prenditi il tuo tempo per esplorare i dintorni, fare una passeggiata e goderti la città!",
+      "System_003": "Potresti trovare qualche attività interessante da fare e conoscere nuove persone!",
+      "System_004": "Premi i tasti freccia per camminare.",
+      "System_005": "Premi spazio per interagire, leggere e parlare.",
+      "System_006": "Divertiti!",
+      "Mario_001": "Non sembra male qui. Vediamo un po' cosa c'è in giro.",
+      "Town_hall_party": "Municipio.\nFesta danzante, questo venerdì sera nella sala comunale.\nOrario: 20:00 - 23:00\nIngresso gratuito",
+      "Mario_party": "Oh, beh. Non sono un appassionato di balli, ma può essere una buona occasione per incontrare qualcuno. Meglio che vada a prepararmi e che mi metta qualcosa di carino.",
+      "Dog_pound_sign": "Canile.\nVieni a conoscere il tuo nuovo migliore amico.",
+      "Mario_dog": "Ho sempre desiderato un cane. Ma non credo di potermi prendere una simile responsabilità da solo. Magari prima o poi potrò condividere una simile gioia con qualcuno.",
+      "Inn": "AvaBar\nGrog, Nuka Cola, Birra Pißner e molto altro.\nSiamo aperti!",
+      "Mario_Inn": "Sembra fico. Dovrei tornarci prima o poi. Ma al momento non ho voglia di bere da solo.",
+      "Park": "Parco comunale.\nOrario di apertura:\n9:00 - 21:00",
+      "Mario_park": "Che giardino adorabile. Mi piacerebbe avere qualcosa di simile a casa.",
+      "House_sign": "In vendita",
+      "Mario_house": "Diamine! Questa è la casa dei miei sogni!\nNon so cosa darei per poter vivere qui!",
+      "Mario party_1": "Dovrei andare a prepararmi prima che sia troppo tardi...",
+      "Mario party_2": "Speriamo ci sia un servizio bar. A volte far due chiacchiere col barista è l'unico modo di sopravvivere a una serata a ballo."
+    }
+  }
+}
