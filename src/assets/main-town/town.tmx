@@ -126507,6 +126507,7 @@
   </object>
   <object id="18" name="Message" type="message" x="150" y="320" width="40" height="40">
    <properties>
+    <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="System_001,System_002,System_003,System_004,System_005,System_006"/>
    </properties>
   </object>
