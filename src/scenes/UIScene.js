@@ -75,13 +75,13 @@ export default class UIScene extends Phaser.Scene {
         currentGame.events.on('systemMessage', function(message) {
             console.debug('Event systemMessage received')
             currentGame.events.emit('dialogStart')
-            textBox.setVisible(true).start(i18next.t(message.stringId()), 50)
+            textBox.setVisible(true).start(message.stringId().split(',').map(s => i18next.t(s)), 50)
         }, this)
 
         currentGame.events.on('readSign', function(sign) {
             console.debug('Event readSign received')
             currentGame.events.emit('dialogStart')
-            textBox.setVisible(true).start(i18next.t(sign.stringId()), 50)
+            textBox.setVisible(true).start(message.stringId().split(',').map(s => i18next.t(s)), 50)
         }, this)
 
         currentGame.events.on('talkTo', function(npc) {
