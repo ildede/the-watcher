@@ -126500,6 +126500,9 @@
    <point/>
   </object>
   <object id="16" name="ezechiele" type="npc" x="890" y="310">
+   <properties>
+    <property name="stringId" value="Mario party_2"/>
+   </properties>
    <point/>
   </object>
   <object id="18" name="Message" type="message" x="150" y="320" width="40" height="40">

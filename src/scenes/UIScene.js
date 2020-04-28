@@ -72,22 +72,28 @@ export default class UIScene extends Phaser.Scene {
             textBox.resetChildVisibleState(icon)
         }, textBox)
 
-        currentGame.events.on('systemMessage', function(message) {
+        currentGame.events.on('systemMessage', function(item) {
             console.debug('Event systemMessage received')
-            currentGame.events.emit('dialogStart')
-            textBox.setVisible(true).start(message.stringId().split(',').map(s => i18next.t(s)), 50)
+            if (item.stringId()) {
+                currentGame.events.emit('dialogStart')
+                textBox.setVisible(true).start(item.stringId().split(',').map(s => i18next.t(s)), 50)
+            }
         }, this)
 
-        currentGame.events.on('readSign', function(sign) {
+        currentGame.events.on('readSign', function(item) {
             console.debug('Event readSign received')
-            currentGame.events.emit('dialogStart')
-            textBox.setVisible(true).start(message.stringId().split(',').map(s => i18next.t(s)), 50)
+            if (item.stringId()) {
+                currentGame.events.emit('dialogStart')
+                textBox.setVisible(true).start(item.stringId().split(',').map(s => i18next.t(s)), 50)
+            }
         }, this)
 
-        currentGame.events.on('talkTo', function(npc) {
+        currentGame.events.on('talkTo', function(item) {
             console.debug('Event talkTo received')
-            currentGame.events.emit('dialogStart')
-            textBox.setVisible(true).start(`Stop touching me! (I'm ${npc.spriteKey})`, 50)
+            if (item.stringId()) {
+                currentGame.events.emit('dialogStart')
+                textBox.setVisible(true).start(item.stringId().split(',').map(s => i18next.t(s)), 50)
+            }
         }, this)
 
         currentGame.events.on('continueDialog', function() {

@@ -75,7 +75,7 @@ export default class WorldScene extends Phaser.Scene {
                 this.systemMessage.add(new Sign(this, object))
             }
             if (object.type === 'npc') {
-                this.npc.add(new Character(this, object.x, object.y, object.name, "front", true))
+                this.npc.add(new Character(this, object.x, object.y, object.name, "front", true, object))
             }
             if (object.type === 'spawn') {
                 const spawnPoint = this.levelConfig.x && this.levelConfig.y

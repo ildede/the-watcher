@@ -1,7 +1,7 @@
 import 'phaser'
 
 export default class Character extends Phaser.Physics.Arcade.Sprite {
-    constructor(scene, x, y, spriteKey, frame, isStatic) {
+    constructor(scene, x, y, spriteKey, frame, isStatic, object) {
         super(scene, x, y, spriteKey, frame)
 
         this.scene = scene
@@ -12,6 +12,8 @@ export default class Character extends Phaser.Physics.Arcade.Sprite {
 
         this.createAnimations()
         this.down()
+
+        this.stringId = () => object.properties?.find(e => e.name === 'stringId').value
     }
 
     down() { this.anims.play(this.spriteKey+"front-walk", true) }
