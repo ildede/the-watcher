@@ -118,6 +118,9 @@ export default class UIScene extends Phaser.Scene {
                 .forEach(e => {
                     if (this.messages.includes(e) === false) this.messages.push(e)
                 })
+            if (item.showOnce()) {
+                item.stringId = () => {}
+            }
         }
     }
 }
