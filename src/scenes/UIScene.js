@@ -25,6 +25,7 @@ export default class UIScene extends Phaser.Scene {
     create(data) {
         const currentGame = this.scene.get('WorldScene')
         this.uiConfig = data
+        this.messages = []
 
         i18next
             .init({
@@ -74,29 +75,17 @@ export default class UIScene extends Phaser.Scene {
 
         currentGame.events.on('systemMessage', function(item) {
             console.debug('Event systemMessage received')
-            if (item.stringId()) {
-                currentGame.events.emit('dialogStart')
-                textBox.setVisible(true).start(item.stringId().split(',').map(s => i18next.t(s)), 50)
-                if (item.showOnce()) {
-                    item.stringId = () => {}
-                }
-            }
+            this.manageMessageFor(item, currentGame, textBox);
         }, this)
 
         currentGame.events.on('readSign', function(item) {
             console.debug('Event readSign received')
-            if (item.stringId()) {
-                currentGame.events.emit('dialogStart')
-                textBox.setVisible(true).start(item.stringId().split(',').map(s => i18next.t(s)), 50)
-            }
+            this.manageMessageFor(item, currentGame, textBox);
         }, this)
 
         currentGame.events.on('talkTo', function(item) {
             console.debug('Event talkTo received')
-            if (item.stringId()) {
-                currentGame.events.emit('dialogStart')
-                textBox.setVisible(true).start(item.stringId().split(',').map(s => i18next.t(s)), 50)
-            }
+            this.manageMessageFor(item, currentGame, textBox);
         }, this)
 
         currentGame.events.on('continueDialog', function() {
@@ -116,6 +105,20 @@ export default class UIScene extends Phaser.Scene {
         this.events.on('wake', () => {
             mainCamera.fadeIn(500)
         })
+    }
+
+    manageMessageFor(item, currentGame, textBox) {
+        if (item.stringId()) {
+            if (item.stringIdRequired() && (this.messages.includes(item.stringIdRequired()) === false)) {
+                return
+            }
+            currentGame.events.emit('dialogStart')
+            textBox.setVisible(true).start(item.stringId().split(',').map(s => i18next.t(s)), 50)
+            item.stringId().split(',')
+                .forEach(e => {
+                    if (this.messages.includes(e) === false) this.messages.push(e)
+                })
+        }
     }
 }
 

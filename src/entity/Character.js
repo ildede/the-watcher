@@ -13,7 +13,9 @@ export default class Character extends Phaser.Physics.Arcade.Sprite {
         this.createAnimations()
         this.down()
 
-        this.stringId = () => object.properties?.find(e => e.name === 'stringId').value
+        this.stringId = () => object.properties?.find(e => e.name === 'stringId')?.value
+        this.showOnce = () => object.properties?.find(e => e.name === 'showOnce')?.value
+        this.stringIdRequired = () => object.properties?.find(e => e.name === 'stringIdRequired')?.value
     }
 
     down() { this.anims.play(this.spriteKey+"front-walk", true) }

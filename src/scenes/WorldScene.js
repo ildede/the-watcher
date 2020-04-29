@@ -90,7 +90,7 @@ export default class WorldScene extends Phaser.Scene {
         this.physics.add.collider(this.player, [this.npc],
             (player, item) => {
                 if (!this.dialogOpen) {
-                    if (item.lastVisit === undefined || (item.lastVisit && (Date.now() - item.lastVisit) / 1000 > 15)) {
+                    if (item.lastVisit === undefined || (item.lastVisit && (Date.now() - item.lastVisit) / 1000 > 7)) {
                         item.lastVisit = Date.now()
                         this.events.emit('talkTo', item)
                     }
@@ -100,7 +100,7 @@ export default class WorldScene extends Phaser.Scene {
         this.physics.add.overlap(this.player, [this.systemMessage],
             (player, item) => {
                 if (!this.dialogOpen) {
-                    if (item.lastVisit === undefined || (item.lastVisit && (Date.now() - item.lastVisit) / 1000 > 15)) {
+                    if (item.lastVisit === undefined || (item.lastVisit && (Date.now() - item.lastVisit) / 1000 > 7)) {
                         item.lastVisit = Date.now()
                         this.events.emit('systemMessage', item)
                     }

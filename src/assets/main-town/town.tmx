@@ -126456,7 +126456,7 @@
   </object>
   <object id="4" name="Message" type="sign" x="314" y="320" width="28" height="28">
    <properties>
-    <property name="stringId" value="System_006"/>
+    <property name="stringId" value="House_sign"/>
    </properties>
   </object>
   <object id="11" name="Message" type="sign" x="320" y="1120" width="32" height="32">
@@ -126502,6 +126502,7 @@
   <object id="16" name="ezechiele" type="npc" x="890" y="310">
    <properties>
     <property name="stringId" value="Mario party_2"/>
+    <property name="stringIdRequired" value="House_sign"/>
    </properties>
    <point/>
   </object>
