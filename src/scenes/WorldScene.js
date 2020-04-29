@@ -2,16 +2,19 @@ import 'phaser'
 import Player from "../entity/Player";
 import Sign from "../entity/Sign";
 import Character from "../entity/Character";
+import {TRANSITION_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
 
 export default class WorldScene extends Phaser.Scene {
     constructor() {
-        super('WorldScene')
+        super(WORLD_SCENE)
     }
 
     create(data) {
         this.levelConfig = data
         this.dialogOpen = false
 
+
+        //-- Draw map and game objects
         const map = this.make.tilemap({ key: "map" })
         const tileset = map.addTilesetImage("watcherbase", "tiles")
 
@@ -46,6 +49,12 @@ export default class WorldScene extends Phaser.Scene {
         })
 
 
+        //-- Collisions
+        this.physics.world.bounds.width = map.widthInPixels
+        this.physics.world.bounds.height = map.heightInPixels
+        worldLayer.setCollisionByProperty({ collide: true })
+        this.player.setCollideWorldBounds(true)
+        this.physics.add.collider(this.player, worldLayer)
         this.physics.add.collider(this.player, [this.npc],
             (player, item) => {
                 if (!this.dialogOpen) {
@@ -55,7 +64,6 @@ export default class WorldScene extends Phaser.Scene {
                     }
                 }
             })
-
         this.physics.add.overlap(this.player, [this.systemMessage],
             (player, item) => {
                 if (!this.dialogOpen) {
@@ -66,21 +74,31 @@ export default class WorldScene extends Phaser.Scene {
                 }
             })
 
-        worldLayer.setCollisionByProperty({ collide: true })
 
-        this.physics.world.bounds.width = map.widthInPixels
-        this.physics.world.bounds.height = map.heightInPixels
-
-        this.physics.add.collider(this.player, worldLayer)
-
-        this.player.setCollideWorldBounds(true)
-
+        //-- Camera rules
         this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels)
         this.cameras.main.startFollow(this.player)
         this.cameras.main.setZoom(1.3)
 
-        this.cursors = this.input.keyboard.createCursorKeys();
 
+        //-- Event listener
+        const uiScene = this.scene.get(UI_SCENE)
+        uiScene.events.once('startTransition', () => {
+            this.cameras.main.fadeOut(500)
+            this.time.addEvent({
+                    delay: 500,
+                    callback: () => {
+                        this.events.off('update')
+                        this.scene.sleep(UI_SCENE)
+                        this.scene.start(TRANSITION_SCENE, { x: this.player.x, y: this.player.y, new: this.levelConfig.new })
+                    }
+                })
+        }, this)
+
+
+        //-- Input rules
+        this.cursors = this.input.keyboard.createCursorKeys();
+        this.input.keyboard.on('keydown_SPACE', this.playerAction());
         console.debug('D: Turn on physics debugging to show player\'s hitbox')
         this.input.keyboard.once("keydown_D", event => {
             // Turn on physics debugging to show player's hitbox
@@ -103,19 +121,6 @@ export default class WorldScene extends Phaser.Scene {
             uiScene.events.emit('startTransition')
         });
 
-        const uiScene = this.scene.get('UIScene')
-        uiScene.events.once('startTransition', () => {
-            this.cameras.main.fadeOut(500)
-            this.time.addEvent({
-                    delay: 500,
-                    callback: () => {
-                        this.events.off('update')
-                        this.scene.sleep('UIScene')
-                        this.scene.start('TransitionScene', { x: this.player.x, y: this.player.y, new: this.levelConfig.new })
-                    }
-                })
-        }, this)
-
         this.events.on('dialogStart', () => {
             this.dialogOpen = true
             this.input.keyboard.off('keydown_SPACE');
@@ -126,8 +131,6 @@ export default class WorldScene extends Phaser.Scene {
             this.input.keyboard.off('keydown_SPACE');
             this.input.keyboard.on('keydown_SPACE', this.playerAction());
         })
-
-        this.input.keyboard.on('keydown_SPACE', this.playerAction());
     }
 
     update(time, delta) {

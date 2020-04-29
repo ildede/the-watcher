@@ -1,8 +1,9 @@
 import 'phaser'
+import {TITLE_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
 
 export default class TitleScene extends Phaser.Scene {
     constructor() {
-        super('TitleScene')
+        super(TITLE_SCENE)
         this.startWorldScene = this.startWorldScene.bind(this)
     }
 
@@ -24,9 +25,9 @@ export default class TitleScene extends Phaser.Scene {
         this.time.addEvent({
             delay: 500,
             callback: () => {
-                this.scene.start('WorldScene', { new: true })
-                this.scene.launch('UIScene', { language: language })
-                this.scene.bringToTop('UIScene')
+                this.scene.start(WORLD_SCENE, { new: true })
+                this.scene.launch(UI_SCENE, { language: language })
+                this.scene.bringToTop(UI_SCENE)
             }
         })
     }

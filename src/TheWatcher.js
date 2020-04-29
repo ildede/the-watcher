@@ -5,17 +5,23 @@ import WorldScene from "./scenes/WorldScene";
 import UIScene from "./scenes/UIScene";
 import TransitionScene from "./scenes/TransitionScene";
 
+export const BOOT_SCENE = 'BootScene';
+export const TITLE_SCENE = 'TitleScene';
+export const WORLD_SCENE = 'WorldScene';
+export const UI_SCENE = 'UIScene';
+export const TRANSITION_SCENE = 'TransitionScene';
+
 class TheWatcher extends Phaser.Game {
     constructor(phaserConfig) {
         super(phaserConfig);
 
-        this.scene.add('BootScene', BootScene)
-        this.scene.add('TitleScene', TitleScene)
-        this.scene.add('WorldScene', WorldScene)
-        this.scene.add('UIScene', UIScene)
-        this.scene.add('TransitionScene', TransitionScene)
+        this.scene.add(BOOT_SCENE, BootScene)
+        this.scene.add(TITLE_SCENE, TitleScene)
+        this.scene.add(WORLD_SCENE, WorldScene)
+        this.scene.add(UI_SCENE, UIScene)
+        this.scene.add(TRANSITION_SCENE, TransitionScene)
 
-        this.scene.start('BootScene')
+        this.scene.start(BOOT_SCENE)
     }
 }
 

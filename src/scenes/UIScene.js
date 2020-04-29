@@ -1,13 +1,11 @@
 import 'phaser'
-import nextPage from "../assets/UI/arrow-down-left.png";
 import i18next from 'i18next';
-
-const theArrival = require('../locales/the_arrival.json');
+import {UI_SCENE, WORLD_SCENE} from "../TheWatcher";
 
 export default class UIScene extends Phaser.Scene {
 
     constructor() {
-        super('UIScene')
+        super(UI_SCENE)
     }
 
     preload() {
@@ -16,14 +14,10 @@ export default class UIScene extends Phaser.Scene {
             url: 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexuiplugin.min.js',
             sceneKey: 'rexUI'
         })
-
-        this.load.image('nextPage', nextPage)
-
-        this.load.json('langResource', theArrival)
     }
 
     create(data) {
-        const currentGame = this.scene.get('WorldScene')
+        const currentGame = this.scene.get(WORLD_SCENE)
         this.uiConfig = data
         this.messages = []
 

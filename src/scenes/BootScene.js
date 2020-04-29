@@ -11,6 +11,8 @@ import amilcarePng from "../assets/characters/npcs/amilcare.png";
 import carolinaPng from "../assets/characters/npcs/carolina.png";
 import debborahPng from "../assets/characters/npcs/debborah.png";
 import ezechielePng from "../assets/characters/npcs/ezechiele.png";
+import nextPage from "../assets/UI/arrow-down-left.png";
+import {BOOT_SCENE, TITLE_SCENE} from "../TheWatcher";
 
 const townJson = require('../assets/main-town/town.json');
 const marioJson = require('../assets/characters/mario/mario.json');
@@ -24,10 +26,11 @@ const amilcareJson = require('../assets/characters/npcs/amilcare.json');
 const carolinaJson = require('../assets/characters/npcs/carolina.json');
 const debborahJson = require('../assets/characters/npcs/debborah.json');
 const ezechieleJson = require('../assets/characters/npcs/ezechiele.json');
+const theArrival = require('../locales/the_arrival.json');
 
 export default class BootScene extends Phaser.Scene {
     constructor() {
-        super('BootScene')
+        super(BOOT_SCENE)
     }
 
     preload() {
@@ -78,14 +81,16 @@ export default class BootScene extends Phaser.Scene {
             assetText.setText('Loading asset: ' + file.key);
         });
         this.load.on('complete', function () {
-            // progressBar.destroy();
-            // progressBox.destroy();
-            // loadingText.destroy();
-            // percentText.destroy();
-            // assetText.destroy();
+            progressBar.destroy();
+            progressBox.destroy();
+            loadingText.destroy();
+            percentText.destroy();
+            assetText.destroy();
         });
 
         this.load.image("tiles", townPng)
+        this.load.image('nextPage', nextPage)
+
         this.load.tilemapTiledJSON("map", townJson)
         this.load.atlas("mario", marioPng, marioJson)
         this.load.atlas("gioia", gioiaPng, gioiaJson)
@@ -98,9 +103,11 @@ export default class BootScene extends Phaser.Scene {
         this.load.atlas("carolina", carolinaPng, carolinaJson)
         this.load.atlas("debborah", debborahPng, debborahJson)
         this.load.atlas("ezechiele", ezechielePng, ezechieleJson)
+
+        this.load.json('langResource', theArrival)
     }
 
     create() {
-        this.scene.start('TitleScene')
+        this.scene.start(TITLE_SCENE)
     }
 }

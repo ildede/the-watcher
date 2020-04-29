@@ -1,8 +1,9 @@
 import 'phaser'
+import {TRANSITION_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
 
 export default class TransitionScene extends Phaser.Scene {
   constructor() {
-    super('TransitionScene');
+    super(TRANSITION_SCENE);
   }
 
   create(data) {
@@ -14,11 +15,11 @@ export default class TransitionScene extends Phaser.Scene {
     this.add.text(100,340, 'Wait a moment...', {fontSize: '30px'})
 
     this.time.addEvent({
-      delay: 10,
+      delay: 500,
       callback: () => {
-        this.scene.start('WorldScene', this.levelConfig);
-        this.scene.wake('UIScene')
-        this.scene.bringToTop('UIScene')
+        this.scene.start(WORLD_SCENE, this.levelConfig);
+        this.scene.wake(UI_SCENE)
+        this.scene.bringToTop(UI_SCENE)
       }
     })
   }
