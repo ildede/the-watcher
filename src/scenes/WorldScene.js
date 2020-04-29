@@ -62,7 +62,10 @@ export default class WorldScene extends Phaser.Scene {
         const belowLayer = map.createStaticLayer("Below Player", tileset, 0, 0)
         const worldLayer = map.createStaticLayer("World", tileset, 0, 0)
         const aboveLayer = map.createStaticLayer("Above Player", tileset, 0, 0)
+        const top = map.createStaticLayer("Top", tileset, 0, 0)
         const objectLayer = map.getObjectLayer('Objects')
+        aboveLayer.setDepth(50)
+        top.setDepth(60)
 
         this.readableSigns = this.physics.add.group()
         this.systemMessage = this.physics.add.group()
@@ -85,7 +88,6 @@ export default class WorldScene extends Phaser.Scene {
             }
         })
 
-        aboveLayer.setDepth(10)
 
         this.physics.add.collider(this.player, [this.npc],
             (player, item) => {
