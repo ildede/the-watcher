@@ -14,10 +14,7 @@ class TheWatcher extends Phaser.Game {
         this.scene.add('WorldScene', WorldScene)
         this.scene.add('UIScene', UIScene)
         this.scene.add('TransitionScene', TransitionScene)
-        // this.scene.add('IntroScene', IntroScene)
-        // this.scene.add('EndScene', EndScene)
 
-        //Start the game with the main scene
         this.scene.start('BootScene')
     }
 }
