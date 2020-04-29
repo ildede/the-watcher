@@ -26,7 +26,7 @@ const amilcareJson = require('../assets/characters/npcs/amilcare.json');
 const carolinaJson = require('../assets/characters/npcs/carolina.json');
 const debborahJson = require('../assets/characters/npcs/debborah.json');
 const ezechieleJson = require('../assets/characters/npcs/ezechiele.json');
-const theArrival = require('../locales/the_arrival.json');
+const langResources = require('../locales/lang_resources.json');
 
 export default class BootScene extends Phaser.Scene {
     constructor() {
@@ -104,7 +104,7 @@ export default class BootScene extends Phaser.Scene {
         this.load.atlas("debborah", debborahPng, debborahJson)
         this.load.atlas("ezechiele", ezechielePng, ezechieleJson)
 
-        this.load.json('langResource', theArrival)
+        this.load.json('langResource', langResources)
     }
 
     create() {
