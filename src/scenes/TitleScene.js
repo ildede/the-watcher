@@ -1,6 +1,6 @@
 import 'phaser'
 import {TITLE_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
-import {ARRIVAL} from "./TransitionScene";
+import {ARRIVAL} from "../config/levels";
 
 export default class TitleScene extends Phaser.Scene {
     constructor() {
