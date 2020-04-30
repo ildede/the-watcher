@@ -1,6 +1,6 @@
 import 'phaser'
 import i18next from 'i18next';
-import {UI_SCENE, WORLD_SCENE} from "../TheWatcher";
+import {DIALOG_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
 
 export default class UIScene extends Phaser.Scene {
 
@@ -17,7 +17,8 @@ export default class UIScene extends Phaser.Scene {
     }
 
     create(data) {
-        const currentGame = this.scene.get(WORLD_SCENE)
+        const worldScene = this.scene.get(WORLD_SCENE)
+        const dialogScene = this.scene.get(DIALOG_SCENE)
         this.uiConfig = data
         this.messages = []
 
@@ -67,27 +68,27 @@ export default class UIScene extends Phaser.Scene {
             textBox.resetChildVisibleState(icon)
         }, textBox)
 
-        currentGame.events.on('systemMessage', function(item) {
+        worldScene.events.on('systemMessage', function(item) {
             console.debug('Event systemMessage received')
-            this.manageMessageFor(item, currentGame, textBox);
+            this.manageMessageFor(item, worldScene, textBox);
         }, this)
 
-        currentGame.events.on('readSign', function(item) {
+        worldScene.events.on('readSign', function(item) {
             console.debug('Event readSign received')
-            this.manageMessageFor(item, currentGame, textBox);
+            this.manageMessageFor(item, worldScene, textBox);
         }, this)
 
-        currentGame.events.on('talkTo', function(item) {
+        worldScene.events.on('talkTo', function(item) {
             console.debug('Event talkTo received')
-            this.manageMessageFor(item, currentGame, textBox);
+            this.manageMessageFor(item, worldScene, textBox);
         }, this)
 
-        currentGame.events.on('dialogMessages', function(messages) {
+        dialogScene.events.on('dialogMessages', function(messages) {
             console.debug('Event dialogMessages received')
-            console.log(messages)
+            this.manageDialogMessagesFor(messages, dialogScene, textBox);
         }, this)
 
-        currentGame.events.on('continueDialog', function() {
+        worldScene.events.on('continueDialog', function() {
             console.debug('Event continueDialog received')
             const icon = textBox.getElement('action').setVisible(false)
             textBox.resetChildVisibleState(icon)
@@ -95,7 +96,20 @@ export default class UIScene extends Phaser.Scene {
                 this.stop(true)
             } else if (this.isLastPage) {
                 textBox.setVisible(false)
-                currentGame.events.emit('dialogEnd')
+                worldScene.events.emit('dialogEnd')
+            } else {
+                this.typeNextPage()
+            }
+        }, textBox)
+        dialogScene.events.on('continueDialog', function() {
+            console.debug('Event continueDialog received')
+            const icon = textBox.getElement('action').setVisible(false)
+            textBox.resetChildVisibleState(icon)
+            if (this.isTyping) {
+                this.stop(true)
+            } else if (this.isLastPage) {
+                textBox.setVisible(false)
+                dialogScene.events.emit('dialogEnd')
             } else {
                 this.typeNextPage()
             }
@@ -107,12 +121,12 @@ export default class UIScene extends Phaser.Scene {
         })
     }
 
-    manageMessageFor(item, currentGame, textBox) {
+    manageMessageFor(item, currentScene, textBox) {
         if (item.stringId()) {
             if (item.stringIdRequired() && (this.messages.includes(item.stringIdRequired()) === false)) {
                 return
             }
-            currentGame.events.emit('dialogStart')
+            currentScene.events.emit('dialogStart')
             textBox.setVisible(true).start(item.stringId().split(',').map(s => i18next.t(s)), 50)
             item.stringId().split(',')
                 .forEach(e => {
@@ -122,6 +136,14 @@ export default class UIScene extends Phaser.Scene {
                 item.stringId = () => {}
             }
         }
+    }
+    manageDialogMessagesFor(messages, currentScene, textBox) {
+        currentScene.events.emit('dialogStart')
+        textBox.setVisible(true).start(messages.split(',').map(s => i18next.t(s)), 50)
+        messages.split(',')
+            .forEach(e => {
+                if (this.messages.includes(e) === false) this.messages.push(e)
+            })
     }
 }
 
