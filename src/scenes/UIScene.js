@@ -97,6 +97,7 @@ export default class UIScene extends Phaser.Scene {
         }, textBox)
 
         this.events.on('wake', () => {
+            this.messages = []
             mainCamera.fadeIn(500)
         })
     }

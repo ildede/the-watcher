@@ -3,16 +3,18 @@ import Player from "../entity/Player";
 import Sign from "../entity/Sign";
 import Character from "../entity/Character";
 import {TRANSITION_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
+import {ARRIVAL} from "./TransitionScene";
 
 export default class WorldScene extends Phaser.Scene {
     constructor() {
         super(WORLD_SCENE)
+        this.fillCurrentMap = this.fillCurrentMap.bind(this)
     }
 
     create(data) {
         this.levelConfig = data
         this.dialogOpen = false
-
+        console.log(data)
 
         //-- Draw map and game objects
         const map = this.make.tilemap({ key: "map" })
@@ -23,6 +25,7 @@ export default class WorldScene extends Phaser.Scene {
         const worldLayer = map.createStaticLayer("World", tileset, 0, 0)
         const aboveLayer = map.createStaticLayer("Above Player", tileset, 0, 0)
         const top = map.createStaticLayer("Top", tileset, 0, 0)
+        const levelLayer = map.getObjectLayer(this.levelConfig.level.name)
         const objectLayer = map.getObjectLayer('Objects')
         aboveLayer.setDepth(50)
         top.setDepth(60)
@@ -30,23 +33,9 @@ export default class WorldScene extends Phaser.Scene {
         this.readableSigns = this.physics.add.group()
         this.systemMessage = this.physics.add.group()
         this.npc = this.physics.add.staticGroup()
-        objectLayer.objects.forEach((object) => {
-            if (object.type === 'sign') {
-                this.readableSigns.add(new Sign(this, object))
-            }
-            if (object.type === 'message') {
-                this.systemMessage.add(new Sign(this, object))
-            }
-            if (object.type === 'npc') {
-                this.npc.add(new Character(this, object.x, object.y, object.name, "front", true, object))
-            }
-            if (object.type === 'spawn') {
-                const spawnPoint = this.levelConfig.x && this.levelConfig.y
-                    ? { x: this.levelConfig.x, y: this.levelConfig.y }
-                    : { x: object.x, y: object.y }
-                this.player = new Player(this, spawnPoint.x, spawnPoint.y, "amilcare", "front")
-            }
-        })
+
+        objectLayer.objects.forEach(this.fillCurrentMap())
+        levelLayer.objects.forEach(this.fillCurrentMap())
 
 
         //-- Collisions
@@ -90,7 +79,7 @@ export default class WorldScene extends Phaser.Scene {
                     callback: () => {
                         this.events.off('update')
                         this.scene.sleep(UI_SCENE)
-                        this.scene.start(TRANSITION_SCENE, { x: this.player.x, y: this.player.y, new: this.levelConfig.new })
+                        this.scene.start(TRANSITION_SCENE, this.levelConfig)
                     }
                 })
         }, this)
@@ -146,5 +135,24 @@ export default class WorldScene extends Phaser.Scene {
         this.physics.overlap(this.player, this.readableSigns,
             (player, item) => this.events.emit('readSign', item))
     }}
+    fillCurrentMap() {
+        return (object) => {
+            if (object.type === 'sign') {
+                this.readableSigns.add(new Sign(this, object))
+            }
+            if (object.type === 'message') {
+                this.systemMessage.add(new Sign(this, object))
+            }
+            if (object.type === 'npc') {
+                this.npc.add(new Character(this, object.x, object.y, object.name, "front", true, object))
+            }
+            if (object.type === 'spawn') {
+                const spawnPoint = this.levelConfig.x && this.levelConfig.y
+                    ? {x: this.levelConfig.x, y: this.levelConfig.y}
+                    : {x: object.x, y: object.y}
+                this.player = new Player(this, spawnPoint.x, spawnPoint.y, "amilcare", "front")
+            }
+        };
+    }
 }
 
