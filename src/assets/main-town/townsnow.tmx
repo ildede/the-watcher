@@ -3,8 +3,8 @@
  <editorsettings>
   <export target="town.json" format="json"/>
  </editorsettings>
- <tileset firstgid="1" name="watcherbase" tilewidth="16" tileheight="16" tilecount="25200" columns="120">
-  <image source="../tileset/tileset.png" width="1920" height="3360"/>
+ <tileset firstgid="1" name="watcherbase" tilewidth="16" tileheight="16" spacing="2" margin="1" tilecount="25200" columns="120">
+  <image source="../tileset/tileset-extruded.png" width="2160" height="3780"/>
   <tile id="0">
    <properties>
     <property name="collide" type="bool" value="false"/>
