@@ -3,7 +3,6 @@ import Player from "../entity/Player";
 import Sign from "../entity/Sign";
 import Character from "../entity/Character";
 import {TRANSITION_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
-import {ARRIVAL} from "./TransitionScene";
 
 export default class WorldScene extends Phaser.Scene {
     constructor() {
@@ -18,7 +17,7 @@ export default class WorldScene extends Phaser.Scene {
 
         //-- Draw map and game objects
         const map = this.make.tilemap({ key: "map" })
-        const tileset = map.addTilesetImage("watcherbase", "tiles")
+        const tileset = map.addTilesetImage("watcherbase", "tiles", 16, 16, 1, 2)
 
         const bottom = map.createStaticLayer("Bottom", tileset, 0, 0)
         const belowLayer = map.createStaticLayer("Below Player", tileset, 0, 0)

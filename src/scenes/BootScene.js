@@ -1,5 +1,5 @@
 import 'phaser'
-import townPng from "../assets/tileset/tileset.png";
+import townPng from "../assets/tileset/tileset-extruded.png";
 import marioPng from "../assets/characters/mario/mario.png";
 import gioiaPng from "../assets/characters/gioia/gioia.png";
 import blackPng from "../assets/characters/cats/black.png";
