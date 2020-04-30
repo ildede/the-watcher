@@ -34,7 +34,7 @@ export default class DialogScene extends Phaser.Scene {
         });
 
         //-- Start scene dialog
-        this.events.emit('dialogMessages', this.levelConfig.level.messages)
+        this.events.emit('dialogMessages', this.levelConfig.messages)
     }
 
     continueDialog() { return () => this.events.emit('continueDialog') }

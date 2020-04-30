@@ -1,20 +1,20 @@
 import 'phaser'
 import {DIALOG_SCENE, TRANSITION_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
 
-export const ARRIVAL =          {name: '01_arrival',          scene: 'WorldScene'  }
-export const BEFORE_PARTY =     {name: '02_before_party',     scene: 'WorldScene'  }
-export const PARTY =            {name: '03_party',            scene: 'WorldScene'  }
-export const APPOINTMENT =      {name: '04_appointment',      scene: 'DialogScene' }
-export const BAR =              {name: '05_bar',              scene: 'WorldScene'  }
-export const DINNER =           {name: '06_dinner',           scene: 'DialogScene' }
-export const NIGHT_OUT =        {name: '07_night_out',        scene: 'DialogScene' }
-export const WHAT_ARE_WE =      {name: '08_what_are_we',      scene: 'WorldScene'  }
-export const ANNIVERSARY =      {name: '09_anniversary',      scene: 'WorldScene'  }
-export const MARRY_ME =         {name: '10_marry_me',         scene: 'WorldScene'  }
-export const MOVING_TOGETHER =  {name: '11_moving_together',  scene: 'WorldScene'  }
-export const DOG =              {name: '12_dog',              scene: 'WorldScene'  }
-export const B_DAY =            {name: '13_b_day',            scene: 'WorldScene'  }
-export const CREDITS =          {name: '14_credits',          scene: 'WorldScene'  }
+export const ARRIVAL =          {name: '01_arrival',          scene: 'WorldScene' }
+export const BEFORE_PARTY =     {name: '02_before_party',     scene: 'WorldScene' }
+export const PARTY =            {name: '03_party',            scene: 'WorldScene' }
+export const APPOINTMENT =      {name: '04_appointment',      scene: 'DialogScene', messages: ['Mario_first_date001', 'Mario_first_date002', 'Mario_first_date003', 'Mario_first_date004', 'Mario_first_date005', 'Gioia_first_date001', 'Gioia_first_date002', 'Mario_first_date006', 'Gioia_first_date003', 'Mario_first_date007', 'Gioia_first_date004', 'Mario_first_date008', 'Gioia_first_date005', 'Mario_first_date009', 'Gioia_first_date006', 'Mario_first_date010', 'Gioia_first_date007', 'Mario_first_date011', 'Gioia_first_date008', 'Mario_first_date012', 'Gioia_first_date009', 'Mario_first_date013', 'Gioia_first_date010', 'Mario_first_date014', 'Gioia_first_date011', 'Mario_first_date015', 'Mario_first_date016', 'Mario_first_date017'] }
+export const BAR =              {name: '05_bar',              scene: 'WorldScene' }
+export const DINNER =           {name: '06_dinner',           scene: 'DialogScene', messages: ['','','']  }
+export const NIGHT_OUT =        {name: '07_night_out',        scene: 'DialogScene', messages: ['','','']  }
+export const WHAT_ARE_WE =      {name: '08_what_are_we',      scene: 'WorldScene' }
+export const ANNIVERSARY =      {name: '09_anniversary',      scene: 'WorldScene' }
+export const MARRY_ME =         {name: '10_marry_me',         scene: 'WorldScene' }
+export const MOVING_TOGETHER =  {name: '11_moving_together',  scene: 'WorldScene' }
+export const DOG =              {name: '12_dog',              scene: 'WorldScene' }
+export const B_DAY =            {name: '13_b_day',            scene: 'WorldScene' }
+export const CREDITS =          {name: '14_credits',          scene: 'WorldScene' }
 
 export default class TransitionScene extends Phaser.Scene {
   constructor() {
