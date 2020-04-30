@@ -2,7 +2,7 @@ import 'phaser'
 import Player from "../entity/Player";
 import Sign from "../entity/Sign";
 import Character from "../entity/Character";
-import {TRANSITION_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
+import {DIALOG_SCENE, TRANSITION_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
 
 export default class WorldScene extends Phaser.Scene {
     constructor() {
@@ -13,7 +13,8 @@ export default class WorldScene extends Phaser.Scene {
     create(data) {
         this.levelConfig = data
         this.dialogOpen = false
-        console.log(data)
+        console.log(WORLD_SCENE, this.levelConfig)
+
 
         //-- Draw map and game objects
         const map = this.make.tilemap({ key: "map" })

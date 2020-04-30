@@ -82,6 +82,11 @@ export default class UIScene extends Phaser.Scene {
             this.manageMessageFor(item, currentGame, textBox);
         }, this)
 
+        currentGame.events.on('dialogMessages', function(messages) {
+            console.debug('Event dialogMessages received')
+            console.log(messages)
+        }, this)
+
         currentGame.events.on('continueDialog', function() {
             console.debug('Event continueDialog received')
             const icon = textBox.getElement('action').setVisible(false)
