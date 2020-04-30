@@ -1,5 +1,5 @@
 import 'phaser'
-import {DIALOG_SCENE, TRANSITION_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
+import {TRANSITION_SCENE, UI_SCENE} from "../TheWatcher";
 
 export const ARRIVAL =          {name: '01_arrival',          scene: 'WorldScene' }
 export const BEFORE_PARTY =     {name: '02_before_party',     scene: 'WorldScene' }

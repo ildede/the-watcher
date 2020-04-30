@@ -2,7 +2,7 @@ import 'phaser'
 import Player from "../entity/Player";
 import Sign from "../entity/Sign";
 import Character from "../entity/Character";
-import {DIALOG_SCENE, TRANSITION_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
+import {TRANSITION_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
 
 export default class WorldScene extends Phaser.Scene {
     constructor() {
