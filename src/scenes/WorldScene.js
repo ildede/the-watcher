@@ -165,7 +165,7 @@ export default class WorldScene extends Phaser.Scene {
                 const spawnPoint = this.levelConfig.x && this.levelConfig.y
                     ? {x: this.levelConfig.x, y: this.levelConfig.y}
                     : {x: object.x, y: object.y}
-                this.player = new Player(this, spawnPoint.x, spawnPoint.y, "black", "front")
+                this.player = new Player(this, spawnPoint.x, spawnPoint.y, "female1", "front")
             }
         };
     }

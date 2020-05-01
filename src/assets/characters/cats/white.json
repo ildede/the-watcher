@@ -10,7 +10,7 @@
 			"scale": 1,
 			"frames": [
 				{
-					"filename": "left-walk.001",
+					"filename": "right-walk.1",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -31,7 +31,7 @@
 					}
 				},
 				{
-					"filename": "right-walk.001",
+					"filename": "left-walk.1",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -52,7 +52,7 @@
 					}
 				},
 				{
-					"filename": "left-walk.002",
+					"filename": "right-walk.2",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -73,7 +73,7 @@
 					}
 				},
 				{
-					"filename": "right-walk.000",
+					"filename": "left-walk.0",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -90,48 +90,6 @@
 						"x": 29,
 						"y": 25,
 						"w": 26,
-						"h": 21
-					}
-				},
-				{
-					"filename": "right",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 26,
-						"h": 21
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 26,
-						"h": 21
-					},
-					"frame": {
-						"x": 29,
-						"y": 25,
-						"w": 26,
-						"h": 21
-					}
-				},
-				{
-					"filename": "left-walk.000",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 25,
-						"h": 21
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 25,
-						"h": 21
-					},
-					"frame": {
-						"x": 1,
-						"y": 48,
-						"w": 25,
 						"h": 21
 					}
 				},
@@ -140,6 +98,27 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
+						"w": 26,
+						"h": 21
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 26,
+						"h": 21
+					},
+					"frame": {
+						"x": 29,
+						"y": 25,
+						"w": 26,
+						"h": 21
+					}
+				},
+				{
+					"filename": "right-walk.0",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
 						"w": 25,
 						"h": 21
 					},
@@ -157,7 +136,28 @@
 					}
 				},
 				{
-					"filename": "right-walk.002",
+					"filename": "right",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 25,
+						"h": 21
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 25,
+						"h": 21
+					},
+					"frame": {
+						"x": 1,
+						"y": 48,
+						"w": 25,
+						"h": 21
+					}
+				},
+				{
+					"filename": "left-walk.2",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -178,7 +178,7 @@
 					}
 				},
 				{
-					"filename": "back-walk.000",
+					"filename": "back-walk.0",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -220,7 +220,7 @@
 					}
 				},
 				{
-					"filename": "back-walk.001",
+					"filename": "back-walk.1",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -241,7 +241,7 @@
 					}
 				},
 				{
-					"filename": "back-walk.002",
+					"filename": "back-walk.2",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -262,7 +262,7 @@
 					}
 				},
 				{
-					"filename": "front-walk.000",
+					"filename": "front-walk.0",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -304,7 +304,7 @@
 					}
 				},
 				{
-					"filename": "front-walk.002",
+					"filename": "front-walk.2",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -325,7 +325,7 @@
 					}
 				},
 				{
-					"filename": "front-walk.001",
+					"filename": "front-walk.1",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {

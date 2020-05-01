@@ -31,8 +31,7 @@ export default class Character extends Phaser.Physics.Arcade.Sprite {
             frames: anims.generateFrameNames(this.spriteKey, {
                 prefix: "left-walk.",
                 start: 0,
-                end: 2,
-                zeroPad: 3
+                end: 2
             }),
             frameRate: 7,
             repeat: -1
@@ -42,8 +41,7 @@ export default class Character extends Phaser.Physics.Arcade.Sprite {
             frames: anims.generateFrameNames(this.spriteKey, {
                 prefix: "right-walk.",
                 start: 0,
-                end: 3,
-                zeroPad: 3
+                end: 3
             }),
             frameRate: 7,
             repeat: -1
@@ -53,8 +51,7 @@ export default class Character extends Phaser.Physics.Arcade.Sprite {
             frames: anims.generateFrameNames(this.spriteKey, {
                 prefix: "front-walk.",
                 start: 0,
-                end: 2,
-                zeroPad: 3
+                end: 2
             }),
             frameRate: 7,
             repeat: -1
@@ -64,8 +61,7 @@ export default class Character extends Phaser.Physics.Arcade.Sprite {
             frames: anims.generateFrameNames(this.spriteKey, {
                 prefix: "back-walk.",
                 start: 0,
-                end: 2,
-                zeroPad: 3
+                end: 2
             }),
             frameRate: 7,
             repeat: -1

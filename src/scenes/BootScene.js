@@ -8,6 +8,14 @@ import blackPng from "../assets/characters/cats/black.png";
 import orangePng from "../assets/characters/cats/orange.png";
 import whitePng from "../assets/characters/cats/white.png";
 import brownPng from "../assets/characters/cats/brown.png";
+import female1Png from "../assets/characters/npcs/female/female1.png";
+import female2Png from "../assets/characters/npcs/female/female2.png";
+import female3Png from "../assets/characters/npcs/female/female3.png";
+import female4Png from "../assets/characters/npcs/female/female4.png";
+import female5Png from "../assets/characters/npcs/female/female5.png";
+import female6Png from "../assets/characters/npcs/female/female6.png";
+import female7Png from "../assets/characters/npcs/female/female7.png";
+import female8Png from "../assets/characters/npcs/female/female8.png";
 import nextPage from "../assets/UI/arrow-down-left.png";
 import titleWatcher from "../assets/title/title-watcher.png";
 import splashBg00 from "../assets/title/splash-background-0.png";
@@ -23,6 +31,14 @@ import * as blackJson from '../assets/characters/cats/black.json';
 import * as orangeJson from '../assets/characters/cats/orange.json';
 import * as whiteJson from '../assets/characters/cats/white.json';
 import * as brownJson from '../assets/characters/cats/brown.json';
+import * as female1Json from "../assets/characters/npcs/female/female1.json";
+import * as female2Json from "../assets/characters/npcs/female/female2.json";
+import * as female3Json from "../assets/characters/npcs/female/female3.json";
+import * as female4Json from "../assets/characters/npcs/female/female4.json";
+import * as female5Json from "../assets/characters/npcs/female/female5.json";
+import * as female6Json from "../assets/characters/npcs/female/female6.json";
+import * as female7Json from "../assets/characters/npcs/female/female7.json";
+import * as female8Json from "../assets/characters/npcs/female/female8.json";
 
 import * as splashBgJson from '../assets/title/splash-background.json';
 import * as splashLanguagesJson from '../assets/title/splash-languages.json';
@@ -102,6 +118,14 @@ export default class BootScene extends Phaser.Scene {
         this.load.atlas("orange", orangePng, orangeJson)
         this.load.atlas("white", whitePng, whiteJson)
         this.load.atlas("brown", brownPng, brownJson)
+        this.load.atlas("female1", female1Png, female1Json)
+        this.load.atlas("female2", female2Png, female2Json)
+        this.load.atlas("female3", female3Png, female3Json)
+        this.load.atlas("female4", female4Png, female4Json)
+        this.load.atlas("female5", female5Png, female5Json)
+        this.load.atlas("female6", female6Png, female6Json)
+        this.load.atlas("female7", female7Png, female7Json)
+        this.load.atlas("female8", female8Png, female8Json)
         this.load.atlas('splashLanguages', splashLanguagesPng, splashLanguagesJson)
         this.load.atlas("splashBg", splashBg00, splashBgJson)
 
