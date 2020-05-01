@@ -68,5 +68,5 @@ export const D2_BAR_AFTER = {
     next: () => A_ARRIVAL
 }
 
-export const FIRST_LEVEL = B4_PARTY_AFTER
+export const FIRST_LEVEL = A_ARRIVAL
 
