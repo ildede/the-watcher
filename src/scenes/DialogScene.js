@@ -9,7 +9,7 @@ export default class DialogScene extends Phaser.Scene {
     create(data) {
         this.levelConfig = data
         this.dialogOpen = false
-        console.log(DIALOG_SCENE, this.levelConfig)
+        console.debug(DIALOG_SCENE, this.levelConfig)
 
         //-- Event listener
         const uiScene = this.scene.get(UI_SCENE)

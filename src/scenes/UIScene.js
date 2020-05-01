@@ -122,22 +122,21 @@ export default class UIScene extends Phaser.Scene {
     }
 
     manageMessageFor(item, currentScene, textBox) {
-        if (item.stringId()) {
-            if (item.stringIdRequired() && (this.messages.includes(item.stringIdRequired()) === false)) {
-                return
-            }
-            if (item.endScene()) {
-                this.events.emit('startTransition')
-            } else {
-                currentScene.events.emit('dialogStart')
-                textBox.setVisible(true).start(item.stringId().split(',').map(s => i18next.t(s)), 50)
-                item.stringId().split(',')
-                    .forEach(e => {
-                        if (this.messages.includes(e) === false) this.messages.push(e)
-                    })
-                if (item.showOnce()) {
-                    item.stringId = () => {}
-                }
+        if (item.stringIdRequired() && (this.messages.includes(item.stringIdRequired()) === false)) {
+            return
+        }
+        if (item.endScene()) {
+            currentScene.events.emit('dialogStart')
+            this.events.emit('startTransition')
+        } else if (item.stringId()) {
+            currentScene.events.emit('dialogStart')
+            textBox.setVisible(true).start(item.stringId().split(',').map(s => i18next.t(s)), 50)
+            item.stringId().split(',')
+                .forEach(e => {
+                    if (this.messages.includes(e) === false) this.messages.push(e)
+                })
+            if (item.showOnce()) {
+                item.stringId = () => {}
             }
         }
     }
