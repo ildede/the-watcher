@@ -10,11 +10,10 @@ export default class TransitionScene extends Phaser.Scene {
     const nextLevel = data.level.next()
 
     this.add.text(140, 100, 'THE WATCHER', { fontSize: '70px' })
-    this.add.text(225, 300, `Prev level: ${data.level.name}`, { fontSize: '30px' })
-    this.add.text(225, 340, `Next level: ${nextLevel.name}`, { fontSize: '30px' })
+    console.debug(`Prev level: ${data.level.name}\nNext level: ${nextLevel.name}`)
 
     this.time.addEvent({
-      delay: 1000,
+      delay: 500,
       callback: () => {
         this.scene.start(nextLevel.scene, { level: nextLevel });
         this.scene.wake(UI_SCENE)
