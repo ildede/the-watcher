@@ -17,6 +17,7 @@ module.exports = merge(base, {
     minimizer: [
       new TerserPlugin({
         terserOptions: {
+          sourceMap: true,
           output: {
             comments: false
           }
