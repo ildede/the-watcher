@@ -18,20 +18,20 @@ import nextPage from "../assets/UI/arrow-down-left.png";
 import {BOOT_SCENE, TITLE_SCENE} from "../TheWatcher";
 import {CASINO_TILES, DANCE_HALL_MAP, DANCE_HALL_TILES, PARTY_TILES, TOWN_MAP, TOWN_TILES} from "../config/levels";
 
-const townJson = require('../assets/main-town/town.json');
-const danceHallJson = require('../assets/main-town/dancehall.json');
-const marioJson = require('../assets/characters/mario/mario.json');
-const gioiaJson = require('../assets/characters/gioia/gioia.json');
-const blackJson = require('../assets/characters/cats/black.json');
-const orangeJson = require('../assets/characters/cats/orange.json');
-const whiteJson = require('../assets/characters/cats/white.json');
-const brownJson = require('../assets/characters/cats/brown.json');
-const amarantaJson = require('../assets/characters/npcs/amaranta.json');
-const amilcareJson = require('../assets/characters/npcs/amilcare.json');
-const carolinaJson = require('../assets/characters/npcs/carolina.json');
-const debborahJson = require('../assets/characters/npcs/debborah.json');
-const ezechieleJson = require('../assets/characters/npcs/ezechiele.json');
-const langResources = require('../locales/lang_resources.json');
+import * as townJson from '../assets/main-town/town.json';
+import * as danceHallJson from '../assets/main-town/dancehall.json';
+import * as marioJson from '../assets/characters/mario/mario.json';
+import * as gioiaJson from '../assets/characters/gioia/gioia.json';
+import * as blackJson from '../assets/characters/cats/black.json';
+import * as orangeJson from '../assets/characters/cats/orange.json';
+import * as whiteJson from '../assets/characters/cats/white.json';
+import * as brownJson from '../assets/characters/cats/brown.json';
+import * as amarantaJson from '../assets/characters/npcs/amaranta.json';
+import * as amilcareJson from '../assets/characters/npcs/amilcare.json';
+import * as carolinaJson from '../assets/characters/npcs/carolina.json';
+import * as debborahJson from '../assets/characters/npcs/debborah.json';
+import * as ezechieleJson from '../assets/characters/npcs/ezechiele.json';
+import * as langResources from '../locales/lang_resources.json';
 
 export default class BootScene extends Phaser.Scene {
     constructor() {

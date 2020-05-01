@@ -126034,7 +126034,7 @@
     <property name="stringIdRequired" value="System_006"/>
    </properties>
   </object>
-  <object id="27" name="Welcome" type="message" x="153.282" y="323" width="40" height="40">
+  <object id="27" name="Welcome" type="message" x="153.181" y="323.102" width="40" height="40">
    <properties>
     <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="System_001,System_002,System_003,System_004,System_005,System_006"/>
@@ -126070,7 +126070,7 @@
     <property name="stringIdRequired" value="Mario_party"/>
    </properties>
   </object>
-  <object id="48" name="End" type="message" x="54.9427" y="140.172" width="249.252" height="301.565">
+  <object id="48" name="End" type="message" x="55" y="140" width="249" height="300">
    <properties>
     <property name="endScene" type="bool" value="true"/>
     <property name="stringId" value="Mario_end"/>
