@@ -13,7 +13,7 @@ export default class TitleScene extends Phaser.Scene {
         this.anims.create({key: 'starfield', frames: this.anims.generateFrameNames('splashBg'), repeat: -1, frameRate: 60})
         this.add.sprite(450, 300, 'splashBg').setDisplaySize(900, 600).play('starfield')
 
-        this.add.image(450, 110, 'titleWatcher')
+        this.add.image(450, 140, 'titleWatcher')
         const english = this.add.sprite(450, 380, 'splashLanguages', 'english');
         const italian = this.add.sprite(450, 420, 'splashLanguages', 'italian');
         english.setInteractive({ useHandCursor: true })
