@@ -126034,28 +126034,29 @@
     <property name="stringIdRequired" value="System_006"/>
    </properties>
   </object>
-  <object id="27" name="Welcome" type="message" x="153.181" y="323.102" width="40" height="40">
+  <object id="27" name="Welcome" type="message" x="120" y="300" width="100" height="100">
    <properties>
     <property name="showOnce" type="bool" value="true"/>
-    <property name="stringId" value="System_001,System_002,System_003,System_004,System_005,System_006"/>
+    <property name="stringId" value="System_001,System_005,System_004,System_002,System_003,System_006"/>
    </properties>
   </object>
-  <object id="33" name="Player" type="spawn" x="174.667" y="344.667">
+  <object id="33" name="Player" type="spawn" x="175" y="345">
    <point/>
   </object>
-  <object id="40" name="Mario think" type="message" x="776.356" y="613.165" width="78.2274" height="59.8216">
+  <object id="40" name="Mario think" type="message" x="750" y="590" width="110" height="100">
    <properties>
+    <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="Mario_party"/>
     <property name="stringIdRequired" value="Town_hall_party"/>
    </properties>
   </object>
-  <object id="41" name="Town hall" type="sign" x="779.93" y="617.165" width="70" height="50">
+  <object id="41" name="Town hall" type="sign" x="770" y="590" width="75" height="65">
    <properties>
     <property name="stringId" value="Town_hall_party"/>
    </properties>
   </object>
-  <object id="46" name="Mario think" type="message" x="11.3767" y="15.9919" width="1655.16" height="1679.1">
+  <object id="46" name="Mario think" type="message" x="10" y="10" width="1660" height="1680">
    <properties>
     <property name="interval" type="int" value="30"/>
     <property name="showOnce" type="bool" value="false"/>
@@ -126063,8 +126064,9 @@
     <property name="stringIdRequired" value="Mario_party"/>
    </properties>
   </object>
-  <object id="47" name="Mario think" type="message" x="142.61" y="280.761" width="67.6259" height="79.3816">
+  <object id="47" name="Mario think" type="message" x="140" y="285" width="70" height="80">
    <properties>
+    <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="Mario_party_2"/>
     <property name="stringIdRequired" value="Mario_party"/>
@@ -126073,7 +126075,7 @@
   <object id="48" name="End" type="message" x="55" y="140" width="249" height="300">
    <properties>
     <property name="endScene" type="bool" value="true"/>
-    <property name="stringId" value="Mario_end"/>
+    <property name="stringId" value="any"/>
     <property name="stringIdRequired" value="Mario_party_2"/>
    </properties>
   </object>
@@ -126634,44 +126636,48 @@
 </data>
  </layer>
  <objectgroup id="3" name="Objects" locked="1">
-  <object id="25" name="Mario think" type="message" x="296.183" y="1074.52" width="77.9127" height="84.4387">
+  <object id="25" name="Mario think" type="message" x="257" y="1040" width="160" height="175">
    <properties>
+    <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="Mario_house"/>
     <property name="stringIdRequired" value="House_sign"/>
    </properties>
   </object>
-  <object id="11" name="House" type="sign" x="313.322" y="1088.43" width="45.3568" height="50.2138">
+  <object id="11" name="House" type="sign" x="305" y="1075" width="60" height="70">
    <properties>
     <property name="stringId" value="House_sign"/>
    </properties>
   </object>
-  <object id="42" name="Mario think" type="message" x="491.457" y="1144.73" width="68.6471" height="85.9189">
+  <object id="42" name="Mario think" type="message" x="460" y="1110" width="129" height="160">
    <properties>
+    <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="Mario_Inn"/>
     <property name="stringIdRequired" value="Inn"/>
    </properties>
   </object>
-  <object id="17" name="Inn" type="sign" x="510" y="1160" width="35" height="55">
+  <object id="17" name="Inn" type="sign" x="503" y="1150" width="50" height="75">
    <properties>
     <property name="stringId" value="Inn"/>
    </properties>
   </object>
-  <object id="24" name="Mario think" type="message" x="1254.52" y="224.117" width="52.1209" height="54.9646">
+  <object id="24" name="Mario think" type="message" x="1215" y="207" width="128" height="113">
    <properties>
+    <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="Mario_dog"/>
     <property name="stringIdRequired" value="Dog_pound_sign"/>
    </properties>
   </object>
-  <object id="23" name="Dog pound" type="sign" x="1260.52" y="229.331" width="39.0365" height="39.0717">
+  <object id="23" name="Dog pound" type="sign" x="1253.47" y="229.331" width="51.38" height="52.003">
    <properties>
     <property name="stringId" value="Dog_pound_sign"/>
    </properties>
   </object>
-  <object id="44" name="Mario think" type="message" x="1270.72" y="799.091" width="82.1304" height="112.256">
+  <object id="44" name="Mario think" type="message" x="1241.33" y="762.06" width="140.321" height="176.324">
    <properties>
+    <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="Mario_park"/>
     <property name="stringIdRequired" value="Park"/>
