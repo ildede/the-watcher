@@ -9,7 +9,10 @@ export default class TitleScene extends Phaser.Scene {
     }
 
     create() {
-        this.add.text(140, 100, 'THE WATCHER', { fontSize: '70px' })
+        this.anims.create({key: 'starfield', frames: this.anims.generateFrameNames('splashBg'), repeat: -1, frameRate: 60})
+        this.add.sprite(450, 300, 'splashBg').setDisplaySize(900, 600).play('starfield')
+
+        this.add.image(450, 110, 'titleWatcher')
 
         const en = this.add.text(225, 300, 'English (default)', { fontSize: '30px' })
         const it = this.add.text(225, 340, 'Italiano', { fontSize: '30px' })
