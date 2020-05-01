@@ -11,10 +11,11 @@ export default class Character extends Phaser.Physics.Arcade.Sprite {
         this.spriteKey = spriteKey
 
         this.createAnimations()
-        this.down()
 
         this.stringId = () => object.properties?.find(e => e.name === 'stringId')?.value
         this.showOnce = () => object.properties?.find(e => e.name === 'showOnce')?.value
+        this.interval = () => object.properties?.find(e => e.name === 'interval')?.value || 5
+        this.endScene = () => object.properties?.find(e => e.name === 'endScene')?.value
         this.stringIdRequired = () => object.properties?.find(e => e.name === 'stringIdRequired')?.value
     }
 

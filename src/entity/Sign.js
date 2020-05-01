@@ -6,8 +6,7 @@ export default class Sign extends Phaser.GameObjects.Sprite {
         super(scene, object.x, object.y, 'atlas')
 
         this.setOrigin(0,0)
-        this.width = object.width
-        this.height = object.height
+        this.setDisplaySize(object.width, object.height)
 
         this.visible = false
 
@@ -17,6 +16,8 @@ export default class Sign extends Phaser.GameObjects.Sprite {
 
         this.stringId = () => object.properties?.find(e => e.name === 'stringId')?.value
         this.showOnce = () => object.properties?.find(e => e.name === 'showOnce')?.value
+        this.interval = () => object.properties?.find(e => e.name === 'interval')?.value || 2
+        this.endScene = () => object.properties?.find(e => e.name === 'endScene')?.value
         this.stringIdRequired = () => object.properties?.find(e => e.name === 'stringIdRequired')?.value
     }
 }
