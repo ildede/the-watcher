@@ -9,8 +9,9 @@ import orangePng from "../assets/characters/cats/orange.png";
 import whitePng from "../assets/characters/cats/white.png";
 import brownPng from "../assets/characters/cats/brown.png";
 import nextPage from "../assets/UI/arrow-down-left.png";
-import titleWatcher from "../assets/title/titleWatcher.png";
+import titleWatcher from "../assets/title/title-watcher.png";
 import splashBg00 from "../assets/title/splash-background-0.png";
+import splashLanguagesPng from "../assets/title/splash-languages.png";
 
 import {BOOT_SCENE, TITLE_SCENE} from "../TheWatcher";
 import {CASINO_TILES, DANCE_HALL_MAP, DANCE_HALL_TILES, PARTY_TILES, TOWN_MAP, TOWN_TILES} from "../config/levels";
@@ -24,6 +25,7 @@ import * as whiteJson from '../assets/characters/cats/white.json';
 import * as brownJson from '../assets/characters/cats/brown.json';
 
 import * as splashBgJson from '../assets/title/splash-background.json';
+import * as splashLanguagesJson from '../assets/title/splash-languages.json';
 
 import * as langResources from '../locales/lang_resources.json';
 
@@ -100,6 +102,7 @@ export default class BootScene extends Phaser.Scene {
         this.load.atlas("orange", orangePng, orangeJson)
         this.load.atlas("white", whitePng, whiteJson)
         this.load.atlas("brown", brownPng, brownJson)
+        this.load.atlas('splashLanguages', splashLanguagesPng, splashLanguagesJson)
         this.load.atlas("splashBg", splashBg00, splashBgJson)
 
         this.load.json('langResource', langResources)

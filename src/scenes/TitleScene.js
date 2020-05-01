@@ -6,6 +6,7 @@ export default class TitleScene extends Phaser.Scene {
     constructor() {
         super(TITLE_SCENE)
         this.startWorldScene = this.startWorldScene.bind(this)
+        this.drawOutlineRect = this.drawOutlineRect.bind(this)
     }
 
     create() {
@@ -13,14 +14,25 @@ export default class TitleScene extends Phaser.Scene {
         this.add.sprite(450, 300, 'splashBg').setDisplaySize(900, 600).play('starfield')
 
         this.add.image(450, 110, 'titleWatcher')
+        const english = this.add.sprite(450, 380, 'splashLanguages', 'english');
+        const italian = this.add.sprite(450, 420, 'splashLanguages', 'italian');
+        english.setInteractive({ useHandCursor: true })
+        italian.setInteractive({ useHandCursor: true })
+        english.on('pointerdown', () => this.startWorldScene('en'))
+        italian.on('pointerdown', () => this.startWorldScene('it'))
+        english.on('pointerover', () => this.drawOutlineRect(english))
+        italian.on('pointerover', () => this.drawOutlineRect(italian))
+        english.on('pointerout', () => this.selection.clear())
+        italian.on('pointerout', () => this.selection.clear())
 
-        const en = this.add.text(225, 300, 'English (default)', { fontSize: '30px' })
-        const it = this.add.text(225, 340, 'Italiano', { fontSize: '30px' })
-        en.setInteractive({ useHandCursor: true })
-        it.setInteractive({ useHandCursor: true })
-        en.on('pointerdown', () => this.startWorldScene('en'))
-        it.on('pointerdown', () => this.startWorldScene('it'))
         this.input.keyboard.on('keydown-SPACE', () => this.startWorldScene())
+    }
+
+    drawOutlineRect(sprite) {
+        let rect = new Phaser.Geom.Rectangle((sprite.x-sprite.width/2)-5, (sprite.y-sprite.height/2)-5, sprite.width+10, sprite.height+10)
+        const graphics = this.add.graphics({ lineStyle: { color: 0x00ffff, width: 2 } })
+        graphics.strokeRectShape(rect)
+        this.selection = graphics
     }
 
     startWorldScene(language) {

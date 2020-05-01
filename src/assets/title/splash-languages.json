@@ -1,0 +1,62 @@
+{
+	"textures": [
+		{
+			"image": "splash-languages.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 285,
+				"h": 26
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "italian",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 147,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 147,
+						"h": 24
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 147,
+						"h": 24
+					}
+				},
+				{
+					"filename": "english",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 134,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 134,
+						"h": 24
+					},
+					"frame": {
+						"x": 150,
+						"y": 1,
+						"w": 134,
+						"h": 24
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:f806a68c1a150f4fff216a474fa59c7f:9f3cc3ee389614d68ca7e89b227912d1:bf4a57f98f3977f9798102ac126484a1$"
+	}
+}
