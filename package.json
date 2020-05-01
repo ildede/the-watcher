@@ -4,6 +4,8 @@
   "description": "The watcher, an AdventureJam2020 Game",
   "main": "src/index.js",
   "scripts": {
+    "minify-locale": "json-minify src/locales/lang_resources.json > src/locales/tmp_lang_resources.json && mv src/locales/tmp_lang_resources.json src/locales/lang_resources.json",
+    "minify-map": "json-minify src/assets/main-town/town.json > src/assets/main-town/tmp_town.json && mv src/assets/main-town/tmp_town.json src/assets/main-town/town.json",
     "build": "webpack --config webpack/prod.js ",
     "start": "webpack-dev-server --config webpack/base.js --open"
   },
@@ -26,6 +28,7 @@
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^3.2.0",
     "i18next-http-backend": "^1.0.7",
+    "json-minify": "^1.0.0",
     "raw-loader": "^3.1.0",
     "terser-webpack-plugin": "^2.3.6",
     "webpack": "^4.41.2",
