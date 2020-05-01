@@ -24,7 +24,9 @@ export default class WorldScene extends Phaser.Scene {
 
         const bottom = map.createStaticLayer("Bottom", tileset, 0, 0)
         const belowLayer = map.createStaticLayer("Below Player", tileset, 0, 0)
-        const worldLayer = map.createStaticLayer("World", tileset, 0, 0)
+        const worldBottom = map.createStaticLayer("World Bottom", tileset, 0, 0)
+        const worldMiddle = map.createStaticLayer("World Middle", tileset, 0, 0)
+        const worldUp = map.createStaticLayer("World Up", tileset, 0, 0)
         const aboveLayer = map.createStaticLayer("Above Player", tileset, 0, 0)
         const top = map.createStaticLayer("Top", tileset, 0, 0)
         const levelLayer = map.getObjectLayer(this.levelConfig.level.name)
@@ -43,9 +45,11 @@ export default class WorldScene extends Phaser.Scene {
         //-- Collisions
         this.physics.world.bounds.width = map.widthInPixels
         this.physics.world.bounds.height = map.heightInPixels
-        worldLayer.setCollisionByProperty({ collide: true })
+        worldUp.setCollisionByProperty({ collide: true })
+        worldMiddle.setCollisionByProperty({ collide: true })
+        worldBottom.setCollisionByProperty({ collide: true })
         this.player.setCollideWorldBounds(true)
-        this.physics.add.collider(this.player, worldLayer)
+        this.physics.add.collider(this.player, [worldUp,worldBottom,worldMiddle])
         this.physics.add.collider(this.player, [this.npc],
             (player, item) => {
                 if (!this.dialogOpen) {
@@ -100,7 +104,17 @@ export default class WorldScene extends Phaser.Scene {
                 .graphics()
                 .setAlpha(0.75)
                 .setDepth(20);
-            worldLayer.renderDebug(graphics, {
+            worldUp.renderDebug(graphics, {
+                tileColor: null, // Color of non-colliding tiles
+                collidingTileColor: new Phaser.Display.Color(243, 134, 48, 255), // Color of colliding tiles
+                faceColor: new Phaser.Display.Color(40, 39, 37, 255) // Color of colliding face edges
+            });
+            worldMiddle.renderDebug(graphics, {
+                tileColor: null, // Color of non-colliding tiles
+                collidingTileColor: new Phaser.Display.Color(243, 134, 48, 255), // Color of colliding tiles
+                faceColor: new Phaser.Display.Color(40, 39, 37, 255) // Color of colliding face edges
+            });
+            worldBottom.renderDebug(graphics, {
                 tileColor: null, // Color of non-colliding tiles
                 collidingTileColor: new Phaser.Display.Color(243, 134, 48, 255), // Color of colliding tiles
                 faceColor: new Phaser.Display.Color(40, 39, 37, 255) // Color of colliding face edges
