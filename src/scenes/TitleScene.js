@@ -25,7 +25,10 @@ export default class TitleScene extends Phaser.Scene {
         english.on('pointerout', () => this.selection.clear())
         italian.on('pointerout', () => this.selection.clear())
 
-        this.input.keyboard.on('keydown-SPACE', () => this.startWorldScene())
+        this.input.keyboard.on('keydown-SPACE', () => {
+            this.drawOutlineRect(english)
+            setTimeout(() => this.startWorldScene(), 400)
+        })
     }
 
     drawOutlineRect(sprite) {
