@@ -8,6 +8,7 @@ import blackPng from "../assets/characters/cats/black.png";
 import orangePng from "../assets/characters/cats/orange.png";
 import whitePng from "../assets/characters/cats/white.png";
 import brownPng from "../assets/characters/cats/brown.png";
+import himPng from "../assets/characters/him/him.png";
 import female1Png from "../assets/characters/npcs/female/female1.png";
 import female2Png from "../assets/characters/npcs/female/female2.png";
 import female3Png from "../assets/characters/npcs/female/female3.png";
@@ -39,6 +40,7 @@ import * as blackJson from '../assets/characters/cats/black.json';
 import * as orangeJson from '../assets/characters/cats/orange.json';
 import * as whiteJson from '../assets/characters/cats/white.json';
 import * as brownJson from '../assets/characters/cats/brown.json';
+import * as himJson from '../assets/characters/him/him.json';
 import * as female1Json from "../assets/characters/npcs/female/female1.json";
 import * as female2Json from "../assets/characters/npcs/female/female2.json";
 import * as female3Json from "../assets/characters/npcs/female/female3.json";
@@ -134,6 +136,7 @@ export default class BootScene extends Phaser.Scene {
         this.load.atlas("orange", orangePng, orangeJson)
         this.load.atlas("white", whitePng, whiteJson)
         this.load.atlas("brown", brownPng, brownJson)
+        this.load.atlas("him", himPng, himJson)
         this.load.atlas("female1", female1Png, female1Json)
         this.load.atlas("female2", female2Png, female2Json)
         this.load.atlas("female3", female3Png, female3Json)
