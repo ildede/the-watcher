@@ -14,7 +14,6 @@ export default class WorldScene extends Phaser.Scene {
         this.levelConfig = data
         this.dialogOpen = false
 
-
         //-- Draw map and game objects
         const map = this.make.tilemap({ key: this.levelConfig.level.map })
         const tileset = []
@@ -166,7 +165,7 @@ export default class WorldScene extends Phaser.Scene {
                 const spawnPoint = this.levelConfig.x && this.levelConfig.y
                     ? {x: this.levelConfig.x, y: this.levelConfig.y}
                     : {x: object.x, y: object.y}
-                this.player = new Player(this, spawnPoint.x, spawnPoint.y, "amilcare", "front")
+                this.player = new Player(this, spawnPoint.x, spawnPoint.y, "black", "front")
             }
         };
     }
