@@ -1,5 +1,8 @@
 import 'phaser'
-import townPng from "../assets/tileset/tileset-extruded.png";
+import watcherBasePng from "../assets/tileset/tileset-extruded.png";
+import casinoPng from "../assets/tileset/casino-8x8-extruded.png";
+import danceHallPng from "../assets/tileset/cafe-8x8-extruded.png";
+import partyPng from "../assets/tileset/wedding-8x8-extruded.png";
 import marioPng from "../assets/characters/mario/mario.png";
 import gioiaPng from "../assets/characters/gioia/gioia.png";
 import blackPng from "../assets/characters/cats/black.png";
@@ -13,8 +16,10 @@ import debborahPng from "../assets/characters/npcs/debborah.png";
 import ezechielePng from "../assets/characters/npcs/ezechiele.png";
 import nextPage from "../assets/UI/arrow-down-left.png";
 import {BOOT_SCENE, TITLE_SCENE} from "../TheWatcher";
+import {CASINO_TILES, DANCE_HALL_MAP, DANCE_HALL_TILES, PARTY_TILES, TOWN_MAP, TOWN_TILES} from "../config/levels";
 
 const townJson = require('../assets/main-town/town.json');
+const danceHallJson = require('../assets/main-town/dancehall.json');
 const marioJson = require('../assets/characters/mario/mario.json');
 const gioiaJson = require('../assets/characters/gioia/gioia.json');
 const blackJson = require('../assets/characters/cats/black.json');
@@ -88,10 +93,14 @@ export default class BootScene extends Phaser.Scene {
             assetText.destroy();
         });
 
-        this.load.image("tiles", townPng)
-        this.load.image('nextPage', nextPage)
+        this.load.image(TOWN_TILES, watcherBasePng)
+        this.load.tilemapTiledJSON(TOWN_MAP, townJson)
+        this.load.image(CASINO_TILES, casinoPng)
+        this.load.image(DANCE_HALL_TILES, danceHallPng)
+        this.load.image(PARTY_TILES, partyPng)
+        this.load.tilemapTiledJSON(DANCE_HALL_MAP, danceHallJson)
 
-        this.load.tilemapTiledJSON("map", townJson)
+        this.load.image('nextPage', nextPage)
         this.load.atlas("mario", marioPng, marioJson)
         this.load.atlas("gioia", gioiaPng, gioiaJson)
         this.load.atlas("black", blackPng, blackJson)

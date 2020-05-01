@@ -1,14 +1,72 @@
-export const ARRIVAL =          {name: '01_arrival',          scene: 'WorldScene' }
-export const BEFORE_PARTY =     {name: '02_before_party',     scene: 'WorldScene' }
-export const PARTY =            {name: '03_party',            scene: 'WorldScene' }
-export const APPOINTMENT =      {name: '04_appointment',      scene: 'DialogScene', messages: ['Mario_first_date001,Mario_first_date002,Mario_first_date003', 'Mario_first_date004', 'Mario_first_date005', 'Gioia_first_date001', 'Gioia_first_date002', 'Mario_first_date006', 'Gioia_first_date003', 'Mario_first_date007', 'Gioia_first_date004', 'Mario_first_date008', 'Gioia_first_date005', 'Mario_first_date009', 'Gioia_first_date006', 'Mario_first_date010', 'Gioia_first_date007', 'Mario_first_date011', 'Gioia_first_date008', 'Mario_first_date012', 'Gioia_first_date009', 'Mario_first_date013', 'Gioia_first_date010', 'Mario_first_date014', 'Gioia_first_date011', 'Mario_first_date015', 'Mario_first_date016', 'Mario_first_date017'] }
-export const BAR =              {name: '05_bar',              scene: 'WorldScene' }
-export const DINNER =           {name: '06_dinner',           scene: 'DialogScene', messages: ['','','']  }
-export const NIGHT_OUT =        {name: '07_night_out',        scene: 'DialogScene', messages: ['','','']  }
-export const WHAT_ARE_WE =      {name: '08_what_are_we',      scene: 'WorldScene' }
-export const ANNIVERSARY =      {name: '09_anniversary',      scene: 'WorldScene' }
-export const MARRY_ME =         {name: '10_marry_me',         scene: 'WorldScene' }
-export const MOVING_TOGETHER =  {name: '11_moving_together',  scene: 'WorldScene' }
-export const DOG =              {name: '12_dog',              scene: 'WorldScene' }
-export const B_DAY =            {name: '13_b_day',            scene: 'WorldScene' }
-export const CREDITS =          {name: '14_credits',          scene: 'WorldScene' }
+export const TOWN_TILES = 'watcherbase'
+export const TOWN_MAP = 'townMap'
+export const CASINO_TILES = 'casino'
+export const DANCE_HALL_TILES = 'dancehall'
+export const PARTY_TILES = 'party'
+export const DANCE_HALL_MAP = 'danceHallMap'
+
+export const A_ARRIVAL = {
+    name: 'a_arrival',
+    scene: 'WorldScene',
+    map: TOWN_MAP,
+    tiles: [TOWN_TILES],
+    tileSize: 16,
+    next: () => B1_PARTY_BEFORE
+}
+export const B1_PARTY_BEFORE = {
+    name: 'b1_party_before',
+    scene: 'WorldScene',
+    map: TOWN_MAP,
+    tiles: [TOWN_TILES],
+    tileSize: 16,
+    next: () => B2_PARTY_BEGIN
+}
+export const B2_PARTY_BEGIN = {
+    name: 'b2_party_begin',
+    scene: 'WorldScene',
+    map: DANCE_HALL_MAP,
+    tiles: [CASINO_TILES, DANCE_HALL_TILES, PARTY_TILES],
+    tileSize: 8,
+    next: () => B3_PARTY
+}
+export const B3_PARTY = {
+    name: 'b3_party',
+    scene: 'WorldScene',
+    map: DANCE_HALL_MAP,
+    tiles: [CASINO_TILES, DANCE_HALL_TILES, PARTY_TILES],
+    tileSize: 8,
+    next: () => B4_PARTY_AFTER
+}
+export const B4_PARTY_AFTER = {
+    name: 'b4_party_after',
+    scene: 'WorldScene',
+    map: TOWN_MAP,
+    tiles: [TOWN_TILES],
+    tileSize: 16,
+    next: () => C_FIRST_DATE
+}
+export const C_FIRST_DATE = {
+    name: 'c_first_date',
+    scene: 'WorldScene',
+    map: TOWN_MAP,
+    tiles: [TOWN_TILES],
+    tileSize: 16,
+    next: () => D1_BAR
+}
+export const D1_BAR = {
+    name: 'd1_bar',
+    scene: 'DialogScene',
+    messages: ['Mario_first_date001,Mario_first_date002','Gioia_first_date001'],
+    next: () => D2_BAR_AFTER
+}
+export const D2_BAR_AFTER = {
+    name: 'd2_bar_after',
+    scene: 'WorldScene',
+    map: TOWN_MAP,
+    tiles: [TOWN_TILES],
+    tileSize: 16,
+    next: () => A_ARRIVAL
+}
+
+export const FIRST_LEVEL = A_ARRIVAL
+

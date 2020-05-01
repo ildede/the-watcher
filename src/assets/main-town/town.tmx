@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.3.4" orientation="orthogonal" renderorder="right-down" width="105" height="107" tilewidth="16" tileheight="16" infinite="0" nextlayerid="23" nextobjectid="32">
+<map version="1.2" tiledversion="1.3.4" orientation="orthogonal" renderorder="right-down" width="105" height="107" tilewidth="16" tileheight="16" infinite="0" nextlayerid="23" nextobjectid="40">
  <editorsettings>
   <export target="town.json" format="json"/>
  </editorsettings>
- <tileset firstgid="1" name="watcherbase" tilewidth="16" tileheight="16" spacing="2" margin="1" tilecount="31860" columns="120">
+ <tileset firstgid="1" name="watcherbase" tilewidth="16" tileheight="16" spacing="2" margin="1" tilecount="25200" columns="120">
   <image source="../tileset/tileset-extruded.png" width="2160" height="3780"/>
   <tile id="0">
    <properties>
@@ -126006,42 +126006,41 @@
    </properties>
   </tile>
  </tileset>
- <objectgroup id="22" name="14_credits"/>
- <objectgroup id="21" name="13_b_day"/>
- <objectgroup id="20" name="12_dog"/>
- <objectgroup id="19" name="11_moving_together"/>
- <objectgroup id="18" name="10_marry_me"/>
- <objectgroup id="17" name="09_anniversary"/>
- <objectgroup id="16" name="08_what_are_we"/>
- <objectgroup id="15" name="07_night_out"/>
- <objectgroup id="14" name="06_dinner"/>
- <objectgroup id="13" name="05_bar"/>
- <objectgroup id="12" name="04_appointment"/>
- <objectgroup id="11" name="03_party"/>
- <objectgroup id="10" name="02_before_party">
-  <object id="31" name="carolina" type="npc" x="100" y="360">
+ <objectgroup id="13" name="d2_bar_after" visible="0">
+  <object id="39" name="Player" type="spawn" x="600" y="1310" visible="0">
    <point/>
   </object>
  </objectgroup>
- <objectgroup id="9" name="01_arrival">
-  <object id="26" name="Mario think" type="message" x="153.282" y="323" width="40" height="40">
+ <objectgroup id="12" name="c_first_date" visible="0">
+  <object id="37" name="Player" type="spawn" x="179.333" y="349.333" visible="0">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="11" name="b4_party_after" visible="0">
+  <object id="38" name="Player" type="spawn" x="850" y="630" visible="0">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="10" name="b1_party_before" visible="0">
+  <object id="34" name="Player" type="spawn" x="174.667" y="344.667" visible="0">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="9" name="a_arrival" visible="0">
+  <object id="26" name="Mario think" type="message" x="153.282" y="323" width="40" height="40" visible="0">
    <properties>
     <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="Mario_001"/>
     <property name="stringIdRequired" value="System_006"/>
    </properties>
   </object>
-  <object id="27" name="Welcome" type="message" x="153.282" y="323" width="40" height="40">
+  <object id="27" name="Welcome" type="message" x="153.282" y="323" width="40" height="40" visible="0">
    <properties>
     <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="System_001,System_002,System_003,System_004,System_005,System_006"/>
    </properties>
   </object>
-  <object id="29" name="ezechiele" type="npc" x="100" y="360">
-   <properties>
-    <property name="stringId" value="Mario party_2"/>
-    <property name="stringIdRequired" value="House_sign"/>
-   </properties>
+  <object id="33" name="Player" type="spawn" x="174.667" y="344.667" visible="0">
    <point/>
   </object>
  </objectgroup>
@@ -126601,80 +126600,43 @@
 </data>
  </layer>
  <objectgroup id="3" name="Objects" locked="1">
-  <object id="1" name="Player" type="spawn" x="170" y="340">
-   <point/>
-  </object>
-  <object id="25" name="Mario think" type="message" x="308.46" y="1084.98" width="55.1782" height="61.2495">
+  <object id="25" name="Mario think" type="message" x="308.46" y="1084.98" width="55.1782" height="61.2495" visible="0">
    <properties>
     <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="Mario_house"/>
     <property name="stringIdRequired" value="House_sign"/>
    </properties>
   </object>
-  <object id="11" name="House" type="sign" x="313.322" y="1088.43" width="45.3568" height="50.2138">
+  <object id="11" name="House" type="sign" x="313.322" y="1088.43" width="45.3568" height="50.2138" visible="0">
    <properties>
     <property name="stringId" value="House_sign"/>
    </properties>
   </object>
-  <object id="17" name="Inn" type="sign" x="510" y="1160" width="35" height="55">
+  <object id="17" name="Inn" type="sign" x="510" y="1160" width="35" height="55" visible="0">
    <properties>
     <property name="stringId" value="Inn"/>
    </properties>
   </object>
-  <object id="5" name="orange" type="npc" x="420" y="310">
-   <point/>
-  </object>
-  <object id="6" name="white" type="npc" x="460" y="310">
-   <point/>
-  </object>
-  <object id="7" name="brown" type="npc" x="500" y="310">
-   <point/>
-  </object>
-  <object id="8" name="black" type="npc" x="540" y="310">
-   <point/>
-  </object>
-  <object id="9" name="gioia" type="npc" x="590" y="310">
-   <point/>
-  </object>
-  <object id="10" name="mario" type="npc" x="640" y="310">
-   <point/>
-  </object>
-  <object id="12" name="amaranta" type="npc" x="690" y="310">
-   <point/>
-  </object>
-  <object id="13" name="amilcare" type="npc" x="740" y="310">
-   <point/>
-  </object>
-  <object id="15" name="debborah" type="npc" x="840" y="310">
-   <point/>
-  </object>
-  <object id="16" name="ezechiele" type="npc" x="890" y="310">
-   <properties>
-    <property name="stringId" value="Mario party_2"/>
-    <property name="stringIdRequired" value="House_sign"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="22" name="Mario think" type="message" x="769.426" y="606" width="78.2274" height="59.8216">
+  <object id="22" name="Mario think" type="message" x="769.426" y="606" width="78.2274" height="59.8216" visible="0">
    <properties>
     <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="Mario_party"/>
     <property name="stringIdRequired" value="Town_hall_party"/>
    </properties>
   </object>
-  <object id="21" name="Town hall" type="sign" x="773" y="610" width="70" height="50">
+  <object id="21" name="Town hall" type="sign" x="773" y="610" width="70" height="50" visible="0">
    <properties>
     <property name="stringId" value="Town_hall_party"/>
    </properties>
   </object>
-  <object id="24" name="Mario think" type="message" x="1254.52" y="224.117" width="52.1209" height="54.9646">
+  <object id="24" name="Mario think" type="message" x="1254.52" y="224.117" width="52.1209" height="54.9646" visible="0">
    <properties>
     <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="Mario_dog"/>
     <property name="stringIdRequired" value="Dog_pound_sign"/>
    </properties>
   </object>
-  <object id="23" name="Dog pound" type="sign" x="1260.52" y="229.331" width="39.0365" height="39.0717">
+  <object id="23" name="Dog pound" type="sign" x="1260.52" y="229.331" width="39.0365" height="39.0717" visible="0">
    <properties>
     <property name="stringId" value="Dog_pound_sign"/>
    </properties>

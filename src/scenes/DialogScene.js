@@ -39,7 +39,11 @@ export default class DialogScene extends Phaser.Scene {
 
         this.events.on('dialogEnd', () => {
             index += 1
-            this.events.emit('dialogMessages', this.levelConfig.level.messages[index])
+            if (this.levelConfig.level.messages[index]) {
+                this.events.emit('dialogMessages', this.levelConfig.level.messages[index])
+            } else {
+                uiScene.events.emit('startTransition')
+            }
         })
     }
 

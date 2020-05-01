@@ -1,6 +1,6 @@
 import 'phaser'
 import {TITLE_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
-import {ARRIVAL} from "../config/levels";
+import {FIRST_LEVEL} from "../config/levels";
 
 export default class TitleScene extends Phaser.Scene {
     constructor() {
@@ -26,7 +26,7 @@ export default class TitleScene extends Phaser.Scene {
         this.time.addEvent({
             delay: 500,
             callback: () => {
-                this.scene.start(WORLD_SCENE, { level: ARRIVAL })
+                this.scene.start(WORLD_SCENE, { level: FIRST_LEVEL })
                 this.scene.launch(UI_SCENE, { language: language })
                 this.scene.bringToTop(UI_SCENE)
             }

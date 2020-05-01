@@ -13,12 +13,14 @@ export default class WorldScene extends Phaser.Scene {
     create(data) {
         this.levelConfig = data
         this.dialogOpen = false
-        console.log(WORLD_SCENE, this.levelConfig)
 
 
         //-- Draw map and game objects
-        const map = this.make.tilemap({ key: "map" })
-        const tileset = map.addTilesetImage("watcherbase", "tiles", 16, 16, 1, 2)
+        const map = this.make.tilemap({ key: this.levelConfig.level.map })
+        const tileset = []
+        this.levelConfig.level.tiles.forEach(e => {
+            tileset.push(map.addTilesetImage(e, e, this.levelConfig.level.tileSize, this.levelConfig.level.tileSize, 1, 2))
+        })
 
         const bottom = map.createStaticLayer("Bottom", tileset, 0, 0)
         const belowLayer = map.createStaticLayer("Below Player", tileset, 0, 0)
