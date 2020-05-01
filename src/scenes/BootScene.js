@@ -16,6 +16,14 @@ import female5Png from "../assets/characters/npcs/female/female5.png";
 import female6Png from "../assets/characters/npcs/female/female6.png";
 import female7Png from "../assets/characters/npcs/female/female7.png";
 import female8Png from "../assets/characters/npcs/female/female8.png";
+import male1Png from "../assets/characters/npcs/male/male1.png";
+import male2Png from "../assets/characters/npcs/male/male2.png";
+import male3Png from "../assets/characters/npcs/male/male3.png";
+import male4Png from "../assets/characters/npcs/male/male4.png";
+import male5Png from "../assets/characters/npcs/male/male5.png";
+import male6Png from "../assets/characters/npcs/male/male6.png";
+import male7Png from "../assets/characters/npcs/male/male7.png";
+import male8Png from "../assets/characters/npcs/male/male8.png";
 import nextPage from "../assets/UI/arrow-down-left.png";
 import titleWatcher from "../assets/title/title-watcher.png";
 import splashBg00 from "../assets/title/splash-background-0.png";
@@ -39,6 +47,14 @@ import * as female5Json from "../assets/characters/npcs/female/female5.json";
 import * as female6Json from "../assets/characters/npcs/female/female6.json";
 import * as female7Json from "../assets/characters/npcs/female/female7.json";
 import * as female8Json from "../assets/characters/npcs/female/female8.json";
+import * as male1Json from "../assets/characters/npcs/male/male1.json";
+import * as male2Json from "../assets/characters/npcs/male/male2.json";
+import * as male3Json from "../assets/characters/npcs/male/male3.json";
+import * as male4Json from "../assets/characters/npcs/male/male4.json";
+import * as male5Json from "../assets/characters/npcs/male/male5.json";
+import * as male6Json from "../assets/characters/npcs/male/male6.json";
+import * as male7Json from "../assets/characters/npcs/male/male7.json";
+import * as male8Json from "../assets/characters/npcs/male/male8.json";
 
 import * as splashBgJson from '../assets/title/splash-background.json';
 import * as splashLanguagesJson from '../assets/title/splash-languages.json';
@@ -126,6 +142,14 @@ export default class BootScene extends Phaser.Scene {
         this.load.atlas("female6", female6Png, female6Json)
         this.load.atlas("female7", female7Png, female7Json)
         this.load.atlas("female8", female8Png, female8Json)
+        this.load.atlas("male1", male1Png, male1Json)
+        this.load.atlas("male2", male2Png, male2Json)
+        this.load.atlas("male3", male3Png, male3Json)
+        this.load.atlas("male4", male4Png, male4Json)
+        this.load.atlas("male5", male5Png, male5Json)
+        this.load.atlas("male6", male6Png, male6Json)
+        this.load.atlas("male7", male7Png, male7Json)
+        this.load.atlas("male8", male8Png, male8Json)
         this.load.atlas('splashLanguages', splashLanguagesPng, splashLanguagesJson)
         this.load.atlas("splashBg", splashBg00, splashBgJson)
 
