@@ -129,10 +129,11 @@ export default class WorldScene extends Phaser.Scene {
             uiScene.events.emit('startTransition')
         });
 
-        this.events.on('dialogStart', () => {
+        this.events.on('dialogStart', (box) => {
             this.dialogOpen = true
+            console.log('continue on ', box)
             this.input.keyboard.off('keydown_SPACE');
-            this.input.keyboard.on('keydown_SPACE', this.continueDialog());
+            this.input.keyboard.on('keydown_SPACE', this.continueDialog(box));
         })
         this.events.on('dialogEnd', () => {
             this.dialogOpen = false
@@ -149,7 +150,7 @@ export default class WorldScene extends Phaser.Scene {
         }
     }
 
-    continueDialog() { return () => this.events.emit('continueDialog') }
+    continueDialog(box) { return () => this.events.emit('continueDialog', box) }
     playerAction() { return () => {
         this.physics.overlap(this.player, this.readableSigns,
             (player, item) => this.events.emit('readSign', item))

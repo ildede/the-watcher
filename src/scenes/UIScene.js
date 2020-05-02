@@ -54,12 +54,41 @@ export default class UIScene extends Phaser.Scene {
                 text: 10
             }
         })
-
         textBox.setDepth(1)
         textBox.setVisible(false)
         textBox.setOrigin(0)
         textBox.layout()
         textBox.setInteractive()
+
+        const systemBox = this.rexUI.add.textBox({
+            x: 30,
+            y: 450,
+
+            background: this.rexUI.add.roundRectangle(0, 0, 0, 0, 10, 0xaaaaaa)
+                .setStrokeStyle(3, 0x907748),
+
+            text: getBBcodeText(this, 770, 770, 70),
+
+            action: this.add
+                .image(0, 0, 'nextPage')
+                .setTint(0x4b5e57)
+                .setVisible(false)
+                .setScale(0.6),
+
+            space: {
+                left: 20,
+                right: 20,
+                top: 20,
+                bottom: 20,
+                icon: 2,
+                text: 10
+            }
+        })
+        systemBox.setDepth(1)
+        systemBox.setVisible(false)
+        systemBox.setOrigin(0)
+        systemBox.layout()
+        systemBox.setInteractive()
 
         let mainCamera = this.cameras.main
 
@@ -67,10 +96,14 @@ export default class UIScene extends Phaser.Scene {
             const icon = textBox.getElement('action').setVisible(true)
             textBox.resetChildVisibleState(icon)
         }, textBox)
+        systemBox.on('pageend', function() {
+            const icon = systemBox.getElement('action').setVisible(true)
+            systemBox.resetChildVisibleState(icon)
+        }, systemBox)
 
         worldScene.events.on('systemMessage', function(item) {
             console.debug('Event systemMessage received')
-            this.manageMessageFor(item, worldScene, textBox);
+            this.manageMessageFor(item, worldScene, systemBox);
         }, this)
 
         worldScene.events.on('readSign', function(item) {
@@ -88,19 +121,20 @@ export default class UIScene extends Phaser.Scene {
             this.manageDialogMessagesFor(messages, dialogScene, textBox);
         }, this)
 
-        worldScene.events.on('continueDialog', function() {
+        worldScene.events.on('continueDialog', function(box) {
             console.debug('Event continueDialog received')
-            const icon = textBox.getElement('action').setVisible(false)
-            textBox.resetChildVisibleState(icon)
-            if (this.isTyping) {
-                this.stop(true)
-            } else if (this.isLastPage) {
-                textBox.setVisible(false)
+            console.log('continue on ', box)
+            const icon = box.getElement('action').setVisible(false)
+            box.resetChildVisibleState(icon)
+            if (box.isTyping) {
+                box.stop(true)
+            } else if (box.isLastPage) {
+                box.setVisible(false)
                 worldScene.events.emit('dialogEnd')
             } else {
-                this.typeNextPage()
+                box.typeNextPage()
             }
-        }, textBox)
+        }, this)
         dialogScene.events.on('continueDialog', function() {
             console.debug('Event continueDialog received')
             const icon = textBox.getElement('action').setVisible(false)
@@ -121,17 +155,17 @@ export default class UIScene extends Phaser.Scene {
         })
     }
 
-    manageMessageFor(item, currentScene, textBox) {
+    manageMessageFor(item, currentScene, boxInUse) {
         if (this.requiredMessageNotRead(item) || this.blockingMessageIsRead(item)) {
             return
         }
 
         if (item.endScene()) {
-            currentScene.events.emit('dialogStart')
+            currentScene.events.emit('dialogStart', boxInUse)
             this.events.emit('startTransition')
         } else if (item.stringId()) {
-            currentScene.events.emit('dialogStart')
-            textBox.setVisible(true).start(item.stringId().split(',').map(s => i18next.t(s)), 50)
+            currentScene.events.emit('dialogStart', boxInUse)
+            boxInUse.setVisible(true).start(item.stringId().split(',').map(s => i18next.t(s)), 50)
             item.stringId().split(',')
                 .forEach(e => {
                     if (this.messages.includes(e) === false) this.messages.push(e)
