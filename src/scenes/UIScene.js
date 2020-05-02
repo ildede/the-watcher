@@ -30,76 +30,10 @@ export default class UIScene extends Phaser.Scene {
                 console.debug('i18next initialized')
             })
 
-        const textBox = this.rexUI.add.textBox({
-            x: 30,
-            y: 450,
-
-            background: this.rexUI.add.roundRectangle(0, 0, 0, 0, 10, 0xeeeeee)
-                .setStrokeStyle(3, 0x907748),
-
-            text: getBBcodeText(this, 770, 770, 70),
-
-            action: this.add
-                .image(0, 0, 'nextPage')
-                .setTint(0x4b5e57)
-                .setVisible(false)
-                .setScale(0.6),
-
-            space: {
-                left: 20,
-                right: 20,
-                top: 20,
-                bottom: 20,
-                icon: 2,
-                text: 10
-            }
-        })
-        textBox.setDepth(1)
-        textBox.setVisible(false)
-        textBox.setOrigin(0)
-        textBox.layout()
-        textBox.setInteractive()
-
-        const systemBox = this.rexUI.add.textBox({
-            x: 30,
-            y: 450,
-
-            background: this.rexUI.add.roundRectangle(0, 0, 0, 0, 10, 0xaaaaaa)
-                .setStrokeStyle(3, 0x907748),
-
-            text: getBBcodeText(this, 770, 770, 70),
-
-            action: this.add
-                .image(0, 0, 'nextPage')
-                .setTint(0x4b5e57)
-                .setVisible(false)
-                .setScale(0.6),
-
-            space: {
-                left: 20,
-                right: 20,
-                top: 20,
-                bottom: 20,
-                icon: 2,
-                text: 10
-            }
-        })
-        systemBox.setDepth(1)
-        systemBox.setVisible(false)
-        systemBox.setOrigin(0)
-        systemBox.layout()
-        systemBox.setInteractive()
+        const textBox = createTextBox.call(this, 0xeeeeee, 0x907748, 0x260e04);
+        const systemBox = createTextBox.call(this, 0xaaaaaa, 0x907748, 0x260e04);
 
         let mainCamera = this.cameras.main
-
-        textBox.on('pageend', function() {
-            const icon = textBox.getElement('action').setVisible(true)
-            textBox.resetChildVisibleState(icon)
-        }, textBox)
-        systemBox.on('pageend', function() {
-            const icon = systemBox.getElement('action').setVisible(true)
-            systemBox.resetChildVisibleState(icon)
-        }, systemBox)
 
         worldScene.events.on('systemMessage', function(item) {
             console.debug('Event systemMessage received')
@@ -153,6 +87,43 @@ export default class UIScene extends Phaser.Scene {
             this.messages = []
             mainCamera.fadeIn(500)
         })
+
+        function createTextBox(bgColor = 0xeeeeee, bgBorder = 0x907748, textColor = 0x260e04) {
+            const textBox = this.rexUI.add.textBox({
+                x: 30,
+                y: 450,
+
+                background: this.rexUI.add.roundRectangle(0, 0, 0, 0, 10, bgColor)
+                    .setStrokeStyle(3, bgBorder),
+
+                text: getBBcodeText(this, 770, 770, 70, textColor),
+
+                action: this.add
+                    .image(0, 0, 'nextPage')
+                    .setTint(0x4b5e57)
+                    .setVisible(false)
+                    .setScale(0.6),
+
+                space: {
+                    left: 20,
+                    right: 20,
+                    top: 20,
+                    bottom: 20,
+                    icon: 2,
+                    text: 10
+                }
+            })
+            textBox.setDepth(1)
+            textBox.setVisible(false)
+            textBox.setOrigin(0)
+            textBox.layout()
+            textBox.setInteractive()
+            textBox.on('pageend', function () {
+                const icon = textBox.getElement('action').setVisible(true)
+                textBox.resetChildVisibleState(icon)
+            }, textBox)
+            return textBox;
+        }
     }
 
     manageMessageFor(item, currentScene, boxInUse) {
@@ -194,12 +165,12 @@ export default class UIScene extends Phaser.Scene {
     }
 }
 
-const getBBcodeText = function(scene, wrapWidth, fixedWidth, fixedHeight) {
+const getBBcodeText = function (scene, wrapWidth, fixedWidth, fixedHeight, textColor = 0x260e04) {
     return scene.rexUI.add.BBCodeText(0, 0, '', {
         fixedWidth: fixedWidth,
         fixedHeight: fixedHeight,
 
-        color: 0x260e04,
+        color: textColor,
         fontSize: '20px',
         wrap: {
             mode: 'word',
