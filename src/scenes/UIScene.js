@@ -106,7 +106,7 @@ export default class UIScene extends Phaser.Scene {
                 background: this.rexUI.add.roundRectangle(0, 0, 0, 0, 10, bgColor)
                     .setStrokeStyle(3, bgBorder),
 
-                text: getBBcodeText(this, 770, icon ? 674 : 770, 96, textColor),
+                text: getBBcodeText(this, icon ? 674 : 770, icon ? 674 : 770, 96, textColor),
 
                 icon: iconFrom(this, icon),
                 action: this.add
@@ -120,7 +120,7 @@ export default class UIScene extends Phaser.Scene {
                     right: 20,
                     top: 20,
                     bottom: 20,
-                    icon: 2,
+                    icon: 10,
                     text: 10
                 }
             })
