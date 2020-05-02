@@ -40,7 +40,6 @@ export default class UIScene extends Phaser.Scene {
 
         worldScene.events.on('systemMessage', function(item) {
             console.debug('Event systemMessage received')
-            console.log(item.messageType)
             if (item.messageType === 'him') {
                 this.manageMessageFor(item, worldScene, himBox);
             } else {
@@ -69,7 +68,6 @@ export default class UIScene extends Phaser.Scene {
 
         worldScene.events.on('continueDialog', function(box) {
             console.debug('Event continueDialog received')
-            console.log('continue on ', box)
             const icon = box.getElement('action').setVisible(false)
             box.resetChildVisibleState(icon)
             if (box.isTyping) {

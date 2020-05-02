@@ -131,7 +131,6 @@ export default class WorldScene extends Phaser.Scene {
 
         this.events.on('dialogStart', (box) => {
             this.dialogOpen = true
-            console.log('continue on ', box)
             this.input.keyboard.off('keydown_SPACE');
             this.input.keyboard.on('keydown_SPACE', this.continueDialog(box));
         })
