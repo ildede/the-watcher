@@ -21,6 +21,7 @@ export default class UIScene extends Phaser.Scene {
         const dialogScene = this.scene.get(DIALOG_SCENE)
         this.uiConfig = data
         this.messages = []
+        this.messageQueue = []
 
         i18next
             .init({
@@ -44,7 +45,7 @@ export default class UIScene extends Phaser.Scene {
                 this.manageMessageFor(item, worldScene, himBox);
             } else if (item.messageType === 'her') {
                 this.manageMessageFor(item, worldScene, herBox);
-            }{
+            } else {
                 this.manageMessageFor(item, worldScene, systemBox);
             }
         }, this)
@@ -56,10 +57,18 @@ export default class UIScene extends Phaser.Scene {
 
         worldScene.events.on('talkTo', function(item) {
             console.debug('Event talkTo received')
-            if (item.messageType === 'her') {
-                this.manageMessageFor(item, worldScene, herBox);
+            if (item.stringId() === 'external') {
+                fetch(item.dialogs())
+                    .then(response => response.json())
+                    .then(data => {
+                        startMessagesQueue.call(this, data, worldScene)
+                    })
             } else {
-                this.manageMessageFor(item, worldScene, npcBox);
+                if (item.messageType === 'her') {
+                    this.manageMessageFor(item, worldScene, herBox);
+                } else {
+                    this.manageMessageFor(item, worldScene, npcBox);
+                }
             }
         }, this)
 
@@ -76,7 +85,11 @@ export default class UIScene extends Phaser.Scene {
                 box.stop(true)
             } else if (box.isLastPage) {
                 box.setVisible(false)
-                worldScene.events.emit('dialogEnd')
+                if (this.messageQueue.length > 0) {
+                    readNextMessageInQueue.call(this, worldScene)
+                } else {
+                    worldScene.events.emit('dialogEnd')
+                }
             } else {
                 box.typeNextPage()
             }
@@ -97,9 +110,31 @@ export default class UIScene extends Phaser.Scene {
 
         this.events.on('wake', () => {
             this.messages = []
+            this.messageQueue = []
             mainCamera.fadeIn(500)
         })
 
+        function startMessagesQueue(messages, currentScene) {
+            this.messageQueue = messages
+            readNextMessageInQueue.call(this, currentScene)
+        }
+        function readNextMessageInQueue(currentScene) {
+            if (this.messageQueue.length > 0) {
+                const currentMessage = this.messageQueue.shift();
+                if (currentMessage.who === 'her') {
+                    currentScene.events.emit('dialogStart', herBox)
+                    herBox.setVisible(true).start(i18next.t(currentMessage.stringId), 50)
+                    if (this.messages.includes(currentMessage.stringId) === false) this.messages.push(currentMessage.stringId)
+
+                } else if (currentMessage.who === 'him') {
+                    currentScene.events.emit('dialogStart', himBox)
+                    himBox.setVisible(true).start(i18next.t(currentMessage.stringId), 50)
+                    if (this.messages.includes(currentMessage.stringId) === false) this.messages.push(currentMessage.stringId)
+
+                }
+
+            }
+        }
         function createTextBox(bgColor, bgBorder, textColor, icon) {
             const currentBox = this.rexUI.add.textBox({
                 x: 30,

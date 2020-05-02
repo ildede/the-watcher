@@ -4478,7 +4478,7 @@
   </object>
   <object id="5" name="Think alone" type="him" x="5" y="5" width="400" height="330">
    <properties>
-    <property name="interval" type="int" value="2"/>
+    <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="Mario_partynight_003"/>
     <property name="stringIdRequired" value="Mario_partynight_002"/>

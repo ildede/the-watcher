@@ -1,7 +1,10 @@
 [
-    {
-      "stringId": "Mario_first_date005",
-      "who": "him"
-    },
-  "Mario_first_date005","Gioia_first_date001","Gioia_first_date002","Mario_first_date006","Gioia_first_date003","Mario_first_date007","Gioia_first_date004","Mario_first_date008"
+  { "stringId": "Mario_first_date005", "who": "him" },
+  { "stringId": "Gioia_first_date001", "who": "her" },
+  { "stringId": "Gioia_first_date002", "who": "her" },
+  { "stringId": "Mario_first_date006", "who": "him" },
+  { "stringId": "Gioia_first_date003", "who": "her" },
+  { "stringId": "Mario_first_date007", "who": "him" },
+  { "stringId": "Gioia_first_date004", "who": "her" },
+  { "stringId": "Mario_first_date008", "who": "him" }
 ]

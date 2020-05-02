@@ -16,6 +16,7 @@ export default class Message extends Phaser.GameObjects.Sprite {
 
         this.messageType = object.type
         this.stringId = () => object.properties?.find(e => e.name === 'stringId')?.value
+        this.dialogs = () => object.properties?.find(e => e.name === 'dialogs')?.value
         this.showOnce = () => object.properties?.find(e => e.name === 'showOnce')?.value
         this.interval = () => object.properties?.find(e => e.name === 'interval')?.value || 2
         this.endScene = () => object.properties?.find(e => e.name === 'endScene')?.value
