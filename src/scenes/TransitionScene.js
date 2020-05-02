@@ -1,5 +1,6 @@
 import 'phaser'
-import {TRANSITION_SCENE, UI_SCENE} from "../TheWatcher";
+import {TRANSITION_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
+import i18next from "i18next";
 
 export default class TransitionScene extends Phaser.Scene {
   constructor() {
@@ -8,9 +9,17 @@ export default class TransitionScene extends Phaser.Scene {
 
   create(data) {
     const nextLevel = data.level.next()
-
-    this.add.text(140, 100, 'THE WATCHER', { fontSize: '70px' })
     console.debug(`Prev level: ${data.level.name}\nNext level: ${nextLevel.name}`)
+
+    i18next
+        .init({
+          lng: this.scene.get(UI_SCENE).uiConfig.language,
+          resources: this.cache.json.get('langResource')
+        }).then(function (t) {
+          console.debug('i18next initialized')
+        })
+
+    this.add.text(140, 100, i18next.t(nextLevel.transition), { fontSize: '50px' })
 
     this.time.addEvent({
       delay: 500,
@@ -20,6 +29,7 @@ export default class TransitionScene extends Phaser.Scene {
         this.scene.bringToTop(UI_SCENE)
       }
     })
+
   }
 
 }
