@@ -199,8 +199,11 @@ export default class UIScene extends Phaser.Scene {
                     fetch(item.dialogs())
                         .then(response => response.json())
                         .then(data => {
-                            startMessagesQueue.call(this, data, worldScene)
+                            startMessagesQueue.call(this, data, currentScene)
                         })
+                    if (item.showOnce()) {
+                        item.stringId = () => {}
+                    }
                 } else {
                     currentScene.events.emit('dialogStart', boxInUse)
                     boxInUse.setVisible(true).start(item.stringId().split(',').map(s => i18next.t(s)), 50)
@@ -215,15 +218,6 @@ export default class UIScene extends Phaser.Scene {
             }
 
         }
-    }
-
-    manageDialogMessagesFor(messages, currentScene, textBox) {
-        currentScene.events.emit('dialogStart')
-        textBox.setVisible(true).start(messages.split(',').map(s => i18next.t(s)), 50)
-        messages.split(',')
-            .forEach(e => {
-                if (this.messages.includes(e) === false) this.messages.push(e)
-            })
     }
 }
 
