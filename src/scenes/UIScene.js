@@ -32,8 +32,8 @@ export default class UIScene extends Phaser.Scene {
 
         const signBox = createTextBox.call(this, 0xeeeeee, 0x907748, '#260e04');
         const npcBox = createTextBox.call(this, 0x55aadd, 0x1e2a2d, '#fefefe');
-        const herBox = createTextBox.call(this, 0xeeeeee, 0x907748, '#260e04');
-        const himBox = createTextBox.call(this, 0xeeeeee, 0x907748, '#260e04');
+        const herBox = createTextBox.call(this, 0xeeeeee, 0x907748, '#260e04', 'herFace');
+        const himBox = createTextBox.call(this, 0xeeeeee, 0x907748, '#260e04', 'himFace');
         const systemBox = createTextBox.call(this, 0x101010, 0xfefefe, '#fefefe');
 
         let mainCamera = this.cameras.main
@@ -100,7 +100,7 @@ export default class UIScene extends Phaser.Scene {
             mainCamera.fadeIn(500)
         })
 
-        function createTextBox(bgColor, bgBorder, textColor) {
+        function createTextBox(bgColor, bgBorder, textColor, icon) {
             const currentBox = this.rexUI.add.textBox({
                 x: 30,
                 y: 450,
@@ -108,8 +108,9 @@ export default class UIScene extends Phaser.Scene {
                 background: this.rexUI.add.roundRectangle(0, 0, 0, 0, 10, bgColor)
                     .setStrokeStyle(3, bgBorder),
 
-                text: getBBcodeText(this, 770, 770, 70, textColor),
+                text: getBBcodeText(this, 770, icon ? 674 : 770, 96, textColor),
 
+                icon: iconFrom(this, icon),
                 action: this.add
                     .image(0, 0, 'nextPage')
                     .setTint(textColor)
@@ -188,20 +189,27 @@ const getBBcodeText = function (scene, wrapWidth, fixedWidth, fixedHeight, textC
             mode: 'word',
             width: wrapWidth
         },
-        maxLines: 3
-        // stroke: 'red',
-        // strokeThickness: 4,
-        // shadow: {
-        //     offsetX: 5,
-        //     offsetY: 5,
-        //     blur: 5,
-        //     color: 'yellow'
-        // },
-        //
-        // underline: {
-        //     color: '#000',
-        //     thickness: 2,
-        //     offset: 1
-        // }
+        maxLines: 3,
+        stroke: 'red',
+        strokeThickness: 4,
+        shadow: {
+            offsetX: 5,
+            offsetY: 5,
+            blur: 5,
+            color: 'yellow'
+        },
+
+        underline: {
+            color: '#000',
+            thickness: 2,
+            offset: 1
+        }
     })
+}
+const iconFrom = function (scene, icon) {
+    if (icon) {
+        return scene.add.image(0, 0, icon)
+    } else {
+        return null
+    }
 }

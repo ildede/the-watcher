@@ -10,6 +10,8 @@ import whitePng from "../assets/characters/cats/white.png";
 import brownPng from "../assets/characters/cats/brown.png";
 import himPng from "../assets/characters/him/him.png";
 import herPng from "../assets/characters/her/her.png";
+import himFacePng from "../assets/characters/him/himFace.png";
+import herFacePng from "../assets/characters/her/herFace.png";
 import female1Png from "../assets/characters/npcs/female/female1.png";
 import female2Png from "../assets/characters/npcs/female/female2.png";
 import female3Png from "../assets/characters/npcs/female/female3.png";
@@ -133,6 +135,8 @@ export default class BootScene extends Phaser.Scene {
         this.load.tilemapTiledJSON(DANCE_HALL_MAP, danceHallJson)
 
         this.load.image('nextPage', nextPage)
+        this.load.image('himFace', himFacePng)
+        this.load.image('herFace', herFacePng)
         this.load.image('titleWatcher', titleWatcher)
         this.load.atlas("black", blackPng, blackJson)
         this.load.atlas("orange", orangePng, orangeJson)
