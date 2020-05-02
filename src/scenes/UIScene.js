@@ -42,17 +42,17 @@ export default class UIScene extends Phaser.Scene {
         worldScene.events.on('systemMessage', function(item) {
             console.debug('Event systemMessage received')
             if (item.messageType === 'him') {
-                this.manageMessageFor(item, worldScene, himBox);
+                manageMessageFor.call(this, item, worldScene, himBox);
             } else if (item.messageType === 'her') {
-                this.manageMessageFor(item, worldScene, herBox);
+                manageMessageFor.call(this, item, worldScene, herBox);
             } else {
-                this.manageMessageFor(item, worldScene, systemBox);
+                manageMessageFor.call(this, item, worldScene, systemBox);
             }
         }, this)
 
         worldScene.events.on('readSign', function(item) {
             console.debug('Event readSign received')
-            this.manageMessageFor(item, worldScene, signBox);
+            manageMessageFor.call(this, item, worldScene, signBox);
         }, this)
 
         worldScene.events.on('talkTo', function(item) {
@@ -65,9 +65,9 @@ export default class UIScene extends Phaser.Scene {
                     })
             } else {
                 if (item.messageType === 'her') {
-                    this.manageMessageFor(item, worldScene, herBox);
+                    manageMessageFor.call(this, item, worldScene, herBox);
                 } else {
-                    this.manageMessageFor(item, worldScene, npcBox);
+                    manageMessageFor.call(this, item, worldScene, npcBox);
                 }
             }
         }, this)
@@ -172,35 +172,36 @@ export default class UIScene extends Phaser.Scene {
             }, currentBox)
             return currentBox;
         }
-    }
-
-    manageMessageFor(item, currentScene, boxInUse) {
-        if (this.requiredMessageNotRead(item) || this.blockingMessageIsRead(item)) {
-            return
-        }
-
-        if (item.endScene()) {
-            currentScene.events.emit('dialogStart', boxInUse)
-            this.events.emit('startTransition')
-        } else if (item.stringId()) {
-            currentScene.events.emit('dialogStart', boxInUse)
-            boxInUse.setVisible(true).start(item.stringId().split(',').map(s => i18next.t(s)), 50)
-            item.stringId().split(',')
-                .forEach(e => {
-                    if (this.messages.includes(e) === false) this.messages.push(e)
-                })
-            if (item.showOnce()) {
-                item.stringId = () => {}
+        function manageMessageFor(item, currentScene, boxInUse) {
+            if ((item.stringIdRequired() && (this.messages.includes(item.stringIdRequired()) === false))
+                || (item.stringIdThatDisableThis() && (this.messages.includes(item.stringIdThatDisableThis()) === true))) {
+                return
             }
+
+            if (item.endScene()) {
+                currentScene.events.emit('dialogStart', boxInUse)
+                this.events.emit('startTransition')
+            } else if (item.stringId()) {
+                if (item.stringId() === 'external') {
+                    fetch(item.dialogs())
+                        .then(response => response.json())
+                        .then(data => {
+                            startMessagesQueue.call(this, data, worldScene)
+                        })
+                } else {
+                    currentScene.events.emit('dialogStart', boxInUse)
+                    boxInUse.setVisible(true).start(item.stringId().split(',').map(s => i18next.t(s)), 50)
+                    item.stringId().split(',')
+                        .forEach(e => {
+                            if (this.messages.includes(e) === false) this.messages.push(e)
+                        })
+                    if (item.showOnce()) {
+                        item.stringId = () => {}
+                    }
+                }
+            }
+
         }
-
-    }
-
-    requiredMessageNotRead(item) {
-        return item.stringIdRequired() && (this.messages.includes(item.stringIdRequired()) === false)
-    }
-    blockingMessageIsRead(item) {
-        return item.stringIdThatDisableThis() && (this.messages.includes(item.stringIdThatDisableThis()) === true)
     }
 
     manageDialogMessagesFor(messages, currentScene, textBox) {
