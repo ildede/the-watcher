@@ -72,7 +72,11 @@ export default class WorldScene extends Phaser.Scene {
         //-- Camera rules
         this.cameras.main.setBounds(0, 0, map.widthInPixels, map.heightInPixels)
         this.cameras.main.startFollow(this.player)
-        this.cameras.main.setZoom(1.3)
+        this.cameras.main.setZoom(
+            Array.isArray(map.properties)
+                ? map.properties?.find(e => e.name === 'zoom')?.value || 1.7
+                : 1.7
+        )
 
 
         //-- Event listener
