@@ -42,7 +42,9 @@ export default class UIScene extends Phaser.Scene {
             console.debug('Event systemMessage received')
             if (item.messageType === 'him') {
                 this.manageMessageFor(item, worldScene, himBox);
-            } else {
+            } else if (item.messageType === 'her') {
+                this.manageMessageFor(item, worldScene, herBox);
+            }{
                 this.manageMessageFor(item, worldScene, systemBox);
             }
         }, this)

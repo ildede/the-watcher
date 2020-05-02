@@ -3,6 +3,7 @@ import Player from "../entity/Player";
 import Message from "../entity/Message";
 import Character from "../entity/Character";
 import {TRANSITION_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
+import Her from "../entity/Her";
 
 export default class WorldScene extends Phaser.Scene {
     constructor() {
@@ -165,12 +166,23 @@ export default class WorldScene extends Phaser.Scene {
             if (object.type === 'him') {
                 this.systemMessage.add(new Message(this, object))
             }
+            if (object.type === 'her') {
+                this.systemMessage.add(new Message(this, object))
+            }
             if (object.type === 'npc') {
-                this.npc.add(new Character(this, object.x, object.y, object.name,
-                    Array.isArray(object.properties)
-                        ? object.properties?.find(e => e.name === 'direction')?.value || "front"
-                        : "front"
-                    , true, object))
+                if (object.name === 'her') {
+                    this.npc.add(new Her(this, object.x, object.y, object.name,
+                        Array.isArray(object.properties)
+                            ? object.properties?.find(e => e.name === 'direction')?.value || "front"
+                            : "front"
+                        , true, object))
+                } else {
+                    this.npc.add(new Character(this, object.x, object.y, object.name,
+                        Array.isArray(object.properties)
+                            ? object.properties?.find(e => e.name === 'direction')?.value || "front"
+                            : "front"
+                        , true, object))
+                }
             }
             if (object.type === 'spawn') {
                 const spawnPoint = this.levelConfig.x && this.levelConfig.y

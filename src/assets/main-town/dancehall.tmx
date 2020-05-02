@@ -4347,7 +4347,7 @@
     <property name="stringIdRequired" value="Mario_partynight_012"/>
    </properties>
   </object>
-  <object id="27" name="TalkToHer" type="message" x="5" y="5" width="400" height="330">
+  <object id="27" name="TalkToHer" type="him" x="5" y="5" width="400" height="330">
    <properties>
     <property name="interval" type="int" value="0"/>
     <property name="showOnce" type="bool" value="true"/>
@@ -4355,7 +4355,7 @@
     <property name="stringIdRequired" value="Gioia_partynight_009"/>
    </properties>
   </object>
-  <object id="20" name="TalkToHer" type="message" x="5" y="5" width="400" height="330">
+  <object id="20" name="TalkToHer" type="her" x="5" y="5" width="400" height="330">
    <properties>
     <property name="interval" type="int" value="0"/>
     <property name="showOnce" type="bool" value="true"/>
@@ -4363,7 +4363,7 @@
     <property name="stringIdRequired" value="Mario_partynight_011"/>
    </properties>
   </object>
-  <object id="21" name="TalkToHer" type="message" x="5" y="5" width="400" height="330">
+  <object id="21" name="TalkToHer" type="him" x="5" y="5" width="400" height="330">
    <properties>
     <property name="interval" type="int" value="0"/>
     <property name="showOnce" type="bool" value="true"/>
@@ -4371,7 +4371,7 @@
     <property name="stringIdRequired" value="Gioia_partynight_008"/>
    </properties>
   </object>
-  <object id="22" name="TalkToHer" type="message" x="22.6415" y="22.4214" width="400" height="330">
+  <object id="22" name="TalkToHer" type="her" x="22.6415" y="22.4214" width="400" height="330">
    <properties>
     <property name="interval" type="int" value="0"/>
     <property name="showOnce" type="bool" value="true"/>
@@ -4379,7 +4379,7 @@
     <property name="stringIdRequired" value="Gioia_partynight_007"/>
    </properties>
   </object>
-  <object id="23" name="TalkToHer" type="message" x="5" y="5" width="400" height="330">
+  <object id="23" name="TalkToHer" type="her" x="5" y="5" width="400" height="330">
    <properties>
     <property name="interval" type="int" value="0"/>
     <property name="showOnce" type="bool" value="true"/>
@@ -4406,7 +4406,7 @@
     <property name="stringIdRequired" value="Mario_partynight_010"/>
    </properties>
   </object>
-  <object id="14" name="Think alone" type="message" x="5" y="5" width="400" height="330">
+  <object id="14" name="Think alone" type="him" x="5" y="5" width="400" height="330">
    <properties>
     <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
@@ -4414,7 +4414,7 @@
     <property name="stringIdRequired" value="Gioia_partynight_006"/>
    </properties>
   </object>
-  <object id="12" name="TalkToHer" type="message" x="5" y="5" width="400" height="330">
+  <object id="12" name="TalkToHer" type="her" x="5" y="5" width="400" height="330">
    <properties>
     <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
@@ -4422,7 +4422,7 @@
     <property name="stringIdRequired" value="Gioia_partynight_005"/>
    </properties>
   </object>
-  <object id="15" name="TalkToHer" type="message" x="5" y="5" width="400" height="330">
+  <object id="15" name="TalkToHer" type="her" x="5" y="5" width="400" height="330">
    <properties>
     <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
@@ -4430,7 +4430,7 @@
     <property name="stringIdRequired" value="Mario_partynight_006"/>
    </properties>
   </object>
-  <object id="16" name="Think alone" type="message" x="5" y="5" width="400" height="330">
+  <object id="16" name="Think alone" type="him" x="5" y="5" width="400" height="330">
    <properties>
     <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
@@ -4438,7 +4438,7 @@
     <property name="stringIdRequired" value="Gioia_partynight_004"/>
    </properties>
   </object>
-  <object id="17" name="TalkToHer" type="message" x="5" y="5" width="400" height="330">
+  <object id="17" name="TalkToHer" type="her" x="5" y="5" width="400" height="330">
    <properties>
     <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
@@ -4446,7 +4446,7 @@
     <property name="stringIdRequired" value="Mario_partynight_005"/>
    </properties>
   </object>
-  <object id="10" name="TalkToHer" type="message" x="5" y="5" width="400" height="330">
+  <object id="10" name="TalkToHer" type="him" x="5" y="5" width="400" height="330">
    <properties>
     <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
@@ -4454,7 +4454,7 @@
     <property name="stringIdRequired" value="Gioia_partynight_002"/>
    </properties>
   </object>
-  <object id="18" name="TalkToHer" type="message" x="15.0943" y="14.8742" width="400" height="330">
+  <object id="18" name="TalkToHer" type="her" x="15.0943" y="14.8742" width="400" height="330">
    <properties>
     <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
@@ -4462,7 +4462,7 @@
     <property name="stringIdRequired" value="Mario_partynight_004"/>
    </properties>
   </object>
-  <object id="8" name="TalkToHer" type="message" x="5" y="5" width="400" height="330">
+  <object id="8" name="TalkToHer" type="him" x="5" y="5" width="400" height="330">
    <properties>
     <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
@@ -4476,7 +4476,7 @@
    </properties>
    <point/>
   </object>
-  <object id="5" name="Think alone" type="message" x="5" y="5" width="400" height="330">
+  <object id="5" name="Think alone" type="him" x="5" y="5" width="400" height="330">
    <properties>
     <property name="interval" type="int" value="2"/>
     <property name="showOnce" type="bool" value="true"/>
@@ -4484,17 +4484,17 @@
     <property name="stringIdRequired" value="Mario_partynight_002"/>
    </properties>
   </object>
-  <object id="4" name="Think alone" type="message" x="5" y="5" width="400" height="330">
+  <object id="4" name="Think alone" type="him" x="5" y="5" width="400" height="330">
    <properties>
-    <property name="interval" type="int" value="2"/>
+    <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="Mario_partynight_002"/>
     <property name="stringIdRequired" value="Mario_partynight_001"/>
    </properties>
   </object>
-  <object id="3" name="Think alone" type="message" x="5" y="5" width="400" height="330">
+  <object id="3" name="Think alone" type="him" x="5" y="5" width="400" height="330">
    <properties>
-    <property name="interval" type="int" value="2"/>
+    <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="Mario_partynight_001"/>
    </properties>

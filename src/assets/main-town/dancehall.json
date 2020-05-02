@@ -63,7 +63,7 @@
                          "value":"Gioia_partynight_009"
                         }],
                  "rotation":0,
-                 "type":"message",
+                 "type":"him",
                  "visible":true,
                  "width":400,
                  "x":5,
@@ -95,7 +95,7 @@
                          "value":"Mario_partynight_011"
                         }],
                  "rotation":0,
-                 "type":"message",
+                 "type":"her",
                  "visible":true,
                  "width":400,
                  "x":5,
@@ -127,7 +127,7 @@
                          "value":"Gioia_partynight_008"
                         }],
                  "rotation":0,
-                 "type":"message",
+                 "type":"him",
                  "visible":true,
                  "width":400,
                  "x":5,
@@ -159,7 +159,7 @@
                          "value":"Gioia_partynight_007"
                         }],
                  "rotation":0,
-                 "type":"message",
+                 "type":"her",
                  "visible":true,
                  "width":400,
                  "x":22.641486163522,
@@ -186,7 +186,7 @@
                          "value":"Gioia_partynight_007"
                         }],
                  "rotation":0,
-                 "type":"message",
+                 "type":"her",
                  "visible":true,
                  "width":400,
                  "x":5,
@@ -287,7 +287,7 @@
                          "value":"Gioia_partynight_006"
                         }],
                  "rotation":0,
-                 "type":"message",
+                 "type":"him",
                  "visible":true,
                  "width":400,
                  "x":5,
@@ -319,7 +319,7 @@
                          "value":"Gioia_partynight_005"
                         }],
                  "rotation":0,
-                 "type":"message",
+                 "type":"her",
                  "visible":true,
                  "width":400,
                  "x":5,
@@ -351,7 +351,7 @@
                          "value":"Mario_partynight_006"
                         }],
                  "rotation":0,
-                 "type":"message",
+                 "type":"her",
                  "visible":true,
                  "width":400,
                  "x":5,
@@ -383,7 +383,7 @@
                          "value":"Gioia_partynight_004"
                         }],
                  "rotation":0,
-                 "type":"message",
+                 "type":"him",
                  "visible":true,
                  "width":400,
                  "x":5,
@@ -415,7 +415,7 @@
                          "value":"Mario_partynight_005"
                         }],
                  "rotation":0,
-                 "type":"message",
+                 "type":"her",
                  "visible":true,
                  "width":400,
                  "x":5,
@@ -447,7 +447,7 @@
                          "value":"Gioia_partynight_002"
                         }],
                  "rotation":0,
-                 "type":"message",
+                 "type":"him",
                  "visible":true,
                  "width":400,
                  "x":5,
@@ -479,7 +479,7 @@
                          "value":"Mario_partynight_004"
                         }],
                  "rotation":0,
-                 "type":"message",
+                 "type":"her",
                  "visible":true,
                  "width":400,
                  "x":15.0943396226415,
@@ -511,7 +511,7 @@
                          "value":"Gioia_partynight_001"
                         }],
                  "rotation":0,
-                 "type":"message",
+                 "type":"him",
                  "visible":true,
                  "width":400,
                  "x":5,
@@ -561,7 +561,7 @@
                          "value":"Mario_partynight_002"
                         }],
                  "rotation":0,
-                 "type":"message",
+                 "type":"him",
                  "visible":true,
                  "width":400,
                  "x":5,
@@ -575,7 +575,7 @@
                         {
                          "name":"interval",
                          "type":"int",
-                         "value":2
+                         "value":1
                         }, 
                         {
                          "name":"showOnce",
@@ -593,7 +593,7 @@
                          "value":"Mario_partynight_001"
                         }],
                  "rotation":0,
-                 "type":"message",
+                 "type":"him",
                  "visible":true,
                  "width":400,
                  "x":5,
@@ -607,7 +607,7 @@
                         {
                          "name":"interval",
                          "type":"int",
-                         "value":2
+                         "value":1
                         }, 
                         {
                          "name":"showOnce",
@@ -620,7 +620,7 @@
                          "value":"Mario_partynight_001"
                         }],
                  "rotation":0,
-                 "type":"message",
+                 "type":"him",
                  "visible":true,
                  "width":400,
                  "x":5,
