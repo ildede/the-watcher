@@ -30,8 +30,8 @@ export default class UIScene extends Phaser.Scene {
                 console.debug('i18next initialized')
             })
 
-        const textBox = createTextBox.call(this, 0xeeeeee, 0x907748, 0x260e04);
-        const systemBox = createTextBox.call(this, 0xaaaaaa, 0x907748, 0x260e04);
+        const textBox = createTextBox.call(this, 0xeeeeee, 0x907748, '#260e04');
+        const systemBox = createTextBox.call(this, 0x101010, 0xfefefe, '#fefefe');
 
         let mainCamera = this.cameras.main
 
@@ -88,8 +88,8 @@ export default class UIScene extends Phaser.Scene {
             mainCamera.fadeIn(500)
         })
 
-        function createTextBox(bgColor = 0xeeeeee, bgBorder = 0x907748, textColor = 0x260e04) {
-            const textBox = this.rexUI.add.textBox({
+        function createTextBox(bgColor, bgBorder, textColor) {
+            const currentBox = this.rexUI.add.textBox({
                 x: 30,
                 y: 450,
 
@@ -100,7 +100,7 @@ export default class UIScene extends Phaser.Scene {
 
                 action: this.add
                     .image(0, 0, 'nextPage')
-                    .setTint(0x4b5e57)
+                    .setTint(textColor)
                     .setVisible(false)
                     .setScale(0.6),
 
@@ -113,16 +113,16 @@ export default class UIScene extends Phaser.Scene {
                     text: 10
                 }
             })
-            textBox.setDepth(1)
-            textBox.setVisible(false)
-            textBox.setOrigin(0)
-            textBox.layout()
-            textBox.setInteractive()
-            textBox.on('pageend', function () {
-                const icon = textBox.getElement('action').setVisible(true)
-                textBox.resetChildVisibleState(icon)
-            }, textBox)
-            return textBox;
+            currentBox.setDepth(1)
+            currentBox.setVisible(false)
+            currentBox.setOrigin(0)
+            currentBox.layout()
+            currentBox.setInteractive()
+            currentBox.on('pageend', function () {
+                const icon = currentBox.getElement('action').setVisible(true)
+                currentBox.resetChildVisibleState(icon)
+            }, currentBox)
+            return currentBox;
         }
     }
 
@@ -165,7 +165,7 @@ export default class UIScene extends Phaser.Scene {
     }
 }
 
-const getBBcodeText = function (scene, wrapWidth, fixedWidth, fixedHeight, textColor = 0x260e04) {
+const getBBcodeText = function (scene, wrapWidth, fixedWidth, fixedHeight, textColor) {
     return scene.rexUI.add.BBCodeText(0, 0, '', {
         fixedWidth: fixedWidth,
         fixedHeight: fixedHeight,
@@ -176,20 +176,20 @@ const getBBcodeText = function (scene, wrapWidth, fixedWidth, fixedHeight, textC
             mode: 'word',
             width: wrapWidth
         },
-        maxLines: 3,
-        stroke: 'red',
-        strokeThickness: 4,
-        shadow: {
-            offsetX: 5,
-            offsetY: 5,
-            blur: 5,
-            color: 'yellow'
-        },
-
-        underline: {
-            color: '#000',
-            thickness: 2,
-            offset: 1
-        }
+        maxLines: 3
+        // stroke: 'red',
+        // strokeThickness: 4,
+        // shadow: {
+        //     offsetX: 5,
+        //     offsetY: 5,
+        //     blur: 5,
+        //     color: 'yellow'
+        // },
+        //
+        // underline: {
+        //     color: '#000',
+        //     thickness: 2,
+        //     offset: 1
+        // }
     })
 }
