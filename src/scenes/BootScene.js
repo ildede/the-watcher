@@ -20,6 +20,8 @@ import female5Png from "../assets/characters/npcs/female/female5.png";
 import female6Png from "../assets/characters/npcs/female/female6.png";
 import female7Png from "../assets/characters/npcs/female/female7.png";
 import female8Png from "../assets/characters/npcs/female/female8.png";
+import barPng from "../assets/bar/bar.png";
+import himAndHerPng from "../assets/bar/him-and-her.png";
 import male1Png from "../assets/characters/npcs/male/male1.png";
 import male2Png from "../assets/characters/npcs/male/male2.png";
 import male3Png from "../assets/characters/npcs/male/male3.png";
@@ -53,6 +55,7 @@ import * as female5Json from "../assets/characters/npcs/female/female5.json";
 import * as female6Json from "../assets/characters/npcs/female/female6.json";
 import * as female7Json from "../assets/characters/npcs/female/female7.json";
 import * as female8Json from "../assets/characters/npcs/female/female8.json";
+import * as barJson from "../assets/bar/bar.json";
 import * as male1Json from "../assets/characters/npcs/male/male1.json";
 import * as male2Json from "../assets/characters/npcs/male/male2.json";
 import * as male3Json from "../assets/characters/npcs/male/male3.json";
@@ -138,6 +141,7 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('himFace', himFacePng)
         this.load.image('herFace', herFacePng)
         this.load.image('titleWatcher', titleWatcher)
+        this.load.image('himAndHer', himAndHerPng)
         this.load.atlas("black", blackPng, blackJson)
         this.load.atlas("orange", orangePng, orangeJson)
         this.load.atlas("white", whitePng, whiteJson)
@@ -152,6 +156,7 @@ export default class BootScene extends Phaser.Scene {
         this.load.atlas("female6", female6Png, female6Json)
         this.load.atlas("female7", female7Png, female7Json)
         this.load.atlas("female8", female8Png, female8Json)
+        this.load.atlas("barBg", barPng, barJson)
         this.load.atlas("male1", male1Png, male1Json)
         this.load.atlas("male2", male2Png, male2Json)
         this.load.atlas("male3", male3Png, male3Json)

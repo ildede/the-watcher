@@ -11,6 +11,10 @@ export default class DialogScene extends Phaser.Scene {
         this.dialogOpen = false
         console.debug(DIALOG_SCENE, this.levelConfig)
 
+        this.anims.create({key: 'barGif', frames: this.anims.generateFrameNames('barBg'), repeat: -1, frameRate: 12})
+        this.add.sprite(450, 300, 'barBg').setScale(0.35, 0.35).play('barGif')
+        this.add.image(450, 200, 'himAndHer').setScale(0.35, 0.35).setFlipX(true)
+
         //-- Event listener
         const uiScene = this.scene.get(UI_SCENE)
         uiScene.events.once('startTransition', () => {
@@ -26,7 +30,12 @@ export default class DialogScene extends Phaser.Scene {
         }, this)
 
         //-- Input rules
-        this.input.keyboard.on('keydown_SPACE', this.continueDialog());
+        this.events.on('dialogStart', (box) => {
+            this.input.keyboard.off('keydown_SPACE');
+            this.input.keyboard.on('keydown_SPACE', () => {
+                this.events.emit('continueDialog', box)
+            });
+        })
 
         console.debug('S: Test startTransition event')
         this.input.keyboard.once("keydown_S", event => {
@@ -34,19 +43,11 @@ export default class DialogScene extends Phaser.Scene {
         });
 
         //-- Start dialog
-        let index = 0
-        this.events.emit('dialogMessages', this.levelConfig.level.messages[index])
+        this.events.emit('dialogMessages', this.levelConfig.level.messages)
 
         this.events.on('dialogEnd', () => {
-            index += 1
-            if (this.levelConfig.level.messages[index]) {
-                this.events.emit('dialogMessages', this.levelConfig.level.messages[index])
-            } else {
-                uiScene.events.emit('startTransition')
-            }
+            uiScene.events.emit('startTransition')
         })
     }
-
-    continueDialog() { return () => this.events.emit('continueDialog') }
 }
 

@@ -49,6 +49,11 @@ module.exports = {
             to: 'dialogs/',
             context: 'src/assets/',
           },
+          {
+            from: 'bar/dialogs',
+            to: 'dialogs/',
+            context: 'src/assets/',
+          },
         ]
     ),
   ]

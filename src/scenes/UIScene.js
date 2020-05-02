@@ -74,7 +74,11 @@ export default class UIScene extends Phaser.Scene {
 
         dialogScene.events.on('dialogMessages', function(messages) {
             console.debug('Event dialogMessages received')
-            this.manageDialogMessagesFor(messages, dialogScene, signBox);
+            fetch(messages)
+                .then(response => response.json())
+                .then(data => {
+                    startMessagesQueue.call(this, data, dialogScene)
+                })
         }, this)
 
         worldScene.events.on('continueDialog', function(box) {
@@ -94,19 +98,23 @@ export default class UIScene extends Phaser.Scene {
                 box.typeNextPage()
             }
         }, this)
-        dialogScene.events.on('continueDialog', function() {
+        dialogScene.events.on('continueDialog', function(box) {
             console.debug('Event continueDialog received')
-            const icon = signBox.getElement('action').setVisible(false)
-            signBox.resetChildVisibleState(icon)
-            if (this.isTyping) {
-                this.stop(true)
-            } else if (this.isLastPage) {
-                signBox.setVisible(false)
-                dialogScene.events.emit('dialogEnd')
+            const icon = box.getElement('action').setVisible(false)
+            box.resetChildVisibleState(icon)
+            if (box.isTyping) {
+                box.stop(true)
+            } else if (box.isLastPage) {
+                box.setVisible(false)
+                if (this.messageQueue.length > 0) {
+                    readNextMessageInQueue.call(this, dialogScene)
+                } else {
+                    dialogScene.events.emit('dialogEnd')
+                }
             } else {
-                this.typeNextPage()
+                box.typeNextPage()
             }
-        }, signBox)
+        }, this)
 
         this.events.on('wake', () => {
             this.messages = []
@@ -129,6 +137,11 @@ export default class UIScene extends Phaser.Scene {
                 } else if (currentMessage.who === 'him') {
                     currentScene.events.emit('dialogStart', himBox)
                     himBox.setVisible(true).start(i18next.t(currentMessage.stringId), 50)
+                    if (this.messages.includes(currentMessage.stringId) === false) this.messages.push(currentMessage.stringId)
+
+                } else {
+                    currentScene.events.emit('dialogStart', systemBox)
+                    systemBox.setVisible(true).start(i18next.t(currentMessage.stringId), 50)
                     if (this.messages.includes(currentMessage.stringId) === false) this.messages.push(currentMessage.stringId)
 
                 }
