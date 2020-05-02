@@ -35,14 +35,6 @@ export const B3_PARTY = {
     map: DANCE_HALL_MAP,
     tiles: [CASINO_TILES, DANCE_HALL_TILES, PARTY_TILES],
     tileSize: 8,
-    next: () => B4_PARTY_AFTER
-}
-export const B4_PARTY_AFTER = {
-    name: 'b4_party_after',
-    scene: 'WorldScene',
-    map: TOWN_MAP,
-    tiles: [TOWN_TILES],
-    tileSize: 16,
     next: () => C_FIRST_DATE
 }
 export const C_FIRST_DATE = {
