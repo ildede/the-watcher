@@ -122,7 +122,10 @@ export default class UIScene extends Phaser.Scene {
     }
 
     manageMessageFor(item, currentScene, textBox) {
-        if (item.stringIdRequired() && (this.messages.includes(item.stringIdRequired()) === false)) {
+        if (
+            item.stringIdRequired() && (this.messages.includes(item.stringIdRequired()) === false)
+            || item.stringIdThatDisableThis() && (this.messages.includes(item.stringIdThatDisableThis()) === true)
+            ) {
             return
         }
         if (item.endScene()) {
