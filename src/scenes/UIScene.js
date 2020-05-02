@@ -122,12 +122,10 @@ export default class UIScene extends Phaser.Scene {
     }
 
     manageMessageFor(item, currentScene, textBox) {
-        if (
-            item.stringIdRequired() && (this.messages.includes(item.stringIdRequired()) === false)
-            || item.stringIdThatDisableThis() && (this.messages.includes(item.stringIdThatDisableThis()) === true)
-            ) {
+        if (this.requiredMessageNotRead(item) || this.blockingMessageIsRead(item)) {
             return
         }
+
         if (item.endScene()) {
             currentScene.events.emit('dialogStart')
             this.events.emit('startTransition')
@@ -142,7 +140,16 @@ export default class UIScene extends Phaser.Scene {
                 item.stringId = () => {}
             }
         }
+
     }
+
+    requiredMessageNotRead(item) {
+        return item.stringIdRequired() && (this.messages.includes(item.stringIdRequired()) === false)
+    }
+    blockingMessageIsRead(item) {
+        return item.stringIdThatDisableThis() && (this.messages.includes(item.stringIdThatDisableThis()) === true)
+    }
+
     manageDialogMessagesFor(messages, currentScene, textBox) {
         currentScene.events.emit('dialogStart')
         textBox.setVisible(true).start(messages.split(',').map(s => i18next.t(s)), 50)
