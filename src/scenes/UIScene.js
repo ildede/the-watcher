@@ -30,29 +30,41 @@ export default class UIScene extends Phaser.Scene {
                 console.debug('i18next initialized')
             })
 
-        const textBox = createTextBox.call(this, 0xeeeeee, 0x907748, '#260e04');
+        const signBox = createTextBox.call(this, 0xeeeeee, 0x907748, '#260e04');
+        const npcBox = createTextBox.call(this, 0x55aadd, 0x1e2a2d, '#fefefe');
+        const herBox = createTextBox.call(this, 0xeeeeee, 0x907748, '#260e04');
+        const himBox = createTextBox.call(this, 0xeeeeee, 0x907748, '#260e04');
         const systemBox = createTextBox.call(this, 0x101010, 0xfefefe, '#fefefe');
 
         let mainCamera = this.cameras.main
 
         worldScene.events.on('systemMessage', function(item) {
             console.debug('Event systemMessage received')
-            this.manageMessageFor(item, worldScene, systemBox);
+            console.log(item.messageType)
+            if (item.messageType === 'him') {
+                this.manageMessageFor(item, worldScene, himBox);
+            } else {
+                this.manageMessageFor(item, worldScene, systemBox);
+            }
         }, this)
 
         worldScene.events.on('readSign', function(item) {
             console.debug('Event readSign received')
-            this.manageMessageFor(item, worldScene, textBox);
+            this.manageMessageFor(item, worldScene, signBox);
         }, this)
 
         worldScene.events.on('talkTo', function(item) {
             console.debug('Event talkTo received')
-            this.manageMessageFor(item, worldScene, textBox);
+            if (item.messageType === 'her') {
+                this.manageMessageFor(item, worldScene, herBox);
+            } else {
+                this.manageMessageFor(item, worldScene, npcBox);
+            }
         }, this)
 
         dialogScene.events.on('dialogMessages', function(messages) {
             console.debug('Event dialogMessages received')
-            this.manageDialogMessagesFor(messages, dialogScene, textBox);
+            this.manageDialogMessagesFor(messages, dialogScene, signBox);
         }, this)
 
         worldScene.events.on('continueDialog', function(box) {
@@ -71,17 +83,17 @@ export default class UIScene extends Phaser.Scene {
         }, this)
         dialogScene.events.on('continueDialog', function() {
             console.debug('Event continueDialog received')
-            const icon = textBox.getElement('action').setVisible(false)
-            textBox.resetChildVisibleState(icon)
+            const icon = signBox.getElement('action').setVisible(false)
+            signBox.resetChildVisibleState(icon)
             if (this.isTyping) {
                 this.stop(true)
             } else if (this.isLastPage) {
-                textBox.setVisible(false)
+                signBox.setVisible(false)
                 dialogScene.events.emit('dialogEnd')
             } else {
                 this.typeNextPage()
             }
-        }, textBox)
+        }, signBox)
 
         this.events.on('wake', () => {
             this.messages = []

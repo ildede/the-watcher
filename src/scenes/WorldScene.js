@@ -1,6 +1,6 @@
 import 'phaser'
 import Player from "../entity/Player";
-import Sign from "../entity/Sign";
+import Message from "../entity/Message";
 import Character from "../entity/Character";
 import {TRANSITION_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
 
@@ -158,10 +158,13 @@ export default class WorldScene extends Phaser.Scene {
     fillCurrentMap() {
         return (object) => {
             if (object.type === 'sign') {
-                this.readableSigns.add(new Sign(this, object))
+                this.readableSigns.add(new Message(this, object))
             }
             if (object.type === 'message') {
-                this.systemMessage.add(new Sign(this, object))
+                this.systemMessage.add(new Message(this, object))
+            }
+            if (object.type === 'him') {
+                this.systemMessage.add(new Message(this, object))
             }
             if (object.type === 'npc') {
                 this.npc.add(new Character(this, object.x, object.y, object.name,
