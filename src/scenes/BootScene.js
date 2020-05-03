@@ -35,10 +35,11 @@ import male7Png from "../assets/characters/npcs/male/male7.png";
 import male8Png from "../assets/characters/npcs/male/male8.png";
 import nextPage from "../assets/UI/arrow-down-left.png";
 import titleWatcher from "../assets/title/title-watcher.png";
+import titleWatcherVr from "../assets/title/title-watcher-vr.png";
 import splashBg00 from "../assets/title/splash-background-0.png";
 import splashLanguagesPng from "../assets/title/splash-languages.png";
 
-import {BOOT_SCENE, TITLE_SCENE} from "../TheWatcher";
+import {BOOT_SCENE, END_TITLE_SCENE, TITLE_SCENE} from "../TheWatcher";
 import {
     CASINO_TILES,
     DANCE_HALL_MAP,
@@ -157,6 +158,7 @@ export default class BootScene extends Phaser.Scene {
         this.load.image(PARTY_TILES_16, party16Png)
         this.load.tilemapTiledJSON(DANCE_HALL_MAP, danceHallJson)
 
+        this.load.image('titleWatcherVR', titleWatcherVr)
         this.load.image('nextPage', nextPage)
         this.load.image('himFace', himFacePng)
         this.load.image('herFace', herFacePng)
