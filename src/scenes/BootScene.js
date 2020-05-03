@@ -198,6 +198,6 @@ export default class BootScene extends Phaser.Scene {
     }
 
     create() {
-        this.scene.start(TITLE_SCENE)
+        this.scene.start(END_TITLE_SCENE)
     }
 }
