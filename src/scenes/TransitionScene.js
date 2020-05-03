@@ -22,7 +22,7 @@ export default class TransitionScene extends Phaser.Scene {
     this.add.text(100, 140, i18next.t(nextLevel.transition), { fontSize: '30px' })
 
     this.time.addEvent({
-      delay: 500,
+      delay: 1500,
       callback: () => {
         this.scene.start(nextLevel.scene, { level: nextLevel });
         this.scene.wake(UI_SCENE)
