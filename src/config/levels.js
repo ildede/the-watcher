@@ -158,8 +158,17 @@ export const E1_WHAT_ARE_WE = {
     tiles: [TOWN_TILES],
     tileSize: 16,
     transition: '',
+    next: () => E2_WHAT_ARE_WE
+}
+export const E2_WHAT_ARE_WE = {
+    name: 'e2_what_are_we',
+    scene: 'WorldScene',
+    map: TOWN_MAP,
+    tiles: [TOWN_TILES],
+    tileSize: 16,
+    transition: 'System_014',
     next: () => A_ARRIVAL
 }
 
-export const FIRST_LEVEL = A_ARRIVAL
+export const FIRST_LEVEL = E2_WHAT_ARE_WE
 

@@ -174,22 +174,22 @@ export default class UIScene extends Phaser.Scene {
                 if (currentMessage.who === 'her') {
                     currentScene.events.emit('dialogStart', herBox)
                     herBox.setVisible(true).start(i18next.t(currentMessage.stringId), 50)
-                    if (this.messages.includes(currentMessage.stringId) === false) this.messages.push(currentMessage.stringId)
+                    this.messages.push(currentMessage.stringId)
 
                 } else if (currentMessage.who === 'him') {
                     currentScene.events.emit('dialogStart', himBox)
                     himBox.setVisible(true).start(i18next.t(currentMessage.stringId), 50)
-                    if (this.messages.includes(currentMessage.stringId) === false) this.messages.push(currentMessage.stringId)
+                    this.messages.push(currentMessage.stringId)
 
                 } else if (currentMessage.who === 'npc') {
                     currentScene.events.emit('dialogStart', npcBox)
                     npcBox.setVisible(true).start(i18next.t(currentMessage.stringId), 50)
-                    if (this.messages.includes(currentMessage.stringId) === false) this.messages.push(currentMessage.stringId)
+                    this.messages.push(currentMessage.stringId)
 
                 } else {
                     currentScene.events.emit('dialogStart', systemBox)
                     systemBox.setVisible(true).start(i18next.t(currentMessage.stringId), 50)
-                    if (this.messages.includes(currentMessage.stringId) === false) this.messages.push(currentMessage.stringId)
+                    this.messages.push(currentMessage.stringId)
 
                 }
 
@@ -256,7 +256,7 @@ export default class UIScene extends Phaser.Scene {
                     boxInUse.setVisible(true).start(item.stringId().split(',').map(s => i18next.t(s)), 50)
                     item.stringId().split(',')
                         .forEach(e => {
-                            if (this.messages.includes(e) === false) this.messages.push(e)
+                            this.messages.push(e)
                         })
                     if (item.showOnce()) {
                         item.stringId = () => {}
