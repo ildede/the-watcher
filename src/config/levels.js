@@ -208,8 +208,19 @@ export const H4_ANNIVERSARY = {
         name: 'restaurantBg',
         flip: false
     },
+    next: () => I1_MARRY_ME
+}
+export const I1_MARRY_ME = {
+    name: 'i1_marry_me',
+    scene: 'RestaurantScene',
+    messages: 'dialogs/restaurant-marry-me-part-1.json',
+    transition: '',
+    image: {
+        name: 'restaurantBg',
+        flip: false
+    },
     next: () => A_ARRIVAL
 }
 
-export const FIRST_LEVEL = H1_ANNIVERSARY
+export const FIRST_LEVEL = A_ARRIVAL
 
