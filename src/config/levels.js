@@ -84,23 +84,46 @@ export const E1_DINNER_BEFORE = {
 }
 export const E2_DINNER_RESTAURANT = {
     name: 'e2_dinner',
-    scene: 'DialogScene',
+    scene: 'RestaurantScene',
     messages: 'dialogs/restaurant-part-3.json',
     transition: '',
+    image: {
+        name: 'restaurantBg',
+        flip: true
+    },
     next: () => E3_DINNER_RESTAURANT
 }
 export const E3_DINNER_RESTAURANT = {
     name: 'e3_dinner',
-    scene: 'DialogScene',
+    scene: 'RestaurantScene',
     messages: 'dialogs/restaurant-part-4.json',
     transition: 'System_010',
+    image: {
+        name: 'restaurantBg',
+        flip: true
+    },
     next: () => E4_DINNER_RESTAURANT
 }
 export const E4_DINNER_RESTAURANT = {
-    name: 'e3_dinner',
-    scene: 'DialogScene',
+    name: 'e4_dinner',
+    scene: 'RestaurantScene',
     messages: 'dialogs/restaurant-part-5.json',
     transition: 'System_011',
+    image: {
+        name: 'restaurantBg',
+        flip: true
+    },
+    next: () => E5_DINNER_RESTAURANT
+}
+export const E5_DINNER_RESTAURANT = {
+    name: 'e5_dinner',
+    scene: 'RestaurantScene',
+    messages: 'dialogs/restaurant-part-6.json',
+    transition: '',
+    image: {
+        name: 'restaurantAloneBg',
+        flip: false
+    },
     next: () => F1_NIGHT_OUT
 }
 export const F1_NIGHT_OUT = {
@@ -129,5 +152,5 @@ export const F3_NIGHT_OUT = {
     next: () => A_ARRIVAL
 }
 
-export const FIRST_LEVEL = E1_DINNER_BEFORE
+export const FIRST_LEVEL = A_ARRIVAL
 

@@ -50,7 +50,7 @@ module.exports = {
             context: 'src/assets/',
           },
           {
-            from: 'bar/dialogs',
+            from: 'dialogs',
             to: 'dialogs/',
             context: 'src/assets/',
           },

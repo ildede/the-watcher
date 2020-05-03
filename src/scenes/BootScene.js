@@ -22,6 +22,8 @@ import female7Png from "../assets/characters/npcs/female/female7.png";
 import female8Png from "../assets/characters/npcs/female/female8.png";
 import barPng from "../assets/bar/bar.png";
 import himAndHerPng from "../assets/bar/him-and-her.png";
+import restaurantBgPng from "../assets/restaurant/restaurant.png";
+import restaurantAloneBgPng from "../assets/restaurant/restaurant-alone.png";
 import male1Png from "../assets/characters/npcs/male/male1.png";
 import male2Png from "../assets/characters/npcs/male/male2.png";
 import male3Png from "../assets/characters/npcs/male/male3.png";
@@ -142,6 +144,8 @@ export default class BootScene extends Phaser.Scene {
         this.load.image('herFace', herFacePng)
         this.load.image('titleWatcher', titleWatcher)
         this.load.image('himAndHer', himAndHerPng)
+        this.load.image('restaurantBg', restaurantBgPng)
+        this.load.image('restaurantAloneBg', restaurantAloneBgPng)
         this.load.atlas("black", blackPng, blackJson)
         this.load.atlas("orange", orangePng, orangeJson)
         this.load.atlas("white", whitePng, whiteJson)

@@ -1,6 +1,6 @@
 import 'phaser'
 import i18next from 'i18next';
-import {DIALOG_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
+import {DIALOG_SCENE, RESTAURANT_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
 
 export default class UIScene extends Phaser.Scene {
 
@@ -19,6 +19,7 @@ export default class UIScene extends Phaser.Scene {
     create(data) {
         const worldScene = this.scene.get(WORLD_SCENE)
         const dialogScene = this.scene.get(DIALOG_SCENE)
+        const restaurantScene = this.scene.get(RESTAURANT_SCENE)
         this.uiConfig = data
         this.messages = []
         this.messageQueue = []
@@ -49,12 +50,10 @@ export default class UIScene extends Phaser.Scene {
                 manageMessageFor.call(this, item, worldScene, systemBox);
             }
         }, this)
-
         worldScene.events.on('readSign', function(item) {
             console.debug('Event readSign received')
             manageMessageFor.call(this, item, worldScene, signBox);
         }, this)
-
         worldScene.events.on('talkTo', function(item) {
             console.debug('Event talkTo received')
             if (item.stringId() === 'external') {
@@ -78,6 +77,14 @@ export default class UIScene extends Phaser.Scene {
                 .then(response => response.json())
                 .then(data => {
                     startMessagesQueue.call(this, data, dialogScene)
+                })
+        }, this)
+        restaurantScene.events.on('dialogMessages', function(messages) {
+            console.debug('Event dialogMessages received')
+            fetch(messages)
+                .then(response => response.json())
+                .then(data => {
+                    startMessagesQueue.call(this, data, restaurantScene)
                 })
         }, this)
 
@@ -110,6 +117,23 @@ export default class UIScene extends Phaser.Scene {
                     readNextMessageInQueue.call(this, dialogScene)
                 } else {
                     dialogScene.events.emit('dialogEnd')
+                }
+            } else {
+                box.typeNextPage()
+            }
+        }, this)
+        restaurantScene.events.on('continueDialog', function(box) {
+            console.debug('Event continueDialog received')
+            const icon = box.getElement('action').setVisible(false)
+            box.resetChildVisibleState(icon)
+            if (box.isTyping) {
+                box.stop(true)
+            } else if (box.isLastPage) {
+                box.setVisible(false)
+                if (this.messageQueue.length > 0) {
+                    readNextMessageInQueue.call(this, restaurantScene)
+                } else {
+                    restaurantScene.events.emit('dialogEnd')
                 }
             } else {
                 box.typeNextPage()
