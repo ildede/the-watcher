@@ -34,6 +34,7 @@ import male6Png from "../assets/characters/npcs/male/male6.png";
 import male7Png from "../assets/characters/npcs/male/male7.png";
 import male8Png from "../assets/characters/npcs/male/male8.png";
 import nextPage from "../assets/UI/arrow-down-left.png";
+import menuCreditsPng from "../assets/title/menu-credits.png";
 import titleWatcher from "../assets/title/title-watcher.png";
 import titleWatcherVr from "../assets/title/title-watcher-vr.png";
 import splashBg00 from "../assets/title/splash-background-0.png";
@@ -160,6 +161,7 @@ export default class BootScene extends Phaser.Scene {
 
         this.load.image('titleWatcherVR', titleWatcherVr)
         this.load.image('nextPage', nextPage)
+        this.load.image('menuCredits', menuCreditsPng)
         this.load.image('himFace', himFacePng)
         this.load.image('herFace', herFacePng)
         this.load.image('titleWatcher', titleWatcher)

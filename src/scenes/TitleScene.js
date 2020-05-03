@@ -25,7 +25,7 @@ export default class TitleScene extends Phaser.Scene {
         const english = this.add.sprite(450, 380, 'splashLanguages', 'english');
         const italian = this.add.sprite(450, 420, 'splashLanguages', 'italian');
         if (isFinished) {
-            const credits = this.add.sprite(450, 460, 'splashLanguages', 'italian');
+            const credits = this.add.sprite(450, 460, 'menuCredits');
             credits.setInteractive({ useHandCursor: true })
             credits.on('pointerdown', () => this.scene.start(CREDIT_1))
             credits.on('pointerover', () => this.drawOutlineRect(credits))
