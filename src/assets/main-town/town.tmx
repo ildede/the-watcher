@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.3.4" orientation="orthogonal" renderorder="right-down" width="105" height="107" tilewidth="16" tileheight="16" infinite="0" nextlayerid="30" nextobjectid="150">
+<map version="1.2" tiledversion="1.3.4" orientation="orthogonal" renderorder="right-down" width="105" height="107" tilewidth="16" tileheight="16" infinite="0" nextlayerid="32" nextobjectid="192">
  <editorsettings>
   <export target="town.json" format="json"/>
  </editorsettings>
@@ -126006,7 +126006,217 @@
    </properties>
   </tile>
  </tileset>
- <objectgroup id="29" name="e2_what_are_we">
+ <objectgroup id="31" name="m3_dog">
+  <object id="166" name="End" type="message" x="10" y="10" width="1650" height="1650">
+   <properties>
+    <property name="endScene" type="bool" value="true"/>
+    <property name="stringIdRequired" value="Mario_dog23"/>
+   </properties>
+  </object>
+  <object id="168" name="female1" type="npc" x="1550" y="880">
+   <properties>
+    <property name="direction" value="back"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="..."/>
+   </properties>
+   <point/>
+  </object>
+  <object id="169" name="male1" type="npc" x="930" y="880">
+   <properties>
+    <property name="direction" value="left"/>
+    <property name="stringId" value="..."/>
+   </properties>
+   <point/>
+  </object>
+  <object id="170" name="female2" type="npc" x="1550" y="840">
+   <properties>
+    <property name="direction" value="front"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="..."/>
+   </properties>
+   <point/>
+  </object>
+  <object id="171" name="male2" type="npc" x="1105" y="1240">
+   <properties>
+    <property name="direction" value="front"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="..."/>
+   </properties>
+   <point/>
+  </object>
+  <object id="188" name="SMS 7" type="message" x="10" y="10" width="1650" height="1650">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/dog-sms-part-7.json"/>
+    <property name="interval" type="int" value="15"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="external"/>
+    <property name="stringIdRequired" value="Mario_dog22"/>
+   </properties>
+  </object>
+  <object id="186" name="SMS 6" type="message" x="10" y="10" width="1650" height="1650">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/dog-sms-part-6.json"/>
+    <property name="interval" type="int" value="14"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="external"/>
+    <property name="stringIdRequired" value="Mario_dog020"/>
+   </properties>
+  </object>
+  <object id="187" name="SMS 5" type="message" x="10" y="10" width="1650" height="1650">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/dog-sms-part-5.json"/>
+    <property name="interval" type="int" value="13"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="external"/>
+    <property name="stringIdRequired" value="Mario_dog018"/>
+   </properties>
+  </object>
+  <object id="185" name="SMS 4" type="message" x="10" y="10" width="1650" height="1650">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/dog-sms-part-4.json"/>
+    <property name="interval" type="int" value="12"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="external"/>
+    <property name="stringIdRequired" value="Mario_dog016"/>
+   </properties>
+  </object>
+  <object id="184" name="SMS 3" type="message" x="10" y="10" width="1650" height="1650">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/dog-sms-part-3.json"/>
+    <property name="interval" type="int" value="11"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="external"/>
+    <property name="stringIdRequired" value="Mario_dog015"/>
+   </properties>
+  </object>
+  <object id="183" name="SMS 2" type="message" x="10" y="10" width="1650" height="1650">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/dog-sms-part-2.json"/>
+    <property name="interval" type="int" value="10"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="external"/>
+    <property name="stringIdRequired" value="Gioia_dog013"/>
+   </properties>
+  </object>
+  <object id="179" name="SMS 1" type="message" x="10" y="10" width="1650" height="1650">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/dog-sms-part-1.json"/>
+    <property name="interval" type="int" value="9"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="external"/>
+    <property name="stringIdRequired" value="Mario_dog013"/>
+   </properties>
+  </object>
+  <object id="167" name="Begin dialog" type="him" x="1227.36" y="185.909" width="204.293" height="169.276">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_dog013"/>
+   </properties>
+  </object>
+  <object id="178" name="Player" type="spawn" x="1323.01" y="260.628">
+   <properties>
+    <property name="direction" value="front"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="180" name="End" type="message" x="10" y="10" width="1650" height="1650">
+   <properties>
+    <property name="endScene" type="bool" value="true"/>
+    <property name="stringIdRequired" value="Mario_dog23"/>
+   </properties>
+  </object>
+  <object id="189" name="orange" type="npc" x="1350.13" y="258.987">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="30" name="m2_dog" visible="0">
+  <object id="150" name="End" type="message" x="10" y="10" width="1650" height="1650">
+   <properties>
+    <property name="endScene" type="bool" value="true"/>
+    <property name="stringIdRequired" value="Mario_dog_dogpound"/>
+   </properties>
+  </object>
+  <object id="152" name="Talk dog" type="him" x="1280" y="221" width="76.4624" height="38.104">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_dog_dogpound"/>
+   </properties>
+  </object>
+  <object id="159" name="female1" type="npc" x="1550" y="880">
+   <properties>
+    <property name="direction" value="back"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="..."/>
+   </properties>
+   <point/>
+  </object>
+  <object id="160" name="male1" type="npc" x="930" y="880">
+   <properties>
+    <property name="direction" value="left"/>
+    <property name="stringId" value="..."/>
+   </properties>
+   <point/>
+  </object>
+  <object id="161" name="female2" type="npc" x="1550" y="840">
+   <properties>
+    <property name="direction" value="front"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="..."/>
+   </properties>
+   <point/>
+  </object>
+  <object id="162" name="male2" type="npc" x="1105" y="1240">
+   <properties>
+    <property name="direction" value="front"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="..."/>
+   </properties>
+   <point/>
+  </object>
+  <object id="155" name="Talk square" type="him" x="556.105" y="1286.59" width="70.1554" height="51.9464">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_dog_bar"/>
+   </properties>
+  </object>
+  <object id="163" name="Talk restaurant" type="him" x="1399.1" y="1184.59" width="73.1431" height="53.9459">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_dog_restaurant"/>
+   </properties>
+  </object>
+  <object id="164" name="Talk townhall" type="him" x="830.75" y="586.227" width="64.023" height="35.378">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_dog_townhall"/>
+   </properties>
+  </object>
+  <object id="153" name="Talk park" type="him" x="1286.61" y="784" width="342.407" height="74.0989">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_dog_park"/>
+   </properties>
+  </object>
+  <object id="165" name="Talk her" type="him" x="1384" y="570.817" width="80.7432" height="74.8403">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_dog_gioiahouse"/>
+   </properties>
+  </object>
+  <object id="154" name="Talk him" type="him" x="150.338" y="270.97" width="62.3849" height="68.59">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_dog_mariohouse"/>
+   </properties>
+  </object>
+  <object id="158" name="Player" type="spawn" x="370.389" y="1104.81">
+   <properties>
+    <property name="direction" value="front"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="29" name="e2_what_are_we" visible="0">
   <object id="127" name="End" type="message" x="10" y="10" width="1650" height="1650">
    <properties>
     <property name="endScene" type="bool" value="true"/>

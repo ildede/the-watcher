@@ -247,8 +247,26 @@ export const M1_DOG = {
     tiles: [TOWN_TILES],
     tileSize: 16,
     transition: '',
+    next: () => M2_DOG
+}
+export const M2_DOG = {
+    name: 'm2_dog',
+    scene: 'WorldScene',
+    map: TOWN_MAP,
+    tiles: [TOWN_TILES],
+    tileSize: 16,
+    transition: '',
+    next: () => M3_DOG
+}
+export const M3_DOG = {
+    name: 'm3_dog',
+    scene: 'WorldScene',
+    map: TOWN_MAP,
+    tiles: [TOWN_TILES],
+    tileSize: 16,
+    transition: '',
     next: () => A_ARRIVAL
 }
 
-export const FIRST_LEVEL = M1_DOG
+export const FIRST_LEVEL = A_ARRIVAL
 
