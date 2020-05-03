@@ -126321,6 +126321,7 @@
    <properties>
     <property name="dialogs" type="file" value="dialogs/night-part-2.json"/>
     <property name="direction" value="left"/>
+    <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="external"/>
    </properties>
    <point/>

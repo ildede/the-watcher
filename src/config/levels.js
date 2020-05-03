@@ -219,8 +219,26 @@ export const I1_MARRY_ME = {
         name: 'restaurantBg',
         flip: false
     },
+    next: () => L1_MOVING
+}
+export const L1_MOVING = {
+    name: 'l1_moving',
+    scene: 'WorldScene',
+    map: SNOW_MAP,
+    tiles: [TOWN_TILES],
+    tileSize: 16,
+    transition: '',
+    next: () => L2_MOVING
+}
+export const L2_MOVING = {
+    name: 'l2_moving',
+    scene: 'WorldScene',
+    map: SNOW_MAP,
+    tiles: [TOWN_TILES],
+    tileSize: 16,
+    transition: '',
     next: () => A_ARRIVAL
 }
 
-export const FIRST_LEVEL = A_ARRIVAL
+export const FIRST_LEVEL = L1_MOVING
 

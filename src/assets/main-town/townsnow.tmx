@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.3.4" orientation="orthogonal" renderorder="right-down" width="105" height="107" tilewidth="16" tileheight="16" infinite="0" nextlayerid="13" nextobjectid="18">
+<map version="1.2" tiledversion="1.3.4" orientation="orthogonal" renderorder="right-down" width="105" height="107" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="49">
  <editorsettings>
   <export target="town-snow.json" format="json"/>
  </editorsettings>
@@ -126783,8 +126783,173 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="3" name="Objects"/>
- <objectgroup id="11" name="h2_anniversary">
+ <objectgroup id="3" name="Objects" visible="0"/>
+ <objectgroup id="14" name="l2_moving">
+  <object id="40" name="End" type="message" x="183.948" y="981.821" width="340.011" height="293.646">
+   <properties>
+    <property name="endScene" type="bool" value="true"/>
+    <property name="stringIdRequired" value="Mario_moving025"/>
+   </properties>
+  </object>
+  <object id="48" name="Final dialog" type="message" x="303.245" y="1053.4" width="113.708" height="52.1595">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/moving-part-4.json"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="external"/>
+    <property name="stringIdRequired" value="Mario_moving013"/>
+   </properties>
+  </object>
+  <object id="39" name="her" type="npc" x="1503.3" y="813.725">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/moving-part-3.json"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="external"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="41" name="Begin message" type="message" x="54.226" y="228.472" width="310.173" height="234.979">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/moving-part-2.json"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="external"/>
+   </properties>
+  </object>
+  <object id="38" name="Spawn Point" type="spawn" x="175" y="345">
+   <point/>
+  </object>
+  <object id="42" name="Wrong bar" type="him" x="560.019" y="1296.72" width="74.38" height="42.6611">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_gioia_moving_bar"/>
+    <property name="stringIdRequired" value="Mario_moving013"/>
+   </properties>
+  </object>
+  <object id="43" name="Wrong restaurant" type="him" x="1405.99" y="1183.85" width="59.8329" height="68.8643">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_gioia_moving_restaurant"/>
+    <property name="stringIdRequired" value="Mario_moving013"/>
+   </properties>
+  </object>
+  <object id="44" name="Wrong townhall" type="him" x="833.431" y="582.971" width="65.4775" height="53.0594">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_gioia_moving_townhall"/>
+    <property name="stringIdRequired" value="Mario_moving013"/>
+   </properties>
+  </object>
+  <object id="45" name="Wrong dog" type="him" x="1274.16" y="215.009" width="92.1348" height="67.4157">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_gioia_moving_dogpound"/>
+    <property name="stringIdRequired" value="Mario_moving013"/>
+   </properties>
+  </object>
+  <object id="46" name="Wrong him place" type="him" x="125.804" y="285.59" width="103.391" height="73.0244">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_gioia_moving_mariohouse"/>
+    <property name="stringIdRequired" value="Mario_moving013"/>
+   </properties>
+  </object>
+  <object id="47" name="Wrong her" type="him" x="1411.96" y="592.672" width="56.5684" height="39.4401">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_gioia_moving_gioiahouse"/>
+    <property name="stringIdRequired" value="Mario_moving013"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="13" name="l1_moving" visible="0">
+  <object id="19" name="End" type="message" x="267.954" y="1031.67" width="203.077" height="182.65">
+   <properties>
+    <property name="endScene" type="bool" value="true"/>
+    <property name="stringIdRequired" value="Mario_moving005"/>
+   </properties>
+  </object>
+  <object id="36" name="House 4" type="him" x="299.328" y="1050.54" width="145.326" height="116.405">
+   <properties>
+    <property name="interval" type="int" value="0"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_moving005"/>
+    <property name="stringIdRequired" value="Mario_moving004"/>
+   </properties>
+  </object>
+  <object id="37" name="House 3" type="him" x="281.252" y="1050.54" width="171.354" height="147.495">
+   <properties>
+    <property name="interval" type="int" value="0"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_moving004"/>
+    <property name="stringIdRequired" value="System_016"/>
+   </properties>
+  </object>
+  <object id="33" name="House sign" type="sign" x="319.572" y="1087.41" width="38.3197" height="57.8411">
+   <properties>
+    <property name="stringId" value="System_016"/>
+   </properties>
+  </object>
+  <object id="32" name="House 2" type="him" x="297.159" y="1050.54" width="147.495" height="117.851">
+   <properties>
+    <property name="interval" type="int" value="0"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_moving_houseforsale1"/>
+    <property name="stringIdRequired" value="Mario_moving_houseforsale"/>
+   </properties>
+  </object>
+  <object id="31" name="House 1" type="him" x="299.328" y="1050.54" width="145.326" height="116.405">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_moving_houseforsale"/>
+   </properties>
+  </object>
+  <object id="30" name="Wrong dog" type="him" x="1269.66" y="208.989" width="92.1348" height="67.4157">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_moving_dogpound"/>
+   </properties>
+  </object>
+  <object id="29" name="Wrong park" type="him" x="1314.61" y="770.787" width="276.404" height="88.764">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_moving_park"/>
+   </properties>
+  </object>
+  <object id="20" name="Wrong her" type="him" x="1407.41" y="587.706" width="56.5684" height="39.4401">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_moving_gioiahouse"/>
+   </properties>
+  </object>
+  <object id="28" name="Wrong townhall" type="him" x="828.629" y="578.009" width="65.4775" height="53.0594">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_moving_townhall"/>
+   </properties>
+  </object>
+  <object id="27" name="Wrong restaurant" type="him" x="1400.99" y="1178.6" width="59.8329" height="68.8643">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_moving_restaurant"/>
+   </properties>
+  </object>
+  <object id="25" name="Wrong bar" type="him" x="555.399" y="1291.79" width="74.38" height="42.6611">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_moving_bar"/>
+   </properties>
+  </object>
+  <object id="22" name="Begin message" type="him" x="38.3672" y="214.67" width="399.702" height="321.599">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/moving-part-1.json"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="external"/>
+   </properties>
+  </object>
+  <object id="18" name="Spawn Point" type="spawn" x="175" y="345">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="11" name="h2_anniversary" visible="0">
   <object id="8" name="Spawn Point" type="spawn" x="175" y="345">
    <point/>
   </object>
@@ -126845,7 +127010,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="10" name="h1_anniversary">
+ <objectgroup id="10" name="h1_anniversary" visible="0">
   <object id="5" name="Spawn Point" type="spawn" x="175" y="345" visible="0">
    <point/>
   </object>
