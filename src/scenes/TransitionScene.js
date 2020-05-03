@@ -19,7 +19,7 @@ export default class TransitionScene extends Phaser.Scene {
           console.debug('i18next initialized')
         })
 
-    this.add.text(140, 100, i18next.t(nextLevel.transition), { fontSize: '50px' })
+    this.add.text(100, 140, i18next.t(nextLevel.transition), { fontSize: '30px' })
 
     this.time.addEvent({
       delay: 500,
