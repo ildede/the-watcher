@@ -57,18 +57,10 @@ export default class UIScene extends Phaser.Scene {
         }, this)
         worldScene.events.on('talkTo', function(item) {
             console.debug('Event talkTo received')
-            if (item.stringId() === 'external') {
-                fetch(item.dialogs())
-                    .then(response => response.json())
-                    .then(data => {
-                        startMessagesQueue.call(this, data, worldScene)
-                    })
+            if (item.messageType === 'her') {
+                manageMessageFor.call(this, item, worldScene, herBox);
             } else {
-                if (item.messageType === 'her') {
-                    manageMessageFor.call(this, item, worldScene, herBox);
-                } else {
-                    manageMessageFor.call(this, item, worldScene, npcBox);
-                }
+                manageMessageFor.call(this, item, worldScene, npcBox);
             }
         }, this)
 
@@ -187,6 +179,11 @@ export default class UIScene extends Phaser.Scene {
                 } else if (currentMessage.who === 'him') {
                     currentScene.events.emit('dialogStart', himBox)
                     himBox.setVisible(true).start(i18next.t(currentMessage.stringId), 50)
+                    if (this.messages.includes(currentMessage.stringId) === false) this.messages.push(currentMessage.stringId)
+
+                } else if (currentMessage.who === 'npc') {
+                    currentScene.events.emit('dialogStart', npcBox)
+                    npcBox.setVisible(true).start(i18next.t(currentMessage.stringId), 50)
                     if (this.messages.includes(currentMessage.stringId) === false) this.messages.push(currentMessage.stringId)
 
                 } else {

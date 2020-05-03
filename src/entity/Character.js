@@ -12,7 +12,7 @@ export default class Character extends Phaser.Physics.Arcade.Sprite {
 
         this.createAnimations()
 
-        this.stringId = () => object.properties?.find(e => e.name === 'stringId')?.value
+        this.stringId = () => object.properties?.find(e => e.name === 'stringId')?.value || '...'
         this.dialogs = () => object.properties?.find(e => e.name === 'dialogs')?.value
         this.showOnce = () => object.properties?.find(e => e.name === 'showOnce')?.value
         this.interval = () => object.properties?.find(e => e.name === 'interval')?.value || 5

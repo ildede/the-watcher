@@ -149,8 +149,17 @@ export const F3_NIGHT_OUT = {
     scene: 'ParkScene',
     messages: 'dialogs/night-part-4.json',
     transition: '',
+    next: () => E1_WHAT_ARE_WE
+}
+export const E1_WHAT_ARE_WE = {
+    name: 'e1_what_are_we',
+    scene: 'WorldScene',
+    map: TOWN_MAP,
+    tiles: [TOWN_TILES],
+    tileSize: 16,
+    transition: '',
     next: () => A_ARRIVAL
 }
 
-export const FIRST_LEVEL = A_ARRIVAL
+export const FIRST_LEVEL = E1_WHAT_ARE_WE
 
