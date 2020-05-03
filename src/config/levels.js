@@ -283,7 +283,25 @@ export const N2_BDAY = {
     tiles: [TOWN_TILES, PARTY_TILES_16],
     tileSize: 16,
     transition: '',
+    next: () => N3_BDAY
+}
+export const N3_BDAY = {
+    name: 'n3_bday',
+    scene: 'WorldScene',
+    map: GARDEN_TORI_MAP,
+    tiles: [TOWN_TILES, PARTY_TILES_16],
+    tileSize: 16,
+    transition: '',
+    next: () => N4_BDAY
+}
+export const N4_BDAY = {
+    name: 'n4_bday',
+    scene: 'WorldScene',
+    map: GARDEN_TORI_MAP,
+    tiles: [TOWN_TILES, PARTY_TILES_16],
+    tileSize: 16,
+    transition: '',
     next: () => A_ARRIVAL
 }
-export const FIRST_LEVEL = N2_BDAY
+export const FIRST_LEVEL = A_ARRIVAL
 

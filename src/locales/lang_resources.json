@@ -538,7 +538,7 @@
       "Gioia_bday_016": "Thank you so much guys. See you around, don't be a stranger!",
       "Mario_bday_013": "Mael, please don't! Stay! Don't go!",
       "Mario_bday_014": "No, Mael, don't!",
-      "System_027": "User: Mael got disconnected."
+      "System_027": "[color=red]User: Mael got disconnected.[/color]"
     }
   },
   "it": {
@@ -1080,7 +1080,7 @@
       "Gioia_bday_016": "Grazie a tutti, ragazzi, ci si vede in giro, non sparite!",
       "Mario_bday_013": "Mael, no, aspetta! Rimani! Non andare!",
       "Mario_bday_014": "No, Mael, no!",
-      "System_027": "L'utente: Mael si è disconnesso."
+      "System_027": "[color=red]L'utente: Mael si è disconnesso.[/color]"
     }
   }
 }
