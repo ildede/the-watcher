@@ -186,6 +186,28 @@ export const H2_ANNIVERSARY = {
     tiles: [TOWN_TILES],
     tileSize: 16,
     transition: 'System_015',
+    next: () => H3_ANNIVERSARY
+}
+export const H3_ANNIVERSARY = {
+    name: 'h3_anniversary',
+    scene: 'RestaurantScene',
+    messages: 'dialogs/restaurant-anniversary-part-1.json',
+    transition: '',
+    image: {
+        name: 'restaurantAloneBg',
+        flip: false
+    },
+    next: () => H4_ANNIVERSARY
+}
+export const H4_ANNIVERSARY = {
+    name: 'h4_anniversary',
+    scene: 'RestaurantScene',
+    messages: 'dialogs/restaurant-anniversary-part-2.json',
+    transition: '',
+    image: {
+        name: 'restaurantBg',
+        flip: false
+    },
     next: () => A_ARRIVAL
 }
 
