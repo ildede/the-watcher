@@ -126016,10 +126016,10 @@
   <object id="129" name="End dialog" type="him" x="10" y="10" width="1660" height="1660">
    <properties>
     <property name="dialogs" type="file" value="dialogs/what-we-are-part-her.json"/>
-    <property name="interval" type="int" value="60"/>
+    <property name="interval" type="int" value="70"/>
     <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="external"/>
-    <property name="stringIdRequired" value="Gioiamumbles"/>
+    <property name="stringIdRequired" value="Mario_whatweare032houseforsale"/>
    </properties>
   </object>
   <object id="131" name="Talk dog" type="him" x="1280" y="220" width="95" height="69">
