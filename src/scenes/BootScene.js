@@ -38,9 +38,10 @@ import splashBg00 from "../assets/title/splash-background-0.png";
 import splashLanguagesPng from "../assets/title/splash-languages.png";
 
 import {BOOT_SCENE, TITLE_SCENE} from "../TheWatcher";
-import {CASINO_TILES, DANCE_HALL_MAP, DANCE_HALL_TILES, PARTY_TILES, TOWN_MAP, TOWN_TILES} from "../config/levels";
+import {CASINO_TILES, DANCE_HALL_MAP, DANCE_HALL_TILES, PARTY_TILES, TOWN_MAP, TOWN_TILES, SNOW_MAP} from "../config/levels";
 
 import * as townJson from '../assets/main-town/town.json';
+import * as snowJson from '../assets/main-town/town-snow.json';
 import * as danceHallJson from '../assets/main-town/dancehall.json';
 
 import * as blackJson from '../assets/characters/cats/black.json';
@@ -134,6 +135,7 @@ export default class BootScene extends Phaser.Scene {
 
         this.load.image(TOWN_TILES, watcherBasePng)
         this.load.tilemapTiledJSON(TOWN_MAP, townJson)
+        this.load.tilemapTiledJSON(SNOW_MAP, snowJson)
         this.load.image(CASINO_TILES, casinoPng)
         this.load.image(DANCE_HALL_TILES, danceHallPng)
         this.load.image(PARTY_TILES, partyPng)

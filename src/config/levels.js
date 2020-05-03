@@ -1,5 +1,6 @@
 export const TOWN_TILES = 'watcherbase'
 export const TOWN_MAP = 'townMap'
+export const SNOW_MAP = 'snowMap'
 export const CASINO_TILES = 'casino'
 export const DANCE_HALL_TILES = 'dancehall'
 export const PARTY_TILES = 'party'
@@ -167,8 +168,26 @@ export const E2_WHAT_ARE_WE = {
     tiles: [TOWN_TILES],
     tileSize: 16,
     transition: 'System_014',
+    next: () => H1_ANNIVERSARY
+}
+export const H1_ANNIVERSARY = {
+    name: 'h1_anniversary',
+    scene: 'WorldScene',
+    map: SNOW_MAP,
+    tiles: [TOWN_TILES],
+    tileSize: 16,
+    transition: '',
+    next: () => H2_ANNIVERSARY
+}
+export const H2_ANNIVERSARY = {
+    name: 'h2_anniversary',
+    scene: 'WorldScene',
+    map: SNOW_MAP,
+    tiles: [TOWN_TILES],
+    tileSize: 16,
+    transition: 'System_015',
     next: () => A_ARRIVAL
 }
 
-export const FIRST_LEVEL = E2_WHAT_ARE_WE
+export const FIRST_LEVEL = H1_ANNIVERSARY
 

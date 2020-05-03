@@ -14,6 +14,7 @@ export default class WorldScene extends Phaser.Scene {
     create(data) {
         this.levelConfig = data
         this.dialogOpen = false
+        console.debug(WORLD_SCENE, this.levelConfig)
 
         //-- Draw map and game objects
         const map = this.make.tilemap({ key: this.levelConfig.level.map })
