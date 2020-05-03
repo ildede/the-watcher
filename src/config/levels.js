@@ -161,5 +161,5 @@ export const E1_WHAT_ARE_WE = {
     next: () => A_ARRIVAL
 }
 
-export const FIRST_LEVEL = E1_WHAT_ARE_WE
+export const FIRST_LEVEL = A_ARRIVAL
 
