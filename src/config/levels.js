@@ -1,6 +1,7 @@
 export const TOWN_TILES = 'watcherbase'
 export const TOWN_MAP = 'townMap'
 export const SNOW_MAP = 'snowMap'
+export const GARDEN_MAP = 'gardenMap'
 export const CASINO_TILES = 'casino'
 export const DANCE_HALL_TILES = 'dancehall'
 export const PARTY_TILES = 'party'
@@ -237,8 +238,17 @@ export const L2_MOVING = {
     tiles: [TOWN_TILES],
     tileSize: 16,
     transition: '',
+    next: () => M1_DOG
+}
+export const M1_DOG = {
+    name: 'm1_dog',
+    scene: 'WorldScene',
+    map: GARDEN_MAP,
+    tiles: [TOWN_TILES],
+    tileSize: 16,
+    transition: '',
     next: () => A_ARRIVAL
 }
 
-export const FIRST_LEVEL = L1_MOVING
+export const FIRST_LEVEL = M1_DOG
 
