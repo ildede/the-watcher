@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.3.4" orientation="orthogonal" renderorder="right-down" width="105" height="107" tilewidth="16" tileheight="16" infinite="0" nextlayerid="25" nextobjectid="50">
+<map version="1.2" tiledversion="1.3.4" orientation="orthogonal" renderorder="right-down" width="105" height="107" tilewidth="16" tileheight="16" infinite="0" nextlayerid="29" nextobjectid="127">
  <editorsettings>
   <export target="town.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="watcherbase" tilewidth="16" tileheight="16" spacing="2" margin="1" tilecount="25200" columns="120">
-  <properties>
-   <property name="collide" type="bool" value="false"/>
-  </properties>
   <image source="../tileset/tileset-extruded.png" width="2160" height="3780"/>
-  <terraintypes>
-   <terrain name="fuime" tile="12732"/>
-  </terraintypes>
   <tile id="0">
    <properties>
     <property name="collide" type="bool" value="false"/>
@@ -62446,34 +62440,34 @@
     <property name="collide" type="bool" value="false"/>
    </properties>
   </tile>
-  <tile id="12487" terrain="0,0,0,">
-   <properties>
-    <property name="collide" type="bool" value="true"/>
-   </properties>
-  </tile>
-  <tile id="12488" terrain="0,0,,">
+  <tile id="12487">
    <properties>
     <property name="collide" type="bool" value="false"/>
    </properties>
   </tile>
-  <tile id="12489" terrain="0,0,,0">
+  <tile id="12488">
    <properties>
-    <property name="collide" type="bool" value="true"/>
+    <property name="collide" type="bool" value="false"/>
    </properties>
   </tile>
-  <tile id="12490" terrain=",,,0">
+  <tile id="12489">
    <properties>
-    <property name="collide" type="bool" value="true"/>
+    <property name="collide" type="bool" value="false"/>
    </properties>
   </tile>
-  <tile id="12491" terrain=",,0,0">
+  <tile id="12490">
    <properties>
-    <property name="collide" type="bool" value="true"/>
+    <property name="collide" type="bool" value="false"/>
    </properties>
   </tile>
-  <tile id="12492" terrain=",,0,">
+  <tile id="12491">
    <properties>
-    <property name="collide" type="bool" value="true"/>
+    <property name="collide" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="12492">
+   <properties>
+    <property name="collide" type="bool" value="false"/>
    </properties>
   </tile>
   <tile id="12493">
@@ -63046,9 +63040,9 @@
     <property name="collide" type="bool" value="false"/>
    </properties>
   </tile>
-  <tile id="12607" terrain="0,,0,">
+  <tile id="12607">
    <properties>
-    <property name="collide" type="bool" value="true"/>
+    <property name="collide" type="bool" value="false"/>
    </properties>
   </tile>
   <tile id="12608">
@@ -63056,24 +63050,24 @@
     <property name="collide" type="bool" value="false"/>
    </properties>
   </tile>
-  <tile id="12609" terrain=",0,,0">
+  <tile id="12609">
    <properties>
-    <property name="collide" type="bool" value="true"/>
+    <property name="collide" type="bool" value="false"/>
    </properties>
   </tile>
-  <tile id="12610" terrain=",0,,0">
+  <tile id="12610">
    <properties>
-    <property name="collide" type="bool" value="true"/>
+    <property name="collide" type="bool" value="false"/>
    </properties>
   </tile>
-  <tile id="12611" terrain="0,0,0,0">
+  <tile id="12611">
    <properties>
-    <property name="collide" type="bool" value="true"/>
+    <property name="collide" type="bool" value="false"/>
    </properties>
   </tile>
-  <tile id="12612" terrain="0,,0,">
+  <tile id="12612">
    <properties>
-    <property name="collide" type="bool" value="true"/>
+    <property name="collide" type="bool" value="false"/>
    </properties>
   </tile>
   <tile id="12613">
@@ -63646,32 +63640,32 @@
     <property name="collide" type="bool" value="false"/>
    </properties>
   </tile>
-  <tile id="12727" terrain="0,,0,0">
-   <properties>
-    <property name="collide" type="bool" value="true"/>
-   </properties>
-  </tile>
-  <tile id="12728" terrain=",,0,0">
-   <properties>
-    <property name="collide" type="bool" value="true"/>
-   </properties>
-  </tile>
-  <tile id="12729" terrain=",0,0,0">
-   <properties>
-    <property name="collide" type="bool" value="true"/>
-   </properties>
-  </tile>
-  <tile id="12730" terrain=",0,,">
+  <tile id="12727">
    <properties>
     <property name="collide" type="bool" value="false"/>
    </properties>
   </tile>
-  <tile id="12731" terrain="0,0,,">
+  <tile id="12728">
    <properties>
     <property name="collide" type="bool" value="false"/>
    </properties>
   </tile>
-  <tile id="12732" terrain="0,,,">
+  <tile id="12729">
+   <properties>
+    <property name="collide" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="12730">
+   <properties>
+    <property name="collide" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="12731">
+   <properties>
+    <property name="collide" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="12732">
    <properties>
     <property name="collide" type="bool" value="false"/>
    </properties>
@@ -101878,27 +101872,27 @@
   </tile>
   <tile id="20373">
    <properties>
-    <property name="collide" type="bool" value="false"/>
+    <property name="collide" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="20374">
    <properties>
-    <property name="collide" type="bool" value="false"/>
+    <property name="collide" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="20375">
    <properties>
-    <property name="collide" type="bool" value="false"/>
+    <property name="collide" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="20376">
    <properties>
-    <property name="collide" type="bool" value="false"/>
+    <property name="collide" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="20377">
    <properties>
-    <property name="collide" type="bool" value="false"/>
+    <property name="collide" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="20378">
@@ -118723,7 +118717,7 @@
   </tile>
   <tile id="23742">
    <properties>
-    <property name="collide" type="bool" value="false"/>
+    <property name="collide" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="23743">
@@ -121678,27 +121672,27 @@
   </tile>
   <tile id="24333">
    <properties>
-    <property name="collide" type="bool" value="false"/>
+    <property name="collide" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="24334">
    <properties>
-    <property name="collide" type="bool" value="false"/>
+    <property name="collide" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="24335">
    <properties>
-    <property name="collide" type="bool" value="false"/>
+    <property name="collide" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="24336">
    <properties>
-    <property name="collide" type="bool" value="false"/>
+    <property name="collide" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="24337">
    <properties>
-    <property name="collide" type="bool" value="false"/>
+    <property name="collide" type="bool" value="true"/>
    </properties>
   </tile>
   <tile id="24338">
@@ -126012,50 +126006,482 @@
    </properties>
   </tile>
  </tileset>
- <objectgroup id="13" name="d2_bar_after" visible="0">
-  <object id="39" name="Player" type="spawn" x="600" y="1310" visible="0">
+ <objectgroup id="28" name="e1_what_are_we" visible="0">
+  <object id="106" name="End" type="message" x="1160.45" y="490" width="500" height="290">
+   <properties>
+    <property name="endScene" type="bool" value="true"/>
+    <property name="stringIdRequired" value="Mario_whatweare021"/>
+   </properties>
+  </object>
+  <object id="120" name="Her house 2" type="him" x="1391.6" y="558.729" width="65.5444" height="82.0003">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_whatweare021"/>
+    <property name="stringIdRequired" value="Randomguy3"/>
+   </properties>
+  </object>
+  <object id="121" name="Think wait" type="him" x="10" y="10" width="1660" height="1660">
+   <properties>
+    <property name="interval" type="int" value="60"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="Mario_whatweare020"/>
+    <property name="stringIdRequired" value="Randomguy3"/>
+   </properties>
+  </object>
+  <object id="107" name="Her house 1" type="message" x="1391.6" y="558.729" width="65.5444" height="82.0003">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/what-we-are-part-2.json"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="external"/>
+   </properties>
+  </object>
+  <object id="119" name="Wrong dog" type="him" x="1280" y="220" width="80" height="50">
+   <properties>
+    <property name="interval" type="int" value="20"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="Mario_whatweare_dogpound"/>
+   </properties>
+  </object>
+  <object id="112" name="Wrong restaurant" type="him" x="1380" y="1170" width="100" height="75">
+   <properties>
+    <property name="interval" type="int" value="20"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="Mario_whatweare_restaurant"/>
+   </properties>
+  </object>
+  <object id="113" name="Wrong bar" type="him" x="513.502" y="1264.22" width="141.798" height="80.4652">
+   <properties>
+    <property name="interval" type="int" value="20"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="Mario_whatweare_bar"/>
+   </properties>
+  </object>
+  <object id="114" name="Wrong house" type="him" x="344.714" y="1054.79" width="65.5103" height="35.59">
+   <properties>
+    <property name="interval" type="int" value="20"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="Mario_whatweare_houseforsale"/>
+   </properties>
+  </object>
+  <object id="115" name="Wrong townhall" type="him" x="832.825" y="580" width="48.0668" height="42.9474">
+   <properties>
+    <property name="interval" type="int" value="20"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="Mario_whatweare_townhall"/>
+   </properties>
+  </object>
+  <object id="118" name="Welcome dialog" type="message" x="48.4653" y="210.914" width="335.667" height="271.046">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/what-we-are-part-1.json"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="external"/>
+   </properties>
+  </object>
+  <object id="116" name="Player" type="spawn" x="175" y="345">
+   <properties>
+    <property name="direction" value="front"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="122" name="female1" type="npc" x="1550" y="880">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/what-we-are-npc-2.json"/>
+    <property name="direction" value="back"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="external"/>
+    <property name="stringIdRequired" value="Mario_whatweare014"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="123" name="male1" type="npc" x="930" y="880">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/what-we-are-npc-1.json"/>
+    <property name="direction" value="left"/>
+    <property name="stringId" value="external"/>
+    <property name="stringIdRequired" value="Mario_whatweare014"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="124" name="female2" type="npc" x="1550" y="840">
+   <properties>
+    <property name="direction" value="front"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="..."/>
+   </properties>
+   <point/>
+  </object>
+  <object id="125" name="male2" type="npc" x="1105" y="1240">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/what-we-are-npc-3.json"/>
+    <property name="direction" value="front"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="external"/>
+    <property name="stringIdRequired" value="Mario_whatweare014"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="27" name="f2_night" visible="0">
+  <object id="92" name="End" type="message" x="1175" y="690" width="500" height="290">
+   <properties>
+    <property name="endScene" type="bool" value="true"/>
+    <property name="stringIdRequired" value="Mario_night010"/>
+   </properties>
+  </object>
+  <object id="93" name="Park ok" type="message" x="1329.67" y="771.437" width="349.156" height="104.438">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/night-part-3.json"/>
+    <property name="stringId" value="external"/>
+    <property name="stringIdRequired" value="Mario_night005"/>
+   </properties>
+  </object>
+  <object id="94" name="Wrong woods4" type="him" x="9.85166" y="1585.27" width="1655.11" height="114.356">
+   <properties>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="Mario_night_woods"/>
+    <property name="stringIdRequired" value="Mario_night005"/>
+   </properties>
+  </object>
+  <object id="95" name="Wrong woods3" type="him" x="15.9123" y="15.5764" width="1655.11" height="114.356">
+   <properties>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="Mario_night_woods"/>
+    <property name="stringIdRequired" value="Mario_night005"/>
+   </properties>
+  </object>
+  <object id="96" name="Wrong woods2" type="him" x="1634.09" y="15.5764" width="36.928" height="1690.11">
+   <properties>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="Mario_night_woods"/>
+    <property name="stringIdRequired" value="Mario_night005"/>
+   </properties>
+  </object>
+  <object id="97" name="Wrong woods1" type="him" x="6.82136" y="6.48551" width="36.928" height="1690.11">
+   <properties>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="Mario_night_woods"/>
+    <property name="stringIdRequired" value="Mario_night005"/>
+   </properties>
+  </object>
+  <object id="99" name="Wrong restaurant" type="him" x="1380" y="1170" width="100" height="75">
+   <properties>
+    <property name="interval" type="int" value="20"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="Mario_other_building"/>
+    <property name="stringIdRequired" value="Mario_night005"/>
+   </properties>
+  </object>
+  <object id="100" name="Wrong bar" type="him" x="513.502" y="1264.22" width="141.798" height="80.4652">
+   <properties>
+    <property name="interval" type="int" value="20"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="Mario_other_building"/>
+    <property name="stringIdRequired" value="Mario_night005"/>
+   </properties>
+  </object>
+  <object id="101" name="Wrong house" type="him" x="306.121" y="1054.79" width="141.798" height="80.4652">
+   <properties>
+    <property name="interval" type="int" value="20"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="Mario_other_building"/>
+    <property name="stringIdRequired" value="Mario_night005"/>
+   </properties>
+  </object>
+  <object id="102" name="Wrong townhall" type="him" x="770" y="580" width="180" height="60">
+   <properties>
+    <property name="interval" type="int" value="20"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="Mario_other_building"/>
+    <property name="stringIdRequired" value="Mario_night005"/>
+   </properties>
+  </object>
+  <object id="104" name="Player" type="spawn" x="175" y="345">
+   <properties>
+    <property name="direction" value="front"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="105" name="her" type="npc" x="930" y="895">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/night-part-2.json"/>
+    <property name="direction" value="left"/>
+    <property name="stringId" value="external"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="26" name="f1_night" visible="0">
+  <object id="76" name="End" type="message" x="1175" y="690" width="500" height="290">
+   <properties>
+    <property name="endScene" type="bool" value="true"/>
+    <property name="stringIdRequired" value="Mario_night002"/>
+   </properties>
+  </object>
+  <object id="91" name="Park ok" type="him" x="1329.67" y="771.437" width="349.156" height="104.438">
+   <properties>
+    <property name="endScene" type="bool" value="false"/>
+    <property name="stringId" value="Mario_night_park,Mario_night002"/>
+   </properties>
+  </object>
+  <object id="90" name="Wrong woods4" type="him" x="9.85166" y="1585.27" width="1655.11" height="114.356">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_night_woods"/>
+   </properties>
+  </object>
+  <object id="89" name="Wrong woods3" type="him" x="15.9123" y="15.5764" width="1655.11" height="114.356">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_night_woods"/>
+   </properties>
+  </object>
+  <object id="88" name="Wrong woods2" type="him" x="1634.09" y="15.5764" width="36.928" height="1690.11">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_night_woods"/>
+   </properties>
+  </object>
+  <object id="87" name="Wrong woods1" type="him" x="6.82136" y="6.48551" width="36.928" height="1690.11">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_night_woods"/>
+   </properties>
+  </object>
+  <object id="86" name="Wrong square" type="him" x="775" y="800" width="155" height="145">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_night_centralsquare"/>
+   </properties>
+  </object>
+  <object id="85" name="Wrong restaurant" type="him" x="1380" y="1170" width="100" height="75">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_night_restaurant"/>
+   </properties>
+  </object>
+  <object id="84" name="Wrong bar" type="him" x="513.502" y="1264.22" width="141.798" height="80.4652">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_night_bar"/>
+   </properties>
+  </object>
+  <object id="83" name="Wrong house" type="him" x="306.121" y="1054.79" width="141.798" height="80.4652">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_night_houseforsale"/>
+   </properties>
+  </object>
+  <object id="79" name="Wrong townhall" type="him" x="770" y="580" width="180" height="60">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_night_townhall"/>
+   </properties>
+  </object>
+  <object id="81" name="Welcome dialog" type="him" x="39.7795" y="243.204" width="369.556" height="251.059">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_night001"/>
+   </properties>
+  </object>
+  <object id="82" name="Player" type="spawn" x="175" y="345">
+   <properties>
+    <property name="direction" value="front"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="25" name="e1_dinner" visible="0">
+  <object id="69" name="End" type="message" x="1420" y="1180" width="24" height="20">
+   <properties>
+    <property name="endScene" type="bool" value="true"/>
+    <property name="stringIdRequired" value="Gioia_dinner003"/>
+   </properties>
+  </object>
+  <object id="72" name="her" type="npc" x="1410" y="610">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/restaurant-part-2.json"/>
+    <property name="direction" value="left"/>
+    <property name="stringId" value="external"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="73" name="Mario think" type="him" x="1202.81" y="538.101" width="237.984" height="189.918">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_dinner011"/>
+   </properties>
+  </object>
+  <object id="75" name="Mario wrong" type="him" x="42.4559" y="1038.22" width="1599.54" height="597.729">
+   <properties>
+    <property name="interval" type="int" value="30"/>
+    <property name="stringId" value="Mario_far"/>
+    <property name="stringIdThatDisableThis" value="Gioia_dinner001"/>
+   </properties>
+  </object>
+  <object id="74" name="Mario wait" type="him" x="5" y="5" width="1650" height="1700">
+   <properties>
+    <property name="interval" type="int" value="60"/>
+    <property name="stringId" value="Mario_delay1"/>
+    <property name="stringIdThatDisableThis" value="Gioia_dinner001"/>
+   </properties>
+  </object>
+  <object id="70" name="Welcome dialog" type="message" x="39.7795" y="243.204" width="369.556" height="251.059">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/restaurant-part-1.json"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="external"/>
+   </properties>
+  </object>
+  <object id="71" name="Player" type="spawn" x="175" y="345">
+   <properties>
+    <property name="direction" value="front"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="13" name="d3_bar_after" visible="0">
+  <object id="67" name="End" type="message" x="500" y="1160" width="180" height="190">
+   <properties>
+    <property name="endScene" type="bool" value="true"/>
+    <property name="stringIdRequired" value="Mario_bar014"/>
+   </properties>
+  </object>
+  <object id="66" name="Final dialog" type="message" x="500" y="1160" width="180" height="190">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/bar-part-3.json"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="external"/>
+   </properties>
+  </object>
+  <object id="39" name="Player" type="spawn" x="610" y="1310">
+   <properties>
+    <property name="direction" value="left"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="68" name="her" type="npc" x="580" y="1310">
+   <properties>
+    <property name="direction" value="right"/>
+   </properties>
    <point/>
   </object>
  </objectgroup>
  <objectgroup id="12" name="c_first_date" visible="0">
-  <object id="37" name="Player" type="spawn" x="179.333" y="349.333" visible="0">
+  <object id="65" name="End" type="message" x="90" y="290" width="170" height="140">
+   <properties>
+    <property name="endScene" type="bool" value="true"/>
+    <property name="stringIdRequired" value="Mario_first_date017"/>
+   </properties>
+  </object>
+  <object id="64" name="Final dialog" type="message" x="110" y="290" width="95" height="95">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/c-first-date-part-2.json"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="external"/>
+    <property name="stringIdRequired" value="Mario_first_date008"/>
+   </properties>
+  </object>
+  <object id="63" name="her" type="npc" x="1370" y="650">
+   <properties>
+    <property name="dialogs" type="file" value="dialogs/c-first-date-part-1.json"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="external"/>
+   </properties>
    <point/>
   </object>
- </objectgroup>
- <objectgroup id="11" name="b4_party_after" visible="0">
-  <object id="38" name="Player" type="spawn" x="850" y="630" visible="0">
+  <object id="62" name="Think wait" type="him" x="5" y="5" width="1670" height="1700">
+   <properties>
+    <property name="interval" type="int" value="45"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="Mario_first_date004"/>
+    <property name="stringIdRequired" value="Mario_first_date003"/>
+    <property name="stringIdThatDisableThis" value="Mario_first_date005"/>
+   </properties>
+  </object>
+  <object id="61" name="Think alone" type="him" x="5" y="5" width="500" height="550">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_first_date002,Mario_first_date003"/>
+    <property name="stringIdRequired" value="Mario_first_date001"/>
+   </properties>
+  </object>
+  <object id="60" name="Think alone" type="him" x="70" y="240" width="345.333" height="247.333">
+   <properties>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_first_date001"/>
+   </properties>
+  </object>
+  <object id="37" name="Player" type="spawn" x="175" y="345">
    <point/>
   </object>
+  <object id="59" name="Town hall" type="sign" x="770" y="590" width="75" height="65">
+   <properties>
+    <property name="stringId" value="Town_hall_postparty"/>
+   </properties>
+  </object>
  </objectgroup>
- <objectgroup id="10" name="b1_party_before">
+ <objectgroup id="10" name="b1_party_before" visible="0">
   <object id="34" name="Player" type="spawn" x="175" y="345">
    <point/>
   </object>
-  <object id="49" name="End" type="message" x="840" y="590" width="32" height="32">
+  <object id="49" name="End" type="message" x="840.75" y="590" width="31.25" height="19.75">
    <properties>
     <property name="endScene" type="bool" value="true"/>
     <property name="stringId" value="any"/>
    </properties>
   </object>
+  <object id="52" name="Think house" type="him" x="140" y="270" width="70" height="40">
+   <properties>
+    <property name="interval" type="int" value="15"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="Mario_partynight_house"/>
+   </properties>
+  </object>
+  <object id="54" name="Think bar" type="him" x="556.428" y="1298.91" width="74.5074" height="68.6328">
+   <properties>
+    <property name="interval" type="int" value="15"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="Mario_partynight_bar"/>
+   </properties>
+  </object>
+  <object id="56" name="Think restaurant" type="him" x="1393.88" y="1176.07" width="81.0983" height="58.6471">
+   <properties>
+    <property name="interval" type="int" value="15"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="Mario_partynight_restaurant"/>
+   </properties>
+  </object>
+  <object id="57" name="Think wait" type="him" x="10" y="10" width="1660" height="1680">
+   <properties>
+    <property name="interval" type="int" value="45"/>
+    <property name="showOnce" type="bool" value="false"/>
+    <property name="stringId" value="Mario_partynight_000"/>
+   </properties>
+  </object>
+  <object id="58" name="Town hall" type="sign" x="770" y="590" width="75" height="65">
+   <properties>
+    <property name="stringId" value="Town_hall_party"/>
+   </properties>
+  </object>
  </objectgroup>
- <objectgroup id="9" name="a_arrival">
-  <object id="26" name="Mario think" type="message" x="153.282" y="323" width="40" height="40" visible="0">
+ <objectgroup id="9" name="a_arrival" visible="0">
+  <object id="26" name="Mario think" type="him" x="15" y="220" width="380" height="260">
    <properties>
     <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="Mario_001"/>
     <property name="stringIdRequired" value="System_006"/>
    </properties>
   </object>
-  <object id="27" name="Welcome" type="message" x="120" y="300" width="100" height="100" visible="0">
+  <object id="27" name="Welcome" type="message" x="30" y="240" width="315" height="210">
    <properties>
     <property name="showOnce" type="bool" value="true"/>
-    <property name="stringId" value="System_001,System_005,System_004,System_002,System_003,System_006"/>
+    <property name="stringId" value="System_001,System_002,System_003,System_004,System_005,System_006"/>
    </properties>
   </object>
   <object id="33" name="Player" type="spawn" x="175" y="345">
    <point/>
   </object>
-  <object id="40" name="Mario think" type="message" x="750" y="590" width="110" height="100" visible="0">
+  <object id="40" name="Mario think" type="him" x="750" y="590" width="110" height="100">
    <properties>
     <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
@@ -126063,12 +126489,12 @@
     <property name="stringIdRequired" value="Town_hall_party"/>
    </properties>
   </object>
-  <object id="41" name="Town hall" type="sign" x="770" y="590" width="75" height="65" visible="0">
+  <object id="41" name="Town hall" type="sign" x="770" y="590" width="75" height="65">
    <properties>
     <property name="stringId" value="Town_hall_party"/>
    </properties>
   </object>
-  <object id="46" name="Mario think" type="message" x="10" y="10" width="1660" height="1680" visible="0">
+  <object id="46" name="Mario think" type="him" x="10" y="10" width="1660" height="1680">
    <properties>
     <property name="interval" type="int" value="30"/>
     <property name="showOnce" type="bool" value="false"/>
@@ -126076,7 +126502,7 @@
     <property name="stringIdRequired" value="Mario_party"/>
    </properties>
   </object>
-  <object id="47" name="Mario think" type="message" x="140" y="285" width="70" height="80" visible="0">
+  <object id="47" name="Mario think" type="him" x="140" y="285" width="70" height="80">
    <properties>
     <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
@@ -126084,15 +126510,14 @@
     <property name="stringIdRequired" value="Mario_party"/>
    </properties>
   </object>
-  <object id="48" name="End" type="message" x="55" y="140" width="249" height="300" visible="0">
+  <object id="48" name="End" type="message" x="167.24" y="282.793" width="33.846" height="21.1681">
    <properties>
     <property name="endScene" type="bool" value="true"/>
-    <property name="stringId" value="any"/>
     <property name="stringIdRequired" value="Mario_party_2"/>
    </properties>
   </object>
  </objectgroup>
- <layer id="7" name="Bottom" width="105" height="107" locked="1">
+ <layer id="7" name="Bottom" width="105" height="107">
   <data encoding="csv">
 10633,10633,10753,10753,10633,10633,10633,10753,10753,10753,10753,10633,10753,10633,10633,10633,10753,10753,10633,10633,10753,10753,10633,10633,10633,10633,10753,10753,10753,10753,10753,10753,10753,10633,10753,10633,10753,10633,10633,10633,10633,10633,10633,10753,10753,10753,10633,10633,10633,10633,10753,10633,10753,10753,10633,10633,10633,10753,10633,10753,10633,10633,10753,10633,10753,10753,10633,10753,10633,10753,10753,10633,10753,10753,10753,10753,10633,10633,10633,10633,10753,10633,10633,10753,10753,10633,10633,10633,10753,10753,10633,10633,10633,10633,10753,10753,10753,10633,10753,10633,10753,10753,10633,10633,10753,
 10753,10753,10633,10753,10633,10633,10753,10753,10633,10753,10633,10633,10633,10753,10753,10633,10633,10753,10633,10633,10633,10633,10753,10633,10753,10633,10753,10753,10633,10753,10633,10753,10753,10753,10633,10633,10753,10753,10753,10753,10753,10633,10633,10633,10633,10753,10633,10753,10633,10633,10753,10633,10753,10753,10633,10753,10753,10753,10633,10753,10633,10633,10753,10753,10633,10753,10753,10753,10633,10633,10633,10633,10753,10753,10753,10753,10753,10633,10753,10753,10633,10633,10633,10753,10633,10753,10633,10633,10633,10633,10753,10633,10633,10753,10633,10633,10633,10633,10753,10753,10753,10753,10753,10753,10753,
@@ -126244,26 +126669,26 @@
 0,0,0,0,10787,6119,10787,11985,10199,12106,10788,10909,9000,10319,7200,10906,8280,8999,12102,8160,6480,7319,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,6479,9119,10787,7319,9119,12223,9120,11744,7439,10430,10788,7680,10200,10308,9119,6120,7799,7080,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8503,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11981,11983,10184,10549,8279,10668,6960,11865,8040,7799,10439,0,0,13554,13555,13556,10548,6960,10439,7440,11985,5999,10200,7320,7560,10667,12224,11986,10428,7439,12223,11742,10667,10427,6600,11745,10427,8880,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11981,11983,10184,10549,8279,10668,6960,11865,8040,7799,10439,0,0,13554,0,13556,10548,6960,10439,7440,11985,5999,10200,7320,7560,10667,12224,11986,10428,7439,12223,11742,10667,10427,6600,11745,10427,8880,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,8880,11983,7199,12222,10185,11863,9239,7200,10667,10186,10186,12104,11983,7559,10670,10440,8039,10319,7440,9120,7439,10789,8159,6960,11985,5880,8520,5880,11986,10546,11986,10439,6480,11861,9359,0,0,7320,6959,7680,7919,7440,6599,12222,6359,10668,10558,10559,0,0,0,8880,7439,9240,10187,6360,10187,6359,8999,11861,10908,11985,10667,11744,10669,8040,8040,12223,11986,11985,11985,8400,12101,11746,6839,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,10186,11982,12226,10786,6839,10065,6839,7439,10906,12225,12221,8040,6959,11746,8879,6359,6599,10910,9000,12101,8519,10427,7919,12103,7919,10547,10547,10068,10549,12106,12106,10560,5880,6360,7199,0,0,6480,11745,10439,11866,12106,10065,10186,10789,10790,10669,11742,0,0,0,10788,10550,12225,11982,10428,10319,7920,9240,10439,10186,8279,12221,6839,11863,10199,12103,10065,10430,6479,9000,10438,6720,8160,10187,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,10440,11982,11984,6360,6600,12106,11745,10559,6720,11744,11745,6959,10200,10546,6720,7200,7799,10319,11864,8999,10308,10908,6840,11741,7919,11986,6359,5880,10547,6600,10909,6840,10199,10427,6000,0,0,10318,5880,8400,8880,12101,10549,8879,10789,6719,10666,11746,0,0,0,10185,8279,7919,6480,7319,8399,11985,10908,8999,10559,10064,8279,6959,10426,8880,10786,7320,10550,11744,10560,10438,8280,10440,10184,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,12226,11741,12106,10558,11981,7199,9239,5880,10909,10318,6120,11744,12223,11861,10200,6120,6479,12104,10319,11984,8999,10068,10790,7919,10430,10187,11743,10549,8040,10320,6960,11746,5999,7080,10308,0,0,11741,7559,7799,8159,6480,12101,11865,10068,12225,7199,6000,0,0,0,7440,10318,7560,10429,10667,11743,12221,10666,6599,6599,10199,11742,7439,7800,10667,6359,11742,8279,10559,8999,9120,8400,8159,10909,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,10667,10429,10558,7440,6960,11861,12226,11866,7439,5879,10184,9360,6239,10667,7799,10428,11863,8759,10786,9359,11866,10438,8520,8519,6359,10319,10548,11743,6479,5999,10065,6840,7320,8399,12225,0,0,11862,10198,6479,9360,6000,8399,6599,7199,11981,12223,9240,0,0,0,12104,10430,10549,10789,12102,7560,12225,12226,10319,10439,10068,10906,7320,11865,11746,6479,12221,5999,11862,8880,7920,10439,8759,12223,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5913,0,0,0,0,0,0,
 0,0,0,0,7679,10185,10185,12222,10546,10440,10910,6599,7319,11866,10064,9239,5999,10439,6959,12224,10438,10546,6479,12225,12222,10906,12224,10546,7800,10430,7439,10318,12223,6720,12103,10429,8160,10668,6480,0,0,7319,7799,11863,6479,12224,10308,10429,10559,6479,12101,11981,0,0,0,9119,10909,8759,11981,7679,11745,8999,10427,8999,11983,12101,7439,6720,8999,12101,10559,7080,6720,11745,12102,8999,8160,6000,12102,0,0,0,0,0,0,0,0,0,0,0,0,0,10068,0,0,0,0,0,0,10185,0,0,0,0,0,
-0,0,0,0,10186,7320,10426,10906,6840,6119,10787,10787,11861,12102,10560,5999,10200,9360,9000,8879,6960,10667,9359,6599,12106,7320,6960,10430,6839,10787,10199,7200,8760,6839,10184,10667,8399,10068,10438,0,0,10547,8880,10549,10065,7560,5999,9360,10318,9240,13554,13555,13556,0,0,10064,10440,6479,9360,7079,6360,11861,12106,12104,5880,8399,10789,11986,10308,6959,6000,12222,11865,11744,11983,10198,8280,7200,8400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10185,0,0,0,0,0,0,0,10186,0,0,
+0,0,0,0,10186,7320,10426,10906,6840,6119,10787,10787,11861,12102,10560,5999,10200,9360,9000,8879,6960,10667,9359,6599,12106,7320,6960,10430,6839,10787,10199,7200,8760,6839,10184,10667,8399,10068,10438,0,0,10547,8880,10549,10065,7560,5999,9360,10318,9240,0,0,0,0,0,10064,10440,6479,9360,7079,6360,11861,12106,12104,5880,8399,10789,11986,10308,6959,6000,12222,11865,11744,11983,10198,8280,7200,8400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10185,0,0,0,0,0,0,0,10186,0,0,
 0,0,0,0,7919,6479,11983,10907,11863,7920,11745,12224,8159,6119,6959,7439,6600,9360,12104,10907,7079,6480,6960,11741,7919,12222,10909,7679,11982,12226,10667,11861,10790,9000,12222,10429,10200,9359,8280,0,0,9119,11984,8879,9240,10200,11862,10064,10429,7320,11866,9240,0,0,0,10187,6360,9240,6840,6719,12101,11746,11861,8759,11745,10668,10667,8159,6839,6720,12105,8280,10668,11864,11863,6959,8520,10318,10427,0,0,0,0,0,0,0,0,0,0,0,5913,0,0,0,0,0,0,0,0,0,0,0,0,10068,0,
 0,0,0,0,6959,10439,11744,10910,9120,7439,6840,12226,8040,10308,10788,7800,7079,8520,10064,7560,9119,10200,10786,8159,10669,6839,10440,10185,12104,10427,12222,12221,10440,10560,6000,6239,8760,10200,10428,0,0,8999,10064,10558,12226,10910,5999,6359,8280,8520,10907,12226,0,0,0,10558,11863,8279,10430,6960,6240,8280,6840,7320,10786,8999,10550,10909,7320,10186,6719,12221,11985,10429,11866,7440,9120,9000,8039,0,0,0,0,0,0,10185,0,0,0,0,0,0,0,0,0,0,22538,0,0,22538,22658,22538,0,0,0,
 0,0,0,0,6479,12221,11982,10064,9000,6600,9359,12104,7440,12221,11985,7320,12103,11865,10549,7919,10546,11744,10548,10429,11864,11744,7679,10319,11981,10786,9119,12102,10907,11982,11745,10788,6480,11981,7200,0,0,11742,10439,12226,10548,11862,9239,12226,6359,10546,7560,10910,0,0,0,6000,8519,11863,10550,8760,12223,11864,12224,5880,6479,6960,12104,10184,8519,10440,7919,7800,7320,10559,11983,12225,7319,10186,10547,0,0,0,5913,0,0,0,0,10186,0,0,0,0,0,22658,22538,0,0,0,0,0,0,0,0,22658,0,
 0,0,0,0,10318,8879,8759,10320,11982,8280,10558,7799,6719,8999,10308,11862,8039,6479,7440,6479,6599,7439,5879,10908,8519,9359,12103,6120,5999,8160,9360,8760,10184,11743,12226,7920,8519,11863,10787,0,0,10547,10908,11985,7319,8879,10670,12101,10199,10786,12222,7679,0,0,0,7919,10198,12221,8879,9239,9240,5880,11741,8039,11743,8279,11982,7320,12221,11986,7680,10430,11861,10184,10548,11986,10440,8999,12225,0,0,0,10185,0,0,0,0,22538,0,0,22538,22658,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,6840,7320,12223,6239,12105,12224,7199,7320,7320,7920,8400,10559,10786,11864,6600,11863,7560,10786,11866,12106,7679,6600,7319,12102,12102,6839,10907,10319,8759,10908,7920,10198,10670,10560,7799,0,0,10065,10909,10788,6119,8880,12106,10907,6000,6120,10440,10547,0,0,0,7440,5880,10668,10910,10666,10185,10668,10549,7200,8879,10550,8279,7080,10427,6000,10200,10440,10428,10668,11744,7679,10667,11985,9360,0,0,0,0,0,0,22658,0,0,0,0,0,0,0,0,0,0,0,22658,22538,0,0,22538,0,0,0,
+0,0,0,0,6840,7320,12223,6239,12105,12224,7199,7320,7320,7920,8400,10559,10786,11864,6600,11863,7560,10786,11866,12106,7679,6600,7319,12102,12102,6839,10907,10319,8759,10908,7920,10198,10670,10560,7799,0,0,10065,10909,10788,6119,8880,12106,10907,6000,6120,10440,10547,0,0,0,7440,5880,10668,10910,10666,10185,10668,10549,7200,8879,10550,8279,7080,10427,6000,10200,10440,10428,10668,11744,7679,10667,11985,9360,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,22658,22538,0,0,22538,0,0,0,
 0,0,0,0,12105,10438,7800,10184,8279,6479,10548,12223,6840,7560,9240,10789,7080,6000,8279,11982,7560,10187,10787,10429,12104,11985,10550,6839,10440,8039,7199,10430,6240,12224,6839,6240,6960,8280,7800,0,0,8160,7800,10788,10439,12226,10319,10320,6720,11982,7560,9000,0,0,0,10186,12103,10789,10910,7799,8160,10319,6600,10668,10906,8519,10558,9239,10429,8400,6240,12105,10667,10666,6479,10909,10184,7799,7799,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,22658,22538,22538,0,0,0,0,0,22658,0,0,
-0,0,0,0,10430,6959,10184,7440,7200,9120,10670,11985,6120,10910,10549,7440,10910,7679,9360,10558,10428,8159,9120,7199,10788,11743,10547,6599,11866,10560,11985,6600,12104,10560,8399,12106,7799,10199,8880,0,0,7199,6600,8039,10547,11865,10547,10065,12103,11863,10546,10558,0,0,0,8999,8400,12106,7800,9360,7200,10559,9120,6959,10199,11742,10667,10187,8279,10065,6599,10185,10560,7560,10064,10789,9239,10185,8759,0,0,0,0,0,0,0,0,0,22538,22658,22658,0,22538,0,0,0,5913,0,0,0,0,0,0,0,0,
+0,0,0,0,10430,6959,10184,7440,7200,9120,10670,11985,6120,10910,10549,7440,10910,7679,9360,10558,10428,8159,9120,7199,10788,11743,10547,6599,11866,10560,11985,6600,12104,10560,8399,12106,7799,10199,8880,0,0,7199,6600,8039,10547,11865,0,0,0,11863,10546,10558,0,0,0,8999,8400,12106,7800,9360,7200,10559,9120,6959,10199,11742,10667,10187,8279,10065,6599,10185,10560,7560,10064,10789,9239,10185,8759,0,0,0,0,0,0,0,0,0,0,22658,22658,0,22538,0,0,0,5913,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10185,0,0,0,0,0,10185,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6600,10200,10668,10064,8520,10669,7679,10558,7680,11981,7559,10670,10560,7679,8759,6960,9359,12223,11746,8999,10666,12222,11864,10200,10790,10440,11865,11742,11863,10547,7199,10550,10440,12226,6599,8280,11863,10185,6479,10666,8520,6960,9360,10909,6719,0,0,0,0,
-0,0,8399,10910,6359,9359,8160,6479,6480,5879,10308,7080,10427,10430,10908,11986,9360,12103,10439,10198,7079,8399,11861,10426,10428,12222,10790,11862,7799,8400,8880,10667,6120,7200,9239,11981,6360,10550,7680,10790,10184,6840,10790,7320,6839,10185,10909,8759,10790,6959,10786,10200,0,0,0,10184,6600,0,8880,8279,11863,8039,8279,10547,12224,6959,10184,11982,11982,8279,10906,10198,7080,10427,11864,7080,10428,10908,6119,12104,7679,7559,6839,12221,8759,8280,10187,10550,10550,10667,11741,10065,8160,6359,7199,11861,5880,9239,10549,7920,10667,0,10186,5913,0,
-0,0,10318,7920,12104,10910,10548,11986,8399,10438,6839,11742,10198,10185,10558,10066,10560,9240,8880,7920,10320,12223,11861,11745,7320,10669,8160,11864,11744,12223,11744,7200,10550,7559,6839,7320,10429,12104,6119,10199,11741,10549,6959,10909,10064,8159,11986,10065,9120,11742,10670,10428,0,0,0,12226,10560,10186,8280,8039,6959,8160,12221,10199,7919,8279,10667,8400,8159,12225,6600,6000,10439,11982,7799,10428,7799,8999,10430,6119,10667,6360,7800,6240,9119,5880,12104,8040,11985,10559,11982,7080,7440,10199,5913,9119,10068,8399,7800,12221,10438,0,0,2537,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6600,0,0,0,8520,10669,7679,10558,7680,11981,7559,10670,10560,7679,8759,6960,9359,12223,11746,8999,10666,12222,11864,10200,10790,10440,11865,11742,11863,10547,7199,10550,10440,12226,6599,8280,11863,10185,6479,10666,8520,6960,9360,10909,6719,0,0,0,0,
+0,0,8399,10910,6359,9359,8160,6479,6480,5879,10308,7080,10427,10430,10908,11986,9360,12103,10439,10198,7079,8399,11861,10426,10428,12222,10790,11862,7799,8400,8880,10667,6120,7200,9239,11981,6360,10550,7680,10790,10184,6840,10790,7320,6839,10185,10909,8759,10790,6959,10786,10200,0,0,0,10184,6600,0,0,0,11863,8039,8279,10547,12224,6959,10184,11982,11982,8279,10906,10198,7080,10427,11864,7080,10428,10908,6119,12104,7679,7559,6839,12221,8759,8280,10187,10550,10550,10667,11741,10065,8160,6359,7199,11861,5880,9239,10549,7920,10667,0,10186,5913,0,
+0,0,10318,7920,12104,10910,10548,11986,8399,10438,6839,11742,10198,10185,10558,10066,10560,9240,8880,7920,10320,12223,11861,11745,7320,10669,8160,11864,11744,12223,11744,7200,10550,7559,6839,7320,10429,12104,6119,10199,11741,10549,6959,10909,10064,8159,11986,10065,9120,11742,10670,10428,0,0,0,12226,10560,0,0,0,6959,8160,12221,10199,7919,8279,10667,8400,8159,12225,6600,6000,10439,11982,7799,10428,7799,8999,10430,6119,10667,6360,7800,6240,9119,5880,12104,8040,11985,10559,11982,7080,7440,10199,5913,9119,10068,8399,7800,12221,10438,0,0,2537,0,
 0,0,10670,10184,10068,12104,7319,6119,11866,7679,11741,10318,6719,10428,11862,8519,12225,11743,11866,10547,11982,12103,10549,12101,8039,10066,10550,10547,7320,10184,8159,10065,10308,10907,10790,6359,11746,7920,6600,10669,10426,8279,6479,12103,10549,6479,7559,6600,6840,12224,5880,6720,0,0,13554,13555,13556,10550,10308,10319,6840,10065,8160,6719,12225,10547,7320,10560,9359,7799,10185,10427,10185,6479,7320,10184,6600,11746,10198,6480,11985,5999,12106,10427,10786,12223,10185,8760,10787,10789,6480,11745,10319,10427,11862,8880,11746,7799,10430,12225,7559,0,0,0,0,
 0,0,10909,10430,8280,10184,12225,11984,10907,8279,10440,11983,10186,10786,10184,11864,6120,11865,10429,6239,10429,9240,10560,6119,10185,9360,7200,10667,10550,8759,8400,12105,9000,10789,12225,6119,10187,7560,9119,10064,11982,7799,10786,10185,7679,6479,10430,10308,10200,10199,7920,10790,0,0,0,11862,6960,10546,10439,11741,6360,10789,7679,12221,11861,11866,11982,7200,10668,10546,11863,9240,7319,9359,7919,10547,8400,12105,9239,10906,8279,10319,10187,10787,11743,10187,11742,6959,9000,9360,12101,8160,10318,11745,9000,11862,7200,12226,10320,5880,6120,0,0,0,0,
 0,0,10068,11983,8519,10305,10558,12225,10560,10788,10790,8039,7320,10184,10670,10668,6000,11986,12102,10788,10065,11744,8399,10907,12222,10184,8879,8879,12104,7080,12101,10319,10427,10198,10547,12101,10549,5879,10308,10667,10439,11863,10199,7439,11743,7800,0,6960,8519,10908,7440,11864,0,0,0,11866,8520,12104,5879,10910,8399,7439,6480,10910,11986,12105,10546,7800,10187,10427,6479,6720,11984,7080,10906,7919,11742,8520,10308,11862,9240,6959,10308,10440,8879,10184,8880,6719,9360,8279,10547,10788,9119,7799,6720,6959,7079,8280,6960,6119,7199,0,0,2417,0,
@@ -126363,8 +126788,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2658,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2778,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -126452,7 +126877,7 @@
 2659,2662,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2538,2539,2778,
 2779,2782,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2658,2659,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2778,2779,2418,
-2537,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13914,0,0,0,0,5297,5298,5298,5298,5298,5298,5298,5298,5298,5298,5299,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2538,
+2537,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13914,0,0,0,0,5297,5298,5298,5298,5298,5298,5298,5298,5298,5298,5299,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2417,2538,
 2657,2658,2659,2660,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5297,0,0,0,0,0,0,0,0,0,5419,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2658,
 2777,2778,2779,2780,5313,5314,5314,5314,5314,5314,5314,5314,5314,5314,5314,5314,5315,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5297,0,17202,17203,17204,17205,17206,17207,17208,17209,5419,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2778,
 0,0,0,0,5313,0,0,0,19834,21272,21273,21274,21275,21276,21277,21287,5315,0,0,0,0,0,0,0,0,0,0,5297,5298,5298,5298,5298,5298,5298,5298,5299,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5297,0,17322,17323,17324,17325,17326,17327,17328,17329,5419,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2418,2419,0,
@@ -126465,27 +126890,27 @@
 2777,2778,2779,2780,5433,0,0,0,0,22112,22113,22114,22115,22116,22117,22127,5435,0,0,0,0,0,0,0,0,0,0,5537,5538,5538,5541,23340,5540,5538,5538,5539,0,0,0,0,0,0,0,8503,0,0,0,21999,22000,24272,24273,24274,24275,24276,24277,24278,24279,24280,22006,22007,8140,8141,8142,0,0,0,13792,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5316,21519,15298,20102,20103,20104,20105,20106,0,0,0,5435,0,0,0,2417,
 0,0,0,0,5553,5554,5554,5554,5554,5557,22233,22234,22235,5556,5554,5554,5555,0,0,0,0,0,0,0,0,0,0,5657,5658,5658,5661,0,5660,5658,5658,5659,0,0,0,0,0,0,0,8503,0,0,0,22119,22120,24392,24393,24394,24395,24396,24397,24398,24399,24400,22126,22127,8260,8261,8262,0,0,0,13912,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5436,21639,15418,20222,20223,20224,20225,20226,21063,21064,21065,5435,0,2418,2419,2778,
 0,2540,0,0,5673,5674,5674,5674,5674,5677,0,0,0,5676,5674,5674,5675,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8140,8141,8142,8140,8141,8142,9109,9110,9111,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21759,16138,20342,20343,20344,20345,20346,21183,21184,21185,5435,0,2538,2539,2418,
-2659,2660,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8260,8261,8262,8260,8261,8262,9229,9230,9231,0,0,13317,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13672,0,0,0,0,0,0,0,0,0,21879,21880,20462,20463,20464,20465,20466,21303,21304,21305,5435,0,2658,2659,2538,
-2779,2780,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13437,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13792,0,0,0,0,0,0,0,0,5317,21999,22000,20582,20583,20584,20585,20586,21423,21424,21425,5435,0,2778,2779,2658,
+2659,2660,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8260,8261,8262,8260,8261,8262,9229,9230,9231,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13672,0,0,0,0,0,0,0,0,0,21879,21880,20462,20463,20464,20465,20466,21303,21304,21305,5435,0,2658,2659,2538,
+2779,2780,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13792,0,0,0,0,0,0,0,0,5317,21999,22000,20582,20583,20584,20585,20586,21423,21424,21425,5435,0,2778,2779,2658,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13912,0,0,0,0,0,0,0,0,5433,22119,22120,20702,20343,20344,20345,20706,21543,21544,21545,5435,0,0,0,2778,
 2537,0,0,0,0,0,0,0,0,0,0,0,13914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5553,5554,5554,5554,5554,5554,5554,5554,5554,5554,5554,5555,0,0,2418,2419,
 2657,2658,2659,2660,0,0,0,0,0,0,0,0,0,0,0,0,0,5281,5282,5282,5282,5282,0,0,0,5282,5282,5282,5283,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13912,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5673,5674,5674,5674,5674,5674,5674,5674,5674,5674,5674,5675,0,0,2538,2539,
 2777,2778,2779,2780,0,0,0,0,0,0,0,0,0,0,0,0,0,5401,0,15851,15852,15853,15854,15855,15856,15857,0,0,5283,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9584,9585,9586,9587,9584,9585,9586,9584,9585,9586,9587,2658,2659,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5401,0,15971,15972,15973,15974,15975,15976,15977,0,0,5283,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9584,9585,9586,9587,0,9591,0,9591,0,0,0,0,0,9591,0,2778,2779,
-0,2540,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5401,0,16091,16092,16093,16094,16095,16096,16097,0,0,5283,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9471,9591,9591,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9471,0,
+0,2540,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5401,0,16091,16092,16093,16094,16095,16096,16097,0,0,5283,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9586,9587,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9471,0,
 2659,2660,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5401,0,15251,15252,15253,15254,15255,15256,15257,0,0,5283,0,0,0,0,0,0,0,0,0,0,0,0,0,13914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9591,0,9096,9097,0,0,0,0,0,0,0,0,0,0,0,0,0,9591,0,
-2779,2780,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5401,0,15371,15372,15373,15374,15375,15376,15377,0,0,5283,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9471,9584,9585,9586,9587,0,0,9216,9217,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+2779,2780,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5401,0,15371,15372,15373,15374,15375,15376,15377,0,0,5283,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9584,9585,9586,9587,0,0,9216,9217,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5401,0,15491,15492,15493,15494,15495,15496,15497,0,0,5403,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9591,9591,0,0,0,0,0,0,0,0,0,0,0,0,0,9595,0,23740,23741,0,0,0,9595,0,0,
 2537,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5521,5522,5522,5522,5522,5522,5522,5522,5522,5522,5522,5523,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13912,0,0,0,23740,23741,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9587,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9715,0,0,0,0,0,0,9715,0,0,
-2657,2658,2659,2660,0,0,0,0,0,0,0,0,0,0,0,0,0,5641,5642,5642,5642,5642,5642,5642,5642,5642,5642,5642,5643,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9591,0,0,0,10531,10532,10533,10534,10535,23740,23741,0,0,24337,0,0,0,0,0,0,0,0,0,0,0,0,
-2777,2778,2779,2780,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13198,0,20257,0,0,0,0,0,13438,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9591,0,0,0,0,10651,10652,10653,10654,10655,0,0,0,0,0,0,0,0,0,0,0,23740,23741,0,0,9595,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20377,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13914,9591,0,0,8865,8866,10771,10772,10773,10774,10775,0,0,0,9595,0,0,0,0,0,0,0,0,0,0,0,9715,2418,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12958,0,0,0,24674,24675,24676,24677,24678,0,0,0,13678,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9947,9947,8985,8986,10891,10892,10893,10894,10895,12838,0,0,9715,0,23740,23741,0,0,0,0,0,0,0,0,0,2538,
-2659,2660,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24794,24795,24796,24797,24798,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11011,11012,11013,11014,11015,12958,9947,9831,0,0,0,0,0,0,0,0,0,0,0,0,0,2658,
-2779,2780,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15269,0,0,0,0,0,0,15276,15277,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24914,24915,24916,24917,24918,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9951,0,9831,0,0,0,0,0,0,0,0,0,0,0,2778,
+2657,2658,2659,2660,0,0,0,0,0,0,0,0,0,0,0,0,0,5641,5642,5642,5642,5642,5642,5642,5642,5642,5642,5642,5643,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13078,0,0,0,0,0,0,0,13318,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9591,0,0,0,0,0,0,0,0,23740,23741,0,0,24337,0,0,0,0,0,0,0,0,0,0,0,0,
+2777,2778,2779,2780,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13198,0,0,0,0,0,0,0,13438,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9591,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23740,23741,0,0,9595,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12838,0,0,0,20377,0,0,0,0,0,0,0,13558,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13914,9591,0,0,0,0,10771,10772,10773,10774,10775,0,0,0,9595,0,0,0,0,0,0,0,0,0,0,0,9715,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12958,0,0,0,24674,24675,24676,24677,24678,0,0,0,13678,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9947,9947,8985,8986,10891,10892,10893,10894,10895,12838,0,0,9715,0,23740,23741,0,0,0,0,0,0,0,0,0,0,
+2659,2660,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24794,24795,24796,24797,24798,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11011,11012,11013,11014,11015,12958,9947,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2658,
+2779,2780,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15269,0,0,0,0,0,0,15276,15277,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13558,0,0,0,24914,24915,24916,24917,24918,0,0,0,12838,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9951,0,0,0,0,0,0,0,0,0,0,0,0,0,2778,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13678,0,0,0,25034,25035,25036,25037,25038,0,0,0,12958,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9951,9951,0,0,0,0,0,0,9083,9084,0,0,0,0,
-0,0,0,8267,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8269,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9947,0,0,0,0,0,9831,0,9203,9204,0,0,0,2418,
-0,0,0,8270,8144,0,0,10431,10432,10433,10434,0,0,0,0,0,0,0,0,15629,15630,15631,15632,15633,15634,15635,15636,15637,0,0,8270,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13438,0,0,0,0,0,0,0,13198,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9947,0,0,0,0,9951,0,0,0,9831,0,0,2538,
+0,0,0,8267,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8269,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13318,0,0,0,0,0,0,0,13078,0,0,0,0,0,0,0,0,0,0,13914,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9947,0,0,0,0,0,0,0,9203,9204,0,0,0,2418,
+0,0,0,8270,8144,0,0,10431,10432,10433,10434,0,0,0,0,0,0,0,0,15629,15630,15631,15632,15633,15634,15635,15636,15637,0,0,8270,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13438,0,0,0,0,0,0,0,13198,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9947,0,0,0,0,9951,0,0,0,0,0,0,2538,
 2659,2660,0,8270,8264,11149,11150,10551,10552,10553,10069,10069,0,0,0,0,0,0,0,15749,15750,15751,15752,15753,15754,15755,15756,15757,0,0,8270,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9947,0,0,9947,9947,0,0,9831,9951,9947,9587,2658,
 2779,2780,0,8270,0,11269,11270,10671,10672,10673,10674,0,0,0,0,0,0,0,0,15869,15870,15871,15872,15873,15874,15875,15876,15877,0,0,8270,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23740,23741,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9947,9584,9585,9586,9587,9947,9951,9587,0,0,2778,
 0,0,0,8270,0,0,0,10791,8993,8994,8156,8157,8158,8995,8996,0,0,0,0,15989,15990,15991,15992,15993,15994,15995,15996,15997,0,0,8270,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9944,9945,9946,0,0,2059,2060,
@@ -126495,7 +126920,7 @@
 2779,2780,0,8270,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16469,16470,16471,16472,16473,16474,16475,16476,16477,0,0,8270,0,0,0,0,0,0,0,11375,0,22978,22979,22980,22981,22982,0,11377,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2538,2539,0,
 0,0,0,8147,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8149,0,0,0,8147,8148,8148,8148,8148,8149,0,0,0,0,0,0,0,11375,0,23098,23099,23100,23101,23102,0,11377,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11255,11256,11256,11256,11256,11380,11256,11256,11256,11256,11256,11256,11380,11256,11256,11260,11256,0,0,0,0,2658,2659,2658,
 0,0,0,8267,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8268,8269,0,16713,16714,8267,8268,8268,8268,8268,8269,0,0,0,0,0,0,0,11375,0,23218,11252,11253,11254,23222,0,11377,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11375,4596,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11377,0,0,0,0,2778,2779,2778,
-0,2540,0,0,0,0,0,0,0,13794,0,0,0,0,0,0,0,0,0,0,8145,8146,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11375,0,0,11372,11373,11374,0,0,11377,0,0,0,0,13912,0,0,0,0,0,0,0,0,0,5281,5282,5282,5282,5282,5282,5282,5282,5282,5282,5282,5282,5282,5283,0,0,0,0,0,0,11375,4716,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11377,0,0,0,0,0,0,0,
+0,2540,0,0,0,0,0,0,0,13794,0,0,0,0,0,0,0,0,0,0,8145,8146,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11375,0,0,11372,11373,11374,0,0,11377,0,0,0,0,13912,0,0,0,0,0,0,0,0,0,5281,5282,5282,5282,5282,5282,5282,5282,5282,5282,5282,5282,5282,5283,0,0,0,0,0,0,11375,4716,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11377,0,0,0,0,0,0,2658,
 2659,2660,0,0,0,0,0,0,0,13914,0,0,0,0,0,0,0,0,0,0,8265,8266,0,0,0,0,0,0,0,0,0,13914,0,0,0,0,0,0,11495,11496,11260,11492,11493,11494,11496,11380,11497,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5401,0,0,0,0,0,0,0,0,0,0,0,0,5283,0,0,0,0,0,0,11375,0,0,0,22712,22713,22714,22715,22716,22717,22718,22719,22720,0,0,0,11377,0,0,0,0,2418,2419,2778,
 2779,2780,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5401,0,0,15971,15972,15973,15974,15975,15976,15977,15978,0,0,5283,0,0,0,0,0,0,11375,0,0,0,22832,22833,22834,24035,24036,24037,22838,22839,22840,0,4714,4715,11377,0,0,0,0,2538,2539,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5401,0,0,16091,16092,16093,16094,16095,16096,16097,16098,0,0,5283,0,0,0,0,0,0,11375,0,0,0,24152,24153,24154,24155,24156,24157,24158,24159,24160,0,0,0,11377,0,0,0,0,2658,2659,2418,
@@ -126537,9 +126962,6 @@
 </data>
  </layer>
  <layer id="23" name="World Up" width="105" height="107">
-  <properties>
-   <property name="collide" type="bool" value="false"/>
-  </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -126691,33 +127113,33 @@
 2419,2420,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8143,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13317,0,13557,0,0,0,0,0,0,0,0,0,0,0,19856,19857,19858,0,21063,21064,0,0,2417,0,2297,2298,
 2539,2058,2059,2060,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13437,13555,13677,0,0,0,0,0,0,0,0,0,0,0,19976,19977,19978,0,0,0,0,0,2537,0,0,0,
 2177,2178,2179,2180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13672,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2057,2058,2059,
-2297,2298,2299,2300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13677,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13792,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2177,2178,2179,
+2297,2298,2299,2300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13555,13677,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13792,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2177,2178,2179,
 2417,2418,2419,2420,0,0,0,0,0,0,0,0,13794,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13794,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13672,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2297,2298,2299,
-2059,2538,2539,2540,0,0,0,0,0,0,0,0,0,0,0,0,0,5161,5162,5162,5162,5525,0,0,5524,5162,5162,5162,5163,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13792,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9344,9345,9346,0,9344,9345,9346,9344,9345,9346,2417,0,0,
-2179,2180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9344,9345,9346,0,9464,9465,9466,9467,9464,9465,9466,9464,9465,9466,2537,2057,2058,
+2059,2538,2539,2540,0,0,0,0,0,0,0,0,0,0,0,0,0,5161,5162,5162,5162,5525,0,0,5524,5162,5162,5162,5163,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13792,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9344,9345,9346,0,9344,9345,9346,9344,9345,9346,2417,2418,0,
+2179,2180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9344,9345,9346,0,9464,9465,9466,9467,9464,9465,9466,9464,9465,9466,2537,2538,2058,
 2299,2300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9464,9465,9466,9467,0,9471,0,9471,0,0,0,0,0,9471,0,2177,2178,
 2419,2420,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9467,9467,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2297,2298,
-2539,2058,2059,2060,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13794,0,0,0,0,0,0,0,13317,0,13557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2417,2418,
-2177,2178,2179,2180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13437,0,13677,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9467,9467,9467,9467,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2537,2538,
-2297,2298,2299,2300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13672,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9471,9471,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23620,23621,0,0,0,0,0,2658,
-2417,2418,2419,2420,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13792,0,0,0,23620,23621,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9467,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2778,
+2539,2058,2059,2060,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13794,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9471,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2417,2418,
+2177,2178,2179,2180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13554,13555,13556,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9467,9467,9467,9467,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2537,2538,
+2297,2298,2299,2300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13672,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9471,9471,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23620,23621,0,0,0,0,0,0,
+2417,2418,2419,2420,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13792,0,0,0,23620,23621,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9467,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 2059,2538,2539,2540,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9471,0,0,0,0,0,0,0,0,23620,23621,0,0,24217,0,0,0,0,0,0,0,0,0,0,2057,2058,
-2179,2180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12838,0,0,0,0,0,0,0,13318,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9471,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23620,23621,0,0,2177,2178,
-2299,2300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13794,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13794,9471,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2297,2298,
-2419,2420,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13318,0,0,0,0,0,0,0,0,0,0,0,13078,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9831,9831,0,0,0,0,0,0,0,0,0,0,0,0,23620,23621,0,0,0,0,0,0,0,0,2417,0,
-2539,2540,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9827,0,0,0,0,0,0,0,0,0,0,0,0,0,2537,0,
-2059,2060,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2057,2058,
-2179,2180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12838,0,0,0,0,0,0,0,0,0,0,0,12838,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9831,0,0,0,0,0,0,0,0,0,0,0,2177,2178,
+2179,2180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12838,0,0,0,0,0,0,0,13318,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9471,0,0,0,0,10531,10532,10533,10534,10535,0,0,0,0,0,0,0,0,0,0,0,23620,23621,0,0,2177,2178,
+2299,2300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13794,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20257,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13794,9471,0,0,0,0,10651,10652,10653,10654,10655,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2297,2298,
+2419,2420,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13318,0,0,0,0,0,0,0,0,0,0,0,13078,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9831,9831,8865,8866,0,0,0,0,0,0,0,0,0,0,23620,23621,0,0,0,0,0,0,0,0,2417,2418,
+2539,2540,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9827,0,0,0,0,0,0,0,0,0,0,0,0,0,2537,2538,
+2059,2060,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9831,0,0,0,0,0,0,0,0,0,0,0,0,2057,2058,
+2179,2180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12838,0,0,0,0,0,0,0,0,0,0,0,12838,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9831,9831,0,0,0,0,0,0,0,0,0,0,2177,2178,
 2299,2300,0,8147,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8148,8149,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13794,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9827,0,0,0,0,0,0,0,0,0,0,0,2297,2298,
-2419,2420,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13078,0,0,0,0,0,0,0,13318,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9827,0,0,0,0,0,0,0,0,0,0,2417,0,
-2539,2540,0,8150,5266,5267,5268,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9827,9704,9705,9706,9704,9705,9706,0,0,9827,9827,2058,
-2059,2060,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23620,23621,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9824,9825,9826,9824,9825,9826,0,0,0,2177,2178,
+2419,2420,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13078,0,0,0,0,0,0,0,13318,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9827,0,0,0,0,9831,0,0,0,0,0,2417,2418,
+2539,2540,0,8150,5266,5267,5268,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9827,9704,9705,9706,9704,9705,9706,0,9831,9827,9827,2058,
+2059,2060,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23620,23621,0,0,0,13555,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9824,9825,9826,9824,9825,9826,0,0,0,2177,2178,
 2179,2180,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13672,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9827,9827,9827,0,0,2297,2298,
-2299,2300,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8150,0,0,0,0,0,0,0,0,0,22378,22379,22380,22381,22382,0,0,0,0,0,0,0,0,0,0,13792,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2057,2058,0,2058,
+2299,2300,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8150,0,0,0,0,0,0,0,0,0,22378,22379,22380,22381,22382,0,0,0,0,0,0,0,0,0,0,13792,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2057,2058,2297,2058,
 2419,2420,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8150,0,0,0,0,0,0,0,0,0,22498,22499,22500,22501,22502,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2177,2178,2177,2178,
 2539,2540,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8150,0,0,0,0,0,0,0,0,0,22618,22619,22620,22621,22622,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2297,2298,2297,2298,
-2059,2060,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2417,0,2417,2418,
-2179,2180,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2537,0,2537,2538,
+2059,2060,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2417,2418,2417,2418,
+2179,2180,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13555,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2537,2538,2537,2538,
 2299,2300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13672,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4476,0,0,22352,22353,22354,22355,22356,22357,22358,22359,22360,0,0,0,0,0,0,0,2057,2058,2059,2060,
 2419,2420,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11251,0,0,0,0,0,0,0,0,0,0,13792,0,0,0,0,0,0,0,0,0,5161,5162,5162,5162,5162,5162,5162,5162,5162,5162,5162,5162,5162,5163,0,0,0,0,0,0,0,0,0,0,22472,22473,22474,22475,22476,22477,22478,22479,22480,0,0,0,0,0,0,0,2177,2178,2179,2180,
 2539,2058,2059,2060,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13794,0,0,0,0,0,0,0,0,11371,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,22592,22593,22594,24300,24301,24302,22598,22599,22600,0,4474,4475,0,0,0,0,2297,2298,2299,2058,
@@ -126726,7 +127148,7 @@
 2417,2418,2419,2420,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2057,2058,2059,
 2059,2538,2539,2540,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2177,2178,2179,
 2179,2180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13794,0,0,0,0,0,0,0,0,0,0,0,0,9105,9106,0,0,0,0,0,0,13794,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4474,4475,0,0,0,0,0,0,0,0,0,0,0,0,4473,0,0,0,0,0,2297,2298,2299,
-2299,2300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13672,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4594,4595,0,0,0,11141,11142,11143,11144,11145,0,0,0,0,4593,0,0,0,0,0,0,0,0,
+2299,2300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13672,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4594,4595,0,0,0,11141,11142,11143,11144,11145,0,0,0,0,4593,0,0,0,0,0,2297,0,0,
 2419,2420,0,0,5177,5178,5178,5178,5178,5541,0,0,0,0,5540,5178,5178,5179,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13792,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11261,11262,11263,11264,11265,0,0,0,0,0,0,0,0,0,2057,2058,2059,2060,
 2539,2058,2059,2060,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2177,2178,2179,2180,
 2177,2178,2179,2180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2297,2298,2299,2300,
@@ -126747,7 +127169,7 @@
 2539,2058,2059,2060,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20442,20443,20444,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2177,2178,2179,2180,
 2177,2178,2179,2180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2297,2298,2299,2420,
 2297,2298,2299,2300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5554,5554,5554,5554,5554,5554,5554,5554,5554,5554,5554,5554,5554,5554,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2417,0,2177,2178,
-2417,2418,2419,2420,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2537,0,0,2298,
+2417,2418,2419,2420,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2537,0,2297,2298,
 2058,2059,2539,2540,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2057,2058,2417,2060,
 2178,2179,2180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2177,2178,2179,2180,
 2298,2299,2300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2297,2298,2299,2300,
@@ -126801,15 +127223,15 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13317,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13437,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15611,15612,15613,15614,15615,15616,15617,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15731,15732,15733,15734,15735,15736,15737,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9467,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13317,0,13557,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13437,0,13677,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -126872,8 +127294,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="3" name="Objects" locked="1">
-  <object id="25" name="Mario think" type="message" x="257" y="1040" width="160" height="175">
+ <objectgroup id="3" name="Objects" visible="0">
+  <object id="25" name="Mario think" type="him" x="257" y="1040" width="160" height="175">
    <properties>
     <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
@@ -126886,7 +127308,7 @@
     <property name="stringId" value="House_sign"/>
    </properties>
   </object>
-  <object id="42" name="Mario think" type="message" x="460" y="1110" width="129" height="160">
+  <object id="42" name="Mario think" type="him" x="460" y="1110" width="129" height="160">
    <properties>
     <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
@@ -126899,7 +127321,7 @@
     <property name="stringId" value="Inn"/>
    </properties>
   </object>
-  <object id="24" name="Mario think" type="message" x="1215" y="207" width="128" height="113">
+  <object id="24" name="Mario think" type="him" x="1215" y="207" width="128" height="113">
    <properties>
     <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
@@ -126912,7 +127334,7 @@
     <property name="stringId" value="Dog_pound_sign"/>
    </properties>
   </object>
-  <object id="44" name="Mario think" type="message" x="1241.33" y="762.06" width="140.321" height="176.324">
+  <object id="44" name="Mario think" type="him" x="1241.33" y="762.06" width="140.321" height="176.324">
    <properties>
     <property name="interval" type="int" value="1"/>
     <property name="showOnce" type="bool" value="true"/>
@@ -126923,6 +127345,19 @@
   <object id="43" name="Park" type="sign" x="1288.17" y="810.452" width="48.585" height="84.9954">
    <properties>
     <property name="stringId" value="Park"/>
+   </properties>
+  </object>
+  <object id="50" name="Restaurant" type="sign" x="1332.31" y="1234.62" width="53.2765" height="73.3617">
+   <properties>
+    <property name="stringId" value="Restaurant"/>
+   </properties>
+  </object>
+  <object id="51" name="Mario think" type="him" x="1260" y="1170" width="195" height="200">
+   <properties>
+    <property name="interval" type="int" value="1"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="Mario_restaurant"/>
+    <property name="stringIdRequired" value="Restaurant"/>
    </properties>
   </object>
  </objectgroup>
