@@ -11,7 +11,9 @@ export default class RestaurantScene extends Phaser.Scene {
         this.dialogOpen = false
         console.debug(RESTAURANT_SCENE, this.levelConfig)
 
-        this.add.image(450, 270, this.levelConfig.level.image.name).setScale(0.55, 0.55).setFlipX(this.levelConfig.level.image.flip)
+        if (this.levelConfig.level.image) {
+            this.add.image(450, 270, this.levelConfig.level.image.name).setScale(0.55, 0.55).setFlipX(this.levelConfig.level.image.flip)
+        }
 
         //-- Event listener
         const uiScene = this.scene.get(UI_SCENE)

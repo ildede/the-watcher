@@ -2,9 +2,11 @@ export const TOWN_TILES = 'watcherbase'
 export const TOWN_MAP = 'townMap'
 export const SNOW_MAP = 'snowMap'
 export const GARDEN_MAP = 'gardenMap'
+export const GARDEN_TORI_MAP = 'gardenToriMap'
 export const CASINO_TILES = 'casino'
 export const DANCE_HALL_TILES = 'dancehall'
 export const PARTY_TILES = 'party'
+export const PARTY_TILES_16 = 'party16'
 export const DANCE_HALL_MAP = 'danceHallMap'
 
 export const A_ARRIVAL = {
@@ -265,8 +267,23 @@ export const M3_DOG = {
     tiles: [TOWN_TILES],
     tileSize: 16,
     transition: '',
+    next: () => N1_BDAY
+}
+export const N1_BDAY = {
+    name: 'n1_bday',
+    scene: 'RestaurantScene',
+    messages: 'dialogs/bday-part-1.json',
+    transition: '',
+    next: () => N2_BDAY
+}
+export const N2_BDAY = {
+    name: 'n2_bday',
+    scene: 'WorldScene',
+    map: GARDEN_TORI_MAP,
+    tiles: [TOWN_TILES, PARTY_TILES_16],
+    tileSize: 16,
+    transition: '',
     next: () => A_ARRIVAL
 }
-
-export const FIRST_LEVEL = A_ARRIVAL
+export const FIRST_LEVEL = N2_BDAY
 

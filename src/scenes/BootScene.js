@@ -3,6 +3,7 @@ import watcherBasePng from "../assets/tileset/tileset-extruded.png";
 import casinoPng from "../assets/tileset/casino-8x8-extruded.png";
 import danceHallPng from "../assets/tileset/cafe-8x8-extruded.png";
 import partyPng from "../assets/tileset/wedding-8x8-extruded.png";
+import party16Png from "../assets/tileset/wedding-extruded.png";
 
 import blackPng from "../assets/characters/cats/black.png";
 import orangePng from "../assets/characters/cats/orange.png";
@@ -38,11 +39,22 @@ import splashBg00 from "../assets/title/splash-background-0.png";
 import splashLanguagesPng from "../assets/title/splash-languages.png";
 
 import {BOOT_SCENE, TITLE_SCENE} from "../TheWatcher";
-import {CASINO_TILES, DANCE_HALL_MAP, DANCE_HALL_TILES, PARTY_TILES, TOWN_MAP, TOWN_TILES, SNOW_MAP, GARDEN_MAP} from "../config/levels";
+import {
+    CASINO_TILES,
+    DANCE_HALL_MAP,
+    DANCE_HALL_TILES,
+    PARTY_TILES,
+    TOWN_MAP,
+    TOWN_TILES,
+    SNOW_MAP,
+    GARDEN_MAP,
+    GARDEN_TORI_MAP, PARTY_TILES_16
+} from "../config/levels";
 
 import * as townJson from '../assets/main-town/town.json';
 import * as snowJson from '../assets/main-town/town-snow.json';
 import * as gardenJson from '../assets/main-town/garden.json';
+import * as gardenToriJson from '../assets/main-town/garden-tori.json';
 import * as danceHallJson from '../assets/main-town/dancehall.json';
 
 import * as blackJson from '../assets/characters/cats/black.json';
@@ -138,9 +150,11 @@ export default class BootScene extends Phaser.Scene {
         this.load.tilemapTiledJSON(TOWN_MAP, townJson)
         this.load.tilemapTiledJSON(SNOW_MAP, snowJson)
         this.load.tilemapTiledJSON(GARDEN_MAP, gardenJson)
+        this.load.tilemapTiledJSON(GARDEN_TORI_MAP, gardenToriJson)
         this.load.image(CASINO_TILES, casinoPng)
         this.load.image(DANCE_HALL_TILES, danceHallPng)
         this.load.image(PARTY_TILES, partyPng)
+        this.load.image(PARTY_TILES_16, party16Png)
         this.load.tilemapTiledJSON(DANCE_HALL_MAP, danceHallJson)
 
         this.load.image('nextPage', nextPage)
