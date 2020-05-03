@@ -127,7 +127,7 @@ export const E5_DINNER_RESTAURANT = {
     next: () => F1_NIGHT_OUT
 }
 export const F1_NIGHT_OUT = {
-    name: 'f1_night_out',
+    name: 'f1_night',
     scene: 'WorldScene',
     map: TOWN_MAP,
     tiles: [TOWN_TILES],
@@ -136,7 +136,7 @@ export const F1_NIGHT_OUT = {
     next: () => F2_NIGHT_OUT
 }
 export const F2_NIGHT_OUT = {
-    name: 'f2_night_out',
+    name: 'f2_night',
     scene: 'WorldScene',
     map: TOWN_MAP,
     tiles: [TOWN_TILES],
@@ -145,9 +145,9 @@ export const F2_NIGHT_OUT = {
     next: () => F3_NIGHT_OUT
 }
 export const F3_NIGHT_OUT = {
-    name: 'f3_night_out',
-    scene: 'DialogScene',
-    messages: 'dialogs/night-part-3.json',
+    name: 'f3_night',
+    scene: 'ParkScene',
+    messages: 'dialogs/night-part-4.json',
     transition: '',
     next: () => A_ARRIVAL
 }

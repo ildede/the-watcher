@@ -1,6 +1,6 @@
 import 'phaser'
 import i18next from 'i18next';
-import {DIALOG_SCENE, RESTAURANT_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
+import {DIALOG_SCENE, PARK_SCENE, RESTAURANT_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
 
 export default class UIScene extends Phaser.Scene {
 
@@ -20,6 +20,7 @@ export default class UIScene extends Phaser.Scene {
         const worldScene = this.scene.get(WORLD_SCENE)
         const dialogScene = this.scene.get(DIALOG_SCENE)
         const restaurantScene = this.scene.get(RESTAURANT_SCENE)
+        const parkScene = this.scene.get(PARK_SCENE)
         this.uiConfig = data
         this.messages = []
         this.messageQueue = []
@@ -87,6 +88,14 @@ export default class UIScene extends Phaser.Scene {
                     startMessagesQueue.call(this, data, restaurantScene)
                 })
         }, this)
+        parkScene.events.on('dialogMessages', function(messages) {
+            console.debug('Event dialogMessages received')
+            fetch(messages)
+                .then(response => response.json())
+                .then(data => {
+                    startMessagesQueue.call(this, data, parkScene)
+                })
+        }, this)
 
         worldScene.events.on('continueDialog', function(box) {
             console.debug('Event continueDialog received')
@@ -134,6 +143,23 @@ export default class UIScene extends Phaser.Scene {
                     readNextMessageInQueue.call(this, restaurantScene)
                 } else {
                     restaurantScene.events.emit('dialogEnd')
+                }
+            } else {
+                box.typeNextPage()
+            }
+        }, this)
+        parkScene.events.on('continueDialog', function(box) {
+            console.debug('Event continueDialog received')
+            const icon = box.getElement('action').setVisible(false)
+            box.resetChildVisibleState(icon)
+            if (box.isTyping) {
+                box.stop(true)
+            } else if (box.isLastPage) {
+                box.setVisible(false)
+                if (this.messageQueue.length > 0) {
+                    readNextMessageInQueue.call(this, parkScene)
+                } else {
+                    parkScene.events.emit('dialogEnd')
                 }
             } else {
                 box.typeNextPage()
