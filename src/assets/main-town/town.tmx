@@ -126649,6 +126649,7 @@
    <properties>
     <property name="interval" type="int" value="60"/>
     <property name="stringId" value="Mario_delay1"/>
+    <property name="stringIdRequired" value="Mario_dinner010"/>
     <property name="stringIdThatDisableThis" value="Gioia_dinner001"/>
    </properties>
   </object>
