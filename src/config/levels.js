@@ -98,6 +98,7 @@ export const E1_DINNER_BEFORE = {
 export const E2_DINNER_RESTAURANT = {
     name: 'e2_dinner',
     scene: 'RestaurantScene',
+    music: 'conversation',
     messages: 'dialogs/restaurant-part-3.json',
     transition: '',
     image: {
@@ -109,6 +110,7 @@ export const E2_DINNER_RESTAURANT = {
 export const E3_DINNER_RESTAURANT = {
     name: 'e3_dinner',
     scene: 'RestaurantScene',
+    music: 'conversation',
     messages: 'dialogs/restaurant-part-4.json',
     transition: 'System_010',
     image: {
