@@ -39,141 +39,13 @@
                 }, 
                 {
                  "height":330,
-                 "id":27,
-                 "name":"TalkToHer",
-                 "properties":[
-                        {
-                         "name":"interval",
-                         "type":"int",
-                         "value":0
-                        }, 
-                        {
-                         "name":"showOnce",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"stringId",
-                         "type":"string",
-                         "value":"Mario_partynight_012"
-                        }, 
-                        {
-                         "name":"stringIdRequired",
-                         "type":"string",
-                         "value":"Gioia_partynight_009"
-                        }],
-                 "rotation":0,
-                 "type":"him",
-                 "visible":true,
-                 "width":400,
-                 "x":5,
-                 "y":5
-                }, 
-                {
-                 "height":330,
-                 "id":20,
-                 "name":"TalkToHer",
-                 "properties":[
-                        {
-                         "name":"interval",
-                         "type":"int",
-                         "value":0
-                        }, 
-                        {
-                         "name":"showOnce",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"stringId",
-                         "type":"string",
-                         "value":"Gioia_partynight_009"
-                        }, 
-                        {
-                         "name":"stringIdRequired",
-                         "type":"string",
-                         "value":"Mario_partynight_011"
-                        }],
-                 "rotation":0,
-                 "type":"her",
-                 "visible":true,
-                 "width":400,
-                 "x":5,
-                 "y":5
-                }, 
-                {
-                 "height":330,
-                 "id":21,
-                 "name":"TalkToHer",
-                 "properties":[
-                        {
-                         "name":"interval",
-                         "type":"int",
-                         "value":0
-                        }, 
-                        {
-                         "name":"showOnce",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"stringId",
-                         "type":"string",
-                         "value":"Mario_partynight_011"
-                        }, 
-                        {
-                         "name":"stringIdRequired",
-                         "type":"string",
-                         "value":"Gioia_partynight_008"
-                        }],
-                 "rotation":0,
-                 "type":"him",
-                 "visible":true,
-                 "width":400,
-                 "x":5,
-                 "y":5
-                }, 
-                {
-                 "height":330,
-                 "id":22,
-                 "name":"TalkToHer",
-                 "properties":[
-                        {
-                         "name":"interval",
-                         "type":"int",
-                         "value":0
-                        }, 
-                        {
-                         "name":"showOnce",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"stringId",
-                         "type":"string",
-                         "value":"Gioia_partynight_008"
-                        }, 
-                        {
-                         "name":"stringIdRequired",
-                         "type":"string",
-                         "value":"Gioia_partynight_007"
-                        }],
-                 "rotation":0,
-                 "type":"her",
-                 "visible":true,
-                 "width":400,
-                 "x":22.6415,
-                 "y":22.4214
-                }, 
-                {
-                 "height":330,
                  "id":23,
                  "name":"TalkToHer",
                  "properties":[
                         {
-                         "name":"interval",
-                         "type":"int",
-                         "value":0
+                         "name":"dialogs",
+                         "type":"file",
+                         "value":"dialogs\/townhall-part-3-her.json"
                         }, 
                         {
                          "name":"showOnce",
@@ -183,7 +55,7 @@
                         {
                          "name":"stringId",
                          "type":"string",
-                         "value":"Gioia_partynight_007"
+                         "value":"external"
                         }],
                  "rotation":0,
                  "type":"her",

@@ -4347,43 +4347,11 @@
     <property name="stringIdRequired" value="Mario_partynight_012"/>
    </properties>
   </object>
-  <object id="27" name="TalkToHer" type="him" x="5" y="5" width="400" height="330">
-   <properties>
-    <property name="interval" type="int" value="0"/>
-    <property name="showOnce" type="bool" value="true"/>
-    <property name="stringId" value="Mario_partynight_012"/>
-    <property name="stringIdRequired" value="Gioia_partynight_009"/>
-   </properties>
-  </object>
-  <object id="20" name="TalkToHer" type="her" x="5" y="5" width="400" height="330">
-   <properties>
-    <property name="interval" type="int" value="0"/>
-    <property name="showOnce" type="bool" value="true"/>
-    <property name="stringId" value="Gioia_partynight_009"/>
-    <property name="stringIdRequired" value="Mario_partynight_011"/>
-   </properties>
-  </object>
-  <object id="21" name="TalkToHer" type="him" x="5" y="5" width="400" height="330">
-   <properties>
-    <property name="interval" type="int" value="0"/>
-    <property name="showOnce" type="bool" value="true"/>
-    <property name="stringId" value="Mario_partynight_011"/>
-    <property name="stringIdRequired" value="Gioia_partynight_008"/>
-   </properties>
-  </object>
-  <object id="22" name="TalkToHer" type="her" x="22.6415" y="22.4214" width="400" height="330">
-   <properties>
-    <property name="interval" type="int" value="0"/>
-    <property name="showOnce" type="bool" value="true"/>
-    <property name="stringId" value="Gioia_partynight_008"/>
-    <property name="stringIdRequired" value="Gioia_partynight_007"/>
-   </properties>
-  </object>
   <object id="23" name="TalkToHer" type="her" x="5" y="5" width="400" height="330">
    <properties>
-    <property name="interval" type="int" value="0"/>
+    <property name="dialogs" type="file" value="dialogs/townhall-part-3-her.json"/>
     <property name="showOnce" type="bool" value="true"/>
-    <property name="stringId" value="Gioia_partynight_007"/>
+    <property name="stringId" value="external"/>
    </properties>
   </object>
   <object id="2" name="Player" type="spawn" x="50" y="210">

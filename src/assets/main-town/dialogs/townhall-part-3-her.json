@@ -1,0 +1,7 @@
+[
+  { "stringId": "Gioia_partynight_007", "who": "her" },
+  { "stringId": "Gioia_partynight_008", "who": "her" },
+  { "stringId": "Mario_partynight_011", "who": "him" },
+  { "stringId": "Gioia_partynight_009", "who": "her" },
+  { "stringId": "Mario_partynight_012", "who": "him", "customEvent": "npc_move_her_down_and_close" }
+]
