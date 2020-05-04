@@ -77,6 +77,10 @@ export default class RestaurantScene extends Phaser.Scene {
 
         if (this.levelConfig.level.image) {
             this.add.image(450, 270, this.levelConfig.level.image.name).setScale(0.55, 0.55).setFlipX(this.levelConfig.level.image.flip)
+        } else {
+            let rect = new Phaser.Geom.Rectangle(0, 0, 900, 600);
+            const graphics = this.add.graphics({ fillStyle: { color: 0x000000 }})
+            graphics.fillRectShape(rect);
         }
 
         //-- Event listener
