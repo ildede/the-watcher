@@ -42,6 +42,7 @@ export const B2_PARTY_BEGIN = {
 export const B3_PARTY = {
     name: 'b3_party',
     scene: 'WorldScene',
+    music: 'afterParty',
     map: DANCE_HALL_MAP,
     tiles: [CASINO_TILES, DANCE_HALL_TILES, PARTY_TILES],
     tileSize: 8,
