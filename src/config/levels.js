@@ -194,6 +194,7 @@ export const E2_WHAT_ARE_WE = {
 export const H1_ANNIVERSARY = {
     name: 'h1_anniversary',
     scene: 'WorldScene',
+    music: 'snowMusic',
     map: SNOW_MAP,
     tiles: [TOWN_TILES],
     tileSize: 16,
@@ -203,6 +204,7 @@ export const H1_ANNIVERSARY = {
 export const H2_ANNIVERSARY = {
     name: 'h2_anniversary',
     scene: 'WorldScene',
+    music: 'snowMusic',
     map: SNOW_MAP,
     tiles: [TOWN_TILES],
     tileSize: 16,

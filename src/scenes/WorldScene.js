@@ -8,6 +8,8 @@ import townMusicMp3 from '../assets/audio/01Mainmap/Pleasant_Creek.mp3';
 import townMusicWav from '../assets/audio/01Mainmap/Pleasant_Creek_Loop.wav';
 import partyBeginMp3 from '../assets/audio/02PartyBegin/Project_2.mp3';
 import afterPartyMp3 from '../assets/audio/03Afterparty/fwid.MP3';
+import snowMusicMp3 from '../assets/audio/07SnowMap/Winter_Snow.mp3';
+import snowMusicOgg from '../assets/audio/07SnowMap/Winter_Snow.ogg';
 
 export default class WorldScene extends Phaser.Scene {
     constructor() {
@@ -73,6 +75,7 @@ export default class WorldScene extends Phaser.Scene {
         this.load.audio('townMusic', [townMusicWav, townMusicMp3]);
         this.load.audio('partyBegin', [partyBeginMp3]);
         this.load.audio('afterParty', [afterPartyMp3]);
+        this.load.audio('snowMusic', [snowMusicOgg, snowMusicMp3]);
     }
 
     create(data) {
