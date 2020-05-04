@@ -337,6 +337,7 @@ export const N4_BDAY = {
 export const THE_END = {
     name: 'the_end',
     scene: 'EndTitleScene',
+    music: 'finalMusic',
     transition: '',
     next: () => {}
 }
