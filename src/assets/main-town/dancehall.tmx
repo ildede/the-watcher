@@ -4340,7 +4340,7 @@
    </properties>
   </tile>
  </tileset>
- <objectgroup id="10" name="b3_party">
+ <objectgroup id="10" name="b3_party" visible="0">
   <object id="25" name="End" type="message" x="5" y="5" width="400" height="330">
    <properties>
     <property name="endScene" type="bool" value="true"/>
