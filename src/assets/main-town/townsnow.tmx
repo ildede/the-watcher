@@ -127010,13 +127010,14 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="10" name="h1_anniversary" visible="0">
+ <objectgroup id="10" name="h1_anniversary">
   <object id="5" name="Spawn Point" type="spawn" x="175" y="345" visible="0">
    <point/>
   </object>
-  <object id="6" name="her" type="npc" x="895.249" y="795.65" visible="0">
+  <object id="6" name="her" type="npc" x="928.848" y="874.398">
    <properties>
     <property name="dialogs" type="file" value="dialogs/anniversary-part-1.json"/>
+    <property name="movable" type="bool" value="true"/>
     <property name="stringId" value="external"/>
    </properties>
    <point/>

@@ -137,7 +137,7 @@ export default class WorldScene extends Phaser.Scene {
                     }
                 }
             })
-        this.physics.add.overlap(this.player, [this.systemMessage],
+        this.physics.add.overlap(this.player, [this.systemMessage,this.movablenpc],
             (player, item) => {
                 if (!this.dialogOpen) {
                     if (item.lastVisit === undefined || (item.lastVisit && (Date.now() - item.lastVisit) / 1000 > item.interval())) {
@@ -239,6 +239,14 @@ export default class WorldScene extends Phaser.Scene {
                 }
             })
         })
+        this.events.on('npc_move_her_right', () => {
+            this.movablenpc.getChildren().forEach(npc => {
+                if (npc.spriteKey === 'her') {
+                    npc.right()
+                    npc.body.setVelocityX(175)
+                }
+            })
+        })
         this.events.on('npc_move_her_down_and_close', () => {
             this.movablenpc.getChildren().forEach(npc => {
                 if (npc.spriteKey === 'her') {
@@ -284,7 +292,7 @@ export default class WorldScene extends Phaser.Scene {
                             Array.isArray(object.properties)
                                 ? object.properties?.find(e => e.name === 'direction')?.value || "front"
                                 : "front"
-                            , false, object))
+                            , false, object).setImmovable())
                     } else {
                         this.npc.add(new Her(this, object.x, object.y, object.name,
                             Array.isArray(object.properties)

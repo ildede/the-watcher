@@ -14,7 +14,7 @@
   { "stringId": "Gioia_anniversary006", "who": "her" },
   { "stringId": "Mario_anniversary006", "who": "him" },
   { "stringId": "Gioia_anniversary007", "who": "her" },
-  { "stringId": "Mario_anniversary007", "who": "him" },
+  { "stringId": "Mario_anniversary007", "who": "him", "customEvent": "npc_move_her_right"},
   { "stringId": "Mario_anniversary008", "who": "him" },
   { "stringId": "Mario_anniversary009", "who": "him" },
   { "stringId": "Mario_anniversary010", "who": "him" },
