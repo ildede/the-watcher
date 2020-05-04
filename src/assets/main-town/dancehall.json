@@ -220,6 +220,11 @@
                          "name":"direction",
                          "type":"string",
                          "value":"left"
+                        }, 
+                        {
+                         "name":"movable",
+                         "type":"bool",
+                         "value":true
                         }],
                  "rotation":0,
                  "type":"npc",
@@ -262,271 +267,25 @@
                  "y":5
                 }, 
                 {
-                 "height":330,
-                 "id":14,
-                 "name":"Think alone",
-                 "properties":[
-                        {
-                         "name":"interval",
-                         "type":"int",
-                         "value":1
-                        }, 
-                        {
-                         "name":"showOnce",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"stringId",
-                         "type":"string",
-                         "value":"Mario_partynight_007,Mario_partynight_008,Mario_partynight_009,Mario_partynight_010"
-                        }, 
-                        {
-                         "name":"stringIdRequired",
-                         "type":"string",
-                         "value":"Gioia_partynight_006"
-                        }],
-                 "rotation":0,
-                 "type":"him",
-                 "visible":true,
-                 "width":400,
-                 "x":5,
-                 "y":5
-                }, 
-                {
-                 "height":330,
-                 "id":12,
-                 "name":"TalkToHer",
-                 "properties":[
-                        {
-                         "name":"interval",
-                         "type":"int",
-                         "value":1
-                        }, 
-                        {
-                         "name":"showOnce",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"stringId",
-                         "type":"string",
-                         "value":"Gioia_partynight_006"
-                        }, 
-                        {
-                         "name":"stringIdRequired",
-                         "type":"string",
-                         "value":"Gioia_partynight_005"
-                        }],
-                 "rotation":0,
-                 "type":"her",
-                 "visible":true,
-                 "width":400,
-                 "x":5,
-                 "y":5
-                }, 
-                {
-                 "height":330,
-                 "id":15,
-                 "name":"TalkToHer",
-                 "properties":[
-                        {
-                         "name":"interval",
-                         "type":"int",
-                         "value":1
-                        }, 
-                        {
-                         "name":"showOnce",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"stringId",
-                         "type":"string",
-                         "value":"Gioia_partynight_005"
-                        }, 
-                        {
-                         "name":"stringIdRequired",
-                         "type":"string",
-                         "value":"Mario_partynight_006"
-                        }],
-                 "rotation":0,
-                 "type":"her",
-                 "visible":true,
-                 "width":400,
-                 "x":5,
-                 "y":5
-                }, 
-                {
-                 "height":330,
-                 "id":16,
-                 "name":"Think alone",
-                 "properties":[
-                        {
-                         "name":"interval",
-                         "type":"int",
-                         "value":1
-                        }, 
-                        {
-                         "name":"showOnce",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"stringId",
-                         "type":"string",
-                         "value":"Mario_partynight_006"
-                        }, 
-                        {
-                         "name":"stringIdRequired",
-                         "type":"string",
-                         "value":"Gioia_partynight_004"
-                        }],
-                 "rotation":0,
-                 "type":"him",
-                 "visible":true,
-                 "width":400,
-                 "x":5,
-                 "y":5
-                }, 
-                {
-                 "height":330,
-                 "id":17,
-                 "name":"TalkToHer",
-                 "properties":[
-                        {
-                         "name":"interval",
-                         "type":"int",
-                         "value":1
-                        }, 
-                        {
-                         "name":"showOnce",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"stringId",
-                         "type":"string",
-                         "value":"Gioia_partynight_003,Gioia_partynight_004"
-                        }, 
-                        {
-                         "name":"stringIdRequired",
-                         "type":"string",
-                         "value":"Mario_partynight_005"
-                        }],
-                 "rotation":0,
-                 "type":"her",
-                 "visible":true,
-                 "width":400,
-                 "x":5,
-                 "y":5
-                }, 
-                {
-                 "height":330,
-                 "id":10,
-                 "name":"TalkToHer",
-                 "properties":[
-                        {
-                         "name":"interval",
-                         "type":"int",
-                         "value":1
-                        }, 
-                        {
-                         "name":"showOnce",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"stringId",
-                         "type":"string",
-                         "value":"Mario_partynight_005"
-                        }, 
-                        {
-                         "name":"stringIdRequired",
-                         "type":"string",
-                         "value":"Gioia_partynight_002"
-                        }],
-                 "rotation":0,
-                 "type":"him",
-                 "visible":true,
-                 "width":400,
-                 "x":5,
-                 "y":5
-                }, 
-                {
-                 "height":330,
-                 "id":18,
-                 "name":"TalkToHer",
-                 "properties":[
-                        {
-                         "name":"interval",
-                         "type":"int",
-                         "value":1
-                        }, 
-                        {
-                         "name":"showOnce",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"stringId",
-                         "type":"string",
-                         "value":"Gioia_partynight_002"
-                        }, 
-                        {
-                         "name":"stringIdRequired",
-                         "type":"string",
-                         "value":"Mario_partynight_004"
-                        }],
-                 "rotation":0,
-                 "type":"her",
-                 "visible":true,
-                 "width":400,
-                 "x":15.0943,
-                 "y":14.8742
-                }, 
-                {
-                 "height":330,
-                 "id":8,
-                 "name":"TalkToHer",
-                 "properties":[
-                        {
-                         "name":"interval",
-                         "type":"int",
-                         "value":1
-                        }, 
-                        {
-                         "name":"showOnce",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"stringId",
-                         "type":"string",
-                         "value":"Mario_partynight_004"
-                        }, 
-                        {
-                         "name":"stringIdRequired",
-                         "type":"string",
-                         "value":"Gioia_partynight_001"
-                        }],
-                 "rotation":0,
-                 "type":"him",
-                 "visible":true,
-                 "width":400,
-                 "x":5,
-                 "y":5
-                }, 
-                {
                  "height":0,
                  "id":6,
                  "name":"her",
                  "point":true,
                  "properties":[
                         {
+                         "name":"dialogs",
+                         "type":"file",
+                         "value":"dialogs\/townhall-part-2-her.json"
+                        }, 
+                        {
+                         "name":"showOnce",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
                          "name":"stringId",
                          "type":"string",
-                         "value":"Gioia_partynight_001"
+                         "value":"external"
                         }],
                  "rotation":0,
                  "type":"npc",
@@ -537,77 +296,13 @@
                 }, 
                 {
                  "height":330,
-                 "id":5,
-                 "name":"Think alone",
-                 "properties":[
-                        {
-                         "name":"interval",
-                         "type":"int",
-                         "value":1
-                        }, 
-                        {
-                         "name":"showOnce",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"stringId",
-                         "type":"string",
-                         "value":"Mario_partynight_003"
-                        }, 
-                        {
-                         "name":"stringIdRequired",
-                         "type":"string",
-                         "value":"Mario_partynight_002"
-                        }],
-                 "rotation":0,
-                 "type":"him",
-                 "visible":true,
-                 "width":400,
-                 "x":5,
-                 "y":5
-                }, 
-                {
-                 "height":330,
-                 "id":4,
-                 "name":"Think alone",
-                 "properties":[
-                        {
-                         "name":"interval",
-                         "type":"int",
-                         "value":1
-                        }, 
-                        {
-                         "name":"showOnce",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"stringId",
-                         "type":"string",
-                         "value":"Mario_partynight_002"
-                        }, 
-                        {
-                         "name":"stringIdRequired",
-                         "type":"string",
-                         "value":"Mario_partynight_001"
-                        }],
-                 "rotation":0,
-                 "type":"him",
-                 "visible":true,
-                 "width":400,
-                 "x":5,
-                 "y":5
-                }, 
-                {
-                 "height":330,
                  "id":3,
                  "name":"Think alone",
                  "properties":[
                         {
-                         "name":"interval",
-                         "type":"int",
-                         "value":1
+                         "name":"dialogs",
+                         "type":"file",
+                         "value":"dialogs\/townhall-part-1-think.json"
                         }, 
                         {
                          "name":"showOnce",
@@ -617,7 +312,7 @@
                         {
                          "name":"stringId",
                          "type":"string",
-                         "value":"Mario_partynight_001"
+                         "value":"external"
                         }],
                  "rotation":0,
                  "type":"him",

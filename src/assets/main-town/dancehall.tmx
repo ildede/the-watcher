@@ -4395,6 +4395,7 @@
   <object id="26" name="her" type="npc" x="80" y="210">
    <properties>
     <property name="direction" value="left"/>
+    <property name="movable" type="bool" value="true"/>
    </properties>
    <point/>
   </object>
@@ -4406,97 +4407,19 @@
     <property name="stringIdRequired" value="Mario_partynight_010"/>
    </properties>
   </object>
-  <object id="14" name="Think alone" type="him" x="5" y="5" width="400" height="330">
-   <properties>
-    <property name="interval" type="int" value="1"/>
-    <property name="showOnce" type="bool" value="true"/>
-    <property name="stringId" value="Mario_partynight_007,Mario_partynight_008,Mario_partynight_009,Mario_partynight_010"/>
-    <property name="stringIdRequired" value="Gioia_partynight_006"/>
-   </properties>
-  </object>
-  <object id="12" name="TalkToHer" type="her" x="5" y="5" width="400" height="330">
-   <properties>
-    <property name="interval" type="int" value="1"/>
-    <property name="showOnce" type="bool" value="true"/>
-    <property name="stringId" value="Gioia_partynight_006"/>
-    <property name="stringIdRequired" value="Gioia_partynight_005"/>
-   </properties>
-  </object>
-  <object id="15" name="TalkToHer" type="her" x="5" y="5" width="400" height="330">
-   <properties>
-    <property name="interval" type="int" value="1"/>
-    <property name="showOnce" type="bool" value="true"/>
-    <property name="stringId" value="Gioia_partynight_005"/>
-    <property name="stringIdRequired" value="Mario_partynight_006"/>
-   </properties>
-  </object>
-  <object id="16" name="Think alone" type="him" x="5" y="5" width="400" height="330">
-   <properties>
-    <property name="interval" type="int" value="1"/>
-    <property name="showOnce" type="bool" value="true"/>
-    <property name="stringId" value="Mario_partynight_006"/>
-    <property name="stringIdRequired" value="Gioia_partynight_004"/>
-   </properties>
-  </object>
-  <object id="17" name="TalkToHer" type="her" x="5" y="5" width="400" height="330">
-   <properties>
-    <property name="interval" type="int" value="1"/>
-    <property name="showOnce" type="bool" value="true"/>
-    <property name="stringId" value="Gioia_partynight_003,Gioia_partynight_004"/>
-    <property name="stringIdRequired" value="Mario_partynight_005"/>
-   </properties>
-  </object>
-  <object id="10" name="TalkToHer" type="him" x="5" y="5" width="400" height="330">
-   <properties>
-    <property name="interval" type="int" value="1"/>
-    <property name="showOnce" type="bool" value="true"/>
-    <property name="stringId" value="Mario_partynight_005"/>
-    <property name="stringIdRequired" value="Gioia_partynight_002"/>
-   </properties>
-  </object>
-  <object id="18" name="TalkToHer" type="her" x="15.0943" y="14.8742" width="400" height="330">
-   <properties>
-    <property name="interval" type="int" value="1"/>
-    <property name="showOnce" type="bool" value="true"/>
-    <property name="stringId" value="Gioia_partynight_002"/>
-    <property name="stringIdRequired" value="Mario_partynight_004"/>
-   </properties>
-  </object>
-  <object id="8" name="TalkToHer" type="him" x="5" y="5" width="400" height="330">
-   <properties>
-    <property name="interval" type="int" value="1"/>
-    <property name="showOnce" type="bool" value="true"/>
-    <property name="stringId" value="Mario_partynight_004"/>
-    <property name="stringIdRequired" value="Gioia_partynight_001"/>
-   </properties>
-  </object>
   <object id="6" name="her" type="npc" x="50" y="200">
    <properties>
-    <property name="stringId" value="Gioia_partynight_001"/>
+    <property name="dialogs" type="file" value="dialogs/townhall-part-2-her.json"/>
+    <property name="showOnce" type="bool" value="true"/>
+    <property name="stringId" value="external"/>
    </properties>
    <point/>
   </object>
-  <object id="5" name="Think alone" type="him" x="5" y="5" width="400" height="330">
-   <properties>
-    <property name="interval" type="int" value="1"/>
-    <property name="showOnce" type="bool" value="true"/>
-    <property name="stringId" value="Mario_partynight_003"/>
-    <property name="stringIdRequired" value="Mario_partynight_002"/>
-   </properties>
-  </object>
-  <object id="4" name="Think alone" type="him" x="5" y="5" width="400" height="330">
-   <properties>
-    <property name="interval" type="int" value="1"/>
-    <property name="showOnce" type="bool" value="true"/>
-    <property name="stringId" value="Mario_partynight_002"/>
-    <property name="stringIdRequired" value="Mario_partynight_001"/>
-   </properties>
-  </object>
   <object id="3" name="Think alone" type="him" x="5" y="5" width="400" height="330">
    <properties>
-    <property name="interval" type="int" value="1"/>
+    <property name="dialogs" type="file" value="dialogs/townhall-part-1-think.json"/>
     <property name="showOnce" type="bool" value="true"/>
-    <property name="stringId" value="Mario_partynight_001"/>
+    <property name="stringId" value="external"/>
    </properties>
   </object>
   <object id="1" name="Player" type="spawn" x="140" y="310">
