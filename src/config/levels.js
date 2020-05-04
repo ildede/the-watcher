@@ -122,6 +122,7 @@ export const E3_DINNER_RESTAURANT = {
 export const E4_DINNER_RESTAURANT = {
     name: 'e4_dinner',
     scene: 'RestaurantScene',
+    music: 'conversation',
     messages: 'dialogs/restaurant-part-5.json',
     transition: 'System_011',
     image: {
@@ -133,6 +134,7 @@ export const E4_DINNER_RESTAURANT = {
 export const E5_DINNER_RESTAURANT = {
     name: 'e5_dinner',
     scene: 'RestaurantScene',
+    music: 'conversation',
     messages: 'dialogs/restaurant-part-6.json',
     transition: '',
     image: {
@@ -164,6 +166,7 @@ export const F2_NIGHT_OUT = {
 export const F3_NIGHT_OUT = {
     name: 'f3_night',
     scene: 'ParkScene',
+    music: 'starryMusic',
     messages: 'dialogs/night-part-4.json',
     transition: '',
     next: () => E1_WHAT_ARE_WE
