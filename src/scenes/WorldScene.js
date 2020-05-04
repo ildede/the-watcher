@@ -23,8 +23,8 @@ export default class WorldScene extends Phaser.Scene {
         console.debug(WORLD_SCENE, this.levelConfig)
 
         if (this.levelConfig.level.music) {
-            const music = this.sound.add(this.levelConfig.level.music);
-            music.play();
+            this.music = this.sound.add(this.levelConfig.level.music);
+            this.music.play();
         }
 
         //-- Draw map and game objects
@@ -96,6 +96,10 @@ export default class WorldScene extends Phaser.Scene {
         const uiScene = this.scene.get(UI_SCENE)
         uiScene.events.once('startTransition', () => {
             this.cameras.main.fadeOut(500)
+            if (this.music.isPlaying) {
+                this.music.stop()
+                this.music.destroy()
+            }
             this.time.addEvent({
                     delay: 500,
                     callback: () => {
