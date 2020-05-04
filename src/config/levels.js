@@ -209,7 +209,7 @@ export const H4_ANNIVERSARY = {
     transition: '',
     image: {
         name: 'restaurantBg',
-        flip: false
+        flip: true
     },
     next: () => I1_MARRY_ME
 }
@@ -220,7 +220,7 @@ export const I1_MARRY_ME = {
     transition: '',
     image: {
         name: 'restaurantBg',
-        flip: false
+        flip: true
     },
     next: () => L1_MOVING
 }
