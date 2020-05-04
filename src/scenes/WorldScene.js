@@ -271,7 +271,6 @@ export default class WorldScene extends Phaser.Scene {
             }
             if (object.type === 'npc') {
                 if (object.name === 'her') {
-                    console.log(object)
                     if (object.properties?.find(e => e.name === 'movable')?.value) {
                         this.movablenpc.add(new Her(this, object.x, object.y, object.name,
                             Array.isArray(object.properties)
