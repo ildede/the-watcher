@@ -6,6 +6,7 @@ import {TRANSITION_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
 import Her from "../entity/Her";
 import townMusicMp3 from '../assets/audio/01Mainmap/Pleasant_Creek.mp3';
 import townMusicWav from '../assets/audio/01Mainmap/Pleasant_Creek_Loop.wav';
+import partyBeginMp3 from '../assets/audio/02PartyBegin/Project_2.mp3';
 
 export default class WorldScene extends Phaser.Scene {
     constructor() {
@@ -14,7 +15,62 @@ export default class WorldScene extends Phaser.Scene {
     }
 
     preload() {
+        const progressBar = this.add.graphics();
+        const progressBox = this.add.graphics();
+        progressBox.fillStyle(0x222222, 0.8);
+        progressBox.fillRect(240, 270, 420, 50);
+        const width = this.cameras.main.width;
+        const height = this.cameras.main.height;
+        const loadingText = this.make.text({
+            x: width / 2,
+            y: height / 2 - 50,
+            text: 'Loading...',
+            style: {
+                font: '20px monospace',
+                fill: '#ffffff'
+            }
+        });
+        loadingText.setOrigin(0.5, 0.5);
+        const percentText = this.make.text({
+            x: width / 2,
+            y: height / 2 - 5,
+            text: '0%',
+            style: {
+                font: '18px monospace',
+                fill: '#ffffff'
+            }
+        });
+        percentText.setOrigin(0.5, 0.5);
+        const assetText = this.make.text({
+            x: width / 2,
+            y: height / 2 + 50,
+            text: '',
+            style: {
+                font: '18px monospace',
+                fill: '#ffffff'
+            }
+        });
+        assetText.setOrigin(0.5, 0.5);
+
+        this.load.on('progress', function (value) {
+            progressBar.clear();
+            progressBar.fillStyle(0xffffff, 1);
+            progressBar.fillRect(250, 280, 400 * value, 30);
+            percentText.setText(parseInt(value * 100) + '%');
+        });
+        this.load.on('fileprogress', function (file) {
+            assetText.setText('Loading asset: ' + file.key);
+        });
+        this.load.on('complete', function () {
+            progressBar.destroy();
+            progressBox.destroy();
+            loadingText.destroy();
+            percentText.destroy();
+            assetText.destroy();
+        });
+
         this.load.audio('townMusic', [townMusicWav, townMusicMp3]);
+        this.load.audio('partyBegin', [partyBeginMp3]);
     }
 
     create(data) {
