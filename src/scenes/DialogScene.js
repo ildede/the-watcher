@@ -13,7 +13,7 @@ export default class DialogScene extends Phaser.Scene {
 
         this.anims.create({key: 'barGif', frames: this.anims.generateFrameNames('barBg'), repeat: -1, frameRate: 12})
         this.add.sprite(450, 300, 'barBg').setScale(0.35, 0.35).play('barGif')
-        this.add.image(450, 200, 'himAndHer').setScale(0.35, 0.35).setFlipX(true)
+        this.add.image(450, 300, 'himAndHer').setScale(0.35, 0.35)
 
         //-- Event listener
         const uiScene = this.scene.get(UI_SCENE)
