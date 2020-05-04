@@ -6,7 +6,9 @@
   {"stringId":"Mario_bday_009", "who": "him"},
   {"stringId":"Gioia_bday_002", "who": "her"},
   {"stringId":"Mario_bday_010", "who": "him"},
+  {"stringId":"npc_bday_cat", "who": "npc"},
   {"stringId":"Gioia_bday_003", "who": "her"},
+  {"stringId":"npc_bday_cat", "who": "npc"},
   {"stringId":"Mario_bday_011", "who": "him"},
   {"stringId":"Gioia_bday_004", "who": "her"},
   {"stringId":"npc_bday_004", "who": "npc"},
@@ -25,7 +27,7 @@
   {"stringId":"Gioia_bday_015", "who": "her"},
   {"stringId":"Mario_bday_012", "who": "him"},
   {"stringId":"Gioia_bday_016", "who": "her"},
-  {"stringId":"Mario_bday_013", "who": "him"},
+  {"stringId":"Mario_bday_013", "who": "him", "customEvent": "npc_delete_her"},
   {"stringId":"Mario_bday_014", "who": "him"},
   {"stringId":"System_027", "who": "system"}
 ]

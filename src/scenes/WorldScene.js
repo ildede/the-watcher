@@ -222,6 +222,14 @@ export default class WorldScene extends Phaser.Scene {
             this.input.keyboard.off('keydown_SPACE');
             this.input.keyboard.on('keydown_SPACE', this.playerAction());
         })
+
+        this.events.on('npc_delete_her', () => {
+            this.npc.getChildren().forEach(npc => {
+                if (npc.spriteKey === 'her') {
+                    npc.destroy()
+                }
+            })
+        })
     }
 
     update(time, delta) {
