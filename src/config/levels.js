@@ -62,6 +62,7 @@ export const C_FIRST_DATE = {
 export const D1_BAR = {
     name: 'd1_bar',
     scene: 'DialogScene',
+    music: 'cloudyMorning',
     messages: 'dialogs/bar-part-1.json',
     transition: '',
     next: () => D2_BAR_MORNING
@@ -69,6 +70,7 @@ export const D1_BAR = {
 export const D2_BAR_MORNING = {
     name: 'd2_bar_morning',
     scene: 'DialogScene',
+    music: 'cloudyMorning',
     messages: 'dialogs/bar-part-2.json',
     transition: 'System_007',
     next: () => D3_BAR_AFTER
