@@ -71,8 +71,8 @@ export default class RestaurantScene extends Phaser.Scene {
         console.debug(RESTAURANT_SCENE, this.levelConfig)
 
         if (this.levelConfig.level.music) {
-            this.music = this.sound.add(this.levelConfig.level.music);
-            this.music.play();
+            this.music = this.sound.add(this.levelConfig.level.music)
+            this.music.play({loop: true})
         }
 
         if (this.levelConfig.level.image) {

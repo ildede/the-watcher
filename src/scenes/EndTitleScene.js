@@ -70,8 +70,8 @@ export default class TitleScene extends Phaser.Scene {
     }
 
     create() {
-        this.music = this.sound.add('finalMusic');
-        this.music.play();
+        this.music = this.sound.add('finalMusic')
+        this.music.play({loop: true})
 
         this.anims.create({key: 'starfield', frames: this.anims.generateFrameNames('splashBg'), repeat: -1, frameRate: 60})
         this.add.sprite(450, 300, 'splashBg').setDisplaySize(900, 600).play('starfield')

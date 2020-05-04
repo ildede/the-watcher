@@ -74,8 +74,8 @@ export default class ParkScene extends Phaser.Scene {
         console.debug(PARK_SCENE, this.levelConfig)
 
         if (this.levelConfig.level.music) {
-            this.music = this.sound.add(this.levelConfig.level.music);
-            this.music.play();
+            this.music = this.sound.add(this.levelConfig.level.music)
+            this.music.play({loop: true})
         }
 
         this.anims.create({key: 'starrySkyGif', frames: this.anims.generateFrameNames('starrySkyBg'), repeat: -1, frameRate: 10})

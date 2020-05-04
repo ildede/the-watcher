@@ -72,8 +72,8 @@ export default class DialogScene extends Phaser.Scene {
         console.debug(DIALOG_SCENE, this.levelConfig)
 
         if (this.levelConfig.level.music) {
-            this.music = this.sound.add(this.levelConfig.level.music);
-            this.music.play();
+            this.music = this.sound.add(this.levelConfig.level.music)
+            this.music.play({loop: true})
         }
 
         this.anims.create({key: 'barGif', frames: this.anims.generateFrameNames('barBg'), repeat: -1, frameRate: 12})

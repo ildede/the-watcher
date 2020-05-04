@@ -88,8 +88,8 @@ export default class WorldScene extends Phaser.Scene {
         console.debug(WORLD_SCENE, this.levelConfig)
 
         if (this.levelConfig.level.music) {
-            this.music = this.sound.add(this.levelConfig.level.music);
-            this.music.play();
+            this.music = this.sound.add(this.levelConfig.level.music)
+            this.music.play({loop: true})
         }
 
         //-- Draw map and game objects
