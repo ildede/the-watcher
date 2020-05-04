@@ -83,7 +83,7 @@ export default class RestaurantScene extends Phaser.Scene {
         const uiScene = this.scene.get(UI_SCENE)
         uiScene.events.once('startTransition', () => {
             this.cameras.main.fadeOut(500)
-            if (this.music.isPlaying) {
+            if (this.music?.isPlaying) {
                 this.music.stop()
                 this.music.destroy()
             }

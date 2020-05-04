@@ -307,6 +307,7 @@ export const N1_BDAY = {
 export const N2_BDAY = {
     name: 'n2_bday',
     scene: 'WorldScene',
+    music: 'gardenLastParty',
     map: GARDEN_TORI_MAP,
     tiles: [TOWN_TILES, PARTY_TILES_16],
     tileSize: 16,
@@ -316,6 +317,7 @@ export const N2_BDAY = {
 export const N3_BDAY = {
     name: 'n3_bday',
     scene: 'WorldScene',
+    music: 'gardenLastParty',
     map: GARDEN_TORI_MAP,
     tiles: [TOWN_TILES, PARTY_TILES_16],
     tileSize: 16,
@@ -325,6 +327,7 @@ export const N3_BDAY = {
 export const N4_BDAY = {
     name: 'n4_bday',
     scene: 'WorldScene',
+    music: 'gardenLastParty',
     map: GARDEN_TORI_MAP,
     tiles: [TOWN_TILES, PARTY_TILES_16],
     tileSize: 16,
@@ -337,5 +340,5 @@ export const THE_END = {
     transition: '',
     next: () => {}
 }
-export const FIRST_LEVEL = A_ARRIVAL
+export const FIRST_LEVEL = M3_DOG
 

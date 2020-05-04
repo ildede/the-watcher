@@ -11,6 +11,7 @@ import afterPartyMp3 from '../assets/audio/03Afterparty/fwid.MP3';
 import snowMusicMp3 from '../assets/audio/07SnowMap/Winter_Snow.mp3';
 import snowMusicOgg from '../assets/audio/07SnowMap/Winter_Snow.ogg';
 import gardenMusicMp3 from '../assets/audio/08Garden/Shake_and_Bake.mp3';
+import gardenLastPartyMp3 from '../assets/audio/09Finalparty/Of_Far_Different_Nature_Funky_House.mp3';
 
 export default class WorldScene extends Phaser.Scene {
     constructor() {
@@ -78,6 +79,7 @@ export default class WorldScene extends Phaser.Scene {
         this.load.audio('afterParty', [afterPartyMp3]);
         this.load.audio('snowMusic', [snowMusicOgg, snowMusicMp3]);
         this.load.audio('gardenMusic', [gardenMusicMp3]);
+        this.load.audio('gardenLastParty', [gardenLastPartyMp3]);
     }
 
     create(data) {
@@ -159,7 +161,7 @@ export default class WorldScene extends Phaser.Scene {
         const uiScene = this.scene.get(UI_SCENE)
         uiScene.events.once('startTransition', () => {
             this.cameras.main.fadeOut(500)
-            if (this.music.isPlaying) {
+            if (this.music?.isPlaying) {
                 this.music.stop()
                 this.music.destroy()
             }
