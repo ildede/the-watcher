@@ -13,7 +13,7 @@
   { "stringId": "Gioia_moving008", "who": "her"},
   { "stringId": "Mario_moving021", "who": "him"},
   { "stringId": "Gioia_moving006_1", "who": "her"},
-  { "stringId": "Mario_moving022", "who": "him"},
+  { "stringId": "Mario_moving022", "who": "him", "customEvent": "npc_go_to_house"},
   { "stringId": "Gioia_moving007_1", "who": "her"},
   { "stringId": "Gioia_moving008_1", "who": "her"},
   { "stringId": "Gioia_moving009", "who": "her"},

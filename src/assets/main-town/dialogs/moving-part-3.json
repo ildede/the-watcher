@@ -5,5 +5,5 @@
   { "stringId": "Gioia_moving002", "who": "her" },
   { "stringId": "Mario_moving012", "who": "him" },
   { "stringId": "Gioia_moving003", "who": "her" },
-  { "stringId": "Mario_moving013", "who": "him" }
+  { "stringId": "Mario_moving013", "who": "him", "customEvent": "npc_follow_me" }
 ]

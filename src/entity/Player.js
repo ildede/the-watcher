@@ -9,10 +9,21 @@ export default class Player extends Character {
 
         this.setSize(this.width/2, this.height/2)
         this.setOffset(this.width/4, this.height/2)
+
+        this.followers = []
+        this.path = []
     }
 
     update(cursors) {
+        this.path.push(new Phaser.Geom.Point(this.x,this.y))
         this.updateMovement(cursors)
+        this.followers.forEach(follower => {
+            // this.scene.physics.moveTo(projectile, {x: this.scene.input.x + this.scene.cameras.main.scrollX, y: this.scene.input.y + this.scene.cameras.main.scrollY}, 750);
+            let newX = this.path[this.path.length-20].x;
+            let newY = this.path[this.path.length-20].y;
+            follower.scene.physics.moveTo(follower, newX, newY, 175)
+            // follower.setPosition(newX, newY)
+        }, this)
     }
 
     updateMovement(cursors) {
@@ -49,6 +60,9 @@ export default class Player extends Character {
         } else {
             // If we were moving, pick and idle frame to use
             this.stopAnimation(prevVelocity);
+            this.followers.forEach(follower => {
+                follower.body.reset(follower.x, follower.y)
+            }, this)
         }
     }
 
@@ -64,6 +78,15 @@ export default class Player extends Character {
         const prevVelocity = this.body.velocity.clone();
         this.body.setVelocity(0);
         this.stopAnimation(prevVelocity)
+        this.followers.forEach(follower => {
+            follower.body.reset(follower.x, follower.y)
+        }, this)
     }
 
+    addFollower(character) {
+        this.followers.push(character)
+    }
+    removeFollowers() {
+        this.followers = []
+    }
 }

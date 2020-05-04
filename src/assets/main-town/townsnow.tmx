@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.3.4" orientation="orthogonal" renderorder="right-down" width="105" height="107" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="49">
+<map version="1.2" tiledversion="1.3.4" orientation="orthogonal" renderorder="right-down" width="105" height="107" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="50">
  <editorsettings>
   <export target="town-snow.json" format="json"/>
  </editorsettings>
@@ -126802,6 +126802,7 @@
   <object id="39" name="her" type="npc" x="1503.3" y="813.725">
    <properties>
     <property name="dialogs" type="file" value="dialogs/moving-part-3.json"/>
+    <property name="movable" type="bool" value="true"/>
     <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="external"/>
    </properties>
@@ -126858,6 +126859,9 @@
     <property name="stringId" value="Mario_gioia_moving_gioiahouse"/>
     <property name="stringIdRequired" value="Mario_moving013"/>
    </properties>
+  </object>
+  <object id="49" name="target" type="target" x="375.584" y="1064.68">
+   <point/>
   </object>
  </objectgroup>
  <objectgroup id="13" name="l1_moving" visible="0">
@@ -127010,7 +127014,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="10" name="h1_anniversary">
+ <objectgroup id="10" name="h1_anniversary" visible="0">
   <object id="5" name="Spawn Point" type="spawn" x="175" y="345" visible="0">
    <point/>
   </object>

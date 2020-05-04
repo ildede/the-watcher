@@ -181,32 +181,32 @@ export default class WorldScene extends Phaser.Scene {
         this.cursors = this.input.keyboard.createCursorKeys();
         this.input.keyboard.on('keydown_SPACE', this.playerAction());
 
-        // console.debug('D: Turn on physics debugging to show player\'s hitbox')
-        // this.input.keyboard.once("keydown_D", event => {
-        //     // Turn on physics debugging to show player's hitbox
-        //     this.physics.world.createDebugGraphic();
-        //
-        //     // Create worldLayer collision graphic above the player, but below the help text
-        //     const graphics = this.add
-        //         .graphics()
-        //         .setAlpha(0.75)
-        //         .setDepth(20);
-        //     worldUp.renderDebug(graphics, {
-        //         tileColor: null, // Color of non-colliding tiles
-        //         collidingTileColor: new Phaser.Display.Color(243, 134, 48, 255), // Color of colliding tiles
-        //         faceColor: new Phaser.Display.Color(40, 39, 37, 255) // Color of colliding face edges
-        //     });
-        //     worldMiddle.renderDebug(graphics, {
-        //         tileColor: null, // Color of non-colliding tiles
-        //         collidingTileColor: new Phaser.Display.Color(243, 134, 48, 255), // Color of colliding tiles
-        //         faceColor: new Phaser.Display.Color(40, 39, 37, 255) // Color of colliding face edges
-        //     });
-        //     worldBottom.renderDebug(graphics, {
-        //         tileColor: null, // Color of non-colliding tiles
-        //         collidingTileColor: new Phaser.Display.Color(243, 134, 48, 255), // Color of colliding tiles
-        //         faceColor: new Phaser.Display.Color(40, 39, 37, 255) // Color of colliding face edges
-        //     });
-        // });
+        console.debug('D: Turn on physics debugging to show player\'s hitbox')
+        this.input.keyboard.once("keydown_D", event => {
+            // Turn on physics debugging to show player's hitbox
+            this.physics.world.createDebugGraphic();
+
+            // Create worldLayer collision graphic above the player, but below the help text
+            const graphics = this.add
+                .graphics()
+                .setAlpha(0.75)
+                .setDepth(20);
+            worldUp.renderDebug(graphics, {
+                tileColor: null, // Color of non-colliding tiles
+                collidingTileColor: new Phaser.Display.Color(243, 134, 48, 255), // Color of colliding tiles
+                faceColor: new Phaser.Display.Color(40, 39, 37, 255) // Color of colliding face edges
+            });
+            worldMiddle.renderDebug(graphics, {
+                tileColor: null, // Color of non-colliding tiles
+                collidingTileColor: new Phaser.Display.Color(243, 134, 48, 255), // Color of colliding tiles
+                faceColor: new Phaser.Display.Color(40, 39, 37, 255) // Color of colliding face edges
+            });
+            worldBottom.renderDebug(graphics, {
+                tileColor: null, // Color of non-colliding tiles
+                collidingTileColor: new Phaser.Display.Color(243, 134, 48, 255), // Color of colliding tiles
+                faceColor: new Phaser.Display.Color(40, 39, 37, 255) // Color of colliding face edges
+            });
+        });
 
         // console.debug('S: Test startTransition event')
         // this.input.keyboard.once("keydown_S", event => {
@@ -256,13 +256,39 @@ export default class WorldScene extends Phaser.Scene {
                 uiScene.events.emit('startTransition')
             })
         })
+        this.events.on('npc_follow_me', () => {
+            this.movablenpc.getChildren().forEach(npc => {
+                if (npc.spriteKey === 'her') {
+                    this.player.addFollower(npc)
+                }
+            })
+        })
+        this.events.on('npc_go_to_house', () => {
+            this.movablenpc.getChildren().forEach(npc => {
+                if (npc.spriteKey === 'her') {
+                    this.player.removeFollowers()
+                    this.physics.moveToObject(npc, this.herTarget, 175)
+                }
+            })
+        })
     }
 
     update(time, delta) {
         if (!this.dialogOpen) {
             this.player.update(this.cursors)
         } else {
-            this.player.stop();
+            this.player.stop()
+        }
+
+        if (this.herTarget && this.her) {
+            let distance = Phaser.Math.Distance.Between(this.her.x, this.her.y, this.herTarget.x, this.herTarget.y)
+            if (this.her?.body.speed > 0) {
+                if (distance < 4) {
+                    this.her.body.reset(this.herTarget.x, this.herTarget.y)
+                    this.her.destroy()
+                    this.her = null
+                }
+            }
         }
     }
 
@@ -285,20 +311,26 @@ export default class WorldScene extends Phaser.Scene {
             if (object.type === 'her') {
                 this.systemMessage.add(new Message(this, object))
             }
+            if (object.type === 'target') {
+                this.herTarget = new Phaser.Math.Vector2(object.x, object.y)
+
+            }
             if (object.type === 'npc') {
                 if (object.name === 'her') {
                     if (object.properties?.find(e => e.name === 'movable')?.value) {
-                        this.movablenpc.add(new Her(this, object.x, object.y, object.name,
+                        this.her = new Her(this, object.x, object.y, object.name,
                             Array.isArray(object.properties)
                                 ? object.properties?.find(e => e.name === 'direction')?.value || "front"
                                 : "front"
-                            , false, object).setImmovable())
+                            , false, object).setImmovable()
+                        this.movablenpc.add(this.her)
                     } else {
-                        this.npc.add(new Her(this, object.x, object.y, object.name,
+                        this.her = new Her(this, object.x, object.y, object.name,
                             Array.isArray(object.properties)
                                 ? object.properties?.find(e => e.name === 'direction')?.value || "front"
                                 : "front"
-                            , true, object))
+                            , true, object)
+                        this.npc.add(this.her)
                     }
                 } else {
                     this.npc.add(new Character(this, object.x, object.y, object.name,
