@@ -341,4 +341,4 @@ export const THE_END = {
     transition: '',
     next: () => {}
 }
-export const FIRST_LEVEL = A_ARRIVAL
+export const FIRST_LEVEL = D3_BAR_AFTER

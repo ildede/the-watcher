@@ -3,7 +3,7 @@
   {"stringId":"Mario_bar011","who": "him"},
   {"stringId":"Gioia_bar017","who": "her"},
   {"stringId":"Gioia_bar018","who": "her"},
-  {"stringId":"Mario_bar012","who": "him"},
+  {"stringId":"Mario_bar012","who": "him", "customEvent": "npc_move_her_up"},
   {"stringId":"Mario_bar013","who": "him"},
   {"stringId":"Mario_bar014","who": "him"}
 ]

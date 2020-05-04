@@ -114,6 +114,7 @@ export default class WorldScene extends Phaser.Scene {
         this.readableSigns = this.physics.add.group()
         this.systemMessage = this.physics.add.group()
         this.npc = this.physics.add.staticGroup()
+        this.movablenpc = this.physics.add.group()
 
         objectLayer.objects.forEach(this.fillCurrentMap())
         levelLayer.objects.forEach(this.fillCurrentMap())
@@ -230,6 +231,15 @@ export default class WorldScene extends Phaser.Scene {
                 }
             })
         })
+        this.events.on('npc_move_her_up', () => {
+            this.movablenpc.getChildren().forEach(npc => {
+                if (npc.spriteKey === 'her') {
+                    console.log(npc)
+                    npc.up()
+                    npc.body.setVelocityY(-175)
+                }
+            })
+        })
     }
 
     update(time, delta) {
@@ -261,11 +271,20 @@ export default class WorldScene extends Phaser.Scene {
             }
             if (object.type === 'npc') {
                 if (object.name === 'her') {
-                    this.npc.add(new Her(this, object.x, object.y, object.name,
-                        Array.isArray(object.properties)
-                            ? object.properties?.find(e => e.name === 'direction')?.value || "front"
-                            : "front"
-                        , true, object))
+                    console.log(object)
+                    if (object.properties?.find(e => e.name === 'movable')?.value) {
+                        this.movablenpc.add(new Her(this, object.x, object.y, object.name,
+                            Array.isArray(object.properties)
+                                ? object.properties?.find(e => e.name === 'direction')?.value || "front"
+                                : "front"
+                            , false, object))
+                    } else {
+                        this.npc.add(new Her(this, object.x, object.y, object.name,
+                            Array.isArray(object.properties)
+                                ? object.properties?.find(e => e.name === 'direction')?.value || "front"
+                                : "front"
+                            , true, object))
+                    }
                 } else {
                     this.npc.add(new Character(this, object.x, object.y, object.name,
                         Array.isArray(object.properties)

@@ -126006,7 +126006,7 @@
    </properties>
   </tile>
  </tileset>
- <objectgroup id="31" name="m3_dog">
+ <objectgroup id="31" name="m3_dog" visible="0">
   <object id="166" name="End" type="message" x="10" y="10" width="1650" height="1650">
    <properties>
     <property name="endScene" type="bool" value="true"/>
@@ -126649,8 +126649,8 @@
    <properties>
     <property name="interval" type="int" value="60"/>
     <property name="stringId" value="Mario_delay1"/>
-    <property name="stringIdThatDisableThis" value="Gioia_dinner001"/>
     <property name="stringIdRequired" value="Mario_dinner010"/>
+    <property name="stringIdThatDisableThis" value="Gioia_dinner001"/>
    </properties>
   </object>
   <object id="70" name="Welcome dialog" type="message" x="39.7795" y="243.204" width="369.556" height="251.059">
@@ -126690,6 +126690,7 @@
   <object id="68" name="her" type="npc" x="580" y="1310">
    <properties>
     <property name="direction" value="right"/>
+    <property name="movable" type="bool" value="true"/>
    </properties>
    <point/>
   </object>
