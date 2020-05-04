@@ -21,12 +21,22 @@ export default class Credit3Scene extends Phaser.Scene {
     create() {
         this.add.image(450, 300, 'creditsBg')
 
-        this.anims.create({key: 'room3', frames: this.anims.generateFrameNames('imageRoom3'), repeat: -1, frameRate: 12})
-        this.add.sprite(450, 300, 'imageRoom3').play('room3').setFlipX(true)
-        this.add.image(450, 300, 'imageHim3')
+        this.anims.create({
+            key: 'room3',
+            frames: this.anims.generateFrameNames('imageRoom3'),
+            repeat: -1,
+            frameRate: 12
+        })
+        this.add.sprite(450, 300, 'imageRoom3')
+            .play('room3')
+            .setCrop(50, 0, 800, 700)
+            .setFlipX(true)
+            .setScale(0.5, 0.5)
 
-        this.add.image(450, 150, 'top3')
-        this.add.image(450, 450, 'bottom3')
+        this.add.image(370, 350, 'imageHim3').setScale(0.45, 0.45)
+
+        this.add.image(450, 60, 'top3').setScale(0.7, 0.7)
+        this.add.image(450, 540, 'bottom3').setScale(0.7, 0.7)
 
 
         this.input.keyboard.on('keydown-SPACE', () => {
