@@ -12,7 +12,7 @@
   { "stringId": "Gioia_first_date010", "who": "her" },
   { "stringId": "Mario_first_date014", "who": "him" },
   { "stringId": "Gioia_first_date011", "who": "her" },
-  { "stringId": "Mario_first_date015", "who": "him" },
+  { "stringId": "Mario_first_date015", "who": "him", "customEvent": "npc_move_her_right" },
   { "stringId": "Mario_first_date016", "who": "him" },
   { "stringId": "Mario_first_date017", "who": "him" }
 ]

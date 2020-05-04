@@ -6,5 +6,5 @@
   { "stringId": "Gioia_first_date003", "who": "her" },
   { "stringId": "Mario_first_date007", "who": "him" },
   { "stringId": "Gioia_first_date004", "who": "her" },
-  { "stringId": "Mario_first_date008", "who": "him" }
+  { "stringId": "Mario_first_date008", "who": "him", "customEvent": "npc_follow_me" }
 ]

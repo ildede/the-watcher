@@ -240,6 +240,7 @@ export default class WorldScene extends Phaser.Scene {
             })
         })
         this.events.on('npc_move_her_right', () => {
+            this.player.removeFollowers()
             this.movablenpc.getChildren().forEach(npc => {
                 if (npc.spriteKey === 'her') {
                     npc.right()
@@ -313,7 +314,6 @@ export default class WorldScene extends Phaser.Scene {
             }
             if (object.type === 'target') {
                 this.herTarget = new Phaser.Math.Vector2(object.x, object.y)
-
             }
             if (object.type === 'npc') {
                 if (object.name === 'her') {

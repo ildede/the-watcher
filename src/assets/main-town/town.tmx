@@ -126695,7 +126695,7 @@
    <point/>
   </object>
  </objectgroup>
- <objectgroup id="12" name="c_first_date" visible="0">
+ <objectgroup id="12" name="c_first_date">
   <object id="65" name="End" type="message" x="90" y="290" width="170" height="140">
    <properties>
     <property name="endScene" type="bool" value="true"/>
@@ -126713,6 +126713,7 @@
   <object id="63" name="her" type="npc" x="1370" y="650">
    <properties>
     <property name="dialogs" type="file" value="dialogs/c-first-date-part-1.json"/>
+    <property name="movable" type="bool" value="true"/>
     <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="external"/>
    </properties>
