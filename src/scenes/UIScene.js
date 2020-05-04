@@ -279,7 +279,7 @@ const getBBcodeText = function (scene, wrapWidth, fixedWidth, fixedHeight, textC
             mode: 'word',
             width: wrapWidth
         },
-        maxLines: 3,
+        maxLines: 4,
         stroke: 'red',
         strokeThickness: 4,
         shadow: {
