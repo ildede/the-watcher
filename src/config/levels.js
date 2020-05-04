@@ -12,6 +12,7 @@ export const DANCE_HALL_MAP = 'danceHallMap'
 export const A_ARRIVAL = {
     name: 'a_arrival',
     scene: 'WorldScene',
+    music: 'townMusic',
     map: TOWN_MAP,
     tiles: [TOWN_TILES],
     tileSize: 16,
@@ -21,6 +22,7 @@ export const A_ARRIVAL = {
 export const B1_PARTY_BEFORE = {
     name: 'b1_party_before',
     scene: 'WorldScene',
+    music: 'townMusic',
     map: TOWN_MAP,
     tiles: [TOWN_TILES],
     tileSize: 16,
@@ -48,6 +50,7 @@ export const B3_PARTY = {
 export const C_FIRST_DATE = {
     name: 'c_first_date',
     scene: 'WorldScene',
+    music: 'townMusic',
     map: TOWN_MAP,
     tiles: [TOWN_TILES],
     tileSize: 16,
@@ -71,6 +74,7 @@ export const D2_BAR_MORNING = {
 export const D3_BAR_AFTER = {
     name: 'd3_bar_after',
     scene: 'WorldScene',
+    music: 'townMusic',
     map: TOWN_MAP,
     tiles: [TOWN_TILES],
     tileSize: 16,
@@ -80,6 +84,7 @@ export const D3_BAR_AFTER = {
 export const E1_DINNER_BEFORE = {
     name: 'e1_dinner',
     scene: 'WorldScene',
+    music: 'townMusic',
     map: TOWN_MAP,
     tiles: [TOWN_TILES],
     tileSize: 16,
@@ -133,6 +138,7 @@ export const E5_DINNER_RESTAURANT = {
 export const F1_NIGHT_OUT = {
     name: 'f1_night',
     scene: 'WorldScene',
+    music: 'townMusic',
     map: TOWN_MAP,
     tiles: [TOWN_TILES],
     tileSize: 16,
@@ -142,6 +148,7 @@ export const F1_NIGHT_OUT = {
 export const F2_NIGHT_OUT = {
     name: 'f2_night',
     scene: 'WorldScene',
+    music: 'townMusic',
     map: TOWN_MAP,
     tiles: [TOWN_TILES],
     tileSize: 16,
@@ -158,6 +165,7 @@ export const F3_NIGHT_OUT = {
 export const E1_WHAT_ARE_WE = {
     name: 'e1_what_are_we',
     scene: 'WorldScene',
+    music: 'townMusic',
     map: TOWN_MAP,
     tiles: [TOWN_TILES],
     tileSize: 16,
@@ -167,6 +175,7 @@ export const E1_WHAT_ARE_WE = {
 export const E2_WHAT_ARE_WE = {
     name: 'e2_what_are_we',
     scene: 'WorldScene',
+    music: 'townMusic',
     map: TOWN_MAP,
     tiles: [TOWN_TILES],
     tileSize: 16,
@@ -254,6 +263,7 @@ export const M1_DOG = {
 export const M2_DOG = {
     name: 'm2_dog',
     scene: 'WorldScene',
+    music: 'townMusic',
     map: TOWN_MAP,
     tiles: [TOWN_TILES],
     tileSize: 16,
@@ -263,6 +273,7 @@ export const M2_DOG = {
 export const M3_DOG = {
     name: 'm3_dog',
     scene: 'WorldScene',
+    music: 'townMusic',
     map: TOWN_MAP,
     tiles: [TOWN_TILES],
     tileSize: 16,

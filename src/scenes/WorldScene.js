@@ -4,6 +4,8 @@ import Message from "../entity/Message";
 import Character from "../entity/Character";
 import {TRANSITION_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
 import Her from "../entity/Her";
+import townMusicMp3 from '../assets/audio/01Mainmap/Pleasant_Creek.mp3';
+import townMusicWav from '../assets/audio/01Mainmap/Pleasant_Creek_Loop.wav';
 
 export default class WorldScene extends Phaser.Scene {
     constructor() {
@@ -11,10 +13,19 @@ export default class WorldScene extends Phaser.Scene {
         this.fillCurrentMap = this.fillCurrentMap.bind(this)
     }
 
+    preload() {
+        this.load.audio('townMusic', [townMusicWav, townMusicMp3]);
+    }
+
     create(data) {
         this.levelConfig = data
         this.dialogOpen = false
         console.debug(WORLD_SCENE, this.levelConfig)
+
+        if (this.levelConfig.level.music) {
+            const music = this.sound.add(this.levelConfig.level.music);
+            music.play();
+        }
 
         //-- Draw map and game objects
         const map = this.make.tilemap({ key: this.levelConfig.level.map })
