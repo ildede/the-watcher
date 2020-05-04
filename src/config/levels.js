@@ -301,7 +301,13 @@ export const N4_BDAY = {
     tiles: [TOWN_TILES, PARTY_TILES_16],
     tileSize: 16,
     transition: '',
-    next: () => A_ARRIVAL
+    next: () => THE_END
+}
+export const THE_END = {
+    name: 'the_end',
+    scene: 'EndTitleScene',
+    transition: '',
+    next: () => {}
 }
 export const FIRST_LEVEL = A_ARRIVAL
 
