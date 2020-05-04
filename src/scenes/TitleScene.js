@@ -10,21 +10,21 @@ export default class TitleScene extends Phaser.Scene {
     }
 
     create(data) {
-        const isFinished = data?.finished || false
+        this.isFinished = data?.finished || false
         this.anims.create({key: 'starfield', frames: this.anims.generateFrameNames('splashBg'), repeat: -1, frameRate: 60})
         this.add.sprite(450, 300, 'splashBg').setDisplaySize(900, 600).play('starfield')
         let rect = new Phaser.Geom.Rectangle(0, 0, 900, 300);
         const graphics = this.add.graphics({ fillStyle: { color: 0x000000 }})
         graphics.fillRectShape(rect);
 
-        if (isFinished) {
+        if (this.isFinished) {
             this.add.image(450, 150, 'titleWatcherVR')
         } else {
             this.add.image(450, 150, 'titleWatcher')
         }
         const english = this.add.sprite(450, 380, 'splashLanguages', 'english');
         const italian = this.add.sprite(450, 420, 'splashLanguages', 'italian');
-        if (isFinished) {
+        if (this.isFinished) {
             const credits = this.add.sprite(450, 460, 'menuCredits');
             credits.setInteractive({ useHandCursor: true })
             credits.on('pointerdown', () => this.scene.start(CREDIT_1))
@@ -56,6 +56,10 @@ export default class TitleScene extends Phaser.Scene {
     startWorldScene(language) {
         language = language || 'en'
         this.cameras.main.fadeOut(500)
+        if (this.isFinished) {
+            this.scene.get(END_TITLE_SCENE).music?.stop()
+            this.scene.get(END_TITLE_SCENE).music?.destroy()
+        }
         this.time.addEvent({
             delay: 500,
             callback: () => {

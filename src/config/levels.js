@@ -341,5 +341,4 @@ export const THE_END = {
     transition: '',
     next: () => {}
 }
-export const FIRST_LEVEL = M3_DOG
-
+export const FIRST_LEVEL = A_ARRIVAL
