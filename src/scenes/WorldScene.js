@@ -10,6 +10,7 @@ import partyBeginMp3 from '../assets/audio/02PartyBegin/Project_2.mp3';
 import afterPartyMp3 from '../assets/audio/03Afterparty/fwid.MP3';
 import snowMusicMp3 from '../assets/audio/07SnowMap/Winter_Snow.mp3';
 import snowMusicOgg from '../assets/audio/07SnowMap/Winter_Snow.ogg';
+import gardenMusicMp3 from '../assets/audio/08Garden/Shake_and_Bake.mp3';
 
 export default class WorldScene extends Phaser.Scene {
     constructor() {
@@ -76,6 +77,7 @@ export default class WorldScene extends Phaser.Scene {
         this.load.audio('partyBegin', [partyBeginMp3]);
         this.load.audio('afterParty', [afterPartyMp3]);
         this.load.audio('snowMusic', [snowMusicOgg, snowMusicMp3]);
+        this.load.audio('gardenMusic', [gardenMusicMp3]);
     }
 
     create(data) {

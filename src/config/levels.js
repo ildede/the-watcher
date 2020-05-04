@@ -214,6 +214,7 @@ export const H2_ANNIVERSARY = {
 export const H3_ANNIVERSARY = {
     name: 'h3_anniversary',
     scene: 'RestaurantScene',
+    music: 'conversation',
     messages: 'dialogs/restaurant-anniversary-part-1.json',
     transition: '',
     image: {
@@ -225,6 +226,7 @@ export const H3_ANNIVERSARY = {
 export const H4_ANNIVERSARY = {
     name: 'h4_anniversary',
     scene: 'RestaurantScene',
+    music: 'conversation',
     messages: 'dialogs/restaurant-anniversary-part-2.json',
     transition: '',
     image: {
@@ -236,6 +238,7 @@ export const H4_ANNIVERSARY = {
 export const I1_MARRY_ME = {
     name: 'i1_marry_me',
     scene: 'RestaurantScene',
+    music: 'conversation',
     messages: 'dialogs/restaurant-marry-me-part-1.json',
     transition: '',
     image: {
@@ -247,6 +250,7 @@ export const I1_MARRY_ME = {
 export const L1_MOVING = {
     name: 'l1_moving',
     scene: 'WorldScene',
+    music: 'snowMusic',
     map: SNOW_MAP,
     tiles: [TOWN_TILES],
     tileSize: 16,
@@ -256,6 +260,7 @@ export const L1_MOVING = {
 export const L2_MOVING = {
     name: 'l2_moving',
     scene: 'WorldScene',
+    music: 'snowMusic',
     map: SNOW_MAP,
     tiles: [TOWN_TILES],
     tileSize: 16,
@@ -265,6 +270,7 @@ export const L2_MOVING = {
 export const M1_DOG = {
     name: 'm1_dog',
     scene: 'WorldScene',
+    music: 'gardenMusic',
     map: GARDEN_MAP,
     tiles: [TOWN_TILES],
     tileSize: 16,
