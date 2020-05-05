@@ -289,7 +289,6 @@ export default class WorldScene extends Phaser.Scene {
             let distance = Phaser.Math.Distance.Between(this.her.x, this.her.y, this.herTarget.x, this.herTarget.y)
             if (this.her?.body.speed > 0) {
                 if (distance < 4) {
-                    console.log(this.levelConfig.level)
                     this.her.body.reset(this.herTarget.x, this.herTarget.y)
                     if (this.levelConfig.level.name !== 'b2_party_begin') {
                         this.her.destroy()
@@ -326,7 +325,6 @@ export default class WorldScene extends Phaser.Scene {
             }
             if (object.type === 'npc') {
                 if (object.name === 'her') {
-                    console.log(object)
                     if (object.properties?.find(e => e.name === 'movable')?.value) {
                         this.her = new Her(this, object.x, object.y, object.name,
                             Array.isArray(object.properties)

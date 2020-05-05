@@ -196,7 +196,6 @@ export default class UIScene extends Phaser.Scene {
                 }
 
                 if (currentMessage.customEvent) {
-                    console.log('emetto', currentMessage.customEvent)
                     currentScene.events.emit(currentMessage.customEvent)
                 }
             }
