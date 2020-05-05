@@ -18,11 +18,11 @@ export default class Player extends Character {
         this.path.push(new Phaser.Geom.Point(this.x,this.y))
         this.updateMovement(cursors)
         this.followers.forEach(follower => {
-            // this.scene.physics.moveTo(projectile, {x: this.scene.input.x + this.scene.cameras.main.scrollX, y: this.scene.input.y + this.scene.cameras.main.scrollY}, 750);
-            let newX = this.path[this.path.length-20].x;
-            let newY = this.path[this.path.length-20].y;
-            follower.scene.physics.moveTo(follower, newX, newY, 175)
-            // follower.setPosition(newX, newY)
+            if (this.path.length > 20) {
+                let newX = this.path[this.path.length-20].x;
+                let newY = this.path[this.path.length-20].y;
+                follower.scene.physics.moveTo(follower, newX, newY, 175)
+            }
         }, this)
     }
 

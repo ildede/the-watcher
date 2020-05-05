@@ -137,7 +137,7 @@ export default class WorldScene extends Phaser.Scene {
                     }
                 }
             })
-        this.physics.add.overlap(this.player, [this.systemMessage,this.movablenpc],
+        this.physics.add.overlap(this.player, [this.systemMessage, this.movablenpc],
             (player, item) => {
                 if (!this.dialogOpen) {
                     if (item.lastVisit === undefined || (item.lastVisit && (Date.now() - item.lastVisit) / 1000 > item.interval())) {
@@ -259,7 +259,7 @@ export default class WorldScene extends Phaser.Scene {
         })
         this.events.on('npc_follow_me', () => {
             this.movablenpc.getChildren().forEach(npc => {
-                if (npc.spriteKey === 'her') {
+                if (npc.spriteKey === 'her' || npc.spriteKey === 'orange') {
                     this.player.addFollower(npc)
                 }
             })
@@ -333,11 +333,19 @@ export default class WorldScene extends Phaser.Scene {
                         this.npc.add(this.her)
                     }
                 } else {
-                    this.npc.add(new Character(this, object.x, object.y, object.name,
-                        Array.isArray(object.properties)
-                            ? object.properties?.find(e => e.name === 'direction')?.value || "front"
-                            : "front"
-                        , true, object))
+                    if (object.properties?.find(e => e.name === 'movable')?.value) {
+                        this.movablenpc.add(new Character(this, object.x, object.y, object.name,
+                            Array.isArray(object.properties)
+                                ? object.properties?.find(e => e.name === 'direction')?.value || "front"
+                                : "front"
+                            , false, object))
+                    } else {
+                        this.npc.add(new Character(this, object.x, object.y, object.name,
+                            Array.isArray(object.properties)
+                                ? object.properties?.find(e => e.name === 'direction')?.value || "front"
+                                : "front"
+                            , true, object))
+                    }
                 }
             }
             if (object.type === 'spawn') {

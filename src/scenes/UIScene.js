@@ -48,7 +48,9 @@ export default class UIScene extends Phaser.Scene {
             } else if (item.messageType === 'her') {
                 manageMessageFor.call(this, item, worldScene, herBox);
             } else {
-                manageMessageFor.call(this, item, worldScene, systemBox);
+                if (item.spriteKey !== 'orange') {
+                    manageMessageFor.call(this, item, worldScene, systemBox);
+                }
             }
         }, this)
         worldScene.events.on('readSign', function(item) {
