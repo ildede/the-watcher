@@ -85,6 +85,8 @@ export default class WorldScene extends Phaser.Scene {
     create(data) {
         this.levelConfig = data
         this.dialogOpen = false
+        this.herTarget = null
+        this.her = null
         console.debug(WORLD_SCENE, this.levelConfig)
 
         if (this.levelConfig.level.music) {
@@ -287,7 +289,7 @@ export default class WorldScene extends Phaser.Scene {
 
         if (this.herTarget && this.her) {
             let distance = Phaser.Math.Distance.Between(this.her.x, this.her.y, this.herTarget.x, this.herTarget.y)
-            if (this.her?.body.speed > 0) {
+            if (this.her?.body?.speed > 0) {
                 if (distance < 4) {
                     this.her.body.reset(this.herTarget.x, this.herTarget.y)
                     if (this.levelConfig.level.name !== 'b2_party_begin') {

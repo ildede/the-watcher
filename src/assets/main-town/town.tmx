@@ -126188,7 +126188,7 @@
   </object>
  </objectgroup>
  <objectgroup id="30" name="m2_dog" visible="0">
-  <object id="150" name="End" type="message" x="402" y="-526" width="1650" height="1650">
+  <object id="150" name="End" type="message" x="25.4676" y="16.9072" width="1650" height="1650">
    <properties>
     <property name="endScene" type="bool" value="true"/>
     <property name="stringIdRequired" value="Mario_dog_dogpound"/>
