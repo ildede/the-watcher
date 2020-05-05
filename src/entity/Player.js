@@ -51,17 +51,22 @@ export default class Player extends Character {
         // Update the animation last and give left/right animations precedence over up/down animations
         if (cursors.left.isDown) {
             this.left()
+            this.followers.forEach(follower => follower.left())
         } else if (cursors.right.isDown) {
             this.right()
+            this.followers.forEach(follower => follower.right())
         } else if (cursors.up.isDown) {
             this.up()
+            this.followers.forEach(follower => follower.up())
         } else if (cursors.down.isDown) {
             this.down()
+            this.followers.forEach(follower => follower.down())
         } else {
             // If we were moving, pick and idle frame to use
             this.stopAnimation(prevVelocity);
             this.followers.forEach(follower => {
                 follower.body.reset(follower.x, follower.y)
+                follower.anims.stop()
             }, this)
         }
     }
@@ -80,6 +85,7 @@ export default class Player extends Character {
         this.stopAnimation(prevVelocity)
         this.followers.forEach(follower => {
             follower.body.reset(follower.x, follower.y)
+            follower.anims.stop()
         }, this)
     }
 
