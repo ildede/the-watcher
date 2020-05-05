@@ -208,11 +208,6 @@ export default class WorldScene extends Phaser.Scene {
             });
         });
 
-        // console.debug('S: Test startTransition event')
-        // this.input.keyboard.once("keydown_S", event => {
-        //     uiScene.events.emit('startTransition')
-        // });
-
         this.events.on('dialogStart', (box) => {
             this.dialogOpen = true
             this.input.keyboard.off('keydown_SPACE');
@@ -264,6 +259,15 @@ export default class WorldScene extends Phaser.Scene {
                 }
             })
         })
+        this.events.on('npc_come_to_me', () => {
+            this.player.left()
+            this.her.right()
+            this.physics.moveToObject(this.her, this.herTarget, 100)
+        })
+        this.events.on('her_look_down', () => {
+            this.her.down()
+            this.her.anims.stop()
+        })
         this.events.on('npc_go_to_house', () => {
             this.movablenpc.getChildren().forEach(npc => {
                 if (npc.spriteKey === 'her') {
@@ -285,9 +289,14 @@ export default class WorldScene extends Phaser.Scene {
             let distance = Phaser.Math.Distance.Between(this.her.x, this.her.y, this.herTarget.x, this.herTarget.y)
             if (this.her?.body.speed > 0) {
                 if (distance < 4) {
+                    console.log(this.levelConfig.level)
                     this.her.body.reset(this.herTarget.x, this.herTarget.y)
-                    this.her.destroy()
-                    this.her = null
+                    if (this.levelConfig.level.name !== 'b2_party_begin') {
+                        this.her.destroy()
+                        this.her = null
+                    } else {
+                        this.her.anims.stop()
+                    }
                 }
             }
         }
@@ -317,6 +326,7 @@ export default class WorldScene extends Phaser.Scene {
             }
             if (object.type === 'npc') {
                 if (object.name === 'her') {
+                    console.log(object)
                     if (object.properties?.find(e => e.name === 'movable')?.value) {
                         this.her = new Her(this, object.x, object.y, object.name,
                             Array.isArray(object.properties)
