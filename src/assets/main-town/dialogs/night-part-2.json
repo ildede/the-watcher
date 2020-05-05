@@ -2,5 +2,5 @@
   { "stringId": "Mario_night003", "who": "him" },
   { "stringId": "Gioia_night001", "who": "her" },
   { "stringId": "Mario_night004", "who": "him" },
-  { "stringId": "Mario_night005", "who": "him" }
+  { "stringId": "Mario_night005", "who": "him", "customEvent": "npc_follow_me" }
 ]

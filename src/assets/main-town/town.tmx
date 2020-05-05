@@ -126706,7 +126706,7 @@
    <point/>
   </object>
  </objectgroup>
- <objectgroup id="27" name="f2_night" visible="0">
+ <objectgroup id="27" name="f2_night">
   <object id="92" name="End" type="message" x="1175" y="690" width="500" height="290">
    <properties>
     <property name="endScene" type="bool" value="true"/>
@@ -126790,6 +126790,7 @@
    <properties>
     <property name="dialogs" type="file" value="dialogs/night-part-2.json"/>
     <property name="direction" value="left"/>
+    <property name="movable" type="bool" value="true"/>
     <property name="showOnce" type="bool" value="true"/>
     <property name="stringId" value="external"/>
    </properties>
