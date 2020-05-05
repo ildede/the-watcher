@@ -21,7 +21,7 @@ export default class Credit1Scene extends Phaser.Scene {
     create() {
         this.add.image(450, 300, 'creditsBg')
 
-        this.anims.create({key: 'starAnim', frames: this.anims.generateFrameNames('imageAnim2'), repeat: -1, frameRate: 12})
+        this.anims.create({key: 'starAnim', frames: this.anims.generateFrameNames('imageAnim2'), repeat: -1, frameRate: 12, yoyo: true});
         this.add.sprite(450, 300, 'imageAnim2').play('starAnim')
         this.add.image(450, 300, 'imageHim2')
 
