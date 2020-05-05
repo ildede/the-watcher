@@ -366,6 +366,7 @@ export default class WorldScene extends Phaser.Scene {
                     Array.isArray(object.properties)
                         ? object.properties?.find(e => e.name === 'direction')?.value || "front"
                         : "front")
+                this.player.setDepth(5)
             }
         };
     }

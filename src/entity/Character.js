@@ -8,6 +8,8 @@ export default class Character extends Phaser.Physics.Arcade.Sprite {
         this.scene.add.existing(this)
         this.scene.physics.add.existing(this, isStatic)
 
+        this.setSize(this.width/2, this.height)
+
         this.spriteKey = spriteKey
 
         this.createAnimations()
