@@ -236,6 +236,14 @@ export default class WorldScene extends Phaser.Scene {
                 }
             })
         })
+        this.events.on('npc_move_her_down', () => {
+            this.movablenpc.getChildren().forEach(npc => {
+                if (npc.spriteKey === 'her') {
+                    npc.down()
+                    npc.body.setVelocityY(175)
+                }
+            })
+        })
         this.events.on('npc_move_her_right', () => {
             this.player.removeFollowers()
             this.movablenpc.getChildren().forEach(npc => {

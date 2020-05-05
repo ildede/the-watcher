@@ -126337,7 +126337,7 @@
    <point/>
   </object>
  </objectgroup>
- <objectgroup id="29" name="e2_what_are_we" visible="0" offsetx="8" offsety="-2.66667">
+ <objectgroup id="29" name="e2_what_are_we" offsetx="8" offsety="-2.66667">
   <object id="127" name="End" type="message" x="10" y="10" width="1650" height="1650">
    <properties>
     <property name="endScene" type="bool" value="true"/>
@@ -126391,6 +126391,7 @@
   <object id="142" name="her" type="npc" x="1425" y="610">
    <properties>
     <property name="direction" value="left"/>
+    <property name="movable" type="bool" value="true"/>
    </properties>
    <point/>
   </object>
@@ -126706,7 +126707,7 @@
    <point/>
   </object>
  </objectgroup>
- <objectgroup id="27" name="f2_night">
+ <objectgroup id="27" name="f2_night" visible="0">
   <object id="92" name="End" type="message" x="1175" y="690" width="500" height="290">
    <properties>
     <property name="endScene" type="bool" value="true"/>

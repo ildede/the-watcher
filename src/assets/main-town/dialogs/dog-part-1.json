@@ -17,7 +17,7 @@
   { "stringId": "Gioia_dog009", "who": "her" },
   { "stringId": "Mario_dog007", "who": "him" },
   { "stringId": "Gioia_dog010", "who": "her" },
-  { "stringId": "Mario_dog008", "who": "him" },
+  { "stringId": "Mario_dog008", "who": "him", "customEvent": "npc_move_her_down" },
   { "stringId": "Mario_dog009", "who": "him" },
   { "stringId": "Mario_dog010", "who": "him" },
   { "stringId": "Mario_dog011", "who": "him" },

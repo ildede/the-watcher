@@ -126157,6 +126157,7 @@
   <object id="2" name="her" type="npc" x="250" y="240">
    <properties>
     <property name="direction" value="left"/>
+    <property name="movable" type="bool" value="true"/>
    </properties>
    <point/>
   </object>
