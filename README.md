@@ -2,12 +2,12 @@
 
 # The Watcher
 The Watcher is a story about people, relationships, forms of control, interactions and human nature, with a dark twist.
-Play online: https://the-watcher.netlify.app/
-
-Gameplay estimated time ~ 1 hour.
+Play online: https://the-watcher.netlify.app/ (Gameplay estimated time ~ 1 hour)
 
 Developed by [Davide Happydev Pedron](https://bit.ly/pedrondavide)
+
 Conceived, designed and translated by [Chiara Di Modica (LoQAce.com)](linkedin.com/in/chiaradimodica)
+
 
 ## Tools & Frameworks
 - Phaser 3
