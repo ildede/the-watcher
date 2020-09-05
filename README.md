@@ -21,3 +21,7 @@ Conceived, designed and translated by [Chiara Di Modica (LoQAce.com)](linkedin.c
 | `npm install` | Install project dependencies |
 | `npm start` | Build project and open web server running project |
 | `npm run build` | Builds code bundle with production settings (minification, uglification, etc..) |
+
+## Articles
+- Creating a video game from scratch in two weeks from a localizer's perspective ([part 1](https://www.linkedin.com/pulse/creating-video-game-from-scratch-two-weeks-localizer-part-di-modica/))([part 2](https://www.linkedin.com/pulse/creating-video-game-from-scratch-two-weeks-localizer-part-di-modica-1c/))
+- Quick post-mortem #AdvJam2020 ([ITA](https://www.linkedin.com/pulse/quick-post-mortem-advjam2020-davide-pedron/))
