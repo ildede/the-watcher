@@ -42,8 +42,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./index.html"
     }),
-    new CopyPlugin(
-        [
+    new CopyPlugin({
+        patterns: [
           {
             from: 'main-town/dialogs',
             to: 'dialogs/',
@@ -60,6 +60,7 @@ module.exports = {
             context: 'src/assets/',
           },
         ]
+      }
     ),
   ]
 };
