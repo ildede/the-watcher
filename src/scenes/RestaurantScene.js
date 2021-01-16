@@ -103,8 +103,8 @@ export default class RestaurantScene extends Phaser.Scene {
 
         //-- Input rules
         this.events.on('dialogStart', (box) => {
-            this.input.keyboard.off('keydown_SPACE');
-            this.input.keyboard.on('keydown_SPACE', () => {
+            this.input.keyboard.off('keydown-SPACE');
+            this.input.keyboard.on('keydown-SPACE', () => {
                 this.events.emit('continueDialog', box)
             });
         })

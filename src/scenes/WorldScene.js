@@ -181,7 +181,7 @@ export default class WorldScene extends Phaser.Scene {
 
         //-- Input rules
         this.cursors = this.input.keyboard.createCursorKeys();
-        this.input.keyboard.on('keydown_SPACE', this.playerAction());
+        this.input.keyboard.on('keydown-SPACE', this.playerAction());
 
         // console.debug('D: Turn on physics debugging to show player\'s hitbox')
         // this.input.keyboard.once("keydown_D", event => {
@@ -212,13 +212,13 @@ export default class WorldScene extends Phaser.Scene {
 
         this.events.on('dialogStart', (box) => {
             this.dialogOpen = true
-            this.input.keyboard.off('keydown_SPACE');
-            this.input.keyboard.on('keydown_SPACE', this.continueDialog(box));
+            this.input.keyboard.off('keydown-SPACE');
+            this.input.keyboard.on('keydown-SPACE', this.continueDialog(box));
         })
         this.events.on('dialogEnd', () => {
             this.dialogOpen = false
-            this.input.keyboard.off('keydown_SPACE');
-            this.input.keyboard.on('keydown_SPACE', this.playerAction());
+            this.input.keyboard.off('keydown-SPACE');
+            this.input.keyboard.on('keydown-SPACE', this.playerAction());
         })
 
         this.events.on('npc_delete_her', () => {
