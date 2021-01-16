@@ -28,7 +28,7 @@
     "copy-webpack-plugin": "^6.1.0",
     "file-loader": "^6.1.0",
     "html-webpack-plugin": "^4.4.1",
-    "i18next-http-backend": "^1.0.18",
+    "i18next-http-backend": "^1.0.21",
     "json-minify": "^1.0.0",
     "raw-loader": "^4.0.1",
     "terser-webpack-plugin": "^4.1.0",
