@@ -1,6 +1,6 @@
 {
   "name": "the-watcher",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "The watcher, an AdventureJam2020 Game",
   "main": "src/index.js",
   "scripts": {
