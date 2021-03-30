@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "i18next": "^19.8.2",
-    "phaser": "^3.52.0",
+    "phaser": "^3.53.1",
     "phaser3-rex-plugins": "^1.1.31"
   }
 }
