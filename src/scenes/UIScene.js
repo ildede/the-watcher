@@ -1,6 +1,7 @@
 import 'phaser'
 import i18next from 'i18next';
 import {DIALOG_SCENE, PARK_SCENE, RESTAURANT_SCENE, UI_SCENE, WORLD_SCENE} from "../TheWatcher";
+import RexUIPlugin from 'phaser3-rex-plugins/templates/ui/ui-plugin.js';
 
 export default class UIScene extends Phaser.Scene {
 
@@ -11,7 +12,7 @@ export default class UIScene extends Phaser.Scene {
     preload() {
         this.load.scenePlugin({
             key: 'rexuiplugin',
-            url: 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexuiplugin.min.js',
+            url: RexUIPlugin,
             sceneKey: 'rexUI'
         })
     }
