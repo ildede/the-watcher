@@ -231,7 +231,6 @@ export default class UIScene extends Phaser.Scene {
             currentBox.setVisible(false)
             currentBox.setOrigin(0)
             currentBox.layout()
-            currentBox.setInteractive()
             currentBox.on('pageend', function () {
                 const icon = currentBox.getElement('action').setVisible(true)
                 currentBox.resetChildVisibleState(icon)
