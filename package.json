@@ -14,8 +14,7 @@
     "url": "git+https://github.com/ildede/the-watcher.git"
   },
   "author": "Davide Pedron <davide@happydev.cloud> (https://happydev.cloud)",
-  "license": "MIT",
-  "licenseUrl": "http://www.opensource.org/licenses/mit-license.php",
+  "license": "SEE LICENSE IN <LICENSE>",
   "bugs": {
     "url": "https://github.com/ildede/the-watcher/issues"
   },
